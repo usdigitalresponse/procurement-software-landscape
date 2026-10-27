@@ -28,7 +28,7 @@ This repository falls under [U.S. Digital Response’s Code of Conduct](./CODE_O
 
 This project wouldn’t exist without the hard work of many people. Thanks to the following for all their contributions! Please see [`CONTRIBUTING.md`](./CONTRIBUTING.md) to find out how you can help.
 
-**Lead Maintainer:** [@gideonkdavis](https://github.com/https://github.com/gideonkdavis)
+**Lead Maintainer:** [@gideonkdavis](https://github.com/gideonkdavis)
 
 **Additional Contributors:**
 
