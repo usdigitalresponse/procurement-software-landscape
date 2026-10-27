@@ -1,0 +1,2394 @@
+-
+    State: '  UK'
+    'System Name': 'Find a Tender'
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://www.find-tender.service.gov.uk/'
+    'Notice list URL': 'https://www.find-tender.service.gov.uk/search/opportunities'
+    'Single Posting URL': 'https://www.find-tender.service.gov.uk/Notice/071922-2026'
+    FIELD8: ""
+    'State Web Design System in use?': Yes
+    'Published Data Standard?': Yes
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 94
+    'Lighthouse Accessibility, Notices': 93
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': Yes
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 85
+    'Lighthouse Accessability, Posting': 100
+    FIELD24: ""
+    I: 5
+    j: 5
+    k: 10
+    l: 5
+    m: 5
+    n: 5
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 5
+    u: 5
+    v: 4
+    w: 5
+    Total: 99
+    'LIghthouse test': ""
+-
+    State: Alabama
+    'System Name': 'Alabama Buys'
+    'System Type': 'eProcurement, ERP'
+    Platform: {Vendor: 'Ivalua; Advantage by CGI'}
+    'Public Link': 'https://alabamabuys.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
+    'Notice list URL': 'https://alabamabuys.gov/page.aspx/en/rfp/request_browse_public'
+    'Single Posting URL': 'https://alabamabuys.gov/page.aspx/en/bpm/process_manage_extranet/42646'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 80
+    'Lighthouse Accessibility, Notices': 89
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': Yes
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 75
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 3
+    o: 4
+    p: 25
+    q: 5
+    r: 0
+    s: 5
+    t: 0
+    u: 5
+    v: 3
+    w: 5
+    Total: 65
+    'LIghthouse test': ""
+-
+    State: Alaska
+    'System Name': IRIS
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://iris-vss.alaska.gov/'
+    'Notice list URL': N/A
+    'Single Posting URL': 'https://iris-vss.alaska.gov/?openDoc=openDoc&DocumentCode=RFP&DepartmentCode=08&DocumentID=270000001&DocumentVersNo=2&Destination=SolicitationDocument&ApplName=vss'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 37
+    'Lighthouse Accessability, Posting': 92
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 25
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 5
+    Total: 45
+    'LIghthouse test': ""
+-
+    State: 'American Samoa'
+    'System Name': ""
+    'System Type': eProcurement
+    Platform: {Vendor: 'illion Tenderlink'}
+    'Public Link': 'https://portal.tenderlink.com/mof_samoa/login?ReturnUrl=%2Fmof_samoa%2F'
+    'Notice list URL': 'https://portal.tenderlink.com/mof_samoa/alltenders/'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': ""
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 87
+    'Lighthouse Accessibility, Notices': 84
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 4
+    o: 4
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 23
+    'LIghthouse test': ""
+-
+    State: Arizona
+    'System Name': 'Arizona Procurement Portal (APP)'
+    'System Type': eProcurement
+    Platform: {Vendor: Ivalua}
+    'Public Link': 'https://app.az.gov/page.aspx/en/usr/login?ReturnUrl=%2Fpage.aspx%2Fen%2Fbuy%2Fhomepage'
+    'Notice list URL': 'https://app.az.gov/page.aspx/en/rfp/request_browse_public'
+    'Single Posting URL': 'https://app.az.gov/page.aspx/en/bpm/process_manage_extranet/13800'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 84
+    'Lighthouse Accessibility, Notices': 93
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 80
+    'Lighthouse Accessability, Posting': 85
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 4
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 3
+    w: 4
+    Total: 76
+    'LIghthouse test': ""
+-
+    State: Arkansas
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: 'SAP Ariba'}
+    'Public Link': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
+    'Notice list URL': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
+    'Single Posting URL': 'https://portal.us.bn.cloud.ariba.com/dashboard/public/appext/comsapsbncdiscoveryui#/RfxEvent/preview/1110018345?anId=ANONYMOUS'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 84
+    'Lighthouse Accessibility, Notices': 97
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 43
+    'Lighthouse Accessability, Posting': 92
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 4
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 5
+    t: 0
+    u: 0
+    v: 0
+    w: 5
+    Total: 64
+    'LIghthouse test': ""
+-
+    State: California
+    'System Name': CaleProcure
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://caleprocure.ca.gov/pages/index.aspx'
+    'Notice list URL': 'https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx'
+    'Single Posting URL': 'https://caleprocure.ca.gov/event/3860/0000039630'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 68
+    'Lighthouse Accessibility, Notices': 99
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 70
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 2
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 2
+    w: 5
+    Total: 74
+    'LIghthouse test': ""
+-
+    State: Colorado
+    'System Name': 'CORE VSS'
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://prd.co.cgiadvantage.com/PRDVSS1X1/Advantage4'
+    'Notice list URL': N/A
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 0
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 15
+    'LIghthouse test': ""
+-
+    State: Connecticut
+    'System Name': 'CT Source'
+    'System Type': 'eProcurement, ERP'
+    Platform: {Vendor: 'Proactis WebProcure; Peoplesoft by Oracle'}
+    'Public Link': 'https://portal.ct.gov/DAS/CTSource/CTSource'
+    'Notice list URL': 'https://portal.ct.gov/das/ctsource/bidboard?language=en_US'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 69
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 2
+    o: 5
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 42
+    'LIghthouse test': ""
+-
+    State: Delaware
+    'System Name': ""
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://mymarketplace.delaware.gov/'
+    'Notice list URL': 'https://mmp.delaware.gov/Bids/'
+    'Single Posting URL': 'https://mmp.delaware.gov/Bids/Details/9246'
+    FIELD8: 'Generally not bad, accept some bids through Bonfire, uses Euna Marketplace'
+    'State Web Design System in use?': Yes
+    'Published Data Standard?': Yes
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 93
+    'Lighthouse Accessibility, Notices': 88
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 80
+    'Lighthouse Accessability, Posting': 100
+    FIELD24: ""
+    I: 5
+    j: 5
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 4
+    p: 25
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 3
+    w: 5
+    Total: 77
+    'LIghthouse test': ""
+-
+    State: 'District of Columbia'
+    'System Name': ""
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://contracts.ocp.dc.gov/'
+    'Notice list URL': 'https://contracts.ocp.dc.gov/solicitations/search'
+    'Single Posting URL': 'https://contracts.ocp.dc.gov/solicitations/details?id=Doc831461'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': ""
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 69
+    'Lighthouse Accessibility, Notices': 91
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 67
+    'Lighthouse Accessability, Posting': 100
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 2
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 0
+    v: 2
+    w: 5
+    Total: 69
+    'LIghthouse test': ""
+-
+    State: Florida
+    'System Name': MyFloridaMarketplace
+    'System Type': ERP
+    Platform: {Vendor: 'SAP Ariba'}
+    'Public Link': 'https://vendor.myfloridamarketplace.com/'
+    'Notice list URL': 'https://vendor.myfloridamarketplace.com/search/bids'
+    'Single Posting URL': 'https://vendor.myfloridamarketplace.com/search/bids/detail/16318'
+    FIELD8: 'Some Florida agencies apper to accept proposals via email'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 72
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 69
+    'Lighthouse Accessability, Posting': 100
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 3
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 2
+    w: 5
+    Total: 75
+    'LIghthouse test': ""
+-
+    State: Georgia
+    'System Name': GA@Work
+    'System Type': 'eProcurement, ERP'
+    Platform: {Vendor: 'Jaggaer; Workday'}
+    'Public Link': 'https://app01.jaggaer.com/apps/Router/SupplierLogin?CustOrg=Georgia'
+    'Notice list URL': 'https://ssl.doas.state.ga.us/gpr/'
+    'Single Posting URL': 'https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=SWC-eRFP-00023-2027&sourceSystemType=jag'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 90
+    'Lighthouse Accessibility, Notices': 94
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 88
+    'Lighthouse Accessability, Posting': 95
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 4
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 0
+    v: 4
+    w: 5
+    Total: 73
+    'LIghthouse test': ""
+-
+    State: Guam
+    'System Name': ""
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': ""
+    'Notice list URL': 'https://gsa.doa.guam.gov/invitation-for-bid/'
+    'Single Posting URL': N/A
+    FIELD8: 'Links directly to a PDF'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': ""
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 97
+    'Lighthouse Accessibility, Notices': 79
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 3
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 23
+    'LIghthouse test': ""
+-
+    State: Hawaii
+    'System Name': HIePRO
+    'System Type': ERP
+    Platform: {Vendor: 'Tyler Technologies'}
+    'Public Link': 'https://hiepro.ehawaii.gov/solicitation-notices.html'
+    'Notice list URL': 'https://hands.ehawaii.gov/hands/opportunities'
+    'Single Posting URL': 'https://hiepro.ehawaii.gov/public-display-solicitation.html?rfid=26003293'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 55
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 83
+    'Lighthouse Accessability, Posting': 95
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 5
+    n: 1
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 4
+    w: 5
+    Total: 80
+    'LIghthouse test': ""
+-
+    State: Idaho
+    'System Name': IPRO
+    'System Type': eProcurement
+    Platform: {Vendor: Infor}
+    'Public Link': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/page/XiSupplyManagementSupplierPage?csk.SupplierGroup=LUMA'
+    'Notice list URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=LUMA'
+    'Single Posting URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/form/SourcingEvent%5BByCompany%5D%28230,1301%29.XiSupplierPortalSummary?action=_open&navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&fromlist=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%7CNotificationStatus%3D2%29.XiOpenForBid&csk.SupplierGroup=LUMA&sortOrderName=SourcingEvent.ByCompany&previousDisabled=true&fk=SourcingEvent%5BByCompany%5D%28190,1418%7CNotificationStatus%3D2%29&firstDisabled=true&hasPrevious=false&pageSize=10&hasNext=true&isAscending=true&lk=SourcingEvent%5BByCompany%5D%28270,1411%7CNotificationStatus%3D2%29&pk=SourcingEvent%5BByCompany%5D%28230,1301%7CNotificationStatus%3D2%29&selectedPanel=Lines'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 35
+    'Lighthouse Accessibility, Notices': 97
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 69
+    'Lighthouse Accessability, Posting': 93
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 0
+    o: 5
+    p: 0
+    q: 5
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 2
+    w: 5
+    Total: 32
+    'LIghthouse test': ""
+-
+    State: Illinois
+    'System Name': 'Illinois BidBuy'
+    'System Type': eProcurement
+    Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
+    'Public Link': 'https://www.bidbuy.illinois.gov/bso/'
+    'Notice list URL': 'https://www.bidbuy.illinois.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
+    'Single Posting URL': 'https://www.bidbuy.illinois.gov/bso/external/bidDetail.sda?docId=26-551HDA-FINAN-B-53072&external=true&parentUrl=close'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 92
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 96
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 5
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 5
+    w: 5
+    Total: 75
+    'LIghthouse test': ""
+-
+    State: Indiana
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://www.in.gov/idoa/procurement/supplier-resource-center/requirements-to-do-business-with-the-state/bidder-profile-registration/'
+    'Notice list URL': 'https://www.in.gov/idoa/procurement/current-business-opportunities/'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': Yes
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 61
+    'Lighthouse Accessibility, Notices': 97
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 5
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 2
+    o: 5
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 27
+    'LIghthouse test': ""
+-
+    State: Iowa
+    'System Name': IMPACS
+    'System Type': eProcurement
+    Platform: {Vendor: Jaggaer}
+    'Public Link': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
+    'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 99
+    'Lighthouse Accessibility, Notices': 83
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 4
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 24
+    'LIghthouse test': ""
+-
+    State: Kansas
+    'System Name': SMART
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://smartweb.ks.gov/'
+    'Notice list URL': 'https://supplier.sok.ks.gov/psc/sokfsprdsup/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL?&'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 59
+    'Lighthouse Accessibility, Notices': 90
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 1
+    o: 4
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 35
+    'LIghthouse test': ""
+-
+    State: Kentucky
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://vss.ky.gov/vssprod-ext/Advantage4'
+    'Notice list URL': N/A
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 0
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 15
+    'LIghthouse test': ""
+-
+    State: Louisiana
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: SAP}
+    'Public Link': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm'
+    'Notice list URL': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/srchopen.cfm?deptno=all&catno=all&dateStart=&dateEnd=&compareDate=O&keywords=&keywordsCheck=all'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 90
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 4
+    o: 5
+    p: 0
+    q: 0
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 34
+    'LIghthouse test': ""
+-
+    State: Maine
+    'System Name': MeVSS
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://mevss.hostams.com/PRDVSS1X1/AltSelfService'
+    'Notice list URL': N/A
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 0
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 15
+    'LIghthouse test': ""
+-
+    State: Maryland
+    'System Name': eMMA
+    'System Type': eProcurement
+    Platform: {Vendor: Ivalua}
+    'Public Link': 'https://emma.maryland.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
+    'Notice list URL': 'https://emma.maryland.gov/page.aspx/en/rfp/request_browse_public'
+    'Single Posting URL': 'https://emma.maryland.gov/page.aspx/en/bpm/process_manage_extranet/93305'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 68
+    'Lighthouse Accessibility, Notices': 93
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 67
+    'Lighthouse Accessability, Posting': 97
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 2
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 2
+    w: 5
+    Total: 74
+    'LIghthouse test': ""
+-
+    State: Massachusetts
+    'System Name': COMMBUYS
+    'System Type': eProcurement
+    Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
+    'Public Link': 'https://www.commbuys.com/bso/'
+    'Notice list URL': 'https://www.commbuys.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
+    'Single Posting URL': 'https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-27-1026-DOE02-DOE01-130975'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 83
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 95
+    'Lighthouse Accessability, Posting': 98
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 5
+    n: 4
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 5
+    w: 5
+    Total: 74
+    'LIghthouse test': ""
+-
+    State: Michigan
+    'System Name': 'SIGMA VSS'
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://sigma.michigan.gov/PRDVSS1X1/Advantage4'
+    'Notice list URL': N/A
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 5
+    m: 0
+    n: 0
+    o: 0
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 25
+    'LIghthouse test': ""
+-
+    State: Minnesota
+    'System Name': SWIFT
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://mn.gov/mmb/accounting/swift/'
+    'Notice list URL': 'https://guest.supplier.systems.state.mn.us/psc/fmssupap/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 78
+    'Lighthouse Accessibility, Notices': 94
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 3
+    o: 5
+    p: 0
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 33
+    'LIghthouse test': ""
+-
+    State: Mississippi
+    'System Name': MAGIC
+    'System Type': ERP
+    Platform: {Vendor: SAP}
+    'Public Link': 'https://www.dfa.ms.gov/magic-finance-and-grants-management'
+    'Notice list URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid'
+    'Single Posting URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid/Details/45855?AppId=1'
+    FIELD8: 'MS IT accpeting proposals via mail on a flash drive'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 74
+    'Lighthouse Accessibility, Notices': 88
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 74
+    'Lighthouse Accessability, Posting': 74
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 3
+    o: 4
+    p: 25
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 3
+    w: 3
+    Total: 68
+    'LIghthouse test': ""
+-
+    State: Missouri
+    'System Name': 'MissouriBUYS, powerd by Movers'
+    'System Type': ERP
+    Platform: {Vendor: Oracle}
+    'Public Link': 'https://missouribuys.mo.gov/'
+    'Notice list URL': 'https://ewqg.fa.us8.oraclecloud.com/fscmUI/redwood/negotiation-abstracts/view/abstractlisting?prcBuId=300000005255687'
+    'Single Posting URL': N/A
+    FIELD8: 'Page reload breaks lighthouse for posting'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 11
+    'Lighthouse Accessibility, Notices': 91
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 0
+    o: 5
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 40
+    'LIghthouse test': ""
+-
+    State: Montana
+    'System Name': eMACS
+    'System Type': eProcurement
+    Platform: {Vendor: Jaggaer}
+    'Public Link': 'https://spb.mt.gov/eMACS-Resources'
+    'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfMontana'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 99
+    'Lighthouse Accessibility, Notices': 83
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 4
+    p: 0
+    q: 0
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 29
+    'LIghthouse test': ""
+-
+    State: Nebraska
+    'System Name': ""
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://das.nebraska.gov/materiel/vendor-information.html'
+    'Notice list URL': 'https://das.nebraska.gov/materiel/bid-opportunities.html#current-bid-opportunities'
+    'Single Posting URL': 'https://das.nebraska.gov/materiel/purchasing/124528%20ON/124528%20ON.html'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 96
+    'Lighthouse Accessibility, Notices': 95
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 95
+    'Lighthouse Accessability, Posting': 98
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 5
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 5
+    w: 5
+    Total: 80
+    'LIghthouse test': ""
+-
+    State: Nevada
+    'System Name': NevadaEPro
+    'System Type': eProcurement
+    Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
+    'Public Link': 'https://nevadaepro.com/bso/'
+    'Notice list URL': 'https://nevadaepro.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
+    'Single Posting URL': 'https://nevadaepro.com/bso/external/bidDetail.sda?docId=41NHA-S3922&external=true&parentUrl=close'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 93
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': Yes
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 95
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 5
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 5
+    u: 5
+    v: 5
+    w: 5
+    Total: 75
+    'LIghthouse test': ""
+-
+    State: 'New Hampshire'
+    'System Name': ""
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://apps.das.nh.gov/NHProcurement/Bid'
+    'Notice list URL': 'https://apps.das.nh.gov/NHProcurement/Bid'
+    'Single Posting URL': 'https://apps.das.nh.gov/NHProcurement/Bid/rfp-nhlc-202606'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 91
+    'Lighthouse Accessibility, Notices': 99
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 97
+    'Lighthouse Accessability, Posting': 100
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 5
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 5
+    w: 5
+    Total: 70
+    'LIghthouse test': ""
+-
+    State: 'New Jersey'
+    'System Name': NJSTART
+    'System Type': eProcurement
+    Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
+    'Public Link': 'https://www.njstart.gov/bso/'
+    'Notice list URL': 'https://www.njstart.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
+    'Single Posting URL': 'https://www.njstart.gov/bso/external/bidDetail.sda?docId=26DPP01212&external=true&parentUrl=close'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 82
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': Yes
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 89
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 4
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 5
+    u: 5
+    v: 4
+    w: 5
+    Total: 73
+    'LIghthouse test': ""
+-
+    State: 'New Mexico'
+    'System Name': eProNM
+    'System Type': 'eProcurement, ERP'
+    Platform: {Vendor: 'Jaggaer (soon Euna); Peoplesoft by Oracle'}
+    'Public Link': 'https://www.generalservices.state.nm.us/state-purchasing/online-procurement/'
+    'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
+    'Single Posting URL': N/A
+    FIELD8: 'https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 94
+    'Lighthouse Accessibility, Notices': 91
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 5
+    p: 0
+    q: 0
+    r: 5
+    s: 0
+    t: 0
+    u: 0
+    v: 0
+    w: 0
+    Total: 25
+    'LIghthouse test': ""
+-
+    State: 'New York'
+    'System Name': 'New York State Contract Reporter'
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://www.nyscr.ny.gov/'
+    'Notice list URL': 'https://www.nyscr.ny.gov/Ads/Search'
+    'Single Posting URL': N/A
+    FIELD8: 'Still requiring physical proposals'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 96
+    'Lighthouse Accessibility, Notices': 88
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 5
+    n: 5
+    o: 4
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 0
+    v: 0
+    w: 0
+    Total: 29
+    'LIghthouse test': ""
+-
+    State: 'North Carolina'
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: 'SAP Ariba'}
+    'Public Link': 'https://eprocurement.nc.gov/'
+    'Notice list URL': 'https://evp.nc.gov/solicitations/?status=0'
+    'Single Posting URL': 'https://evp.nc.gov/solicitations/details/?id=1290880c-067b-f111-ab0e-001dd80db495'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 55
+    'Lighthouse Accessibility, Notices': 99
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 77
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 5
+    n: 1
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 5
+    t: 0
+    u: 5
+    v: 3
+    w: 5
+    Total: 74
+    'LIghthouse test': ""
+-
+    State: 'North Dakota'
+    'System Name': ""
+    'System Type': eProcurement
+    Platform: {Vendor: Ivalua}
+    'Public Link': ""
+    'Notice list URL': 'https://public.ndbuys.nd.gov/page.aspx/en/rfp/request_browse_public'
+    'Single Posting URL': 'https://public.ndbuys.nd.gov/page.aspx/en/bpm/process_manage_extranet/3545'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 59
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 72
+    'Lighthouse Accessability, Posting': 97
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 1
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 3
+    w: 5
+    Total: 69
+    'LIghthouse test': ""
+-
+    State: 'Northern Mariana Islands'
+    'System Name': MUNIS
+    'System Type': ERP
+    Platform: {Vendor: 'Tyler Technologies'}
+    'Public Link': 'https://selfservice.dof.gov.mp/vss/default.aspx'
+    'Notice list URL': 'https://selfservice.dof.gov.mp/vss/Vendors/VBids/SearchResults.aspx'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': ""
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 87
+    'Lighthouse Accessibility, Notices': 96
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 85
+    'Lighthouse Accessability, Posting': 98
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 4
+    o: 5
+    p: 0
+    q: 5
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 4
+    w: 5
+    Total: 38
+    'LIghthouse test': ""
+-
+    State: Ohio
+    'System Name': ""
+    'System Type': 'eProcurement, ERP'
+    Platform: {Vendor: 'Ivalua; Peoplesoft by Oracle'}
+    'Public Link': 'https://procure.ohio.gov/state-and-local-agencies/resources/ohiobuys-overview'
+    'Notice list URL': 'https://ohiobuys.ohio.gov/page.aspx/en/rfp/request_browse_public'
+    'Single Posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/56086'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 64
+    'Lighthouse Accessibility, Notices': 96
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 65
+    'Lighthouse Accessability, Posting': 100
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 2
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 2
+    w: 5
+    Total: 69
+    'LIghthouse test': ""
+-
+    State: Oklahoma
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://oklahoma.gov/omes/divisions/central-purchasing/suppliers-and-payees/supplier-portal.html'
+    'Notice list URL': 'https://financials.ok.gov/psc/SOKLFP1DS/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 61
+    'Lighthouse Accessibility, Notices': 94
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 2
+    o: 5
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 42
+    'LIghthouse test': ""
+-
+    State: Oregon
+    'System Name': OregonBuys
+    'System Type': eProcurement
+    Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
+    'Public Link': 'https://www.oregon.gov/das/procurement/pages/oregonbuys.aspx'
+    'Notice list URL': 'https://oregonbuys.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
+    'Single Posting URL': 'https://oregonbuys.gov/bso/external/bidDetail.sda?docId=S-R09145-00017514&external=true&parentUrl=close'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 89
+    'Lighthouse Accessibility, Notices': 97
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 93
+    'Lighthouse Accessability, Posting': 94
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 5
+    n: 4
+    o: 5
+    p: 25
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 5
+    w: 5
+    Total: 79
+    'LIghthouse test': ""
+-
+    State: Pennsylvania
+    'System Name': 'PA - eMarketplace'
+    'System Type': eProcurement
+    Platform: {Vendor: Jaggaer}
+    'Public Link': 'https://www.emarketplace.state.pa.us/'
+    'Notice list URL': 'https://www.emarketplace.state.pa.us/Search.aspx'
+    'Single Posting URL': 'https://www.emarketplace.state.pa.us/Solicitations.aspx?SID=6100066036'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 98
+    'Lighthouse Accessibility, Notices': 68
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': Print
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 94
+    'Lighthouse Accessability, Posting': 89
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 5
+    o: 2
+    p: 25
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 0
+    v: 5
+    w: 4
+    Total: 71
+    'LIghthouse test': ""
+-
+    State: 'Puerto Rico'
+    'System Name': 'JEDI - Joint E-procurement Digital Intelligence'
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://asg.pr.gov/miasg'
+    'Notice list URL': 'https://asg.pr.gov/subastas'
+    'Single Posting URL': 'https://asg.pr.gov/subastas26J-22671'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 79
+    'Lighthouse Accessibility, Notices': 96
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 85
+    'Lighthouse Accessability, Posting': 96
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 3
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 5
+    t: 0
+    u: 5
+    v: 4
+    w: 5
+    Total: 67
+    'LIghthouse test': ""
+-
+    State: 'Rhode Island'
+    'System Name': OSP
+    'System Type': eProcurement
+    Platform: {Vendor: 'Proactis WebProcure'}
+    'Public Link': 'https://ridop.ri.gov/ocean-state-procures-osp'
+    'Notice list URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
+    'Single Posting URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 99
+    'Lighthouse Accessibility, Notices': 95
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 5
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 40
+    'LIghthouse test': ""
+-
+    State: 'South Carolina'
+    'System Name': ""
+    'System Type': ERP
+    Platform: {Vendor: SAP}
+    'Public Link': 'https://www.procurement.sc.gov/scpro'
+    'Notice list URL': 'https://apps.sceis.sc.gov/SCSolicitationWeb/solicitationSearch.do'
+    'Single Posting URL': 'https://apps.sceis.sc.gov/SCSolicitationWeb/solicitationAttachment.do?solicitnumber=5400029860'
+    FIELD8: 'Transitioning in November 2026?'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 100
+    'Lighthouse Accessability, Posting': 77
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 5
+    w: 3
+    Total: 53
+    'LIghthouse test': ""
+-
+    State: 'South Dakota'
+    'System Name': easyPurchase
+    'System Type': eProcurement
+    Platform: {Vendor: 'ESM Solutions'}
+    'Public Link': 'https://boa.sd.gov/central-services/procurement-management/procurement-management-eprocurement.aspx'
+    'Notice list URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/events'
+    'Single Posting URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/eventDetail/19882'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 65
+    'Lighthouse Accessibility, Notices': 94
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 90
+    'Lighthouse Accessability, Posting': 95
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 2
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 5
+    t: 0
+    u: 5
+    v: 4
+    w: 5
+    Total: 66
+    'LIghthouse test': ""
+-
+    State: Tennessee
+    'System Name': Edison
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://hub.edison.tn.gov/psp/paprd/SUPPLIER/SUPP/h/?tab=PAPP_GUEST'
+    'Notice list URL': 'https://www.tn.gov/content/tn/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html'
+    'Single Posting URL': N/A
+    FIELD8: 'List links directly to documents'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 72
+    'Lighthouse Accessibility, Notices': 97
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 3
+    o: 5
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 23
+    'LIghthouse test': ""
+-
+    State: Texas
+    'System Name': TXSmartBuy
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://www.txsmartbuy.com/'
+    'Notice list URL': 'https://www.txsmartbuy.gov/esbd'
+    'Single Posting URL': 'https://www.txsmartbuy.gov/esbd/304-27-0790MS-1'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 86
+    'Lighthouse Accessibility, Notices': 74
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 86
+    'Lighthouse Accessability, Posting': 92
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 4
+    o: 3
+    p: 25
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 4
+    w: 5
+    Total: 71
+    'LIghthouse test': ""
+-
+    State: 'US Virgin Islands'
+    'System Name': GVIBUY
+    'System Type': eProcurement
+    Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
+    'Public Link': 'https://gvibuy.buyspeed.com/bso/'
+    'Notice list URL': 'https://gvibuy.buyspeed.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
+    'Single Posting URL': 'https://gvibuy.buyspeed.com/bso/external/bidDetail.sda?docId=BD-26-720-7201-646&external=true&parentUrl=close'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 93
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': Yes
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 97
+    'Lighthouse Accessability, Posting': 98
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 5
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 5
+    u: 5
+    v: 5
+    w: 5
+    Total: 75
+    'LIghthouse test': ""
+-
+    State: Utah
+    'System Name': U3P
+    'System Type': eProcurement
+    Platform: {Vendor: Euna}
+    'Public Link': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah'
+    'Notice list URL': 'https://utah.bonfirehub.com/portal/?tab=openOpportunities'
+    'Single Posting URL': 'https://utah.bonfirehub.com/opportunities/237998'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 79
+    'Lighthouse Accessibility, Notices': 90
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 100
+    'Lighthouse Accessability, Posting': 93
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 3
+    o: 4
+    p: 25
+    q: 5
+    r: 0
+    s: 5
+    t: 0
+    u: 5
+    v: 5
+    w: 5
+    Total: 72
+    'LIghthouse test': ""
+-
+    State: Vermont
+    'System Name': VTBuys
+    'System Type': 'eProcurement, ERP'
+    Platform: {Vendor: 'Ivalua; Peoplesoft by Oracle'}
+    'Public Link': 'https://bgs.vermont.gov/content/vtbuys-eprocurement-0'
+    'Notice list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
+    'Single Posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 73
+    'Lighthouse Accessibility, Notices': 93
+    'Direct URL to Individual Posting? (25 pts)': Yes
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 48
+    'Lighthouse Accessability, Posting': 93
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 3
+    o: 5
+    p: 25
+    q: 5
+    r: 0
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 5
+    Total: 58
+    'LIghthouse test': ""
+-
+    State: Virginia
+    'System Name': eVA
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://eva.virginia.gov/'
+    'Notice list URL': 'https://mvendor.cgieva.com/Vendor/public/AllOpportunities.jsp'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': Yes
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 89
+    'Lighthouse Accessibility, Notices': 75
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 5
+    m: 0
+    n: 4
+    o: 3
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 42
+    'LIghthouse test': ""
+-
+    State: Washington
+    'System Name': WEBS
+    'System Type': Custom
+    Platform: {Vendor: 'Government owned'}
+    'Public Link': 'https://des.wa.gov/sell/how-work-state'
+    'Notice list URL': 'https://pr-webs-vendor.des.wa.gov/'
+    'Single Posting URL': N/A
+    FIELD8: 'Must be logged in to see bids'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 0
+    v: 0
+    w: 0
+    Total: 0
+    'LIghthouse test': ""
+-
+    State: 'West Virginia'
+    'System Name': wvOASIS
+    'System Type': ERP
+    Platform: {Vendor: 'Advantage by CGI'}
+    'Public Link': 'https://prd311.wvoasis.gov/PRDVSS1X1ERP/Advantage4'
+    'Notice list URL': N/A
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': No
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 0
+    'Lighthouse Accessibility, Notices': 0
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': No
+    'Data Export of Posting?': Print
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 0
+    l: 0
+    m: 0
+    n: 0
+    o: 0
+    p: 0
+    q: 5
+    r: 5
+    s: 0
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 15
+    'LIghthouse test': ""
+-
+    State: Wisconsin
+    'System Name': WISBuy
+    'System Type': ERP
+    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    'Public Link': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/h/?tab=WI_BIDDER'
+    'Notice list URL': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/c/WI_SS_BIDDER_FLU.WI_SS_BDR_BIDS_FLU.GBL'
+    'Single Posting URL': N/A
+    FIELD8: ""
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': Yes
+    'Lighthouse Performance, Notices': 64
+    'Lighthouse Accessibility, Notices': 100
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': Yes
+    'Contact Name and Email': Yes
+    'Project Summary': Yes
+    'Data Export of Posting?': No
+    'Documents without registration?': Yes
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 5
+    n: 2
+    o: 5
+    p: 0
+    q: 5
+    r: 5
+    s: 5
+    t: 0
+    u: 5
+    v: 0
+    w: 0
+    Total: 42
+    'LIghthouse test': ""
+-
+    State: Wyoming
+    'System Name': 'Public Purchase'
+    'System Type': eProcurement
+    Platform: {Vendor: 'Public Purchase'}
+    'Public Link': 'https://www.publicpurchase.com/gems/browse/home'
+    'Notice list URL': 'https://www.publicpurchase.com/gems/wyominggsd,wy/buyer/public/publicInfo'
+    'Single Posting URL': N/A
+    FIELD8: 'Must be logged in to see bids'
+    'State Web Design System in use?': No
+    'Published Data Standard?': No
+    'Direct URL to Notice List? (10 pts)': Yes
+    'Includes local listings': No
+    'Data Export of Notice List?': No
+    'Lighthouse Performance, Notices': 100
+    'Lighthouse Accessibility, Notices': 48
+    'Direct URL to Individual Posting? (25 pts)': No
+    'Individual Posting Page?': No
+    'Contact Name and Email': No
+    'Project Summary': No
+    'Data Export of Posting?': No
+    'Documents without registration?': No
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessability, Posting': 0
+    FIELD24: ""
+    I: 0
+    j: 0
+    k: 10
+    l: 0
+    m: 0
+    n: 5
+    o: 0
+    p: 0
+    q: 0
+    r: 0
+    s: 0
+    t: 0
+    u: 0
+    v: 0
+    w: 0
+    Total: 15
+    'LIghthouse test': ""
