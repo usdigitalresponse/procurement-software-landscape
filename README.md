@@ -1,9 +1,3 @@
-‼️⚠️ **Welcome to your new repo! It already includes a few important files. First things first, please update this repository with information specific to your project. It doesn't need to be perfect or 100% complete, but please to fill in as much as possible to start with. In particular, please make sure to replace the text `{PROJECT_NAME}` and `{YOUR_GITHUB_USERNAME}`.**
-
-**Please review USDR’s general guidelines for software & data, too: https://policies.usdigitalresponse.org/data-and-software-guidelines**
-
-[![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg?style=flat)](./CODE_OF_CONDUCT.md)
-
 # Procurement Software Landscape
 
 This project attempts to create a model to to evaluate and score the websites state and territorial government procurement agencies use to publicly advertise contracting opportunities, like requests for proposals (RFPs) and invitations to bid (ITB), to potential vendors and the public. 
