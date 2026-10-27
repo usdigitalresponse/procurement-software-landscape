@@ -6,8 +6,7 @@
 
 # Procurement Software Landscape
 
-Description of what the project does and who & where it is used.
-
+This project attempts to create a model to to evaluate and score the websites state and territorial government procurement agencies use to publicly advertise contracting opportunities, like requests for proposals (RFPs) and invitations to bid (ITB), to potential vendors and the public. 
 
 ## Setup & Installation
 
