@@ -39,7 +39,6 @@
     v: 4
     w: 5
     Total: 99
-    'LIghthouse test': ""
 -
     State: Alabama
     'System Name': 'Alabama Buys'
@@ -81,7 +80,6 @@
     v: 3
     w: 5
     Total: 65
-    'LIghthouse test': ""
 -
     State: Alaska
     'System Name': IRIS
@@ -123,7 +121,6 @@
     v: 0
     w: 5
     Total: 45
-    'LIghthouse test': ""
 -
     State: 'American Samoa'
     'System Name': ""
@@ -165,7 +162,6 @@
     v: 0
     w: 0
     Total: 23
-    'LIghthouse test': ""
 -
     State: Arizona
     'System Name': 'Arizona Procurement Portal (APP)'
@@ -207,7 +203,6 @@
     v: 3
     w: 4
     Total: 76
-    'LIghthouse test': ""
 -
     State: Arkansas
     'System Name': ""
@@ -249,7 +244,6 @@
     v: 0
     w: 5
     Total: 64
-    'LIghthouse test': ""
 -
     State: California
     'System Name': CaleProcure
@@ -291,7 +285,6 @@
     v: 2
     w: 5
     Total: 74
-    'LIghthouse test': ""
 -
     State: Colorado
     'System Name': 'CORE VSS'
@@ -333,7 +326,6 @@
     v: 0
     w: 0
     Total: 15
-    'LIghthouse test': ""
 -
     State: Connecticut
     'System Name': 'CT Source'
@@ -375,7 +367,6 @@
     v: 0
     w: 0
     Total: 42
-    'LIghthouse test': ""
 -
     State: Delaware
     'System Name': ""
@@ -417,7 +408,6 @@
     v: 3
     w: 5
     Total: 77
-    'LIghthouse test': ""
 -
     State: 'District of Columbia'
     'System Name': ""
@@ -459,7 +449,6 @@
     v: 2
     w: 5
     Total: 69
-    'LIghthouse test': ""
 -
     State: Florida
     'System Name': MyFloridaMarketplace
@@ -501,7 +490,6 @@
     v: 2
     w: 5
     Total: 75
-    'LIghthouse test': ""
 -
     State: Georgia
     'System Name': GA@Work
@@ -543,7 +531,6 @@
     v: 4
     w: 5
     Total: 73
-    'LIghthouse test': ""
 -
     State: Guam
     'System Name': ""
@@ -585,7 +572,6 @@
     v: 0
     w: 0
     Total: 23
-    'LIghthouse test': ""
 -
     State: Hawaii
     'System Name': HIePRO
@@ -627,7 +613,6 @@
     v: 4
     w: 5
     Total: 80
-    'LIghthouse test': ""
 -
     State: Idaho
     'System Name': IPRO
@@ -669,7 +654,6 @@
     v: 2
     w: 5
     Total: 32
-    'LIghthouse test': ""
 -
     State: Illinois
     'System Name': 'Illinois BidBuy'
@@ -711,7 +695,6 @@
     v: 5
     w: 5
     Total: 75
-    'LIghthouse test': ""
 -
     State: Indiana
     'System Name': ""
@@ -753,7 +736,6 @@
     v: 0
     w: 0
     Total: 27
-    'LIghthouse test': ""
 -
     State: Iowa
     'System Name': IMPACS
@@ -795,7 +777,6 @@
     v: 0
     w: 0
     Total: 24
-    'LIghthouse test': ""
 -
     State: Kansas
     'System Name': SMART
@@ -837,7 +818,6 @@
     v: 0
     w: 0
     Total: 35
-    'LIghthouse test': ""
 -
     State: Kentucky
     'System Name': ""
@@ -879,7 +859,6 @@
     v: 0
     w: 0
     Total: 15
-    'LIghthouse test': ""
 -
     State: Louisiana
     'System Name': ""
@@ -921,7 +900,6 @@
     v: 0
     w: 0
     Total: 34
-    'LIghthouse test': ""
 -
     State: Maine
     'System Name': MeVSS
@@ -963,7 +941,6 @@
     v: 0
     w: 0
     Total: 15
-    'LIghthouse test': ""
 -
     State: Maryland
     'System Name': eMMA
@@ -1005,7 +982,6 @@
     v: 2
     w: 5
     Total: 74
-    'LIghthouse test': ""
 -
     State: Massachusetts
     'System Name': COMMBUYS
@@ -1047,7 +1023,6 @@
     v: 5
     w: 5
     Total: 74
-    'LIghthouse test': ""
 -
     State: Michigan
     'System Name': 'SIGMA VSS'
@@ -1089,7 +1064,6 @@
     v: 0
     w: 0
     Total: 25
-    'LIghthouse test': ""
 -
     State: Minnesota
     'System Name': SWIFT
@@ -1131,7 +1105,6 @@
     v: 0
     w: 0
     Total: 33
-    'LIghthouse test': ""
 -
     State: Mississippi
     'System Name': MAGIC
@@ -1173,7 +1146,6 @@
     v: 3
     w: 3
     Total: 68
-    'LIghthouse test': ""
 -
     State: Missouri
     'System Name': 'MissouriBUYS, powerd by Movers'
@@ -1215,7 +1187,6 @@
     v: 0
     w: 0
     Total: 40
-    'LIghthouse test': ""
 -
     State: Montana
     'System Name': eMACS
@@ -1257,7 +1228,6 @@
     v: 0
     w: 0
     Total: 29
-    'LIghthouse test': ""
 -
     State: Nebraska
     'System Name': ""
@@ -1299,7 +1269,6 @@
     v: 5
     w: 5
     Total: 80
-    'LIghthouse test': ""
 -
     State: Nevada
     'System Name': NevadaEPro
@@ -1341,7 +1310,6 @@
     v: 5
     w: 5
     Total: 75
-    'LIghthouse test': ""
 -
     State: 'New Hampshire'
     'System Name': ""
@@ -1383,7 +1351,6 @@
     v: 5
     w: 5
     Total: 70
-    'LIghthouse test': ""
 -
     State: 'New Jersey'
     'System Name': NJSTART
@@ -1425,7 +1392,6 @@
     v: 4
     w: 5
     Total: 73
-    'LIghthouse test': ""
 -
     State: 'New Mexico'
     'System Name': eProNM
@@ -1467,7 +1433,6 @@
     v: 0
     w: 0
     Total: 25
-    'LIghthouse test': ""
 -
     State: 'New York'
     'System Name': 'New York State Contract Reporter'
@@ -1509,7 +1474,6 @@
     v: 0
     w: 0
     Total: 29
-    'LIghthouse test': ""
 -
     State: 'North Carolina'
     'System Name': ""
@@ -1551,7 +1515,6 @@
     v: 3
     w: 5
     Total: 74
-    'LIghthouse test': ""
 -
     State: 'North Dakota'
     'System Name': ""
@@ -1593,7 +1556,6 @@
     v: 3
     w: 5
     Total: 69
-    'LIghthouse test': ""
 -
     State: 'Northern Mariana Islands'
     'System Name': MUNIS
@@ -1635,7 +1597,6 @@
     v: 4
     w: 5
     Total: 38
-    'LIghthouse test': ""
 -
     State: Ohio
     'System Name': ""
@@ -1677,7 +1638,6 @@
     v: 2
     w: 5
     Total: 69
-    'LIghthouse test': ""
 -
     State: Oklahoma
     'System Name': ""
@@ -1719,7 +1679,6 @@
     v: 0
     w: 0
     Total: 42
-    'LIghthouse test': ""
 -
     State: Oregon
     'System Name': OregonBuys
@@ -1761,7 +1720,6 @@
     v: 5
     w: 5
     Total: 79
-    'LIghthouse test': ""
 -
     State: Pennsylvania
     'System Name': 'PA - eMarketplace'
@@ -1803,7 +1761,6 @@
     v: 5
     w: 4
     Total: 71
-    'LIghthouse test': ""
 -
     State: 'Puerto Rico'
     'System Name': 'JEDI - Joint E-procurement Digital Intelligence'
@@ -1845,7 +1802,6 @@
     v: 4
     w: 5
     Total: 67
-    'LIghthouse test': ""
 -
     State: 'Rhode Island'
     'System Name': OSP
@@ -1887,7 +1843,6 @@
     v: 0
     w: 0
     Total: 40
-    'LIghthouse test': ""
 -
     State: 'South Carolina'
     'System Name': ""
@@ -1929,7 +1884,6 @@
     v: 5
     w: 3
     Total: 53
-    'LIghthouse test': ""
 -
     State: 'South Dakota'
     'System Name': easyPurchase
@@ -1971,7 +1925,6 @@
     v: 4
     w: 5
     Total: 66
-    'LIghthouse test': ""
 -
     State: Tennessee
     'System Name': Edison
@@ -2013,7 +1966,6 @@
     v: 0
     w: 0
     Total: 23
-    'LIghthouse test': ""
 -
     State: Texas
     'System Name': TXSmartBuy
@@ -2055,7 +2007,6 @@
     v: 4
     w: 5
     Total: 71
-    'LIghthouse test': ""
 -
     State: 'US Virgin Islands'
     'System Name': GVIBUY
@@ -2097,7 +2048,6 @@
     v: 5
     w: 5
     Total: 75
-    'LIghthouse test': ""
 -
     State: Utah
     'System Name': U3P
@@ -2139,7 +2089,6 @@
     v: 5
     w: 5
     Total: 72
-    'LIghthouse test': ""
 -
     State: Vermont
     'System Name': VTBuys
@@ -2181,7 +2130,6 @@
     v: 0
     w: 5
     Total: 58
-    'LIghthouse test': ""
 -
     State: Virginia
     'System Name': eVA
@@ -2223,7 +2171,6 @@
     v: 0
     w: 0
     Total: 42
-    'LIghthouse test': ""
 -
     State: Washington
     'System Name': WEBS
@@ -2265,7 +2212,6 @@
     v: 0
     w: 0
     Total: 0
-    'LIghthouse test': ""
 -
     State: 'West Virginia'
     'System Name': wvOASIS
@@ -2307,7 +2253,6 @@
     v: 0
     w: 0
     Total: 15
-    'LIghthouse test': ""
 -
     State: Wisconsin
     'System Name': WISBuy
@@ -2349,7 +2294,6 @@
     v: 0
     w: 0
     Total: 42
-    'LIghthouse test': ""
 -
     State: Wyoming
     'System Name': 'Public Purchase'
@@ -2391,4 +2335,3 @@
     v: 0
     w: 0
     Total: 15
-    'LIghthouse test': ""
