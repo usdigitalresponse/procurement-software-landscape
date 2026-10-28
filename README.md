@@ -20,8 +20,11 @@ The site is published with GitHub Pages from the `main` branch. Changes pushed t
 
 ## Updating the data
 
-Edit `Website-Inventory.yaml` directly. Each record has three kinds of fields:
+Edit `Website-Inventory.yaml` directly. Each record has these kinds of fields:
 
+- **Description:** `State` (the government's name, including DC, the territories, and benchmark sites such as the United Kingdom), `System Name`, `System Type`, and `Platform` (with its `Vendor`).
+- **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
+- **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
 - **Links:** `Public Link`, `Notice list URL`, and `Single Posting URL`. Use `N/A` when there is none.
 - **Answers:** one field per metric, such as `Contact Name and Email: Yes`, or a Lighthouse score from 0 to 100. Use 0 for a Lighthouse score that could not be measured.
 - **Points:** one field per metric, `G1` through `P8`, plus `Total`.
@@ -52,8 +55,6 @@ When you change a record, keep these consistent:
 - Lighthouse points use these bands: 90 or more = 5, 80–89 = 4, 70–79 = 3, 60–69 = 2, 50–59 = 1, below 50 = 0.
 - Lighthouse points for the notice list or posting page are 0 unless that page has a direct URL.
 - `Total` must equal the sum of the 15 points fields.
-- `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
-- `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download.
 
 If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the inventory links each metric to its heading.
 

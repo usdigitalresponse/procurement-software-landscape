@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Procurement Website Inventory</title>
-<meta name="description" content="Scorecard of state and territory public procurement notice websites.">
+<meta name="description" content="Catalogs and scores the public solicitation websites of U.S. states, territories, and DC.">
 <style>
   :root {
     --ink: #1b1b1b; --muted: #565c65; --line: #dfe1e2; --bg: #fff; --panel: #f6f7f8;
@@ -511,7 +511,7 @@ async function init() {
   document.addEventListener("click", e => menus.forEach(m => { if (m.open && !m.contains(e.target)) m.open = false; }));
   document.querySelectorAll("th[data-key] button").forEach(b => b.addEventListener("click", () => {
     const key = b.parentElement.dataset.key;
-    sort = { key, dir: sort.key === key ? -sort.dir : (["state", "name", "type", "vendor", "rank"].includes(key) ? 1 : -1) };
+    sort = { key, dir: sort.key === key ? -sort.dir : (["state", "name", "vendor", "rank"].includes(key) ? 1 : -1) };
     render();
   }));
   $("#main").addEventListener("click", e => {
