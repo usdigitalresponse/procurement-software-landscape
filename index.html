@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Procurement Website Inventory</title>
+<title>Procurement Software Landscape</title>
 <meta name="description" content="Catalogs and scores the public solicitation websites of U.S. states, territories, and DC.">
 <style>
   :root {
@@ -114,12 +114,12 @@
 <header>
   <nav aria-label="Site">
     <ul class="site-nav">
-      <li><a href="./" aria-current="page">Inventory</a></li>
+      <li><a href="./" aria-current="page">Landscape</a></li>
       <li><a href="Scoring-Metrics.html">Scoring metrics</a></li>
       <li><a href="https://github.com/usdigitalresponse/procurement-software-landscape">GitHub</a></li>
     </ul>
   </nav>
-  <h1>Procurement Website Inventory <span class="beta">Beta</span></h1>
+  <h1>Procurement Software Landscape <span class="beta">Beta</span></h1>
   <p>How easy is it to find and use public bid notices on each state and territory procurement website? This site catalogs and scores the public solicitation websites of U.S. states, territories, and DC. Each site is scored out of 100 points using the <a href="Scoring-Metrics.html">scoring metrics</a>.</p>
 </header>
 
@@ -188,7 +188,7 @@
     <div class="actions">
       <button type="button" class="btn" id="expand-all">Expand all</button>
       <button type="button" class="btn" id="csv">Download CSV</button>
-      <a class="btn" href="Website-Inventory.yaml" download>Raw YAML</a>
+      <a class="btn" href="Procurement-Software-Landscape.yaml" download>Raw YAML</a>
     </div>
   </form>
 
@@ -220,14 +220,14 @@
 </main>
 
 <footer>
-  <p>A <a href="https://www.usdigitalresponse.org/">U.S. Digital Response</a> project. Data: <a href="Website-Inventory.yaml">Website-Inventory.yaml</a><span id="updated"></span>.</p>
+  <p>A <a href="https://www.usdigitalresponse.org/">U.S. Digital Response</a> project. Data: <a href="Procurement-Software-Landscape.yaml">Procurement-Software-Landscape.yaml</a><span id="updated"></span>.</p>
   <p>Lighthouse scores are 0–100 from <a href="https://developer.chrome.com/docs/lighthouse/overview">Google Lighthouse</a>; "Not tested" means the page could not be tested.</p>
   <p>See something wrong? <a href="https://github.com/usdigitalresponse/procurement-software-landscape/issues/new">Report a correction on GitHub</a>.</p>
 </footer>
 
 <script src="assets/js/js-yaml.min.js"></script>
 <script>
-const DATA_URL = "Website-Inventory.yaml";
+const DATA_URL = "Procurement-Software-Landscape.yaml";
 
 // Score fields in the YAML: G = General, N = Notices list, P = Individual posting.
 const CRITERIA = [
@@ -424,7 +424,7 @@ function toCsv() {
   const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public Link"], d.raw["Notices list URL"], d.raw["Single Posting URL"],
     ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total, d.notes.join("; ")].map(q).join(","));
   const blob = new Blob([[cols.map(q).join(","), ...lines].join("\r\n")], { type: "text/csv" });
-  const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "website-inventory.csv" });
+  const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "procurement-software-landscape.csv" });
   a.click();
   URL.revokeObjectURL(a.href);
 }
@@ -475,7 +475,7 @@ async function init() {
     benchmarks = all.filter(d => d.benchmark);
     showLastUpdated();
   } catch (e) {
-    $("#main").innerHTML = `<div class="error" role="alert"><strong>Could not load the inventory.</strong> ${esc(e.message)}</div>`;
+    $("#main").innerHTML = `<div class="error" role="alert"><strong>Could not load the landscape.</strong> ${esc(e.message)}</div>`;
     return;
   }
   // Competition ranking: ties share a rank.

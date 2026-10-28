@@ -2,7 +2,7 @@
 
 This project evaluates and scores the websites that state and territorial government procurement agencies use to publicly advertise contracting opportunities, like requests for proposals (RFPs) and invitations to bid (ITBs), to potential vendors and the public.
 
-**View the inventory: https://usdigitalresponse.github.io/procurement-software-landscape/**
+**View the landscape: https://usdigitalresponse.github.io/procurement-software-landscape/**
 
 Each site is scored out of 100 points on whether its notices are easy to find, share, and use: direct links to the notices list and to individual postings, contact details, project summaries, data exports, access to documents without registration, and Google Lighthouse performance and accessibility. See [Scoring-Metrics.md](./Scoring-Metrics.md) for what each metric means, how it is scored, and why it matters.
 
@@ -10,9 +10,9 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 
 | File | Purpose |
 |---|---|
-| [`Website-Inventory.yaml`](./Website-Inventory.yaml) | The data: one record per state or territory, with links, answers to each metric, and points. |
+| [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per state or territory, with links, answers to each metric, and points. |
 | [`Scoring-Metrics.md`](./Scoring-Metrics.md) | The scoring methodology, published as the site's Scoring metrics page. |
-| [`index.html`](./index.html) | The inventory page. It reads `Website-Inventory.yaml` in the browser, so there is no build step. |
+| [`index.html`](./index.html) | The landscape page. It reads `Procurement-Software-Landscape.yaml` in the browser, so there is no build step. |
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
 
@@ -20,7 +20,7 @@ The site is published with GitHub Pages from the `main` branch. Changes pushed t
 
 ## Updating the data
 
-Edit `Website-Inventory.yaml` directly. Each record has these kinds of fields:
+Edit `Procurement-Software-Landscape.yaml` directly. Each record has these kinds of fields:
 
 - **Description:** `State` (the government's name, including DC, the territories, and benchmark sites such as the United Kingdom), `System Name`, `System Type`, and `Platform` (with its `Vendor`).
 - **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
@@ -56,11 +56,11 @@ When you change a record, keep these consistent:
 - Lighthouse points for the notices list or posting page are 0 unless that page has a direct URL.
 - `Total` must equal the sum of the 15 points fields.
 
-If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the inventory links each metric to its heading.
+If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the landscape page links each metric to its heading.
 
 ## Previewing locally
 
-The inventory page loads the data with `fetch`, so it needs to be served over HTTP rather than opened as a file. From the repository folder, run any static file server, for example:
+The landscape page loads the data with `fetch`, so it needs to be served over HTTP rather than opened as a file. From the repository folder, run any static file server, for example:
 
 ```bash
 python -m http.server 8000
