@@ -51,6 +51,9 @@
   .metric-row:not(.metric-head):hover { background: #f0f7fd; }
   .metric-head { font-weight: 700; font-size: .8rem; color: var(--muted); text-align: center; }
   .controls .menu-panel input { min-width: 0; margin: 0 auto; width: 1rem; height: 1rem; }
+  .controls .check-list label { flex-direction: row; align-items: center; gap: .5rem; font-size: .92rem; font-weight: 400; padding: .15rem 0; }
+  .controls .check-list input { margin: 0; flex: none; }
+  .menu-clear { margin-top: .5rem; }
   .controls .actions { margin-left: auto; display: flex; gap: .5rem; }
   button.btn, a.btn { font: inherit; font-size: .9rem; padding: .45rem .8rem; border-radius: .25rem; border: 1px solid var(--accent); background: #fff; color: var(--accent); cursor: pointer; text-decoration: none; }
   button.btn:hover, a.btn:hover { background: var(--accent); color: #fff; }
@@ -146,18 +149,28 @@
     <label>Search
       <input type="search" id="q" placeholder="State, system, or vendor">
     </label>
-    <label>System type
-      <select id="type"><option value="">All types</option></select>
-    </label>
-    <label>Vendor
-      <select id="vendor"><option value="">All vendors</option></select>
-    </label>
-    <label>Minimum score
-      <select id="min">
-        <option value="0">Any</option><option value="25">25+</option><option value="50">50+</option>
-        <option value="75">75+</option><option value="90">90+</option>
-      </select>
-    </label>
+    <div class="field">
+      <span aria-hidden="true">System type</span>
+      <details class="menu" id="type-menu">
+        <summary><span class="sr-only">System type: </span><span id="type-summary">All types</span></summary>
+        <div class="menu-panel">
+          <p>Show sites with any of the checked types.</p>
+          <div class="check-list" id="type-list"></div>
+          <button type="button" class="btn menu-clear">Clear</button>
+        </div>
+      </details>
+    </div>
+    <div class="field">
+      <span aria-hidden="true">Vendor</span>
+      <details class="menu" id="vendor-menu">
+        <summary><span class="sr-only">Vendor: </span><span id="vendor-summary">All vendors</span></summary>
+        <div class="menu-panel">
+          <p>Show sites that use any of the checked vendors.</p>
+          <div class="check-list" id="vendor-list"></div>
+          <button type="button" class="btn menu-clear">Clear</button>
+        </div>
+      </details>
+    </div>
     <div class="field">
       <span aria-hidden="true">Metrics</span>
       <details class="menu" id="metrics-menu">
@@ -166,7 +179,7 @@
           <p>Check <strong>Yes</strong> for sites that earn full points on a metric, or <strong>No</strong> for sites that don't. Sites must match every box you check.</p>
           <div class="metric-row metric-head" aria-hidden="true"><span></span><span>Yes</span><span>No</span></div>
           <div id="metric-list"></div>
-          <button type="button" class="btn" id="metrics-clear">Clear</button>
+          <button type="button" class="btn menu-clear">Clear</button>
         </div>
       </details>
     </div>
@@ -306,14 +319,28 @@ function detail(d) {
 
 function filtered() {
   const q = $("#q").value.trim().toLowerCase();
-  const type = $("#type").value, vendor = $("#vendor").value, min = +$("#min").value;
+  const types = checkedValues("type-list"), vendors = checkedValues("vendor-list");
   const metrics = checkedMetrics();
   return rows.filter(d =>
     (!q || [d.state, d.name, d.vendor, d.type].join(" ").toLowerCase().includes(q)) &&
-    (!type || d.type.split(/,\s*/).includes(type)) &&
-    (!vendor || d.vendor.split(/;\s*/).includes(vendor)) &&
-    metrics.every(({ c, yes }) => (num(d.raw[c.key]) >= c.max) === yes) &&
-    d.total >= min);
+    (!types.length || d.type.split(/,\s*/).some(t => types.includes(t))) &&
+    (!vendors.length || d.vendor.split(/;\s*/).some(v => vendors.includes(v))) &&
+    metrics.every(({ c, yes }) => (num(d.raw[c.key]) >= c.max) === yes));
+}
+
+const checkedValues = id => [...document.querySelectorAll(`#${id} input:checked`)].map(i => i.value);
+
+function fillChecks(id, values) {
+  $("#" + id).innerHTML = [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b))
+    .map(v => `<label><input type="checkbox" value="${esc(v)}"> ${esc(v)}</label>`).join("");
+}
+
+function updateSummaries() {
+  const label = (id, all) => { const v = checkedValues(id); return v.length === 1 ? v[0] : v.length ? `${v.length} selected` : all; };
+  $("#type-summary").textContent = label("type-list", "All types");
+  $("#vendor-summary").textContent = label("vendor-list", "All vendors");
+  const n = checkedMetrics().length;
+  $("#metrics-summary").textContent = n ? `${n} selected` : "Any";
 }
 
 // Checked metric boxes as { c: criterion, yes: true for "Yes" or false for "No" }.
@@ -329,12 +356,10 @@ function fillMetrics() {
     `</fieldset>`).join("");
 }
 
-function updateMetricsSummary(e) {
-  // Yes and No for the same metric can't both be checked.
-  const i = e?.target;
-  if (i?.checked) document.querySelector(`#metric-list input[data-key="${i.dataset.key}"]:not([value="${i.value}"])`).checked = false;
-  const n = checkedMetrics().length;
-  $("#metrics-summary").textContent = n ? `${n} selected` : "Any";
+// Yes and No for the same metric can't both be checked.
+function exclusiveYesNo(e) {
+  const i = e.target;
+  if (i.checked) document.querySelector(`#metric-list input[data-key="${i.dataset.key}"]:not([value="${i.value}"])`).checked = false;
 }
 
 function render() {
@@ -384,11 +409,6 @@ function stats() {
   ].map(([v, l]) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
 }
 
-function fillSelect(sel, values) {
-  [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b))
-    .forEach(v => sel.insertAdjacentHTML("beforeend", `<option>${esc(v)}</option>`));
-}
-
 function methodology() {
   $("#method").innerHTML = `<table><thead><tr><th>Section</th><th>Criterion</th><th class="num">Max points</th></tr></thead><tbody>` +
     CRITERIA.map(c => `<tr><td>${GROUPS[c.group]}</td><td>${critLink(c)}</td><td class="num">${c.max}</td></tr>`).join("") +
@@ -411,9 +431,8 @@ function toCsv() {
 function syncHash() {
   const p = new URLSearchParams();
   if ($("#q").value) p.set("q", $("#q").value);
-  if ($("#type").value) p.set("type", $("#type").value);
-  if ($("#vendor").value) p.set("vendor", $("#vendor").value);
-  if ($("#min").value !== "0") p.set("min", $("#min").value);
+  checkedValues("type-list").forEach(v => p.append("type", v));
+  checkedValues("vendor-list").forEach(v => p.append("vendor", v));
   // e.g. metrics=p,u,-w: full points on p and u, not on w.
   if (checkedMetrics().length) p.set("metrics", checkedMetrics().map(({ c, yes }) => (yes ? "" : "-") + c.key).join(","));
   if (open.size === 1) p.set("state", [...open][0]);
@@ -423,13 +442,12 @@ function syncHash() {
 function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   $("#q").value = p.get("q") || "";
-  $("#type").value = p.get("type") || "";
-  $("#vendor").value = p.get("vendor") || "";
-  $("#min").value = p.get("min") || "0";
+  document.querySelectorAll("#type-list input").forEach(i => i.checked = p.getAll("type").includes(i.value));
+  document.querySelectorAll("#vendor-list input").forEach(i => i.checked = p.getAll("vendor").includes(i.value));
   const keys = (p.get("metrics") || "").split(",");
   document.querySelectorAll("#metric-list input").forEach(i =>
     i.checked = keys.includes((i.value === "yes" ? "" : "-") + i.dataset.key));
-  updateMetricsSummary();
+  updateSummaries();
   if (p.get("state")) open.add(p.get("state"));
 }
 
@@ -460,8 +478,8 @@ async function init() {
   const byTotal = [...rows].sort((a, b) => b.total - a.total);
   byTotal.forEach((d, i) => d.rank = i && d.total === byTotal[i - 1].total ? byTotal[i - 1].rank : i + 1);
 
-  fillSelect($("#type"), rows.flatMap(d => d.type.split(/,\s*/)));
-  fillSelect($("#vendor"), rows.flatMap(d => d.vendor.split(/;\s*/)));
+  fillChecks("type-list", rows.flatMap(d => d.type.split(/,\s*/)));
+  fillChecks("vendor-list", rows.flatMap(d => d.vendor.split(/;\s*/)));
   fillMetrics();
   $("#benchmark").hidden = !benchmarks.length;
   readHash();
@@ -470,20 +488,23 @@ async function init() {
   render();
   if (open.size) document.getElementById("d-" + [...open][0].replace(/\W+/g, "-"))?.scrollIntoView();
 
-  $("#metric-list").addEventListener("input", updateMetricsSummary);
-  ["#q", "#type", "#vendor", "#min", "#metric-list"].forEach(s => $(s).addEventListener("input", () => { render(); syncHash(); }));
-  $("#metrics-clear").addEventListener("click", () => {
-    document.querySelectorAll("#metric-list input").forEach(i => i.checked = false);
-    updateMetricsSummary();
-    render();
-    syncHash();
+  $("#metric-list").addEventListener("input", exclusiveYesNo);
+  ["#q", "#type-list", "#vendor-list", "#metric-list"].forEach(s => $(s).addEventListener("input", () => { updateSummaries(); render(); syncHash(); }));
+  const menus = document.querySelectorAll(".menu");
+  menus.forEach(menu => {
+    menu.querySelector(".menu-clear").addEventListener("click", () => {
+      menu.querySelectorAll("input").forEach(i => i.checked = false);
+      updateSummaries();
+      render();
+      syncHash();
+    });
+    // Only one menu open at a time; close on Escape or a click outside it.
+    menu.addEventListener("toggle", () => { if (menu.open) menus.forEach(m => m !== menu && (m.open = false)); });
+    menu.addEventListener("keydown", e => {
+      if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+    });
   });
-  // Close the metrics menu on Escape or a click outside it.
-  const menu = $("#metrics-menu");
-  document.addEventListener("click", e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
-  menu.addEventListener("keydown", e => {
-    if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
-  });
+  document.addEventListener("click", e => menus.forEach(m => { if (m.open && !m.contains(e.target)) m.open = false; }));
   document.querySelectorAll("th[data-key] button").forEach(b => b.addEventListener("click", () => {
     const key = b.parentElement.dataset.key;
     sort = { key, dir: sort.key === key ? -sort.dir : (["state", "name", "type", "vendor", "rank"].includes(key) ? 1 : -1) };
