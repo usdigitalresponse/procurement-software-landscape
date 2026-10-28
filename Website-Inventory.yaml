@@ -1541,8 +1541,8 @@
     'Project Summary': No
     'Data Export of Posting?': No
     'Documents without registration?': Yes
-    'Lighthouse Performance, Posting': 85
-    'Lighthouse Accessibility, Posting': 98
+    'Lighthouse Performance, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     G1: 0
     G2: 0
     N1: 10
@@ -1766,7 +1766,7 @@
     Platform: {Vendor: 'Proactis WebProcure'}
     'Public Link': 'https://ridop.ri.gov/ocean-state-procures-osp'
     'Notice list URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
-    'Single Posting URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
+    'Single Posting URL': N/A
     Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
