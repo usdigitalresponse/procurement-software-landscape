@@ -84,7 +84,7 @@ Please see [`CONTRIBUTING.md`](./CONTRIBUTING.md) to find out how you can help.
 
 ## License & Copyright
 
-Copyright (C) 2022 U.S. Digital Response (USDR)
+Copyright (C) 2022–2026 U.S. Digital Response (USDR)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this software except in compliance with the License. You may obtain a copy of the License at:
 
