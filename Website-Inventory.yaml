@@ -131,7 +131,7 @@
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
-    'Includes local listings': ""
+    'Includes local listings': N/A
     'Data Export of Notice List?': No
     'Lighthouse Performance, Notices': 87
     'Lighthouse Accessibility, Notices': 84
@@ -411,7 +411,7 @@
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
-    'Includes local listings': ""
+    'Includes local listings': N/A
     'Data Export of Notice List?': Yes
     'Lighthouse Performance, Notices': 69
     'Lighthouse Accessibility, Notices': 91
@@ -531,7 +531,7 @@
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
-    'Includes local listings': ""
+    'Includes local listings': N/A
     'Data Export of Notice List?': No
     'Lighthouse Performance, Notices': 97
     'Lighthouse Accessibility, Notices': 79
@@ -1531,7 +1531,7 @@
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
-    'Includes local listings': ""
+    'Includes local listings': N/A
     'Data Export of Notice List?': No
     'Lighthouse Performance, Notices': 87
     'Lighthouse Accessibility, Notices': 96
@@ -1731,7 +1731,7 @@
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
-    'Includes local listings': ""
+    'Includes local listings': N/A
     'Data Export of Notice List?': No
     'Lighthouse Performance, Notices': 79
     'Lighthouse Accessibility, Notices': 96
@@ -1971,7 +1971,7 @@
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
-    'Includes local listings': ""
+    'Includes local listings': N/A
     'Data Export of Notice List?': Yes
     'Lighthouse Performance, Notices': 93
     'Lighthouse Accessibility, Notices': 100
