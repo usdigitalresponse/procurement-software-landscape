@@ -88,6 +88,7 @@
   .pill.yes { background: var(--good-bg); color: #216e1f; }
   .pill.no { background: var(--bad-bg); color: #8b0a03; }
   .pill.part { background: var(--mid-bg); color: #6b5100; }
+  .detail-grid p.system { margin: 0 0 1rem; font-size: .92rem; }
   .links dt { font-weight: 600; font-size: .875rem; color: var(--muted); }
   .links dd { margin: 0 0 .6rem; word-break: break-all; font-size: .92rem; }
   .note { background: var(--mid-bg); border-left: 4px solid var(--mid); padding: .5rem .75rem; margin-top: .75rem; font-size: .92rem; }
@@ -135,7 +136,7 @@
         <caption class="sr-only">Benchmark sites. Select a site to see its scoring detail.</caption>
         <thead>
           <tr>
-            <th class="num">Rank</th><th>Site</th><th class="hide-sm">System</th><th class="hide-sm">Type</th><th class="hide-sm">Vendor</th>
+            <th class="num">Rank</th><th>Government</th><th class="hide-sm">System</th><th class="hide-sm">Type</th><th class="hide-sm">Vendor</th>
             <th class="num hide-sm">Notice list</th><th class="num hide-sm">Posting</th><th class="num">Total</th>
           </tr>
         </thead>
@@ -147,7 +148,7 @@
   <h2 class="section" id="sites-heading">All sites</h2>
   <form class="controls" role="search" aria-labelledby="sites-heading" onsubmit="return false">
     <label>Search
-      <input type="search" id="q" placeholder="State, system, or vendor">
+      <input type="search" id="q" placeholder="Government, system, or vendor">
     </label>
     <div class="field">
       <span aria-hidden="true">System type</span>
@@ -194,11 +195,11 @@
 
   <div class="table-wrap">
     <table id="tbl">
-      <caption class="sr-only">Procurement websites by state, sortable. Select a state to see its scoring detail.</caption>
+      <caption class="sr-only">Procurement websites by government, sortable. Select a government to see its scoring detail.</caption>
       <thead>
         <tr>
           <th data-key="rank" class="num"><button type="button">Rank</button></th>
-          <th data-key="state"><button type="button">State</button></th>
+          <th data-key="state"><button type="button">Government</button></th>
           <th data-key="name" class="hide-sm"><button type="button">System</button></th>
           <th data-key="type" class="hide-sm"><button type="button">Type</button></th>
           <th data-key="vendor" class="hide-sm"><button type="button">Vendor</button></th>
@@ -307,12 +308,12 @@ function detail(d) {
     return `<div><h3>${GROUPS[g]} <small>${d[g + "Score"]} / ${groupMax(g)} pts</small></h3><ul class="crit">${items}</ul></div>`;
   }).join("");
   return `<div class="detail-grid">
-    <div><h3>Links</h3><dl class="links">
+    <div><p class="system"><strong>Government:</strong> ${esc(d.state)}<br><strong>Total:</strong> ${d.total} / 100 pts<br><strong>System:</strong> ${esc(d.name || "—")}<br><strong>Type:</strong> ${esc(d.type || "—")}<br><strong>Vendor:</strong> ${esc(d.vendor || "—")}</p>
+    <h3>Links</h3><dl class="links">
       ${linkRow("Public site", r["Public Link"])}
       ${linkRow("Notice list", r["Notice list URL"])}
       ${linkRow("Sample posting", r["Single Posting URL"])}
     </dl>
-    <p><strong>System:</strong> ${esc(d.name || "—")}<br><strong>Type:</strong> ${esc(d.type || "—")}<br><strong>Vendor:</strong> ${esc(d.vendor || "—")}</p>
     ${d.notes.map(n => `<div class="note">${linkify(n)}</div>`).join("")}
     </div>${groups}</div>`;
 }
@@ -417,7 +418,7 @@ function methodology() {
 }
 
 function toCsv() {
-  const cols = ["Rank", "State", "System Name", "System Type", "Vendor", "Public Link", "Notice list URL", "Single Posting URL",
+  const cols = ["Rank", "Government", "System Name", "System Type", "Vendor", "Public Link", "Notice list URL", "Single Posting URL",
     ...CRITERIA.map(c => c.field), ...CRITERIA.map(c => `${GROUPS[c.group]}: ${c.label} (pts)`), "Total", "Notes"];
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public Link"], d.raw["Notice list URL"], d.raw["Single Posting URL"],
