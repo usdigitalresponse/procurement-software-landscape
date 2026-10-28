@@ -148,22 +148,24 @@ const DATA_URL = "Website-Inventory.yaml";
 
 // Score columns in the YAML (I..w) map, in order, to these criteria.
 const CRITERIA = [
-  { group: "general", key: "I", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?" },
-  { group: "general", key: "j", max: 5,  label: "Published data standard", field: "Published Data Standard?" },
-  { group: "notice",  key: "k", max: 10, label: "Direct URL to notice list", field: "Direct URL to Notice List? (10 pts)" },
-  { group: "notice",  key: "l", max: 5,  label: "Includes local listings", field: "Includes local listings" },
-  { group: "notice",  key: "m", max: 5,  label: "Data export of notice list", field: "Data Export of Notice List?" },
-  { group: "notice",  key: "n", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices" },
-  { group: "notice",  key: "o", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices" },
-  { group: "posting", key: "p", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)" },
-  { group: "posting", key: "q", max: 5,  label: "Individual posting page", field: "Individual Posting Page?" },
-  { group: "posting", key: "r", max: 5,  label: "Contact name and email", field: "Contact Name and Email" },
-  { group: "posting", key: "s", max: 5,  label: "Project summary", field: "Project Summary" },
-  { group: "posting", key: "t", max: 5,  label: "Data export of posting", field: "Data Export of Posting?" },
-  { group: "posting", key: "u", max: 5,  label: "Documents without registration", field: "Documents without registration?" },
-  { group: "posting", key: "v", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting" },
-  { group: "posting", key: "w", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessability, Posting" },
+  { group: "general", key: "I", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use" },
+  { group: "general", key: "j", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published" },
+  { group: "notice",  key: "k", max: 10, label: "Direct URL to notice list", field: "Direct URL to Notice List? (10 pts)", anchor: "solicitation-posting-notice-list-has-a-direct-url-10-pts" },
+  { group: "notice",  key: "l", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings" },
+  { group: "notice",  key: "m", max: 5,  label: "Data export of notice list", field: "Data Export of Notice List?", anchor: "data-export-of-notices-list" },
+  { group: "notice",  key: "n", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices", anchor: "lighthouse-performance-for-the-notices-list" },
+  { group: "notice",  key: "o", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices", anchor: "lighthouse-accessibility-for-the-notices-list" },
+  { group: "posting", key: "p", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)", anchor: "direct-url-to-an-individual-posting-25-pts" },
+  { group: "posting", key: "q", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page" },
+  { group: "posting", key: "r", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email" },
+  { group: "posting", key: "s", max: 5,  label: "Project summary", field: "Project Summary", anchor: "project-summary" },
+  { group: "posting", key: "t", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting" },
+  { group: "posting", key: "u", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration" },
+  { group: "posting", key: "v", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page" },
+  { group: "posting", key: "w", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessability, Posting", anchor: "lighthouse-accessibility-for-the-posting-page" },
 ];
+const METRICS_URL = "Scoring-Metrics.html";
+const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;
 const GROUPS = { general: "General", notice: "Notice list", posting: "Individual posting" };
 const groupMax = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + c.max, 0);
 
@@ -214,7 +216,7 @@ function detail(d) {
   const groups = Object.keys(GROUPS).map(g => {
     const items = CRITERIA.filter(c => c.group === g).map(c => {
       const pts = num(r[c.key]);
-      return `<li><span>${c.label}</span><span>${answerPill(r[c.field], pts, c.max)} <strong>${pts}</strong>/${c.max}</span></li>`;
+      return `<li><span>${critLink(c)}</span><span>${answerPill(r[c.field], pts, c.max)} <strong>${pts}</strong>/${c.max}</span></li>`;
     }).join("");
     return `<div><h3>${GROUPS[g]} <small>${d[g + "Score"]} / ${groupMax(g)} pts</small></h3><ul class="crit">${items}</ul></div>`;
   }).join("");
@@ -290,9 +292,9 @@ function fillSelect(sel, values) {
 
 function methodology() {
   $("#method").innerHTML = `<table><thead><tr><th>Section</th><th>Criterion</th><th class="num">Max points</th></tr></thead><tbody>` +
-    CRITERIA.map(c => `<tr><td>${GROUPS[c.group]}</td><td>${c.label}</td><td class="num">${c.max}</td></tr>`).join("") +
+    CRITERIA.map(c => `<tr><td>${GROUPS[c.group]}</td><td>${critLink(c)}</td><td class="num">${c.max}</td></tr>`).join("") +
     `<tr><th colspan="2">Total</th><th class="num">${CRITERIA.reduce((a, c) => a + c.max, 0)}</th></tr></tbody></table>` +
-    `<p>Lighthouse criteria award points on a sliding scale based on the page's Lighthouse score.</p>`;
+    `<p>Lighthouse criteria award points on a sliding scale based on the page's Lighthouse score. See the <a href="${METRICS_URL}">full scoring metrics</a> for what each criterion means and why it matters.</p>`;
 }
 
 function toCsv() {
