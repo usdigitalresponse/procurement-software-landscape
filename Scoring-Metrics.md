@@ -22,7 +22,7 @@ Ideally, every state has a web design system implemented, so that collaborativel
 
 A published data standard is a public record of the fields and information that a government will collect and publish related to a government program or process. In this instance, we are specifically referring to a data standard for solicitation postings. A government can create their own data standard and publish it somewhere, or preferably they adopt the [Open Contracting Data Standard (OCDS)](https://www.open-contracting.org/data-standard/). The [UK’s find a tender service](https://www.find-tender.service.gov.uk/Search/Results) is an example of the OCDS in use.
 
-This is a yes-or-no binary metric worth five (5) points. Yes indicates that a government has adopted the OCSD or publishes their own data standard related to solicitation postings.
+This is a yes-or-no binary metric worth five (5) points. Yes indicates that a government has adopted the OCDS or publishes their own data standard related to solicitation postings.
 
 Published data standards make data more useful to researchers and efforts to match up data from multiple sources. This matters in making software applications modular and interoperable with other related software, necessary for automating processes and improving service delivery. 
 
@@ -36,7 +36,7 @@ This is a yes-or-no binary metric worth ten (10) points. Yes indicates that a go
    
 Public notice of intended government actions are an important part of how a government ensures actions are transparent, trustworthy, and defensible. Procurement is built on the idea of full and open competition, where all responsible sources will be considered. An easily sharable, bookmarkable, and even crawlable notices list makes it easier for the opportunity to be discovered by new vendors. This metric is given extra weight because competition and vendor discovery is so vital to the goals of a notices list.
 
-Ideally, every government’s notices list website URL is something easy like [state.gov/solicitations](http://not_real) so that government contracting opportunities are as easy as possible for potential vendors and the public to find.
+Ideally, every government’s notices list website URL is something easy like `state.gov/solicitations` so that government contracting opportunities are as easy as possible for potential vendors and the public to find.
 
 ### Includes local listings	
 
@@ -76,13 +76,13 @@ This is a graded metric worth five (5) points derived from the Lighthouse access
 
 This metric is dependent on the notices list having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each site was tested manually using the features built into Google Chrome. 
 
-Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good performance is important to giving users a positive experience that loads quickly and renders correctly. 	
+Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good accessibility ensures that everyone, including people who use screen readers, keyboard navigation, or other assistive technology, can find and use public information about government contracting opportunities. 
 
 ### Direct URL to an individual posting (25 pts)
 
-This metric is focused specifically on the webpage for an individual solicitation posting (like an ITB or RFP). When a webpage has a direct URL it can be shared easily with other people, scrapped by AI or other information services, and generally circulated more easily.
+This metric is focused specifically on the webpage for an individual solicitation posting (like an ITB or RFP). When a webpage has a direct URL it can be shared easily with other people, scraped by AI or other information services, and generally circulated more easily.
 
-This is a yes-or-no binary metric worth twenty five (25) points. Yes indicates that a government (or a vendor on their behalf) maintains a public webpage for an individual solicitation posting notice and that the URL of that website leads directly to the list without additional navigation by the user. This is the most important metric, worth 25% of the available points.
+This is a yes-or-no binary metric worth twenty five (25) points. Yes indicates that a government (or a vendor on their behalf) maintains a public webpage for an individual solicitation posting notice and that the URL of that webpage leads directly to the posting without additional navigation by the user. This is the most important metric, worth 25% of the available points.
 
 This metric receives the most weight because for government procurement, advertising the solicitation publicly is the underlying thing that demonstrates it is fair. Giving interested persons equal opportunity to compete for the government’s business is the foundation of public procurement. The point of the notice is to be distributed and discovered, so it should be as easy as possible to do so. 
 
@@ -90,7 +90,7 @@ Governments often pay for advertising their opportunities and vendors pay third-
    
 Gone are the days where potential vendors find solicitation opportunities in the local newspaper’s public notices section, governments can and should make information directly available online. Public notice of intended government actions are an important part of how a government ensures actions are transparent, trustworthy, and defensible. Procurement is built on the idea of full and open competition, where all responsible sources will be considered. An easily sharable, bookmarkable, and even crawlable notice makes it easier for the opportunity to be discovered by new vendors. Public notice of a solicitation is often a legal requirement, where the intended purpose is the transparency and advertising of the government action being considered. An easily found, easily shared URL for a specific opportunity also helps other governments identify best practices and share information. 
 
-Ideally, every government’s notices list website URL is something easy like [state.gov/solicitations/RFP-2026-17-case-management-software](http://not_real) so that government contracting opportunities are as easy as possible for potential vendors and the public to find. Additionally, we would like to see public digital records of solicitations continue to exist, in alignment with government records retention schedules, with links to related records like award information, contract records, and payment records that are also public; but documenting that is beyond the scope of this project.
+Ideally, every individual solicitation posting has a URL that is something easy like `state.gov/solicitations/RFP-2026-17-case-management-software` so that government contracting opportunities are as easy as possible for potential vendors and the public to find. Additionally, we would like to see public digital records of solicitations continue to exist, in alignment with government records retention schedules, with links to related records like award information, contract records, and payment records that are also public; but documenting that is beyond the scope of this project.
 
 ### Individual posting page
 
@@ -98,7 +98,7 @@ This metric is focused specifically on the existence of a webpage for an individ
 
 This is a yes-or-no binary metric worth five (5) points. Yes indicates that a government (or a vendor on their behalf) maintains a public webpage for an individual posting. A yes on this metric includes pages that do not have an individual URL but can be navigated to manually by a user. A webpage that requires registration and login to access a posting does not meet this metric. 
 
-This further differentiates those agencies who do not have a direct URL, but do have an individual public posting page for solicitations. Agencies that do not meet this metric are smaller populations with less digital services generally or agencies that have made a poor decision to put the information behind a registration and login process. Putting the individual posting page behind a registration process creates an unnecessary barrier for small or new vendors to discover an opportunity, further entrenching large and existing vendors with the resources and knowledge to navigate poorly designed services.
+This further differentiates those agencies who do not have a direct URL, but do have an individual public posting page for solicitations. Agencies that do not meet this metric are smaller populations with less digital services generally or agencies that have chosen to put the information behind a registration and login process. Putting the individual posting page behind a registration process creates an unnecessary barrier for small or new vendors to discover an opportunity, further entrenching large and existing vendors with the resources and knowledge to navigate poorly designed services.
 
 ### Contact name and email
 
@@ -106,7 +106,7 @@ This metric looks at content on an individual posting webpage and determines if 
 
 This is a yes-or-no binary metric worth five (5) points. Yes indicates that the webpage for an individual posting includes the name and email address of the person responsible for conducting a solicitation. A posting must include both a name and an email address.
 
-It should be easy to get human assistance. Procurement processes often require that vendors communicate with a single point of contact during an active solicitation for reasons of equality and fairness. The government must uphold their side of that requirement by clearly providing that single point of contact. Email is the preferred method of communication for this purpose because it is in writing and a commonly used tool, but providing a phone number is encouraged as well. The person's name is necessary to create accountability for government actions and ensure inherently government functions are performed by qualified government officials. The public, media, researchers, and other governments may have a need to contact the government too. 
+It should be easy to get human assistance. Procurement processes often require that vendors communicate with a single point of contact during an active solicitation for reasons of equality and fairness. The government must uphold their side of that requirement by clearly providing that single point of contact. Email is the preferred method of communication for this purpose because it is in writing and a commonly used tool, but providing a phone number is encouraged as well. The person's name is necessary to create accountability for government actions and ensure inherently governmental functions are performed by qualified government officials. The public, media, researchers, and other governments may have a need to contact the government too. 
 
 ### Project summary	
 
@@ -156,4 +156,4 @@ This is a graded metric worth five (5) points derived from the Lighthouse access
 
 This metric is dependent on an individual solicitation posting having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each site was tested manually using the features built into Google Chrome. 
 
-Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good performance is important to giving users a positive experience that loads quickly and renders correctly. 
+Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good accessibility ensures that everyone, including people who use screen readers, keyboard navigation, or other assistive technology, can find and use public information about government contracting opportunities. 

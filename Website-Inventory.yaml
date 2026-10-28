@@ -69,7 +69,7 @@
     k: 10
     l: 0
     m: 0
-    n: 3
+    n: 4
     o: 4
     p: 25
     q: 5
@@ -79,7 +79,7 @@
     u: 5
     v: 3
     w: 5
-    Total: 65
+    Total: 66
 -
     State: Alaska
     'System Name': IRIS
@@ -200,9 +200,9 @@
     s: 5
     t: 0
     u: 5
-    v: 3
+    v: 4
     w: 4
-    Total: 76
+    Total: 77
 -
     State: Arkansas
     'System Name': 'Bid Opportunities'
@@ -282,9 +282,9 @@
     s: 5
     t: 0
     u: 5
-    v: 2
+    v: 3
     w: 5
-    Total: 74
+    Total: 75
 -
     State: Colorado
     'System Name': 'CORE VSS'
@@ -405,9 +405,9 @@
     s: 0
     t: 0
     u: 5
-    v: 3
+    v: 4
     w: 5
-    Total: 77
+    Total: 78
 -
     State: 'District of Columbia'
     'System Name': 'Contracts and Procurement Transparency Portal'
@@ -520,7 +520,7 @@
     k: 10
     l: 5
     m: 0
-    n: 4
+    n: 5
     o: 5
     p: 25
     q: 5
@@ -530,7 +530,7 @@
     u: 5
     v: 4
     w: 5
-    Total: 78
+    Total: 79
 -
     State: Guam
     'System Name': 'Invitation for Bid'
@@ -808,7 +808,7 @@
     l: 0
     m: 0
     n: 1
-    o: 4
+    o: 5
     p: 0
     q: 5
     r: 5
@@ -817,7 +817,7 @@
     u: 5
     v: 0
     w: 0
-    Total: 35
+    Total: 36
 -
     State: Kentucky
     'System Name': 'Vendor Self Service'
@@ -889,7 +889,7 @@
     k: 10
     l: 5
     m: 0
-    n: 4
+    n: 5
     o: 5
     p: 0
     q: 0
@@ -899,7 +899,7 @@
     u: 5
     v: 0
     w: 0
-    Total: 34
+    Total: 35
 -
     State: Maine
     'System Name': MeVSS
@@ -1922,9 +1922,9 @@
     s: 5
     t: 0
     u: 5
-    v: 4
+    v: 5
     w: 5
-    Total: 66
+    Total: 67
 -
     State: Tennessee
     'System Name': Edison
@@ -2079,7 +2079,7 @@
     l: 5
     m: 0
     n: 3
-    o: 4
+    o: 5
     p: 25
     q: 5
     r: 0
@@ -2088,7 +2088,7 @@
     u: 5
     v: 5
     w: 5
-    Total: 72
+    Total: 73
 -
     State: Vermont
     'System Name': VTBuys
