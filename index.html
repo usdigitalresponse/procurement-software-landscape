@@ -231,21 +231,21 @@ const DATA_URL = "Procurement-Software-Landscape.yaml";
 
 // Score fields in the YAML: G = General, N = Notices list, P = Individual posting.
 const CRITERIA = [
-  { group: "general", key: "G1", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use" },
-  { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published" },
+  { group: "general", key: "G1", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use-5-pts" },
+  { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published-5-pts" },
   { group: "notice",  key: "N1", max: 10, label: "Direct URL to notices list", field: "Direct URL to Notices List? (10 pts)", anchor: "solicitation-posting-notices-list-has-a-direct-url-10-pts" },
-  { group: "notice",  key: "N2", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings" },
-  { group: "notice",  key: "N3", max: 5,  label: "Data export of notices list", field: "Data Export of Notices List?", anchor: "data-export-of-notices-list" },
-  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices List", anchor: "lighthouse-performance-for-the-notices-list" },
-  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices List", anchor: "lighthouse-accessibility-for-the-notices-list" },
+  { group: "notice",  key: "N2", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings-5-pts" },
+  { group: "notice",  key: "N3", max: 5,  label: "Data export of notices list", field: "Data Export of Notices List?", anchor: "data-export-of-notices-list-5-pts" },
+  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices List", anchor: "lighthouse-performance-for-the-notices-list-5-pts" },
+  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices List", anchor: "lighthouse-accessibility-for-the-notices-list-5-pts" },
   { group: "posting", key: "P1", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)", anchor: "direct-url-to-an-individual-posting-25-pts" },
-  { group: "posting", key: "P2", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page" },
-  { group: "posting", key: "P3", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email" },
-  { group: "posting", key: "P4", max: 5,  label: "Project summary", field: "Project Summary", anchor: "project-summary" },
-  { group: "posting", key: "P5", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting" },
-  { group: "posting", key: "P6", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration" },
-  { group: "posting", key: "P7", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page" },
-  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Posting", anchor: "lighthouse-accessibility-for-the-posting-page" },
+  { group: "posting", key: "P2", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page-5-pts" },
+  { group: "posting", key: "P3", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email-5-pts" },
+  { group: "posting", key: "P4", max: 5,  label: "Project summary", field: "Project Summary", anchor: "project-summary-5-pts" },
+  { group: "posting", key: "P5", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting-5-pts" },
+  { group: "posting", key: "P6", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration-5-pts" },
+  { group: "posting", key: "P7", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page-5-pts" },
+  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Posting", anchor: "lighthouse-accessibility-for-the-posting-page-5-pts" },
 ];
 const METRICS_URL = "Scoring-Metrics.html";
 const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;

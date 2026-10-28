@@ -8,7 +8,7 @@ This evaluation only considers information that is publicly available, meaning t
 
 The total score available from all metrics is 100 points.
 
-### State web design system in use
+### State web design system in use (5 pts)
 
 A web design system (WDS) is a library of user interface components and visual style guides for websites operated by a government. The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) is an example of a web design system. The [Delaware bids website](https://mmp.delaware.gov/Bids/) is an example of a solicitation posting notices list website using a state WDS.
 
@@ -18,7 +18,7 @@ Use of a web design system helps create better services. A good WDS makes govern
 
 Ideally, every state has a web design system implemented, so that collaboratively developed, open source, or commercially acquired tools can be easily included without changing the overall user experience.  
 
-### Data standard is published	
+### Data standard is published (5 pts)
 
 A published data standard is a public record of the fields and information that a government will collect and publish related to a government program or process. In this instance, we are specifically referring to a data standard for solicitation postings. A government can create their own data standard and publish it somewhere, or preferably they adopt the [Open Contracting Data Standard (OCDS)](https://www.open-contracting.org/data-standard/). The [UK’s find a tender service](https://www.find-tender.service.gov.uk/Search/Results) is an example of the OCDS in use.
 
@@ -28,7 +28,7 @@ Published data standards make data more useful to researchers and efforts to mat
 
 Ideally, every government procurement agency adopts a universal standard like OCDS and flows that requirement down to their vendor systems, assisting the entire community in sharing information, comparing experiences, improving vendor performance, minimizing switching costs, and enabling data sharing. 
 
-### Solicitation posting notices list has a direct URL (10 pts)	
+### Solicitation posting notices list has a direct URL (10 pts)
 
 This metric is focused specifically on the webpage for the notices list for active competitive solicitation postings (like RFPs). When a webpage has a direct URL it can be shared easily with other people.
 
@@ -38,7 +38,7 @@ Public notice of intended government actions is an important part of how a gover
 
 Ideally, every government’s notices list website URL is something easy like `state.gov/solicitations` so that government contracting opportunities are as easy as possible for potential vendors and the public to find.
 
-### Includes local listings	
+### Includes local listings (5 pts)
 
 This metric looks at the solicitation posting notices list webpage and whether the notices included in the lists are exclusive to the executive agencies of a state government or if they also include notices from local jurisdictions like cities, counties, and districts. This metric examines a notices list webpage whether it has a dedicated URL or not.
 
@@ -48,7 +48,7 @@ Vendors with the potential to provide a good or service often would like to prov
 
 Ideally, every state level government operates a notices list website that performs at a level where local governments choose to participate in the system for the benefits that using it provides.
 
-### Data export of notices list	
+### Data export of notices list (5 pts)
 
 This metric looks at the solicitation posting notices list webpage to see if there is an easily accessible method of exporting the data included in the notices list for ease of collection by prospective vendors and interested third parties. 
 
@@ -58,7 +58,7 @@ Vendors work with multiple customers, both public and private, and benefit from 
 
 Ideally, every state government would provide direct machine readable access to notices list data, so that other governments, researchers, vendors, the public, and even AI agents can easily access and use it.
 
-### Lighthouse performance for the notices list
+### Lighthouse performance for the notices list (5 pts)
 
 [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) is an open source, automated tool used to audit web apps. This metric looks at the [Lighthouse performance score](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) of the solicitation posting notices list webpage. 
 
@@ -68,7 +68,7 @@ This metric is dependent on the notices list having a direct URL. If it does not
 
 Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good performance is important to giving users a positive experience that loads quickly and renders correctly. 
 
-### Lighthouse accessibility for the notices list
+### Lighthouse accessibility for the notices list (5 pts)
 
 [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) is an open source, automated tool used to audit web apps. This metric looks at the Lighthouse accessibility score of the solicitation posting notices list webpage. 
 
@@ -92,7 +92,7 @@ Gone are the days where potential vendors find solicitation opportunities in the
 
 Ideally, every individual solicitation posting has a URL that is something easy like `state.gov/solicitations/RFP-2026-17-case-management-software` so that government contracting opportunities are as easy as possible for potential vendors and the public to find. Additionally, we would like to see public digital records of solicitations continue to exist, in alignment with government records retention schedules, with links to related records like award information, contract records, and payment records that are also public; but documenting that is beyond the scope of this project.
 
-### Individual posting page
+### Individual posting page (5 pts)
 
 This metric is focused specifically on the existence of a webpage for an individual solicitation posting (like an ITB or RFP), regardless of whether it has a dedicated URL or not. 
 
@@ -100,7 +100,7 @@ This is a yes-or-no binary metric worth five (5) points. Yes indicates that a go
 
 This further differentiates those agencies who do not have a direct URL, but do have an individual public posting page for solicitations. Agencies that do not meet this metric are smaller populations with less digital services generally or agencies that have chosen to put the information behind a registration and login process. Putting the individual posting page behind a registration process creates an unnecessary barrier for small or new vendors to discover an opportunity, further entrenching large and existing vendors with the resources and knowledge to navigate poorly designed services.
 
-### Contact name and email
+### Contact name and email (5 pts)
 
 This metric looks at content on an individual posting webpage and determines if the information listed includes a name and email address as the point of contact for that solicitation. 
 
@@ -108,7 +108,7 @@ This is a yes-or-no binary metric worth five (5) points. Yes indicates that the 
 
 It should be easy to get human assistance. Procurement processes often require that vendors communicate with a single point of contact during an active solicitation for reasons of equality and fairness. The government must uphold their side of that requirement by clearly providing that single point of contact. Email is the preferred method of communication for this purpose because it is in writing and a commonly used tool, but providing a phone number is encouraged as well. The person's name is necessary to create accountability for government actions and ensure inherently governmental functions are performed by qualified government officials. The public, media, researchers, and other governments may have a need to contact the government too. 
 
-### Project summary	
+### Project summary (5 pts)
 
 This metric looks at content on an individual posting webpage and determines if the information listed includes a simple project summary that provides enough information for a potential vendor to determine if the solicitation is targeted at them and worth reviewing in full.  
 
@@ -118,7 +118,7 @@ A good service should have no dead ends, the service should consider the needs o
 
 A plain language description of what the agency needs—directly on the webpage, not buried in the attachments—is ideal for letting potential vendors determine quickly whether they are interested.
 
-### Data export of posting
+### Data export of posting (5 pts)
 
 This metric looks at the functionality of an individual posting webpage and determines if the service is capable of exporting the information included on the page, so that it can be consumed as data by another service, artificial intelligence, or various other use cases.
 
@@ -128,7 +128,7 @@ Vendors work with multiple customers, both public and private, and benefit from 
 
 Ideally, every state government would provide direct machine readable access to individual solicitation notices following consistent data standards like the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/latest/en/), so that other governments, researchers, vendors, the public, and even AI agents can easily access, use, and compare it.
 
-### Documents without registration
+### Documents without registration (5 pts)
 
 This metric looks at whether the state provides access to the full solicitation documents publicly, without requiring the user to register for an account or log in to a system in order to view or download solicitation documents.
 
@@ -138,7 +138,7 @@ Government solicitations are active public records that should be easily accessi
 
 Ideally, governments will modernize their solicitation processes and templates to include more of the project and contact information in a standard machine readable format and phase out the use of PDFs and Word files that do not meet accessible standards as the primary packaging for government solicitations. 
 
-### Lighthouse performance for the posting page
+### Lighthouse performance for the posting page (5 pts)
 
 [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) is an open source, automated tool used to audit web apps. This metric looks at the [Lighthouse performance score](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) of an individual solicitation posting notice webpage. 
 
@@ -148,7 +148,7 @@ This metric is dependent on an individual solicitation posting having a direct U
 
 Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good performance is important to giving users a positive experience that loads quickly and renders correctly. 
 
-### Lighthouse accessibility for the posting page
+### Lighthouse accessibility for the posting page (5 pts)
 
 [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) is an open source, automated tool used to audit web apps. This metric looks at the Lighthouse accessibility score of an individual solicitation posting notice webpage. 
 
