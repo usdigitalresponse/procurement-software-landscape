@@ -83,7 +83,7 @@
     Total: 66
 -
     State: Alaska
-    'System Name': IRIS
+    'System Name': 'IRIS (Integrated Resource Information System)'
     'System Type': ERP
     Platform: {Vendor: 'Advantage by CGI'}
     'Public Link': 'https://iris-vss.alaska.gov/'
@@ -165,7 +165,7 @@
     Total: 23
 -
     State: Arizona
-    'System Name': 'Arizona Procurement Portal (APP)'
+    'System Name': 'APP (Arizona Procurement Portal)'
     'System Type': eProcurement
     Platform: {Vendor: Ivalua}
     'Public Link': 'https://app.az.gov/page.aspx/en/usr/login?ReturnUrl=%2Fpage.aspx%2Fen%2Fbuy%2Fhomepage'
@@ -288,7 +288,7 @@
     Total: 75
 -
     State: Colorado
-    'System Name': 'CORE VSS'
+    'System Name': 'CORE VSS (Colorado Operations Resource Engine Vendor Self Service)'
     'System Type': ERP
     Platform: {Vendor: 'Advantage by CGI'}
     'Public Link': 'https://prd.co.cgiadvantage.com/PRDVSS1X1/Advantage4'
@@ -739,7 +739,7 @@
     Total: 27
 -
     State: Iowa
-    'System Name': IMPACS
+    'System Name': 'IMPACS (Iowa Management of Procurement and Contracts System)'
     'System Type': eProcurement
     Platform: {Vendor: Jaggaer}
     'Public Link': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
@@ -780,7 +780,7 @@
     Total: 24
 -
     State: Kansas
-    'System Name': SMART
+    'System Name': 'SMART (Statewide Management, Accounting and Reporting Tool)'
     'System Type': ERP
     Platform: {Vendor: 'Peoplesoft by Oracle'}
     'Public Link': 'https://smartweb.ks.gov/'
@@ -862,7 +862,7 @@
     Total: 15
 -
     State: Louisiana
-    'System Name': 'Louisiana Procurement and Contract Network (LaPAC)'
+    'System Name': 'LaPAC (Louisiana Procurement and Contract Network)'
     'System Type': ERP
     Platform: {Vendor: SAP}
     'Public Link': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm'
@@ -944,7 +944,7 @@
     Total: 15
 -
     State: Maryland
-    'System Name': eMMA
+    'System Name': 'eMMA (eMaryland Marketplace Advantage)'
     'System Type': eProcurement
     Platform: {Vendor: Ivalua}
     'Public Link': 'https://emma.maryland.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
@@ -1067,7 +1067,7 @@
     Total: 20
 -
     State: Minnesota
-    'System Name': SWIFT
+    'System Name': 'SWIFT (Statewide Integrated Financial Tools)'
     'System Type': ERP
     Platform: {Vendor: 'Peoplesoft by Oracle'}
     'Public Link': 'https://mn.gov/mmb/accounting/swift/'
@@ -1108,7 +1108,7 @@
     Total: 33
 -
     State: Mississippi
-    'System Name': MAGIC
+    'System Name': 'MAGIC (Mississippi''s Accountability System for Government Information and Collaboration)'
     'System Type': ERP
     Platform: {Vendor: SAP}
     'Public Link': 'https://www.dfa.ms.gov/magic-finance-and-grants-management'
@@ -1190,7 +1190,7 @@
     Total: 40
 -
     State: Montana
-    'System Name': eMACS
+    'System Name': 'eMACS (electronic Montana Acquisition and Contracting System)'
     'System Type': eProcurement
     Platform: {Vendor: Jaggaer}
     'Public Link': 'https://spb.mt.gov/eMACS-Resources'
@@ -1354,7 +1354,7 @@
     Total: 70
 -
     State: 'New Jersey'
-    'System Name': NJSTART
+    'System Name': 'NJSTART (New Jersey State-of-the-Art Requisition Technology)'
     'System Type': eProcurement
     Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
     'Public Link': 'https://www.njstart.gov/bso/'
@@ -1477,7 +1477,7 @@
     Total: 29
 -
     State: 'North Carolina'
-    'System Name': eVP
+    'System Name': 'eVP (electronic Vendor Portal)'
     'System Type': ERP
     Platform: {Vendor: 'SAP Ariba'}
     'Public Link': 'https://eprocurement.nc.gov/'
@@ -1559,7 +1559,7 @@
     Total: 69
 -
     State: 'Northern Mariana Islands'
-    'System Name': MUNIS
+    'System Name': Munis
     'System Type': ERP
     Platform: {Vendor: 'Tyler Technologies'}
     'Public Link': 'https://selfservice.dof.gov.mp/vss/default.aspx'
@@ -1764,7 +1764,7 @@
     Total: 76
 -
     State: 'Puerto Rico'
-    'System Name': 'JEDI - Joint E-procurement Digital Intelligence'
+    'System Name': 'JEDI (Joint E-procurement Digital Intelligence)'
     'System Type': Custom
     Platform: {Vendor: 'Government owned'}
     'Public Link': 'https://asg.pr.gov/miasg'
@@ -1805,7 +1805,7 @@
     Total: 67
 -
     State: 'Rhode Island'
-    'System Name': OSP
+    'System Name': 'OSP (Ocean State Procures)'
     'System Type': eProcurement
     Platform: {Vendor: 'Proactis WebProcure'}
     'Public Link': 'https://ridop.ri.gov/ocean-state-procures-osp'
@@ -2051,7 +2051,7 @@
     Total: 70
 -
     State: Utah
-    'System Name': U3P
+    'System Name': 'U3P (Utah Public Procurement Place)'
     'System Type': eProcurement
     Platform: {Vendor: Euna}
     'Public Link': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah'
@@ -2174,7 +2174,7 @@
     Total: 42
 -
     State: Washington
-    'System Name': WEBS
+    'System Name': 'WEBS (Washington''s Electronic Business Solution)'
     'System Type': Custom
     Platform: {Vendor: 'Government owned'}
     'Public Link': 'https://pr-webs-vendor.des.wa.gov/'
@@ -2215,7 +2215,7 @@
     Total: 0
 -
     State: 'West Virginia'
-    'System Name': wvOASIS
+    'System Name': 'wvOASIS (Our Advanced Solution with Integrated Systems)'
     'System Type': ERP
     Platform: {Vendor: 'Advantage by CGI'}
     'Public Link': 'https://prd311.wvoasis.gov/PRDVSS1X1ERP/Advantage4'
