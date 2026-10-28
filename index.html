@@ -30,6 +30,7 @@
   header :focus-visible { outline-color: #fff; }
   main { max-width: 80rem; margin: 0 auto; padding: 1rem; }
   h2.section { font-size: 1.2rem; margin: 1.75rem 0 .75rem; }
+  p.intro { margin: -.25rem 0 .75rem; color: var(--muted); }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; margin: 1rem 0; }
   .stat { background: var(--panel); border: 1px solid var(--line); border-radius: .375rem; padding: .75rem 1rem; }
   .stat .v { font-size: 1.6rem; font-weight: 700; }
@@ -108,6 +109,23 @@
   <section aria-labelledby="summary-heading">
     <h2 id="summary-heading" class="sr-only">Summary</h2>
     <div class="stats" id="stats"></div>
+  </section>
+
+  <section id="benchmark" aria-labelledby="benchmark-heading" hidden>
+    <h2 class="section" id="benchmark-heading">International benchmark</h2>
+    <p class="intro">Scored with the same metrics for comparison. Not included in the rankings or summary figures.</p>
+    <div class="table-wrap">
+      <table>
+        <caption class="sr-only">Benchmark sites. Select a site to see its scoring detail.</caption>
+        <thead>
+          <tr>
+            <th class="num">Rank</th><th>Site</th><th class="hide-sm">System</th><th class="hide-sm">Type</th><th class="hide-sm">Vendor</th>
+            <th class="num hide-sm">Notice list</th><th class="num hide-sm">Posting</th><th class="num">Total</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </section>
 
   <h2 class="section" id="sites-heading">All sites</h2>
@@ -203,7 +221,8 @@ const extLink = u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u
 // Escape note text, then turn any bare URLs in it into links.
 const linkify = s => esc(s).replace(/https?:\/\/[^\s<]+/g, u => extLink(u.replace(/&amp;/g, "&")));
 
-let rows = [];
+let rows = [];        // ranked sites
+let benchmarks = [];  // shown separately, not ranked
 let sort = { key: "total", dir: -1 };
 const open = new Set();
 
@@ -217,6 +236,7 @@ function normalize(r) {
     name: String(r["System Name"] || "").trim(),
     type: String(r["System Type"] || "").trim(),
     vendor: String(vendor).trim(),
+    benchmark: r.Benchmark === true,
     total: num(r.Total),
     generalScore: sum("general"),
     noticeScore: sum("notice"),
@@ -278,11 +298,16 @@ function render() {
   document.querySelectorAll("th[data-key]").forEach(th =>
     th.setAttribute("aria-sort", th.dataset.key === sort.key ? (sort.dir > 0 ? "ascending" : "descending") : "none"));
   $("#count").textContent = `Showing ${list.length} of ${rows.length} sites`;
-  $("#tbl tbody").innerHTML = list.map(d => {
+  $("#tbl tbody").innerHTML = list.map(rowHtml).join("") || `<tr><td colspan="8">No sites match these filters.</td></tr>`;
+  $("#benchmark tbody").innerHTML = benchmarks.map(rowHtml).join("");
+  $("#expand-all").textContent = list.length && list.every(d => open.has(d.state)) ? "Collapse all" : "Expand all";
+}
+
+function rowHtml(d) {
     const id = "d-" + d.state.replace(/\W+/g, "-");
     const isOpen = open.has(d.state);
     return `<tr class="row">
-      <td class="num">${d.rank}</td>
+      <td class="num">${d.benchmark ? `<span aria-hidden="true">—</span><span class="sr-only">Not ranked</span>` : d.rank}</td>
       <td><button type="button" class="state-btn" aria-expanded="${isOpen}" aria-controls="${id}" data-state="${esc(d.state)}">${esc(d.state)}</button></td>
       <td class="hide-sm">${esc(d.name || "—")}</td>
       <td class="hide-sm">${d.type.split(/,\s*/).filter(Boolean).map(t => `<span class="tag">${esc(t)}</span>`).join(" ")}</td>
@@ -291,8 +316,6 @@ function render() {
       <td class="num hide-sm">${d.postingScore}/${groupMax("posting")}</td>
       <td class="num">${scoreCell(d.total, 100)}</td>
     </tr>` + (isOpen ? `<tr class="detail" id="${id}"><td colspan="8">${detail(d)}</td></tr>` : "");
-  }).join("") || `<tr><td colspan="8">No sites match these filters.</td></tr>`;
-  $("#expand-all").textContent = list.length && list.every(d => open.has(d.state)) ? "Collapse all" : "Expand all";
 }
 
 function stats() {
@@ -371,7 +394,9 @@ async function init() {
     const res = await fetch(DATA_URL, { cache: "no-cache" });
     if (!res.ok) throw new Error(`HTTP ${res.status} loading ${DATA_URL}`);
     const data = jsyaml.load(await res.text());
-    rows = (Array.isArray(data) ? data : []).map(normalize).filter(d => d.state);
+    const all = (Array.isArray(data) ? data : []).map(normalize).filter(d => d.state);
+    rows = all.filter(d => !d.benchmark);
+    benchmarks = all.filter(d => d.benchmark);
     showLastUpdated();
   } catch (e) {
     $("#main").innerHTML = `<div class="error" role="alert"><strong>Could not load the inventory.</strong> ${esc(e.message)}</div>`;
@@ -383,6 +408,7 @@ async function init() {
 
   fillSelect($("#type"), rows.flatMap(d => d.type.split(/,\s*/)));
   fillSelect($("#vendor"), rows.flatMap(d => d.vendor.split(/;\s*/)));
+  $("#benchmark").hidden = !benchmarks.length;
   readHash();
   stats();
   methodology();
@@ -395,7 +421,7 @@ async function init() {
     sort = { key, dir: sort.key === key ? -sort.dir : (["state", "name", "type", "vendor", "rank"].includes(key) ? 1 : -1) };
     render();
   }));
-  $("#tbl tbody").addEventListener("click", e => {
+  $("#main").addEventListener("click", e => {
     const b = e.target.closest(".state-btn");
     if (!b) return;
     const s = b.dataset.state;

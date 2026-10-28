@@ -1,5 +1,6 @@
 -
-    State: '  UK'
+    State: 'United Kingdom'
+    Benchmark: true
     'System Name': 'Find a Tender'
     'System Type': Custom
     Platform: {Vendor: 'Government owned'}
@@ -1684,7 +1685,7 @@
     'System Name': OregonBuys
     'System Type': eProcurement
     Platform: {Vendor: 'SOVRA (Periscope/MDF)'}
-    'Public Link': 'https://www.oregon.gov/das/procurement/pages/oregonbuys.aspx'
+    'Public Link': 'https://www.oregon.gov/das/orbuys/Pages/index.aspx'
     'Notice list URL': 'https://oregonbuys.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://oregonbuys.gov/bso/external/bidDetail.sda?docId=S-R09145-00017514&external=true&parentUrl=close'
     FIELD8: ""
