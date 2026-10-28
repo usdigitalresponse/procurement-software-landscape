@@ -7,7 +7,7 @@
     'Public Link': 'https://www.find-tender.service.gov.uk/'
     'Notice list URL': 'https://www.find-tender.service.gov.uk/search/opportunities'
     'Single Posting URL': 'https://www.find-tender.service.gov.uk/Notice/071922-2026'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': Yes
     'Published Data Standard?': Yes
     'Direct URL to Notice List? (10 pts)': Yes
@@ -23,7 +23,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 85
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 5
     G2: 5
     N1: 10
@@ -48,7 +47,7 @@
     'Public Link': 'https://alabamabuys.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
     'Notice list URL': 'https://alabamabuys.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://alabamabuys.gov/page.aspx/en/bpm/process_manage_extranet/42646'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -64,7 +63,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 75
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -89,7 +87,7 @@
     'Public Link': 'https://iris-vss.alaska.gov/'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -105,7 +103,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -130,7 +127,7 @@
     'Public Link': 'https://portal.tenderlink.com/mof_samoa/login?ReturnUrl=%2Fmof_samoa%2F'
     'Notice list URL': 'https://portal.tenderlink.com/mof_samoa/alltenders/'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -146,7 +143,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -171,7 +167,7 @@
     'Public Link': 'https://app.az.gov/page.aspx/en/usr/login?ReturnUrl=%2Fpage.aspx%2Fen%2Fbuy%2Fhomepage'
     'Notice list URL': 'https://app.az.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://app.az.gov/page.aspx/en/bpm/process_manage_extranet/13800'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -187,7 +183,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 80
     'Lighthouse Accessibility, Posting': 85
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -212,7 +207,7 @@
     'Public Link': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
     'Notice list URL': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
     'Single Posting URL': 'https://portal.us.bn.cloud.ariba.com/dashboard/public/appext/comsapsbncdiscoveryui#/RfxEvent/preview/1110018345?anId=ANONYMOUS'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -228,7 +223,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 43
     'Lighthouse Accessibility, Posting': 92
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -253,7 +247,7 @@
     'Public Link': 'https://caleprocure.ca.gov/pages/index.aspx'
     'Notice list URL': 'https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx'
     'Single Posting URL': 'https://caleprocure.ca.gov/event/3860/0000039630'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -269,7 +263,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 70
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -294,7 +287,7 @@
     'Public Link': 'https://prd.co.cgiadvantage.com/PRDVSS1X1/Advantage4'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -310,7 +303,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -335,7 +327,7 @@
     'Public Link': 'https://portal.ct.gov/DAS/CTSource/CTSource'
     'Notice list URL': 'https://portal.ct.gov/das/ctsource/bidboard?language=en_US'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -351,7 +343,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -376,7 +367,7 @@
     'Public Link': 'https://mymarketplace.delaware.gov/'
     'Notice list URL': 'https://mmp.delaware.gov/Bids/'
     'Single Posting URL': 'https://mmp.delaware.gov/Bids/Details/9246'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': Yes
     'Published Data Standard?': Yes
     'Direct URL to Notice List? (10 pts)': Yes
@@ -392,7 +383,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 80
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 5
     G2: 5
     N1: 10
@@ -417,7 +407,7 @@
     'Public Link': 'https://contracts.ocp.dc.gov/'
     'Notice list URL': 'https://contracts.ocp.dc.gov/solicitations/search'
     'Single Posting URL': 'https://contracts.ocp.dc.gov/solicitations/details?id=Doc831461'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -433,7 +423,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 67
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -458,7 +447,7 @@
     'Public Link': 'https://vendor.myfloridamarketplace.com/'
     'Notice list URL': 'https://vendor.myfloridamarketplace.com/search/bids'
     'Single Posting URL': 'https://vendor.myfloridamarketplace.com/search/bids/detail/16318'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -474,7 +463,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 69
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -499,7 +487,7 @@
     'Public Link': 'https://app01.jaggaer.com/apps/Router/SupplierLogin?CustOrg=Georgia'
     'Notice list URL': 'https://ssl.doas.state.ga.us/gpr/'
     'Single Posting URL': 'https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=SWC-eRFP-00023-2027&sourceSystemType=jag'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -515,7 +503,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 88
     'Lighthouse Accessibility, Posting': 95
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -540,7 +527,7 @@
     'Public Link': 'https://gsa.doa.guam.gov/invitation-for-bid/'
     'Notice list URL': 'https://gsa.doa.guam.gov/invitation-for-bid/'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -556,7 +543,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -581,7 +567,7 @@
     'Public Link': 'https://hiepro.ehawaii.gov/solicitation-notices.html'
     'Notice list URL': 'https://hands.ehawaii.gov/hands/opportunities'
     'Single Posting URL': 'https://hiepro.ehawaii.gov/public-display-solicitation.html?rfid=26003293'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -597,7 +583,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 83
     'Lighthouse Accessibility, Posting': 95
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -622,7 +607,7 @@
     'Public Link': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/page/XiSupplyManagementSupplierPage?csk.SupplierGroup=LUMA'
     'Notice list URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=LUMA'
     'Single Posting URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/form/SourcingEvent%5BByCompany%5D%28230,1301%29.XiSupplierPortalSummary?action=_open&navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&fromlist=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%7CNotificationStatus%3D2%29.XiOpenForBid&csk.SupplierGroup=LUMA&sortOrderName=SourcingEvent.ByCompany&previousDisabled=true&fk=SourcingEvent%5BByCompany%5D%28190,1418%7CNotificationStatus%3D2%29&firstDisabled=true&hasPrevious=false&pageSize=10&hasNext=true&isAscending=true&lk=SourcingEvent%5BByCompany%5D%28270,1411%7CNotificationStatus%3D2%29&pk=SourcingEvent%5BByCompany%5D%28230,1301%7CNotificationStatus%3D2%29&selectedPanel=Lines'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -638,7 +623,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 69
     'Lighthouse Accessibility, Posting': 93
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -663,7 +647,7 @@
     'Public Link': 'https://www.bidbuy.illinois.gov/bso/'
     'Notice list URL': 'https://www.bidbuy.illinois.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://www.bidbuy.illinois.gov/bso/external/bidDetail.sda?docId=26-551HDA-FINAN-B-53072&external=true&parentUrl=close'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -679,7 +663,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 96
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -704,7 +687,7 @@
     'Public Link': 'https://www.in.gov/idoa/procurement/supplier-resource-center/requirements-to-do-business-with-the-state/bidder-profile-registration/'
     'Notice list URL': 'https://www.in.gov/idoa/procurement/current-business-opportunities/'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': Yes
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -720,7 +703,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 5
     G2: 0
     N1: 10
@@ -745,7 +727,7 @@
     'Public Link': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
     'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -761,7 +743,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -786,7 +767,7 @@
     'Public Link': 'https://smartweb.ks.gov/'
     'Notice list URL': 'https://supplier.sok.ks.gov/psc/sokfsprdsup/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL?&'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -802,7 +783,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -827,7 +807,7 @@
     'Public Link': 'https://vss.ky.gov/vssprod-ext/Advantage4'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -843,7 +823,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -868,7 +847,7 @@
     'Public Link': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm'
     'Notice list URL': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/srchopen.cfm?deptno=all&catno=all&dateStart=&dateEnd=&compareDate=O&keywords=&keywordsCheck=all'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -884,7 +863,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -909,7 +887,7 @@
     'Public Link': 'https://mevss.hostams.com/PRDVSS1X1/Advantage4'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -925,7 +903,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -950,7 +927,7 @@
     'Public Link': 'https://emma.maryland.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
     'Notice list URL': 'https://emma.maryland.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://emma.maryland.gov/page.aspx/en/bpm/process_manage_extranet/93305'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -966,7 +943,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 67
     'Lighthouse Accessibility, Posting': 97
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -991,7 +967,7 @@
     'Public Link': 'https://www.commbuys.com/bso/'
     'Notice list URL': 'https://www.commbuys.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-27-1026-DOE02-DOE01-130975'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1007,7 +983,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 95
     'Lighthouse Accessibility, Posting': 98
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1032,7 +1007,7 @@
     'Public Link': 'https://sigma.michigan.gov/PRDVSS1X1/Advantage4'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -1048,7 +1023,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -1073,7 +1047,7 @@
     'Public Link': 'https://mn.gov/mmb/accounting/swift/'
     'Notice list URL': 'https://guest.supplier.systems.state.mn.us/psc/fmssupap/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1089,7 +1063,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1114,7 +1087,7 @@
     'Public Link': 'https://www.dfa.ms.gov/magic-finance-and-grants-management'
     'Notice list URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid'
     'Single Posting URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid/Details/45855?AppId=1'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1130,7 +1103,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 74
     'Lighthouse Accessibility, Posting': 74
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1155,7 +1127,7 @@
     'Public Link': 'https://missouribuys.mo.gov/'
     'Notice list URL': 'https://ewqg.fa.us8.oraclecloud.com/fscmUI/redwood/negotiation-abstracts/view/abstractlisting?prcBuId=300000005255687'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1171,7 +1143,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1196,7 +1167,7 @@
     'Public Link': 'https://spb.mt.gov/eMACS-Resources'
     'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfMontana'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1212,7 +1183,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1237,7 +1207,7 @@
     'Public Link': 'https://das.nebraska.gov/materiel/vendor-information.html'
     'Notice list URL': 'https://das.nebraska.gov/materiel/bid-opportunities.html#current-bid-opportunities'
     'Single Posting URL': 'https://das.nebraska.gov/materiel/purchasing/124528%20ON/124528%20ON.html'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1253,7 +1223,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 95
     'Lighthouse Accessibility, Posting': 98
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1278,7 +1247,7 @@
     'Public Link': 'https://nevadaepro.com/bso/'
     'Notice list URL': 'https://nevadaepro.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://nevadaepro.com/bso/external/bidDetail.sda?docId=41NHA-S3922&external=true&parentUrl=close'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1294,7 +1263,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 95
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1319,7 +1287,7 @@
     'Public Link': 'https://apps.das.nh.gov/NHProcurement/Bid'
     'Notice list URL': 'https://apps.das.nh.gov/NHProcurement/Bid'
     'Single Posting URL': 'https://apps.das.nh.gov/NHProcurement/Bid/rfp-nhlc-202606'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1335,7 +1303,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 97
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1360,7 +1327,7 @@
     'Public Link': 'https://www.njstart.gov/bso/'
     'Notice list URL': 'https://www.njstart.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://www.njstart.gov/bso/external/bidDetail.sda?docId=26DPP01212&external=true&parentUrl=close'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1376,7 +1343,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 89
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1401,7 +1367,7 @@
     'Public Link': 'https://www.generalservices.state.nm.us/state-purchasing/online-procurement/'
     'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
     'Single Posting URL': N/A
-    FIELD8: 'Transitioning to Euna (Bonfire) in early 2027, replacing eProNM. Re-check the notice list URL, sample posting URL and scores after the transition. New portal: https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
+    Note: 'Transitioning to Euna (Bonfire) in early 2027, replacing eProNM. Re-check the notice list URL, sample posting URL and scores after the transition. New portal: https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1417,7 +1383,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1442,7 +1407,7 @@
     'Public Link': 'https://www.nyscr.ny.gov/'
     'Notice list URL': 'https://www.nyscr.ny.gov/Ads/Search'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1458,7 +1423,6 @@
     'Documents without registration?': No
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1483,7 +1447,7 @@
     'Public Link': 'https://eprocurement.nc.gov/'
     'Notice list URL': 'https://evp.nc.gov/solicitations/?status=0'
     'Single Posting URL': 'https://evp.nc.gov/solicitations/details/?id=1290880c-067b-f111-ab0e-001dd80db495'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1499,7 +1463,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 77
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1524,7 +1487,7 @@
     'Public Link': 'https://public.ndbuys.nd.gov/'
     'Notice list URL': 'https://public.ndbuys.nd.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://public.ndbuys.nd.gov/page.aspx/en/bpm/process_manage_extranet/3545'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1540,7 +1503,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 72
     'Lighthouse Accessibility, Posting': 97
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1565,7 +1527,7 @@
     'Public Link': 'https://selfservice.dof.gov.mp/vss/default.aspx'
     'Notice list URL': 'https://selfservice.dof.gov.mp/vss/Vendors/VBids/SearchResults.aspx'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1581,7 +1543,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 85
     'Lighthouse Accessibility, Posting': 98
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1606,7 +1567,7 @@
     'Public Link': 'https://procure.ohio.gov/state-and-local-agencies/resources/ohiobuys-overview'
     'Notice list URL': 'https://ohiobuys.ohio.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/56086'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1622,7 +1583,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 65
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1647,7 +1607,7 @@
     'Public Link': 'https://oklahoma.gov/omes/divisions/central-purchasing/suppliers-and-payees/supplier-portal.html'
     'Notice list URL': 'https://financials.ok.gov/psc/SOKLFP1DS/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1663,7 +1623,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1688,7 +1647,7 @@
     'Public Link': 'https://www.oregon.gov/das/orbuys/Pages/index.aspx'
     'Notice list URL': 'https://oregonbuys.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://oregonbuys.gov/bso/external/bidDetail.sda?docId=S-R09145-00017514&external=true&parentUrl=close'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1704,7 +1663,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 93
     'Lighthouse Accessibility, Posting': 94
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1729,7 +1687,7 @@
     'Public Link': 'https://www.emarketplace.state.pa.us/'
     'Notice list URL': 'https://www.emarketplace.state.pa.us/Search.aspx'
     'Single Posting URL': 'https://www.emarketplace.state.pa.us/Solicitations.aspx?SID=6100066036'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1745,7 +1703,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 94
     'Lighthouse Accessibility, Posting': 89
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1770,7 +1727,7 @@
     'Public Link': 'https://asg.pr.gov/miasg'
     'Notice list URL': 'https://asg.pr.gov/subastas'
     'Single Posting URL': 'https://asg.pr.gov/subastas26J-22671'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1786,7 +1743,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 85
     'Lighthouse Accessibility, Posting': 96
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1811,7 +1767,7 @@
     'Public Link': 'https://ridop.ri.gov/ocean-state-procures-osp'
     'Notice list URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
     'Single Posting URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1827,7 +1783,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1852,7 +1807,7 @@
     'Public Link': 'https://www.procurement.sc.gov/scpro'
     'Notice list URL': 'https://scpro.sc.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': ""
-    FIELD8: 'SCPro launches November 9, 2026, replacing SCEIS (SCEIS vendor portal down October 26 to November 9). Re-check the sample posting URL and scores after launch.'
+    Note: 'SCPro launches November 9, 2026, replacing SCEIS (SCEIS vendor portal down October 26 to November 9). Re-check the sample posting URL and scores after launch.'
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1868,7 +1823,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 74
     'Lighthouse Accessibility, Posting': 100
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1893,7 +1847,7 @@
     'Public Link': 'https://www.sd.gov/bhra?id=cs_kb_article_view&sysparm_article=KB0044779&sys_kb_id=a9c554f787aecf14a086bae9cebb356d&spa=1'
     'Notice list URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/events'
     'Single Posting URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/eventDetail/19882'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1909,7 +1863,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 90
     'Lighthouse Accessibility, Posting': 95
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1934,7 +1887,7 @@
     'Public Link': 'https://hub.edison.tn.gov/psp/paprd/SUPPLIER/SUPP/h/?tab=PAPP_GUEST'
     'Notice list URL': 'https://www.tn.gov/content/tn/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1950,7 +1903,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -1975,7 +1927,7 @@
     'Public Link': 'https://www.txsmartbuy.com/'
     'Notice list URL': 'https://www.txsmartbuy.gov/esbd'
     'Single Posting URL': 'https://www.txsmartbuy.gov/esbd/304-27-0790MS-1'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1991,7 +1943,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 86
     'Lighthouse Accessibility, Posting': 92
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -2016,7 +1967,7 @@
     'Public Link': 'https://gvibuy.buyspeed.com/bso/'
     'Notice list URL': 'https://gvibuy.buyspeed.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Single Posting URL': 'https://gvibuy.buyspeed.com/bso/external/bidDetail.sda?docId=BD-26-720-7201-646&external=true&parentUrl=close'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2032,7 +1983,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 97
     'Lighthouse Accessibility, Posting': 98
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -2057,7 +2007,7 @@
     'Public Link': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfUtah'
     'Notice list URL': 'https://utah.bonfirehub.com/portal/?tab=openOpportunities'
     'Single Posting URL': 'https://utah.bonfirehub.com/opportunities/237998'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2073,7 +2023,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 100
     'Lighthouse Accessibility, Posting': 93
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -2098,7 +2047,7 @@
     'Public Link': 'https://vtbuysprocurement.vermont.gov/'
     'Notice list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2114,7 +2063,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 48
     'Lighthouse Accessibility, Posting': 93
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -2139,7 +2087,7 @@
     'Public Link': 'https://eva.virginia.gov/'
     'Notice list URL': 'https://mvendor.cgieva.com/Vendor/public/AllOpportunities.jsp'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2155,7 +2103,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -2180,7 +2127,7 @@
     'Public Link': 'https://pr-webs-vendor.des.wa.gov/'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -2196,7 +2143,6 @@
     'Documents without registration?': No
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -2221,7 +2167,7 @@
     'Public Link': 'https://prd311.wvoasis.gov/PRDVSS1X1ERP/Advantage4'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -2237,7 +2183,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 0
@@ -2262,7 +2207,7 @@
     'Public Link': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/h/?tab=WI_BIDDER'
     'Notice list URL': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/c/WI_SS_BIDDER_FLU.WI_SS_BDR_BIDS_FLU.GBL'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2278,7 +2223,6 @@
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10
@@ -2303,7 +2247,7 @@
     'Public Link': 'https://www.publicpurchase.com/gems/browse/home'
     'Notice list URL': 'https://www.publicpurchase.com/gems/wyominggsd,wy/buyer/public/publicInfo'
     'Single Posting URL': N/A
-    FIELD8: ""
+    Note: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2319,7 +2263,6 @@
     'Documents without registration?': No
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessibility, Posting': 0
-    FIELD24: ""
     G1: 0
     G2: 0
     N1: 10

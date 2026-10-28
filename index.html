@@ -269,7 +269,7 @@ const open = new Set();
 function normalize(r) {
   const vendor = (r.Platform && typeof r.Platform === "object" ? r.Platform.Vendor : r.Platform) || "";
   const sum = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + num(r[c.key]), 0);
-  const notes = [r.FIELD8, r.FIELD24].map(v => String(v ?? "").trim()).filter(Boolean);
+  const notes = [r.Note].map(v => String(v ?? "").trim()).filter(Boolean);
   return {
     raw: r,
     state: String(r.State || "").trim(),
