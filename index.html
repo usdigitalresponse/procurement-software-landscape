@@ -38,6 +38,19 @@
   .controls { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: end; background: var(--panel); border: 1px solid var(--line); border-radius: .375rem; padding: 1rem; }
   .controls label { display: flex; flex-direction: column; font-size: .875rem; font-weight: 600; gap: .25rem; }
   .controls input, .controls select { font: inherit; padding: .4rem .5rem; border: 1px solid #71767a; border-radius: .25rem; min-width: 12rem; background: #fff; }
+  .controls .field { display: flex; flex-direction: column; font-size: .875rem; font-weight: 600; gap: .25rem; }
+  .menu { position: relative; font-size: 1rem; font-weight: 400; }
+  .menu summary { list-style: none; cursor: pointer; padding: .4rem .5rem; border: 1px solid #71767a; border-radius: .25rem; min-width: 12rem; background: #fff; }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu summary::after { content: " \25BE"; float: right; color: var(--muted); }
+  .menu-panel { position: absolute; z-index: 5; top: calc(100% + .25rem); left: 0; width: min(22rem, 90vw); max-height: 70vh; overflow-y: auto; background: #fff; border: 1px solid var(--line); border-radius: .375rem; box-shadow: 0 4px 12px rgba(0,0,0,.15); padding: .75rem 1rem; font-size: .92rem; }
+  .menu-panel p { margin: 0 0 .5rem; color: var(--muted); }
+  .menu-panel fieldset { border: 0; margin: 0 0 .5rem; padding: 0; }
+  .menu-panel legend { font-weight: 700; padding: 0; margin-bottom: .25rem; }
+  .metric-row { display: grid; grid-template-columns: 1fr 2.25rem 2.25rem; align-items: center; padding: .15rem 0; }
+  .metric-row:not(.metric-head):hover { background: #f0f7fd; }
+  .metric-head { font-weight: 700; font-size: .8rem; color: var(--muted); text-align: center; }
+  .controls .menu-panel input { min-width: 0; margin: 0 auto; width: 1rem; height: 1rem; }
   .controls .actions { margin-left: auto; display: flex; gap: .5rem; }
   button.btn, a.btn { font: inherit; font-size: .9rem; padding: .45rem .8rem; border-radius: .25rem; border: 1px solid var(--accent); background: #fff; color: var(--accent); cursor: pointer; text-decoration: none; }
   button.btn:hover, a.btn:hover { background: var(--accent); color: #fff; }
@@ -145,6 +158,18 @@
         <option value="75">75+</option><option value="90">90+</option>
       </select>
     </label>
+    <div class="field">
+      <span aria-hidden="true">Metrics</span>
+      <details class="menu" id="metrics-menu">
+        <summary><span class="sr-only">Metrics: </span><span id="metrics-summary">Any</span></summary>
+        <div class="menu-panel">
+          <p>Check <strong>Yes</strong> for sites that earn full points on a metric, or <strong>No</strong> for sites that don't. Sites must match every box you check.</p>
+          <div class="metric-row metric-head" aria-hidden="true"><span></span><span>Yes</span><span>No</span></div>
+          <div id="metric-list"></div>
+          <button type="button" class="btn" id="metrics-clear">Clear</button>
+        </div>
+      </details>
+    </div>
     <div class="actions">
       <button type="button" class="btn" id="expand-all">Expand all</button>
       <button type="button" class="btn" id="csv">Download CSV</button>
@@ -282,11 +307,34 @@ function detail(d) {
 function filtered() {
   const q = $("#q").value.trim().toLowerCase();
   const type = $("#type").value, vendor = $("#vendor").value, min = +$("#min").value;
+  const metrics = checkedMetrics();
   return rows.filter(d =>
     (!q || [d.state, d.name, d.vendor, d.type].join(" ").toLowerCase().includes(q)) &&
     (!type || d.type.split(/,\s*/).includes(type)) &&
     (!vendor || d.vendor.split(/;\s*/).includes(vendor)) &&
+    metrics.every(({ c, yes }) => (num(d.raw[c.key]) >= c.max) === yes) &&
     d.total >= min);
+}
+
+// Checked metric boxes as { c: criterion, yes: true for "Yes" or false for "No" }.
+const checkedMetrics = () => [...document.querySelectorAll("#metric-list input:checked")]
+  .map(i => ({ c: CRITERIA.find(c => c.key === i.dataset.key), yes: i.value === "yes" }));
+
+function fillMetrics() {
+  const box = (c, v) => `<input type="checkbox" data-key="${c.key}" value="${v}" aria-label="${esc(c.label)}: ${v === "yes" ? "Yes" : "No"}">`;
+  $("#metric-list").innerHTML = Object.keys(GROUPS).map(g =>
+    `<fieldset><legend>${GROUPS[g]}</legend>` +
+    CRITERIA.filter(c => c.group === g).map(c =>
+      `<div class="metric-row"><span>${esc(c.label)}${/lighthouse/i.test(c.field) ? " (90+)" : ""}</span>${box(c, "yes")}${box(c, "no")}</div>`).join("") +
+    `</fieldset>`).join("");
+}
+
+function updateMetricsSummary(e) {
+  // Yes and No for the same metric can't both be checked.
+  const i = e?.target;
+  if (i?.checked) document.querySelector(`#metric-list input[data-key="${i.dataset.key}"]:not([value="${i.value}"])`).checked = false;
+  const n = checkedMetrics().length;
+  $("#metrics-summary").textContent = n ? `${n} selected` : "Any";
 }
 
 function render() {
@@ -366,6 +414,8 @@ function syncHash() {
   if ($("#type").value) p.set("type", $("#type").value);
   if ($("#vendor").value) p.set("vendor", $("#vendor").value);
   if ($("#min").value !== "0") p.set("min", $("#min").value);
+  // e.g. metrics=p,u,-w: full points on p and u, not on w.
+  if (checkedMetrics().length) p.set("metrics", checkedMetrics().map(({ c, yes }) => (yes ? "" : "-") + c.key).join(","));
   if (open.size === 1) p.set("state", [...open][0]);
   history.replaceState(null, "", p.toString() ? "#" + p : location.pathname);
 }
@@ -376,6 +426,10 @@ function readHash() {
   $("#type").value = p.get("type") || "";
   $("#vendor").value = p.get("vendor") || "";
   $("#min").value = p.get("min") || "0";
+  const keys = (p.get("metrics") || "").split(",");
+  document.querySelectorAll("#metric-list input").forEach(i =>
+    i.checked = keys.includes((i.value === "yes" ? "" : "-") + i.dataset.key));
+  updateMetricsSummary();
   if (p.get("state")) open.add(p.get("state"));
 }
 
@@ -408,6 +462,7 @@ async function init() {
 
   fillSelect($("#type"), rows.flatMap(d => d.type.split(/,\s*/)));
   fillSelect($("#vendor"), rows.flatMap(d => d.vendor.split(/;\s*/)));
+  fillMetrics();
   $("#benchmark").hidden = !benchmarks.length;
   readHash();
   stats();
@@ -415,7 +470,20 @@ async function init() {
   render();
   if (open.size) document.getElementById("d-" + [...open][0].replace(/\W+/g, "-"))?.scrollIntoView();
 
-  ["#q", "#type", "#vendor", "#min"].forEach(s => $(s).addEventListener("input", () => { render(); syncHash(); }));
+  $("#metric-list").addEventListener("input", updateMetricsSummary);
+  ["#q", "#type", "#vendor", "#min", "#metric-list"].forEach(s => $(s).addEventListener("input", () => { render(); syncHash(); }));
+  $("#metrics-clear").addEventListener("click", () => {
+    document.querySelectorAll("#metric-list input").forEach(i => i.checked = false);
+    updateMetricsSummary();
+    render();
+    syncHash();
+  });
+  // Close the metrics menu on Escape or a click outside it.
+  const menu = $("#metrics-menu");
+  document.addEventListener("click", e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+  menu.addEventListener("keydown", e => {
+    if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+  });
   document.querySelectorAll("th[data-key] button").forEach(b => b.addEventListener("click", () => {
     const key = b.parentElement.dataset.key;
     sort = { key, dir: sort.key === key ? -sort.dir : (["state", "name", "type", "vendor", "rank"].includes(key) ? 1 : -1) };
