@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: "Procurement Website Inventory" }} | Procurement Website Inventory</title>
+<style>
+  :root { --ink: #1b1b1b; --muted: #565c65; --line: #dfe1e2; --panel: #f6f7f8; --accent: #005ea2; --accent-dark: #1a4480; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #fff; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-dark); }
+  :focus-visible { outline: 3px solid #2491ff; outline-offset: 2px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem; z-index: 10; }
+  header { background: var(--accent-dark); color: #fff; padding: 1.25rem 1rem; }
+  header :focus-visible { outline-color: #fff; }
+  .site-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; padding: 0; list-style: none; font-size: .95rem; max-width: 80rem; }
+  .site-nav a { color: #fff; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: .1rem; }
+  .site-nav a:hover { border-bottom-color: #fff; }
+  .site-nav a[aria-current="page"] { font-weight: 700; border-bottom-color: #fff; }
+  main { max-width: 48rem; margin: 0 auto; padding: 1.5rem 1rem; }
+  main h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 1rem; }
+  main h3 { font-size: 1.2rem; margin: 2.25rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  main h3:target { background: #fff5c2; }
+  code { background: var(--panel); padding: .1rem .3rem; border-radius: .2rem; font-size: .9em; word-break: break-word; }
+  footer { max-width: 48rem; margin: 2rem auto; padding: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+  footer p { margin: 0 0 .5rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <nav aria-label="Site">
+    <ul class="site-nav">
+      <li><a href="{{ '/' | relative_url }}">Inventory</a></li>
+      <li><a href="{{ '/Scoring-Metrics.html' | relative_url }}"{% if page.url == '/Scoring-Metrics.html' %} aria-current="page"{% endif %}>Scoring metrics</a></li>
+      <li><a href="https://github.com/usdigitalresponse/procurement-software-landscape">GitHub</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+{{ content }}
+</main>
+
+<footer>
+  <p>A <a href="https://www.usdigitalresponse.org/">U.S. Digital Response</a> project. <a href="{{ '/' | relative_url }}">Back to the inventory</a>.</p>
+  <p>See something wrong? <a href="https://github.com/usdigitalresponse/procurement-software-landscape/issues/new">Report a correction on GitHub</a>.</p>
+</footer>
+</body>
+</html>

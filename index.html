@@ -22,7 +22,14 @@
   header { background: var(--accent-dark); color: #fff; padding: 1.5rem 1rem; }
   header h1 { margin: 0 0 .25rem; font-size: 1.75rem; }
   header p { margin: 0; opacity: .9; max-width: 60rem; }
+  header p a { color: #fff; }
+  .site-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0 0 1rem; padding: 0; list-style: none; font-size: .95rem; }
+  .site-nav a { color: #fff; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: .1rem; }
+  .site-nav a:hover { border-bottom-color: #fff; }
+  .site-nav a[aria-current="page"] { font-weight: 700; border-bottom-color: #fff; }
+  header :focus-visible { outline-color: #fff; }
   main { max-width: 80rem; margin: 0 auto; padding: 1rem; }
+  h2.section { font-size: 1.2rem; margin: 1.75rem 0 .75rem; }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .75rem; margin: 1rem 0; }
   .stat { background: var(--panel); border: 1px solid var(--line); border-radius: .375rem; padding: .75rem 1rem; }
   .stat .v { font-size: 1.6rem; font-weight: 700; }
@@ -46,6 +53,8 @@
   tbody tr.row:hover { background: #f0f7fd; }
   .state-btn { all: unset; cursor: pointer; font-weight: 600; color: var(--accent); }
   .state-btn:hover { text-decoration: underline; }
+  /* "all: unset" on these buttons also removes the global focus ring; restore it. */
+  th button:focus-visible, .state-btn:focus-visible { outline: 3px solid #2491ff; outline-offset: 2px; border-radius: 2px; }
   .state-btn::before { content: "\25B8  "; display: inline-block; width: 1em; color: var(--muted); }
   .state-btn[aria-expanded="true"]::before { content: "\25BE  "; }
   .score { display: flex; align-items: center; gap: .5rem; justify-content: flex-end; }
@@ -53,7 +62,7 @@
   .bar > span { display: block; height: 100%; }
   .tag { display: inline-block; font-size: .78rem; padding: .05rem .45rem; border-radius: 1rem; background: #e7f2f5; color: #07648d; white-space: nowrap; }
   tr.detail > td { background: #fbfcfd; padding: 1rem 1.25rem 1.5rem; }
-  .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.25rem; }
+  .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); gap: 1.25rem; }
   .detail-grid h3 { font-size: 1rem; margin: 0 0 .5rem; display: flex; justify-content: space-between; }
   .detail-grid h3 small { font-weight: 400; color: var(--muted); }
   .crit { list-style: none; margin: 0; padding: 0; }
@@ -66,29 +75,43 @@
   .links dd { margin: 0 0 .6rem; word-break: break-all; font-size: .92rem; }
   .note { background: var(--mid-bg); border-left: 4px solid var(--mid); padding: .5rem .75rem; margin-top: .75rem; font-size: .92rem; }
   details.method { margin: 1.5rem 0; border: 1px solid var(--line); border-radius: .375rem; padding: .75rem 1rem; }
-  details.method summary { cursor: pointer; font-weight: 700; }
+  details.method summary { cursor: pointer; }
+  details.method summary h2 { display: inline; font-size: 1.1rem; margin: 0; }
   details.method table { font-size: .9rem; margin-top: .5rem; }
   .error { background: var(--bad-bg); border-left: 4px solid var(--bad); padding: 1rem; }
-  footer { max-width: 80rem; margin: 2rem auto; padding: 0 1rem; color: var(--muted); font-size: .875rem; }
+  footer { max-width: 80rem; margin: 2rem auto; padding: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+  footer p { margin: 0 0 .5rem; }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   @media (max-width: 700px) {
     .hide-sm { display: none; }
     .bar { width: 3rem; }
     .controls .actions { margin-left: 0; }
+    tr.detail > td { padding: .75rem .5rem 1rem; }
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header>
+  <nav aria-label="Site">
+    <ul class="site-nav">
+      <li><a href="./" aria-current="page">Inventory</a></li>
+      <li><a href="Scoring-Metrics.html">Scoring metrics</a></li>
+      <li><a href="https://github.com/usdigitalresponse/procurement-software-landscape">GitHub</a></li>
+    </ul>
+  </nav>
   <h1>Procurement Website Inventory</h1>
-  <p>How easy is it to find and use public bid notices on each state and territory procurement website? Each site is scored out of 100 points.</p>
+  <p>How easy is it to find and use public bid notices on each state and territory procurement website? Each site is scored out of 100 points using the <a href="Scoring-Metrics.html">scoring metrics</a>.</p>
 </header>
 
 <main id="main">
-  <section class="stats" id="stats" aria-label="Summary"></section>
+  <section aria-labelledby="summary-heading">
+    <h2 id="summary-heading" class="sr-only">Summary</h2>
+    <div class="stats" id="stats"></div>
+  </section>
 
-  <form class="controls" role="search" onsubmit="return false">
+  <h2 class="section" id="sites-heading">All sites</h2>
+  <form class="controls" role="search" aria-labelledby="sites-heading" onsubmit="return false">
     <label>Search
       <input type="search" id="q" placeholder="State, system, or vendor">
     </label>
@@ -133,16 +156,18 @@
   </div>
 
   <details class="method">
-    <summary>Scoring methodology</summary>
+    <summary><h2>Scoring methodology</h2></summary>
     <div id="method"></div>
   </details>
 </main>
 
 <footer>
-  Data: <a href="Website-Inventory.yaml">Website-Inventory.yaml</a>. Lighthouse scores are 0–100 from Google Lighthouse; 0 means the page could not be tested.
+  <p>A <a href="https://www.usdigitalresponse.org/">U.S. Digital Response</a> project. Data: <a href="Website-Inventory.yaml">Website-Inventory.yaml</a><span id="updated"></span>.</p>
+  <p>Lighthouse scores are 0–100 from Google Lighthouse; "Not tested" means the page could not be tested.</p>
+  <p>See something wrong? <a href="https://github.com/usdigitalresponse/procurement-software-landscape/issues/new">Report a correction on GitHub</a>.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script src="assets/js/js-yaml.min.js"></script>
 <script>
 const DATA_URL = "Website-Inventory.yaml";
 
@@ -174,6 +199,9 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": 
 const num = v => (typeof v === "number" ? v : parseFloat(v)) || 0;
 const isUrl = v => /^https?:\/\//i.test(String(v || "").trim());
 const color = pct => pct >= 75 ? "var(--good)" : pct >= 50 ? "var(--mid)" : "var(--bad)";
+const extLink = u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}<span class="sr-only"> (opens in a new tab)</span></a>`;
+// Escape note text, then turn any bare URLs in it into links.
+const linkify = s => esc(s).replace(/https?:\/\/[^\s<]+/g, u => extLink(u.replace(/&amp;/g, "&")));
 
 let rows = [];
 let sort = { key: "total", dir: -1 };
@@ -212,7 +240,7 @@ function answerPill(val, pts, max) {
 
 function detail(d) {
   const r = d.raw;
-  const linkRow = (label, v) => `<dt>${label}</dt><dd>${isUrl(v) ? `<a href="${esc(String(v).trim())}" target="_blank" rel="noopener">${esc(String(v).trim())}</a>` : esc(v || "N/A")}</dd>`;
+  const linkRow = (label, v) => `<dt>${label}</dt><dd>${isUrl(v) ? extLink(String(v).trim()) : esc(v || "N/A")}</dd>`;
   const groups = Object.keys(GROUPS).map(g => {
     const items = CRITERIA.filter(c => c.group === g).map(c => {
       const pts = num(r[c.key]);
@@ -227,7 +255,7 @@ function detail(d) {
       ${linkRow("Sample posting", r["Single Posting URL"])}
     </dl>
     <p><strong>System:</strong> ${esc(d.name || "—")}<br><strong>Type:</strong> ${esc(d.type || "—")}<br><strong>Vendor:</strong> ${esc(d.vendor || "—")}</p>
-    ${d.notes.map(n => `<div class="note">${esc(n)}</div>`).join("")}
+    ${d.notes.map(n => `<div class="note">${linkify(n)}</div>`).join("")}
     </div>${groups}</div>`;
 }
 
@@ -328,12 +356,23 @@ function readHash() {
   if (p.get("state")) open.add(p.get("state"));
 }
 
+// Date of the last commit to the data file. GitHub Pages' Last-Modified header is the
+// deploy time for every file, so ask the GitHub API instead; show nothing if it fails.
+async function showLastUpdated() {
+  try {
+    const res = await fetch(`https://api.github.com/repos/usdigitalresponse/procurement-software-landscape/commits?path=${DATA_URL}&per_page=1`);
+    const date = new Date((await res.json())[0].commit.committer.date);
+    if (!isNaN(date)) $("#updated").textContent = `, last updated ${date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}`;
+  } catch (e) { /* leave the date out */ }
+}
+
 async function init() {
   try {
     const res = await fetch(DATA_URL, { cache: "no-cache" });
     if (!res.ok) throw new Error(`HTTP ${res.status} loading ${DATA_URL}`);
     const data = jsyaml.load(await res.text());
     rows = (Array.isArray(data) ? data : []).map(normalize).filter(d => d.state);
+    showLastUpdated();
   } catch (e) {
     $("#main").innerHTML = `<div class="error" role="alert"><strong>Could not load the inventory.</strong> ${esc(e.message)}</div>`;
     return;
