@@ -14,6 +14,7 @@
   .skip { position: absolute; left: -9999px; }
   .skip:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem; z-index: 10; }
   header { background: var(--accent-dark); color: #fff; padding: 1.25rem 1rem; }
+  .beta { display: inline-block; padding: .1rem .5rem; border-radius: .25rem; background: #fff; color: var(--accent-dark); font-size: .75rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; line-height: 1.4; }
   header :focus-visible { outline-color: #fff; }
   .site-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; padding: 0; list-style: none; font-size: .95rem; max-width: 80rem; }
   .site-nav a { color: #fff; text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: .1rem; }
@@ -36,6 +37,7 @@
       <li><a href="{{ '/' | relative_url }}">Inventory</a></li>
       <li><a href="{{ '/Scoring-Metrics.html' | relative_url }}"{% if page.url == '/Scoring-Metrics.html' %} aria-current="page"{% endif %}>Scoring metrics</a></li>
       <li><a href="https://github.com/usdigitalresponse/procurement-software-landscape">GitHub</a></li>
+      <li><span class="beta">Beta</span></li>
     </ul>
   </nav>
 </header>
