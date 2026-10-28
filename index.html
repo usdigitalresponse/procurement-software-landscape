@@ -238,21 +238,21 @@ const DATA_URL = "Procurement-Software-Landscape.yaml";
 
 // Score fields in the YAML: G = General, N = Notices list, P = Individual posting.
 const CRITERIA = [
-  { group: "general", key: "G1", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use-5-pts" },
-  { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published-5-pts" },
-  { group: "notice",  key: "N1", max: 10, label: "Direct URL to notices list", field: "Direct URL to Notices List? (10 pts)", anchor: "solicitation-posting-notices-list-has-a-direct-url-10-pts" },
+  { group: "general", key: "G1", max: 5,  label: "Uses state web design system", field: "State web design system in use", anchor: "state-web-design-system-in-use-5-pts" },
+  { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Data standard is published", anchor: "data-standard-is-published-5-pts" },
+  { group: "notice",  key: "N1", max: 10, label: "Direct URL to notices list", field: "Notices list has a direct URL", anchor: "solicitation-posting-notices-list-has-a-direct-url-10-pts" },
   { group: "notice",  key: "N2", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings-5-pts" },
-  { group: "notice",  key: "N3", max: 5,  label: "Data export of notices list", field: "Data Export of Notices List?", anchor: "data-export-of-notices-list-5-pts" },
-  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices List", anchor: "lighthouse-performance-for-the-notices-list-5-pts" },
-  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices List", anchor: "lighthouse-accessibility-for-the-notices-list-5-pts" },
-  { group: "posting", key: "P1", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)", anchor: "direct-url-to-an-individual-posting-25-pts" },
-  { group: "posting", key: "P2", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page-5-pts" },
-  { group: "posting", key: "P3", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email-5-pts" },
-  { group: "posting", key: "P4", max: 5,  label: "Project summary", field: "Project Summary", anchor: "project-summary-5-pts" },
-  { group: "posting", key: "P5", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting-5-pts" },
-  { group: "posting", key: "P6", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration-5-pts" },
-  { group: "posting", key: "P7", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page-5-pts" },
-  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Posting", anchor: "lighthouse-accessibility-for-the-posting-page-5-pts" },
+  { group: "notice",  key: "N3", max: 5,  label: "Data export of notices list", field: "Data export of notices list", anchor: "data-export-of-notices-list-5-pts" },
+  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse performance, notices list", anchor: "lighthouse-performance-for-the-notices-list-5-pts" },
+  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse accessibility, notices list", anchor: "lighthouse-accessibility-for-the-notices-list-5-pts" },
+  { group: "posting", key: "P1", max: 25, label: "Direct URL to individual posting", field: "Direct URL to an individual posting", anchor: "direct-url-to-an-individual-posting-25-pts" },
+  { group: "posting", key: "P2", max: 5,  label: "Individual posting page", field: "Individual posting page", anchor: "individual-posting-page-5-pts" },
+  { group: "posting", key: "P3", max: 5,  label: "Contact name and email", field: "Contact name and email", anchor: "contact-name-and-email-5-pts" },
+  { group: "posting", key: "P4", max: 5,  label: "Project summary", field: "Project summary", anchor: "project-summary-5-pts" },
+  { group: "posting", key: "P5", max: 5,  label: "Data export of posting", field: "Data export of posting", anchor: "data-export-of-posting-5-pts" },
+  { group: "posting", key: "P6", max: 5,  label: "Documents without registration", field: "Documents without registration", anchor: "documents-without-registration-5-pts" },
+  { group: "posting", key: "P7", max: 5,  label: "Lighthouse performance", field: "Lighthouse performance, posting page", anchor: "lighthouse-performance-for-the-posting-page-5-pts" },
+  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse accessibility, posting page", anchor: "lighthouse-accessibility-for-the-posting-page-5-pts" },
 ];
 const METRICS_URL = "Scoring-Metrics.html";
 const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;
@@ -274,14 +274,14 @@ let sort = { key: "total", dir: -1 };
 const open = new Set();
 
 function normalize(r) {
-  const vendor = (r.Platform && typeof r.Platform === "object" ? r.Platform.Vendor : r.Platform) || "";
+  const vendor = r.Vendor || "";
   const sum = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + num(r[c.key]), 0);
   const notes = [r.Note].map(v => String(v ?? "").trim()).filter(Boolean);
   return {
     raw: r,
-    state: String(r.State || "").trim(),
-    name: String(r["System Name"] || "").trim(),
-    type: String(r["System Type"] || "").trim(),
+    state: String(r.Government || "").trim(),
+    name: String(r["System name"] || "").trim(),
+    type: String(r["System type"] || "").trim(),
     vendor: String(vendor).trim(),
     benchmark: r.Benchmark === true,
     total: num(r.Total),
@@ -320,9 +320,9 @@ function detail(d) {
   return `<div class="detail-grid">
     <div><p class="system"><strong>Government:</strong> ${esc(d.state)}<br><strong>Total:</strong> ${d.total} / 100 pts<br><strong>System:</strong> ${esc(d.name || "—")}<br><strong>Type:</strong> ${esc(d.type || "—")}<br><strong>Vendor:</strong> ${esc(d.vendor || "—")}</p>
     <h3>Links</h3><dl class="links">
-      ${linkRow("Public site", r["Public Link"])}
+      ${linkRow("Public site", r["Public site URL"])}
       ${linkRow("Notices list", r["Notices list URL"])}
-      ${linkRow("Sample posting", r["Single Posting URL"])}
+      ${linkRow("Sample posting", r["Sample posting URL"])}
     </dl>
     ${d.notes.map(n => `<div class="note">${linkify(n)}</div>`).join("")}
     </div>${groups}</div>`;
@@ -425,10 +425,10 @@ function methodology() {
 }
 
 function toCsv() {
-  const cols = ["Rank", "Government", "System Name", "System Type", "Vendor", "Public Link", "Notices list URL", "Single Posting URL",
+  const cols = ["Rank", "Government", "System name", "System type", "Vendor", "Public site URL", "Notices list URL", "Sample posting URL",
     ...CRITERIA.map(c => c.field), ...CRITERIA.map(c => `${GROUPS[c.group]}: ${c.label} (pts)`), "Total", "Notes"];
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-  const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public Link"], d.raw["Notices list URL"], d.raw["Single Posting URL"],
+  const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public site URL"], d.raw["Notices list URL"], d.raw["Sample posting URL"],
     ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total, d.notes.join("; ")].map(q).join(","));
   const blob = new Blob([[cols.map(q).join(","), ...lines].join("\r\n")], { type: "text/csv" });
   const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "procurement-software-landscape.csv" });

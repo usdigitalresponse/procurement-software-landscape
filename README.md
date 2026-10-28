@@ -22,32 +22,32 @@ The site is published with GitHub Pages from the `main` branch. Changes pushed t
 
 Edit `Procurement-Software-Landscape.yaml` directly. Each record has these kinds of fields:
 
-- **Description:** `State` (the government's name, including DC, the territories, and benchmark sites such as the United Kingdom), `System Name`, `System Type`, and `Platform` (with its `Vendor`).
+- **Description:** `Government` (the name of the state, DC, territory, or benchmark site such as the United Kingdom), `System name`, `System type`, and `Vendor`. Separate more than one vendor with a semicolon.
 - **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
 - **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
-- **Links:** `Public Link`, `Notices list URL`, and `Single Posting URL`. Use `N/A` when there is none.
-- **Answers:** one field per metric, such as `Contact Name and Email: Yes`, or a Lighthouse score from 0 to 100. Use 0 for a Lighthouse score that could not be measured.
+- **Links:** `Public site URL`, `Notices list URL`, and `Sample posting URL`. Use `N/A` when there is none.
+- **Answers:** one field per metric, named for the metric, such as `Contact name and email: Yes`, or a Lighthouse score from 0 to 100. Use 0 for a Lighthouse score that could not be measured.
 - **Points:** one field per metric, `G1` through `P8`, plus `Total`.
 
-Each points field is named for its section and its order within that section: `G` for General, `N` for the notices list, and `P` for the individual posting.
+Each points field is named for its section and its order within that section: `G` for General, `N` for the notices list, and `P` for the individual posting. The table lists each points field with its matching answer field.
 
-| Field | Metric | Max |
+| Points field | Answer field | Max |
 |---|---|---|
-| `G1` | State web design system in use | 5 |
-| `G2` | Data standard is published | 5 |
-| `N1` | Notices list has a direct URL | 10 |
-| `N2` | Includes local listings | 5 |
-| `N3` | Data export of notices list | 5 |
-| `N4` | Lighthouse performance, notices list | 5 |
-| `N5` | Lighthouse accessibility, notices list | 5 |
-| `P1` | Direct URL to an individual posting | 25 |
-| `P2` | Individual posting page | 5 |
-| `P3` | Contact name and email | 5 |
-| `P4` | Project summary | 5 |
-| `P5` | Data export of posting | 5 |
-| `P6` | Documents without registration | 5 |
-| `P7` | Lighthouse performance, posting page | 5 |
-| `P8` | Lighthouse accessibility, posting page | 5 |
+| `G1` | `State web design system in use` | 5 |
+| `G2` | `Data standard is published` | 5 |
+| `N1` | `Notices list has a direct URL` | 10 |
+| `N2` | `Includes local listings` | 5 |
+| `N3` | `Data export of notices list` | 5 |
+| `N4` | `Lighthouse performance, notices list` | 5 |
+| `N5` | `Lighthouse accessibility, notices list` | 5 |
+| `P1` | `Direct URL to an individual posting` | 25 |
+| `P2` | `Individual posting page` | 5 |
+| `P3` | `Contact name and email` | 5 |
+| `P4` | `Project summary` | 5 |
+| `P5` | `Data export of posting` | 5 |
+| `P6` | `Documents without registration` | 5 |
+| `P7` | `Lighthouse performance, posting page` | 5 |
+| `P8` | `Lighthouse accessibility, posting page` | 5 |
 
 When you change a record, keep these consistent:
 
