@@ -24,34 +24,34 @@ Edit `Website-Inventory.yaml` directly. Each record has three kinds of fields:
 
 - **Links:** `Public Link`, `Notice list URL`, and `Single Posting URL`. Use `N/A` when there is none.
 - **Answers:** one field per metric, such as `Contact Name and Email: Yes`, or a Lighthouse score from 0 to 100. Use 0 for a Lighthouse score that could not be measured.
-- **Points:** the single-letter fields `I` through `w`, plus `Total`.
+- **Points:** one field per metric, `G1` through `P8`, plus `Total`.
 
-The points fields map to the metrics in this order:
+Each points field is named for its section and its order within that section: `G` for General, `N` for the notice list, and `P` for the individual posting.
 
 | Field | Metric | Max |
 |---|---|---|
-| `I` | State web design system in use | 5 |
-| `j` | Data standard is published | 5 |
-| `k` | Notice list has a direct URL | 10 |
-| `l` | Includes local listings | 5 |
-| `m` | Data export of notices list | 5 |
-| `n` | Lighthouse performance, notice list | 5 |
-| `o` | Lighthouse accessibility, notice list | 5 |
-| `p` | Direct URL to an individual posting | 25 |
-| `q` | Individual posting page | 5 |
-| `r` | Contact name and email | 5 |
-| `s` | Project summary | 5 |
-| `t` | Data export of posting | 5 |
-| `u` | Documents without registration | 5 |
-| `v` | Lighthouse performance, posting page | 5 |
-| `w` | Lighthouse accessibility, posting page | 5 |
+| `G1` | State web design system in use | 5 |
+| `G2` | Data standard is published | 5 |
+| `N1` | Notice list has a direct URL | 10 |
+| `N2` | Includes local listings | 5 |
+| `N3` | Data export of notices list | 5 |
+| `N4` | Lighthouse performance, notice list | 5 |
+| `N5` | Lighthouse accessibility, notice list | 5 |
+| `P1` | Direct URL to an individual posting | 25 |
+| `P2` | Individual posting page | 5 |
+| `P3` | Contact name and email | 5 |
+| `P4` | Project summary | 5 |
+| `P5` | Data export of posting | 5 |
+| `P6` | Documents without registration | 5 |
+| `P7` | Lighthouse performance, posting page | 5 |
+| `P8` | Lighthouse accessibility, posting page | 5 |
 
 When you change a record, keep these consistent:
 
 - A "Yes" answer earns the metric's full points; anything else earns 0.
 - Lighthouse points use these bands: 90 or more = 5, 80–89 = 4, 70–79 = 3, 60–69 = 2, 50–59 = 1, below 50 = 0.
 - Lighthouse points for the notice list or posting page are 0 unless that page has a direct URL.
-- `Total` must equal the sum of `I` through `w`.
+- `Total` must equal the sum of the 15 points fields.
 - `FIELD8` holds a free-text note, shown on the site in the state's details.
 - `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download.
 

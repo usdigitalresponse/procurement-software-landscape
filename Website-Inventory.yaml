@@ -24,21 +24,21 @@
     'Lighthouse Performance, Posting': 85
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 5
-    j: 5
-    k: 10
-    l: 5
-    m: 5
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 5
-    u: 5
-    v: 4
-    w: 5
+    G1: 5
+    G2: 5
+    N1: 10
+    N2: 5
+    N3: 5
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 5
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 99
 -
     State: Alabama
@@ -65,21 +65,21 @@
     'Lighthouse Performance, Posting': 75
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 4
-    o: 4
-    p: 25
-    q: 5
-    r: 0
-    s: 5
-    t: 0
-    u: 5
-    v: 3
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 4
+    N5: 4
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 3
+    P8: 5
     Total: 66
 -
     State: Alaska
@@ -106,21 +106,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 0
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 15
 -
     State: 'American Samoa'
@@ -147,21 +147,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 4
-    o: 4
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 4
+    N5: 4
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 23
 -
     State: Arizona
@@ -188,21 +188,21 @@
     'Lighthouse Performance, Posting': 80
     'Lighthouse Accessability, Posting': 85
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 4
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 4
-    w: 4
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 4
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 4
     Total: 77
 -
     State: Arkansas
@@ -229,21 +229,21 @@
     'Lighthouse Performance, Posting': 43
     'Lighthouse Accessability, Posting': 92
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 4
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 4
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 5
     Total: 69
 -
     State: California
@@ -270,21 +270,21 @@
     'Lighthouse Performance, Posting': 70
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 2
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 3
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 2
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 3
+    P8: 5
     Total: 75
 -
     State: Colorado
@@ -311,21 +311,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 0
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 15
 -
     State: Connecticut
@@ -352,21 +352,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 2
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 2
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 42
 -
     State: Delaware
@@ -393,21 +393,21 @@
     'Lighthouse Performance, Posting': 80
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 5
-    j: 5
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 4
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 4
-    w: 5
+    G1: 5
+    G2: 5
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 4
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 78
 -
     State: 'District of Columbia'
@@ -434,21 +434,21 @@
     'Lighthouse Performance, Posting': 67
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 2
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 2
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 2
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 2
+    P8: 5
     Total: 74
 -
     State: Florida
@@ -475,21 +475,21 @@
     'Lighthouse Performance, Posting': 69
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 3
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 2
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 3
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 2
+    P8: 5
     Total: 75
 -
     State: Georgia
@@ -516,21 +516,21 @@
     'Lighthouse Performance, Posting': 88
     'Lighthouse Accessability, Posting': 95
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 4
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 79
 -
     State: Guam
@@ -557,21 +557,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 3
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 3
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 23
 -
     State: Hawaii
@@ -598,21 +598,21 @@
     'Lighthouse Performance, Posting': 83
     'Lighthouse Accessability, Posting': 95
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 5
-    n: 1
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 4
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 5
+    N4: 1
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 80
 -
     State: Idaho
@@ -639,21 +639,21 @@
     'Lighthouse Performance, Posting': 69
     'Lighthouse Accessability, Posting': 93
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 0
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 2
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 2
+    P8: 5
     Total: 57
 -
     State: Illinois
@@ -680,21 +680,21 @@
     'Lighthouse Performance, Posting': 96
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 75
 -
     State: Indiana
@@ -721,21 +721,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 5
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 2
-    o: 5
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 5
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 2
+    N5: 5
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 27
 -
     State: Iowa
@@ -762,21 +762,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 4
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 4
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 24
 -
     State: Kansas
@@ -803,21 +803,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 1
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 1
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 36
 -
     State: Kentucky
@@ -844,21 +844,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 0
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 15
 -
     State: Louisiana
@@ -885,21 +885,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 5
-    o: 5
-    p: 0
-    q: 0
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 5
+    N5: 5
+    P1: 0
+    P2: 0
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 35
 -
     State: Maine
@@ -926,21 +926,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 0
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 15
 -
     State: Maryland
@@ -967,21 +967,21 @@
     'Lighthouse Performance, Posting': 67
     'Lighthouse Accessability, Posting': 97
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 2
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 2
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 2
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 2
+    P8: 5
     Total: 74
 -
     State: Massachusetts
@@ -1008,21 +1008,21 @@
     'Lighthouse Performance, Posting': 95
     'Lighthouse Accessability, Posting': 98
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 5
-    n: 4
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 5
+    N4: 4
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 79
 -
     State: Michigan
@@ -1049,21 +1049,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 5
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 5
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 20
 -
     State: Minnesota
@@ -1090,21 +1090,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 3
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 3
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 33
 -
     State: Mississippi
@@ -1131,21 +1131,21 @@
     'Lighthouse Performance, Posting': 74
     'Lighthouse Accessability, Posting': 74
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 3
-    o: 4
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 3
-    w: 3
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 3
+    N5: 4
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 3
+    P8: 3
     Total: 68
 -
     State: Missouri
@@ -1172,21 +1172,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 0
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 0
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 40
 -
     State: Montana
@@ -1213,21 +1213,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 4
-    p: 0
-    q: 0
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 4
+    P1: 0
+    P2: 0
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 29
 -
     State: Nebraska
@@ -1254,21 +1254,21 @@
     'Lighthouse Performance, Posting': 95
     'Lighthouse Accessability, Posting': 98
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 80
 -
     State: Nevada
@@ -1295,21 +1295,21 @@
     'Lighthouse Performance, Posting': 95
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 75
 -
     State: 'New Hampshire'
@@ -1336,21 +1336,21 @@
     'Lighthouse Performance, Posting': 97
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 70
 -
     State: 'New Jersey'
@@ -1377,21 +1377,21 @@
     'Lighthouse Performance, Posting': 89
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 4
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 4
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 4
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 68
 -
     State: 'New Mexico'
@@ -1418,21 +1418,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 5
-    p: 0
-    q: 0
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 5
+    P1: 0
+    P2: 0
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 30
 -
     State: 'New York'
@@ -1459,21 +1459,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 5
-    n: 5
-    o: 4
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 0
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 5
+    N4: 5
+    N5: 4
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 0
+    P7: 0
+    P8: 0
     Total: 29
 -
     State: 'North Carolina'
@@ -1500,21 +1500,21 @@
     'Lighthouse Performance, Posting': 77
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 5
-    n: 1
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 5
-    t: 0
-    u: 5
-    v: 3
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 5
+    N4: 1
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 3
+    P8: 5
     Total: 74
 -
     State: 'North Dakota'
@@ -1541,21 +1541,21 @@
     'Lighthouse Performance, Posting': 72
     'Lighthouse Accessability, Posting': 97
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 1
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 3
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 1
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 3
+    P8: 5
     Total: 69
 -
     State: 'Northern Mariana Islands'
@@ -1582,21 +1582,21 @@
     'Lighthouse Performance, Posting': 85
     'Lighthouse Accessability, Posting': 98
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 4
-    o: 5
-    p: 0
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 4
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 29
 -
     State: Ohio
@@ -1623,21 +1623,21 @@
     'Lighthouse Performance, Posting': 65
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 2
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 2
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 2
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 2
+    P8: 5
     Total: 69
 -
     State: Oklahoma
@@ -1664,21 +1664,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 2
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 2
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 42
 -
     State: Oregon
@@ -1705,21 +1705,21 @@
     'Lighthouse Performance, Posting': 93
     'Lighthouse Accessability, Posting': 94
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 5
-    n: 4
-    o: 5
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 5
+    N4: 4
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 79
 -
     State: Pennsylvania
@@ -1746,21 +1746,21 @@
     'Lighthouse Performance, Posting': 94
     'Lighthouse Accessability, Posting': 89
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 5
-    o: 2
-    p: 25
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 5
-    w: 4
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 5
+    N5: 2
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 4
     Total: 76
 -
     State: 'Puerto Rico'
@@ -1787,21 +1787,21 @@
     'Lighthouse Performance, Posting': 85
     'Lighthouse Accessability, Posting': 96
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 3
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 5
-    t: 0
-    u: 5
-    v: 4
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 3
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 67
 -
     State: 'Rhode Island'
@@ -1828,21 +1828,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 40
 -
     State: 'South Carolina'
@@ -1869,21 +1869,21 @@
     'Lighthouse Performance, Posting': 74
     'Lighthouse Accessability, Posting': 100
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 3
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 3
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 3
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 3
+    P8: 5
     Total: 61
 -
     State: 'South Dakota'
@@ -1910,21 +1910,21 @@
     'Lighthouse Performance, Posting': 90
     'Lighthouse Accessability, Posting': 95
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 2
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 5
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 2
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 67
 -
     State: Tennessee
@@ -1951,21 +1951,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 3
-    o: 5
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 3
+    N5: 5
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 23
 -
     State: Texas
@@ -1992,21 +1992,21 @@
     'Lighthouse Performance, Posting': 86
     'Lighthouse Accessability, Posting': 92
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 4
-    o: 3
-    p: 25
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 4
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 4
+    N5: 3
+    P1: 25
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 4
+    P8: 5
     Total: 71
 -
     State: 'US Virgin Islands'
@@ -2033,21 +2033,21 @@
     'Lighthouse Performance, Posting': 97
     'Lighthouse Accessability, Posting': 98
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 5
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 5
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 70
 -
     State: Utah
@@ -2074,21 +2074,21 @@
     'Lighthouse Performance, Posting': 100
     'Lighthouse Accessability, Posting': 93
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 3
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 5
-    t: 0
-    u: 5
-    v: 5
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 3
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 5
+    P8: 5
     Total: 73
 -
     State: Vermont
@@ -2115,21 +2115,21 @@
     'Lighthouse Performance, Posting': 48
     'Lighthouse Accessability, Posting': 93
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 3
-    o: 5
-    p: 25
-    q: 5
-    r: 0
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 5
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 3
+    N5: 5
+    P1: 25
+    P2: 5
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 5
     Total: 58
 -
     State: Virginia
@@ -2156,21 +2156,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 5
-    m: 0
-    n: 4
-    o: 3
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 5
+    N3: 0
+    N4: 4
+    N5: 3
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 42
 -
     State: Washington
@@ -2197,21 +2197,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 0
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 0
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 0
+    P7: 0
+    P8: 0
     Total: 0
 -
     State: 'West Virginia'
@@ -2238,21 +2238,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 0
-    l: 0
-    m: 0
-    n: 0
-    o: 0
-    p: 0
-    q: 5
-    r: 5
-    s: 0
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 0
+    N2: 0
+    N3: 0
+    N4: 0
+    N5: 0
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 0
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 15
 -
     State: Wisconsin
@@ -2279,21 +2279,21 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 5
-    n: 2
-    o: 5
-    p: 0
-    q: 5
-    r: 5
-    s: 5
-    t: 0
-    u: 5
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 5
+    N4: 2
+    N5: 5
+    P1: 0
+    P2: 5
+    P3: 5
+    P4: 5
+    P5: 0
+    P6: 5
+    P7: 0
+    P8: 0
     Total: 42
 -
     State: Wyoming
@@ -2320,19 +2320,19 @@
     'Lighthouse Performance, Posting': 0
     'Lighthouse Accessability, Posting': 0
     FIELD24: ""
-    I: 0
-    j: 0
-    k: 10
-    l: 0
-    m: 0
-    n: 5
-    o: 0
-    p: 0
-    q: 0
-    r: 0
-    s: 0
-    t: 0
-    u: 0
-    v: 0
-    w: 0
+    G1: 0
+    G2: 0
+    N1: 10
+    N2: 0
+    N3: 0
+    N4: 5
+    N5: 0
+    P1: 0
+    P2: 0
+    P3: 0
+    P4: 0
+    P5: 0
+    P6: 0
+    P7: 0
+    P8: 0
     Total: 15

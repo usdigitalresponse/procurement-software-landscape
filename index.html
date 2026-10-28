@@ -227,23 +227,23 @@
 <script>
 const DATA_URL = "Website-Inventory.yaml";
 
-// Score columns in the YAML (I..w) map, in order, to these criteria.
+// Score fields in the YAML: G = General, N = Notice list, P = Individual posting.
 const CRITERIA = [
-  { group: "general", key: "I", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use" },
-  { group: "general", key: "j", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published" },
-  { group: "notice",  key: "k", max: 10, label: "Direct URL to notice list", field: "Direct URL to Notice List? (10 pts)", anchor: "solicitation-posting-notice-list-has-a-direct-url-10-pts" },
-  { group: "notice",  key: "l", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings" },
-  { group: "notice",  key: "m", max: 5,  label: "Data export of notice list", field: "Data Export of Notice List?", anchor: "data-export-of-notices-list" },
-  { group: "notice",  key: "n", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices", anchor: "lighthouse-performance-for-the-notices-list" },
-  { group: "notice",  key: "o", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices", anchor: "lighthouse-accessibility-for-the-notices-list" },
-  { group: "posting", key: "p", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)", anchor: "direct-url-to-an-individual-posting-25-pts" },
-  { group: "posting", key: "q", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page" },
-  { group: "posting", key: "r", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email" },
-  { group: "posting", key: "s", max: 5,  label: "Project summary", field: "Project Summary", anchor: "project-summary" },
-  { group: "posting", key: "t", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting" },
-  { group: "posting", key: "u", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration" },
-  { group: "posting", key: "v", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page" },
-  { group: "posting", key: "w", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessability, Posting", anchor: "lighthouse-accessibility-for-the-posting-page" },
+  { group: "general", key: "G1", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use" },
+  { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published" },
+  { group: "notice",  key: "N1", max: 10, label: "Direct URL to notice list", field: "Direct URL to Notice List? (10 pts)", anchor: "solicitation-posting-notice-list-has-a-direct-url-10-pts" },
+  { group: "notice",  key: "N2", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings" },
+  { group: "notice",  key: "N3", max: 5,  label: "Data export of notice list", field: "Data Export of Notice List?", anchor: "data-export-of-notices-list" },
+  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices", anchor: "lighthouse-performance-for-the-notices-list" },
+  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices", anchor: "lighthouse-accessibility-for-the-notices-list" },
+  { group: "posting", key: "P1", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)", anchor: "direct-url-to-an-individual-posting-25-pts" },
+  { group: "posting", key: "P2", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page" },
+  { group: "posting", key: "P3", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email" },
+  { group: "posting", key: "P4", max: 5,  label: "Project summary", field: "Project Summary", anchor: "project-summary" },
+  { group: "posting", key: "P5", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting" },
+  { group: "posting", key: "P6", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration" },
+  { group: "posting", key: "P7", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page" },
+  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessability, Posting", anchor: "lighthouse-accessibility-for-the-posting-page" },
 ];
 const METRICS_URL = "Scoring-Metrics.html";
 const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;
@@ -397,8 +397,8 @@ function stats() {
   const sorted = [...totals].sort((a, b) => a - b);
   const median = sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2;
   const best = rows.reduce((a, b) => (b.total > a.total ? b : a));
-  const direct = rows.filter(d => num(d.raw.p) > 0).length;
-  const docs = rows.filter(d => num(d.raw.u) > 0).length;
+  const direct = rows.filter(d => num(d.raw.P1) > 0).length;
+  const docs = rows.filter(d => num(d.raw.P6) > 0).length;
   $("#stats").innerHTML = [
     [rows.length, "Sites reviewed"],
     [avg.toFixed(1), "Average score"],
@@ -433,7 +433,7 @@ function syncHash() {
   if ($("#q").value) p.set("q", $("#q").value);
   checkedValues("type-list").forEach(v => p.append("type", v));
   checkedValues("vendor-list").forEach(v => p.append("vendor", v));
-  // e.g. metrics=p,u,-w: full points on p and u, not on w.
+  // e.g. metrics=P1,P6,-P8: full points on P1 and P6, not on P8.
   if (checkedMetrics().length) p.set("metrics", checkedMetrics().map(({ c, yes }) => (yes ? "" : "-") + c.key).join(","));
   if (open.size === 1) p.set("state", [...open][0]);
   history.replaceState(null, "", p.toString() ? "#" + p : location.pathname);
@@ -444,7 +444,10 @@ function readHash() {
   $("#q").value = p.get("q") || "";
   document.querySelectorAll("#type-list input").forEach(i => i.checked = p.getAll("type").includes(i.value));
   document.querySelectorAll("#vendor-list input").forEach(i => i.checked = p.getAll("vendor").includes(i.value));
-  const keys = (p.get("metrics") || "").split(",");
+  // Links made before the score fields were renamed use the old letters (I, j..w).
+  const OLD_KEYS = { I: "G1", j: "G2", k: "N1", l: "N2", m: "N3", n: "N4", o: "N5",
+    p: "P1", q: "P2", r: "P3", s: "P4", t: "P5", u: "P6", v: "P7", w: "P8" };
+  const keys = (p.get("metrics") || "").split(",").map(k => k.replace(/^(-?)(\w)$/, (m, neg, old) => OLD_KEYS[old] ? neg + OLD_KEYS[old] : m));
   document.querySelectorAll("#metric-list input").forEach(i =>
     i.checked = keys.includes((i.value === "yes" ? "" : "-") + i.dataset.key));
   updateSummaries();
