@@ -1887,10 +1887,10 @@
     Total: 61
 -
     State: 'South Dakota'
-    'System Name': easyPurchase
+    'System Name': 'Posting Board'
     'System Type': eProcurement
     Platform: {Vendor: 'ESM Solutions'}
-    'Public Link': 'https://boa.sd.gov/central-services/procurement-management/procurement-management-eprocurement.aspx'
+    'Public Link': 'https://www.sd.gov/bhra?id=cs_kb_article_view&sysparm_article=KB0044779&sys_kb_id=a9c554f787aecf14a086bae9cebb356d&spa=1'
     'Notice list URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/events'
     'Single Posting URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/eventDetail/19882'
     FIELD8: ""
