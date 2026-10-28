@@ -22,7 +22,7 @@
     'Data Export of Posting?': Yes
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 85
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 5
     G2: 5
@@ -63,7 +63,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 75
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -104,7 +104,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -145,7 +145,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -186,7 +186,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 80
-    'Lighthouse Accessability, Posting': 85
+    'Lighthouse Accessibility, Posting': 85
     FIELD24: ""
     G1: 0
     G2: 0
@@ -227,7 +227,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 43
-    'Lighthouse Accessability, Posting': 92
+    'Lighthouse Accessibility, Posting': 92
     FIELD24: ""
     G1: 0
     G2: 0
@@ -247,9 +247,9 @@
     Total: 69
 -
     State: California
-    'System Name': CaleProcure
+    'System Name': 'Cal eProcure'
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://caleprocure.ca.gov/pages/index.aspx'
     'Notice list URL': 'https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx'
     'Single Posting URL': 'https://caleprocure.ca.gov/event/3860/0000039630'
@@ -268,7 +268,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 70
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -309,7 +309,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -331,7 +331,7 @@
     State: Connecticut
     'System Name': 'CT Source'
     'System Type': 'eProcurement, ERP'
-    Platform: {Vendor: 'Proactis WebProcure; Peoplesoft by Oracle'}
+    Platform: {Vendor: 'Proactis WebProcure; PeopleSoft by Oracle'}
     'Public Link': 'https://portal.ct.gov/DAS/CTSource/CTSource'
     'Notice list URL': 'https://portal.ct.gov/das/ctsource/bidboard?language=en_US'
     'Single Posting URL': N/A
@@ -350,7 +350,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -391,7 +391,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 80
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 5
     G2: 5
@@ -432,7 +432,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 67
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 0
     G2: 0
@@ -473,7 +473,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 69
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 0
     G2: 0
@@ -514,7 +514,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 88
-    'Lighthouse Accessability, Posting': 95
+    'Lighthouse Accessibility, Posting': 95
     FIELD24: ""
     G1: 0
     G2: 0
@@ -555,7 +555,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -596,7 +596,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 83
-    'Lighthouse Accessability, Posting': 95
+    'Lighthouse Accessibility, Posting': 95
     FIELD24: ""
     G1: 0
     G2: 0
@@ -637,7 +637,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 69
-    'Lighthouse Accessability, Posting': 93
+    'Lighthouse Accessibility, Posting': 93
     FIELD24: ""
     G1: 0
     G2: 0
@@ -678,7 +678,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 96
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -700,7 +700,7 @@
     State: Indiana
     'System Name': 'Current Business Opportunities'
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://www.in.gov/idoa/procurement/supplier-resource-center/requirements-to-do-business-with-the-state/bidder-profile-registration/'
     'Notice list URL': 'https://www.in.gov/idoa/procurement/current-business-opportunities/'
     'Single Posting URL': N/A
@@ -719,7 +719,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 5
     G2: 0
@@ -760,7 +760,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -782,7 +782,7 @@
     State: Kansas
     'System Name': 'SMART (Statewide Management, Accounting and Reporting Tool)'
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://smartweb.ks.gov/'
     'Notice list URL': 'https://supplier.sok.ks.gov/psc/sokfsprdsup/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL?&'
     'Single Posting URL': N/A
@@ -801,7 +801,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -842,7 +842,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -883,7 +883,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -924,7 +924,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -965,7 +965,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 67
-    'Lighthouse Accessability, Posting': 97
+    'Lighthouse Accessibility, Posting': 97
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1006,7 +1006,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 95
-    'Lighthouse Accessability, Posting': 98
+    'Lighthouse Accessibility, Posting': 98
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1047,7 +1047,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1069,7 +1069,7 @@
     State: Minnesota
     'System Name': 'SWIFT (Statewide Integrated Financial Tools)'
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://mn.gov/mmb/accounting/swift/'
     'Notice list URL': 'https://guest.supplier.systems.state.mn.us/psc/fmssupap/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Single Posting URL': N/A
@@ -1088,7 +1088,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1129,7 +1129,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 74
-    'Lighthouse Accessability, Posting': 74
+    'Lighthouse Accessibility, Posting': 74
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1149,7 +1149,7 @@
     Total: 68
 -
     State: Missouri
-    'System Name': 'MissouriBUYS, powerd by Movers'
+    'System Name': 'MissouriBUYS, powered by Movers'
     'System Type': ERP
     Platform: {Vendor: Oracle}
     'Public Link': 'https://missouribuys.mo.gov/'
@@ -1170,7 +1170,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1211,7 +1211,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1252,7 +1252,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 95
-    'Lighthouse Accessability, Posting': 98
+    'Lighthouse Accessibility, Posting': 98
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1293,7 +1293,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 95
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1334,7 +1334,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 97
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1375,7 +1375,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 89
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1397,7 +1397,7 @@
     State: 'New Mexico'
     'System Name': eProNM
     'System Type': 'eProcurement, ERP'
-    Platform: {Vendor: 'Jaggaer; Peoplesoft by Oracle'}
+    Platform: {Vendor: 'Jaggaer; PeopleSoft by Oracle'}
     'Public Link': 'https://www.generalservices.state.nm.us/state-purchasing/online-procurement/'
     'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
     'Single Posting URL': N/A
@@ -1416,7 +1416,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1457,7 +1457,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': No
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1498,7 +1498,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 77
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1539,7 +1539,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 72
-    'Lighthouse Accessability, Posting': 97
+    'Lighthouse Accessibility, Posting': 97
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1580,7 +1580,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 85
-    'Lighthouse Accessability, Posting': 98
+    'Lighthouse Accessibility, Posting': 98
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1602,7 +1602,7 @@
     State: Ohio
     'System Name': OhioBuys
     'System Type': 'eProcurement, ERP'
-    Platform: {Vendor: 'Ivalua; Peoplesoft by Oracle'}
+    Platform: {Vendor: 'Ivalua; PeopleSoft by Oracle'}
     'Public Link': 'https://procure.ohio.gov/state-and-local-agencies/resources/ohiobuys-overview'
     'Notice list URL': 'https://ohiobuys.ohio.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/56086'
@@ -1621,7 +1621,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 65
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1643,7 +1643,7 @@
     State: Oklahoma
     'System Name': 'Bidding Opportunities'
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://oklahoma.gov/omes/divisions/central-purchasing/suppliers-and-payees/supplier-portal.html'
     'Notice list URL': 'https://financials.ok.gov/psc/SOKLFP1DS/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Single Posting URL': N/A
@@ -1662,7 +1662,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1703,7 +1703,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 93
-    'Lighthouse Accessability, Posting': 94
+    'Lighthouse Accessibility, Posting': 94
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1744,7 +1744,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 94
-    'Lighthouse Accessability, Posting': 89
+    'Lighthouse Accessibility, Posting': 89
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1785,7 +1785,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 85
-    'Lighthouse Accessability, Posting': 96
+    'Lighthouse Accessibility, Posting': 96
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1826,7 +1826,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1867,7 +1867,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 74
-    'Lighthouse Accessability, Posting': 100
+    'Lighthouse Accessibility, Posting': 100
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1908,7 +1908,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 90
-    'Lighthouse Accessability, Posting': 95
+    'Lighthouse Accessibility, Posting': 95
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1930,7 +1930,7 @@
     State: Tennessee
     'System Name': Edison
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://hub.edison.tn.gov/psp/paprd/SUPPLIER/SUPP/h/?tab=PAPP_GUEST'
     'Notice list URL': 'https://www.tn.gov/content/tn/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html'
     'Single Posting URL': N/A
@@ -1949,7 +1949,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -1971,7 +1971,7 @@
     State: Texas
     'System Name': TXSmartBuy
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://www.txsmartbuy.com/'
     'Notice list URL': 'https://www.txsmartbuy.gov/esbd'
     'Single Posting URL': 'https://www.txsmartbuy.gov/esbd/304-27-0790MS-1'
@@ -1990,7 +1990,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 86
-    'Lighthouse Accessability, Posting': 92
+    'Lighthouse Accessibility, Posting': 92
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2031,7 +2031,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 97
-    'Lighthouse Accessability, Posting': 98
+    'Lighthouse Accessibility, Posting': 98
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2072,7 +2072,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 100
-    'Lighthouse Accessability, Posting': 93
+    'Lighthouse Accessibility, Posting': 93
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2094,7 +2094,7 @@
     State: Vermont
     'System Name': VTBuys
     'System Type': 'eProcurement, ERP'
-    Platform: {Vendor: 'Ivalua; Peoplesoft by Oracle'}
+    Platform: {Vendor: 'Ivalua; PeopleSoft by Oracle'}
     'Public Link': 'https://vtbuysprocurement.vermont.gov/'
     'Notice list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
@@ -2113,7 +2113,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 48
-    'Lighthouse Accessability, Posting': 93
+    'Lighthouse Accessibility, Posting': 93
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2154,7 +2154,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2195,7 +2195,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': No
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2236,7 +2236,7 @@
     'Data Export of Posting?': Print
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2258,7 +2258,7 @@
     State: Wisconsin
     'System Name': WISBuy
     'System Type': ERP
-    Platform: {Vendor: 'Peoplesoft by Oracle'}
+    Platform: {Vendor: 'PeopleSoft by Oracle'}
     'Public Link': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/h/?tab=WI_BIDDER'
     'Notice list URL': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/c/WI_SS_BIDDER_FLU.WI_SS_BDR_BIDS_FLU.GBL'
     'Single Posting URL': N/A
@@ -2277,7 +2277,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': Yes
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0
@@ -2318,7 +2318,7 @@
     'Data Export of Posting?': No
     'Documents without registration?': No
     'Lighthouse Performance, Posting': 0
-    'Lighthouse Accessability, Posting': 0
+    'Lighthouse Accessibility, Posting': 0
     FIELD24: ""
     G1: 0
     G2: 0

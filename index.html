@@ -245,7 +245,7 @@ const CRITERIA = [
   { group: "posting", key: "P5", max: 5,  label: "Data export of posting", field: "Data Export of Posting?", anchor: "data-export-of-posting" },
   { group: "posting", key: "P6", max: 5,  label: "Documents without registration", field: "Documents without registration?", anchor: "documents-without-registration" },
   { group: "posting", key: "P7", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Posting", anchor: "lighthouse-performance-for-the-posting-page" },
-  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessability, Posting", anchor: "lighthouse-accessibility-for-the-posting-page" },
+  { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Posting", anchor: "lighthouse-accessibility-for-the-posting-page" },
 ];
 const METRICS_URL = "Scoring-Metrics.html";
 const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;
@@ -269,7 +269,7 @@ const open = new Set();
 function normalize(r) {
   const vendor = (r.Platform && typeof r.Platform === "object" ? r.Platform.Vendor : r.Platform) || "";
   const sum = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + num(r[c.key]), 0);
-  const notes = [r.FIELD8, r.FIELD24, r["LIghthouse test"]].map(v => String(v ?? "").trim()).filter(Boolean);
+  const notes = [r.FIELD8, r.FIELD24].map(v => String(v ?? "").trim()).filter(Boolean);
   return {
     raw: r,
     state: String(r.State || "").trim(),
