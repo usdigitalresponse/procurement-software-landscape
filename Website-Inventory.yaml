@@ -1397,11 +1397,11 @@
     State: 'New Mexico'
     'System Name': eProNM
     'System Type': 'eProcurement, ERP'
-    Platform: {Vendor: 'Jaggaer (soon Euna); Peoplesoft by Oracle'}
+    Platform: {Vendor: 'Jaggaer; Peoplesoft by Oracle'}
     'Public Link': 'https://www.generalservices.state.nm.us/state-purchasing/online-procurement/'
     'Notice list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
     'Single Posting URL': N/A
-    FIELD8: 'https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
+    FIELD8: 'Transitioning to Euna (Bonfire) in early 2027, replacing eProNM. Re-check the notice list URL, sample posting URL and scores after the transition. New portal: https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
