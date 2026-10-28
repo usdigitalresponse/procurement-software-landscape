@@ -376,7 +376,7 @@
     'Public Link': 'https://mymarketplace.delaware.gov/'
     'Notice list URL': 'https://mmp.delaware.gov/Bids/'
     'Single Posting URL': 'https://mmp.delaware.gov/Bids/Details/9246'
-    FIELD8: 'Generally not bad, accept some bids through Bonfire, uses Euna Marketplace'
+    FIELD8: ""
     'State Web Design System in use?': Yes
     'Published Data Standard?': Yes
     'Direct URL to Notice List? (10 pts)': Yes
@@ -458,7 +458,7 @@
     'Public Link': 'https://vendor.myfloridamarketplace.com/'
     'Notice list URL': 'https://vendor.myfloridamarketplace.com/search/bids'
     'Single Posting URL': 'https://vendor.myfloridamarketplace.com/search/bids/detail/16318'
-    FIELD8: 'Some Florida agencies apper to accept proposals via email'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -540,7 +540,7 @@
     'Public Link': 'https://gsa.doa.guam.gov/invitation-for-bid/'
     'Notice list URL': 'https://gsa.doa.guam.gov/invitation-for-bid/'
     'Single Posting URL': N/A
-    FIELD8: 'Links directly to a PDF'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1114,7 +1114,7 @@
     'Public Link': 'https://www.dfa.ms.gov/magic-finance-and-grants-management'
     'Notice list URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid'
     'Single Posting URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid/Details/45855?AppId=1'
-    FIELD8: 'MS IT accpeting proposals via mail on a flash drive'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1155,7 +1155,7 @@
     'Public Link': 'https://missouribuys.mo.gov/'
     'Notice list URL': 'https://ewqg.fa.us8.oraclecloud.com/fscmUI/redwood/negotiation-abstracts/view/abstractlisting?prcBuId=300000005255687'
     'Single Posting URL': N/A
-    FIELD8: 'Page reload breaks lighthouse for posting'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1442,7 +1442,7 @@
     'Public Link': 'https://www.nyscr.ny.gov/'
     'Notice list URL': 'https://www.nyscr.ny.gov/Ads/Search'
     'Single Posting URL': N/A
-    FIELD8: 'Still requiring physical proposals'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -1934,7 +1934,7 @@
     'Public Link': 'https://hub.edison.tn.gov/psp/paprd/SUPPLIER/SUPP/h/?tab=PAPP_GUEST'
     'Notice list URL': 'https://www.tn.gov/content/tn/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html'
     'Single Posting URL': N/A
-    FIELD8: 'List links directly to documents'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
@@ -2180,7 +2180,7 @@
     'Public Link': 'https://pr-webs-vendor.des.wa.gov/'
     'Notice list URL': N/A
     'Single Posting URL': N/A
-    FIELD8: 'Must be logged in to see bids'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': No
@@ -2303,7 +2303,7 @@
     'Public Link': 'https://www.publicpurchase.com/gems/browse/home'
     'Notice list URL': 'https://www.publicpurchase.com/gems/wyominggsd,wy/buyer/public/publicInfo'
     'Single Posting URL': N/A
-    FIELD8: 'Must be logged in to see bids'
+    FIELD8: ""
     'State Web Design System in use?': No
     'Published Data Standard?': No
     'Direct URL to Notice List? (10 pts)': Yes
