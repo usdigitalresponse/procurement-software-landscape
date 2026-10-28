@@ -2095,7 +2095,7 @@
     'System Name': VTBuys
     'System Type': 'eProcurement, ERP'
     Platform: {Vendor: 'Ivalua; Peoplesoft by Oracle'}
-    'Public Link': 'https://bgs.vermont.gov/content/vtbuys-eprocurement-0'
+    'Public Link': 'https://vtbuysprocurement.vermont.gov/'
     'Notice list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
     'Single Posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
     FIELD8: ""
