@@ -361,7 +361,7 @@
     Total: 42
 -
     Government: Delaware
-    'System name': Bids
+    'System name': MyMarketplace
     'System type': Custom
     Vendor: 'Government owned'
     'Public site URL': 'https://mymarketplace.delaware.gov/'
@@ -1281,7 +1281,7 @@
     Total: 75
 -
     Government: 'New Hampshire'
-    'System name': 'Bids and Contracts'
+    'System name': 'NH Procurement Portal'
     'System type': Custom
     Vendor: 'Government owned'
     'Public site URL': 'https://apps.das.nh.gov/NHProcurement/Bid'
@@ -1601,7 +1601,7 @@
     Total: 69
 -
     Government: Oklahoma
-    'System name': 'Bidding Opportunities'
+    'System name': 'Oklahoma Supplier Portal'
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
     'Public site URL': 'https://oklahoma.gov/omes/divisions/central-purchasing/suppliers-and-payees/supplier-portal.html'
