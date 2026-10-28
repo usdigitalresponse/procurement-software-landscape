@@ -28,9 +28,9 @@ Published data standards make data more useful to researchers and efforts to mat
 
 Ideally, every government procurement agency adopts a universal standard like OCDS and flows that requirement down to their vendor systems, assisting the entire community in sharing information, comparing experiences, improving vendor performance, minimizing switching costs, and enabling data sharing. 
 
-### Solicitation posting notice list has a direct URL (10 pts)	
+### Solicitation posting notices list has a direct URL (10 pts)	
 
-This metric is focused specifically on the webpage for the notices listing for active competitive solicitation postings (like RFPs). When a webpage has a direct URL it can be shared easily with other people.
+This metric is focused specifically on the webpage for the notices list for active competitive solicitation postings (like RFPs). When a webpage has a direct URL it can be shared easily with other people.
 
 This is a yes-or-no binary metric worth ten (10) points. Yes indicates that a government (or a vendor on their behalf) maintains a public website where their current competitive solicitation posting notices are listed and that the URL of that website leads directly to the list without additional navigation by the user.  
    
@@ -56,7 +56,7 @@ This is a yes-or-no binary metric worth five (5) points. Yes indicates that the 
 
 Vendors work with multiple customers, both public and private, and benefit from being able to interact with the information in a method of their own choosing. Additionally, third-party aggregators and small business matchmaking services can better amplify government contracting opportunities when data is easily available for export.
 
-Ideally, every state government would provide direct machine readable access to notice listing data, so that other governments, researchers, vendors, the public, and even AI agents can easily access and use it.
+Ideally, every state government would provide direct machine readable access to notices list data, so that other governments, researchers, vendors, the public, and even AI agents can easily access and use it.
 
 ### Lighthouse performance for the notices list
 

@@ -4,7 +4,7 @@ This project evaluates and scores the websites that state and territorial govern
 
 **View the inventory: https://usdigitalresponse.github.io/procurement-software-landscape/**
 
-Each site is scored out of 100 points on whether its notices are easy to find, share, and use: direct links to the notice list and to individual postings, contact details, project summaries, data exports, access to documents without registration, and Google Lighthouse performance and accessibility. See [Scoring-Metrics.md](./Scoring-Metrics.md) for what each metric means, how it is scored, and why it matters.
+Each site is scored out of 100 points on whether its notices are easy to find, share, and use: direct links to the notices list and to individual postings, contact details, project summaries, data exports, access to documents without registration, and Google Lighthouse performance and accessibility. See [Scoring-Metrics.md](./Scoring-Metrics.md) for what each metric means, how it is scored, and why it matters.
 
 ## What's in this repository
 
@@ -25,21 +25,21 @@ Edit `Website-Inventory.yaml` directly. Each record has these kinds of fields:
 - **Description:** `State` (the government's name, including DC, the territories, and benchmark sites such as the United Kingdom), `System Name`, `System Type`, and `Platform` (with its `Vendor`).
 - **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
 - **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
-- **Links:** `Public Link`, `Notice list URL`, and `Single Posting URL`. Use `N/A` when there is none.
+- **Links:** `Public Link`, `Notices list URL`, and `Single Posting URL`. Use `N/A` when there is none.
 - **Answers:** one field per metric, such as `Contact Name and Email: Yes`, or a Lighthouse score from 0 to 100. Use 0 for a Lighthouse score that could not be measured.
 - **Points:** one field per metric, `G1` through `P8`, plus `Total`.
 
-Each points field is named for its section and its order within that section: `G` for General, `N` for the notice list, and `P` for the individual posting.
+Each points field is named for its section and its order within that section: `G` for General, `N` for the notices list, and `P` for the individual posting.
 
 | Field | Metric | Max |
 |---|---|---|
 | `G1` | State web design system in use | 5 |
 | `G2` | Data standard is published | 5 |
-| `N1` | Notice list has a direct URL | 10 |
+| `N1` | Notices list has a direct URL | 10 |
 | `N2` | Includes local listings | 5 |
 | `N3` | Data export of notices list | 5 |
-| `N4` | Lighthouse performance, notice list | 5 |
-| `N5` | Lighthouse accessibility, notice list | 5 |
+| `N4` | Lighthouse performance, notices list | 5 |
+| `N5` | Lighthouse accessibility, notices list | 5 |
 | `P1` | Direct URL to an individual posting | 25 |
 | `P2` | Individual posting page | 5 |
 | `P3` | Contact name and email | 5 |
@@ -53,7 +53,7 @@ When you change a record, keep these consistent:
 
 - A "Yes" answer earns the metric's full points; anything else earns 0.
 - Lighthouse points use these bands: 90 or more = 5, 80–89 = 4, 70–79 = 3, 60–69 = 2, 50–59 = 1, below 50 = 0.
-- Lighthouse points for the notice list or posting page are 0 unless that page has a direct URL.
+- Lighthouse points for the notices list or posting page are 0 unless that page has a direct URL.
 - `Total` must equal the sum of the 15 points fields.
 
 If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the inventory links each metric to its heading.

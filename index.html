@@ -138,7 +138,7 @@
         <thead>
           <tr>
             <th class="num">Rank</th><th>Government</th><th class="hide-sm">System</th><th class="hide-sm">Vendor</th>
-            <th class="num hide-sm">General</th><th class="num hide-sm">Notice list</th><th class="num hide-sm">Posting</th><th class="num">Total</th>
+            <th class="num hide-sm">General</th><th class="num hide-sm">Notices list</th><th class="num hide-sm">Posting</th><th class="num">Total</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -204,7 +204,7 @@
           <th data-key="name" class="hide-sm"><button type="button">System</button></th>
           <th data-key="vendor" class="hide-sm"><button type="button">Vendor</button></th>
           <th data-key="generalScore" class="num hide-sm"><button type="button">General</button></th>
-          <th data-key="noticeScore" class="num hide-sm"><button type="button">Notice list</button></th>
+          <th data-key="noticeScore" class="num hide-sm"><button type="button">Notices list</button></th>
           <th data-key="postingScore" class="num hide-sm"><button type="button">Posting</button></th>
           <th data-key="total" class="num"><button type="button">Total</button></th>
         </tr>
@@ -229,15 +229,15 @@
 <script>
 const DATA_URL = "Website-Inventory.yaml";
 
-// Score fields in the YAML: G = General, N = Notice list, P = Individual posting.
+// Score fields in the YAML: G = General, N = Notices list, P = Individual posting.
 const CRITERIA = [
   { group: "general", key: "G1", max: 5,  label: "Uses state web design system", field: "State Web Design System in use?", anchor: "state-web-design-system-in-use" },
   { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Published Data Standard?", anchor: "data-standard-is-published" },
-  { group: "notice",  key: "N1", max: 10, label: "Direct URL to notice list", field: "Direct URL to Notice List? (10 pts)", anchor: "solicitation-posting-notice-list-has-a-direct-url-10-pts" },
+  { group: "notice",  key: "N1", max: 10, label: "Direct URL to notices list", field: "Direct URL to Notices List? (10 pts)", anchor: "solicitation-posting-notices-list-has-a-direct-url-10-pts" },
   { group: "notice",  key: "N2", max: 5,  label: "Includes local listings", field: "Includes local listings", anchor: "includes-local-listings" },
-  { group: "notice",  key: "N3", max: 5,  label: "Data export of notice list", field: "Data Export of Notice List?", anchor: "data-export-of-notices-list" },
-  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices", anchor: "lighthouse-performance-for-the-notices-list" },
-  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices", anchor: "lighthouse-accessibility-for-the-notices-list" },
+  { group: "notice",  key: "N3", max: 5,  label: "Data export of notices list", field: "Data Export of Notices List?", anchor: "data-export-of-notices-list" },
+  { group: "notice",  key: "N4", max: 5,  label: "Lighthouse performance", field: "Lighthouse Performance, Notices List", anchor: "lighthouse-performance-for-the-notices-list" },
+  { group: "notice",  key: "N5", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse Accessibility, Notices List", anchor: "lighthouse-accessibility-for-the-notices-list" },
   { group: "posting", key: "P1", max: 25, label: "Direct URL to individual posting", field: "Direct URL to Individual Posting? (25 pts)", anchor: "direct-url-to-an-individual-posting-25-pts" },
   { group: "posting", key: "P2", max: 5,  label: "Individual posting page", field: "Individual Posting Page?", anchor: "individual-posting-page" },
   { group: "posting", key: "P3", max: 5,  label: "Contact name and email", field: "Contact Name and Email", anchor: "contact-name-and-email" },
@@ -249,7 +249,7 @@ const CRITERIA = [
 ];
 const METRICS_URL = "Scoring-Metrics.html";
 const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;
-const GROUPS = { general: "General", notice: "Notice list", posting: "Individual posting" };
+const GROUPS = { general: "General", notice: "Notices list", posting: "Individual posting" };
 const groupMax = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + c.max, 0);
 
 const $ = s => document.querySelector(s);
@@ -308,13 +308,13 @@ function detail(d) {
     }).join("");
     return `<h3>${GROUPS[g]} <small>${d[g + "Score"]} / ${groupMax(g)} pts</small></h3><ul class="crit">${items}</ul>`;
   };
-  // General is short, so it shares a column with the notice list.
+  // General is short, so it shares a column with the notices list.
   const groups = `<div>${section("general")}${section("notice")}</div><div>${section("posting")}</div>`;
   return `<div class="detail-grid">
     <div><p class="system"><strong>Government:</strong> ${esc(d.state)}<br><strong>Total:</strong> ${d.total} / 100 pts<br><strong>System:</strong> ${esc(d.name || "—")}<br><strong>Type:</strong> ${esc(d.type || "—")}<br><strong>Vendor:</strong> ${esc(d.vendor || "—")}</p>
     <h3>Links</h3><dl class="links">
       ${linkRow("Public site", r["Public Link"])}
-      ${linkRow("Notice list", r["Notice list URL"])}
+      ${linkRow("Notices list", r["Notices list URL"])}
       ${linkRow("Sample posting", r["Single Posting URL"])}
     </dl>
     ${d.notes.map(n => `<div class="note">${linkify(n)}</div>`).join("")}
@@ -418,10 +418,10 @@ function methodology() {
 }
 
 function toCsv() {
-  const cols = ["Rank", "Government", "System Name", "System Type", "Vendor", "Public Link", "Notice list URL", "Single Posting URL",
+  const cols = ["Rank", "Government", "System Name", "System Type", "Vendor", "Public Link", "Notices list URL", "Single Posting URL",
     ...CRITERIA.map(c => c.field), ...CRITERIA.map(c => `${GROUPS[c.group]}: ${c.label} (pts)`), "Total", "Notes"];
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-  const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public Link"], d.raw["Notice list URL"], d.raw["Single Posting URL"],
+  const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public Link"], d.raw["Notices list URL"], d.raw["Single Posting URL"],
     ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total, d.notes.join("; ")].map(q).join(","));
   const blob = new Blob([[cols.map(q).join(","), ...lines].join("\r\n")], { type: "text/csv" });
   const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "website-inventory.csv" });
