@@ -68,22 +68,22 @@
   th[aria-sort="descending"] button::after { content: " \2193"; color: var(--ink); }
   td.num, th.num { text-align: right; white-space: nowrap; }
   tbody tr.row:hover { background: #f0f7fd; }
-  .state-btn { all: unset; cursor: pointer; font-weight: 600; color: var(--accent); }
+  .state-btn { all: unset; cursor: pointer; font-weight: 600; color: var(--accent); display: inline-flex; align-items: baseline; }
   .state-btn:hover { text-decoration: underline; }
   /* "all: unset" on these buttons also removes the global focus ring; restore it. */
   th button:focus-visible, .state-btn:focus-visible { outline: 3px solid #2491ff; outline-offset: 2px; border-radius: 2px; }
-  .state-btn::before { content: "\25B8  "; display: inline-block; width: 1em; color: var(--muted); }
+  .state-btn::before { content: "\25B8  "; flex: none; width: 1em; color: var(--muted); }
   .state-btn[aria-expanded="true"]::before { content: "\25BE  "; }
   .score { display: flex; align-items: center; gap: .5rem; justify-content: flex-end; }
   .bar { width: 6rem; height: .6rem; background: var(--line); border-radius: 1rem; overflow: hidden; }
   .bar > span { display: block; height: 100%; }
-  .tag { display: inline-block; font-size: .78rem; padding: .05rem .45rem; border-radius: 1rem; background: #e7f2f5; color: #07648d; white-space: nowrap; }
   tr.detail > td { background: #fbfcfd; padding: 1rem 1.25rem 1.5rem; }
   .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); gap: 1.25rem; }
   .detail-grid h3 { font-size: 1rem; margin: 0 0 .5rem; display: flex; justify-content: space-between; }
   .detail-grid h3 small { font-weight: 400; color: var(--muted); }
   .crit { list-style: none; margin: 0; padding: 0; }
   .crit li { display: flex; justify-content: space-between; gap: .75rem; padding: .3rem 0; border-bottom: 1px dashed var(--line); font-size: .92rem; }
+  .crit + h3 { margin-top: 1.25rem; }
   .pill { font-size: .8rem; font-weight: 600; padding: 0 .5rem; border-radius: 1rem; white-space: nowrap; }
   .pill.yes { background: var(--good-bg); color: #216e1f; }
   .pill.no { background: var(--bad-bg); color: #8b0a03; }
@@ -136,7 +136,7 @@
         <caption class="sr-only">Benchmark sites. Select a site to see its scoring detail.</caption>
         <thead>
           <tr>
-            <th class="num">Rank</th><th>Government</th><th class="hide-sm">System</th><th class="hide-sm">Type</th><th class="hide-sm">Vendor</th>
+            <th class="num">Rank</th><th>Government</th><th class="hide-sm">System</th><th class="hide-sm">Vendor</th>
             <th class="num hide-sm">Notice list</th><th class="num hide-sm">Posting</th><th class="num">Total</th>
           </tr>
         </thead>
@@ -201,7 +201,6 @@
           <th data-key="rank" class="num"><button type="button">Rank</button></th>
           <th data-key="state"><button type="button">Government</button></th>
           <th data-key="name" class="hide-sm"><button type="button">System</button></th>
-          <th data-key="type" class="hide-sm"><button type="button">Type</button></th>
           <th data-key="vendor" class="hide-sm"><button type="button">Vendor</button></th>
           <th data-key="noticeScore" class="num hide-sm"><button type="button">Notice list</button></th>
           <th data-key="postingScore" class="num hide-sm"><button type="button">Posting</button></th>
@@ -300,13 +299,15 @@ function answerPill(val, pts, max) {
 function detail(d) {
   const r = d.raw;
   const linkRow = (label, v) => `<dt>${label}</dt><dd>${isUrl(v) ? extLink(String(v).trim()) : esc(v || "N/A")}</dd>`;
-  const groups = Object.keys(GROUPS).map(g => {
+  const section = g => {
     const items = CRITERIA.filter(c => c.group === g).map(c => {
       const pts = num(r[c.key]);
       return `<li><span>${critLink(c)}</span><span>${answerPill(r[c.field], pts, c.max)} <strong>${pts}</strong>/${c.max}</span></li>`;
     }).join("");
-    return `<div><h3>${GROUPS[g]} <small>${d[g + "Score"]} / ${groupMax(g)} pts</small></h3><ul class="crit">${items}</ul></div>`;
-  }).join("");
+    return `<h3>${GROUPS[g]} <small>${d[g + "Score"]} / ${groupMax(g)} pts</small></h3><ul class="crit">${items}</ul>`;
+  };
+  // General is short, so it shares a column with the notice list.
+  const groups = `<div>${section("general")}${section("notice")}</div><div>${section("posting")}</div>`;
   return `<div class="detail-grid">
     <div><p class="system"><strong>Government:</strong> ${esc(d.state)}<br><strong>Total:</strong> ${d.total} / 100 pts<br><strong>System:</strong> ${esc(d.name || "—")}<br><strong>Type:</strong> ${esc(d.type || "—")}<br><strong>Vendor:</strong> ${esc(d.vendor || "—")}</p>
     <h3>Links</h3><dl class="links">
@@ -372,7 +373,7 @@ function render() {
   document.querySelectorAll("th[data-key]").forEach(th =>
     th.setAttribute("aria-sort", th.dataset.key === sort.key ? (sort.dir > 0 ? "ascending" : "descending") : "none"));
   $("#count").textContent = `Showing ${list.length} of ${rows.length} sites`;
-  $("#tbl tbody").innerHTML = list.map(rowHtml).join("") || `<tr><td colspan="8">No sites match these filters.</td></tr>`;
+  $("#tbl tbody").innerHTML = list.map(rowHtml).join("") || `<tr><td colspan="7">No sites match these filters.</td></tr>`;
   $("#benchmark tbody").innerHTML = benchmarks.map(rowHtml).join("");
   $("#expand-all").textContent = list.length && list.every(d => open.has(d.state)) ? "Collapse all" : "Expand all";
 }
@@ -384,12 +385,11 @@ function rowHtml(d) {
       <td class="num">${d.benchmark ? `<span aria-hidden="true">—</span><span class="sr-only">Not ranked</span>` : d.rank}</td>
       <td><button type="button" class="state-btn" aria-expanded="${isOpen}" aria-controls="${id}" data-state="${esc(d.state)}">${esc(d.state)}</button></td>
       <td class="hide-sm">${esc(d.name || "—")}</td>
-      <td class="hide-sm">${d.type.split(/,\s*/).filter(Boolean).map(t => `<span class="tag">${esc(t)}</span>`).join(" ")}</td>
       <td class="hide-sm">${esc(d.vendor)}</td>
       <td class="num hide-sm">${d.noticeScore}/${groupMax("notice")}</td>
       <td class="num hide-sm">${d.postingScore}/${groupMax("posting")}</td>
       <td class="num">${scoreCell(d.total, 100)}</td>
-    </tr>` + (isOpen ? `<tr class="detail" id="${id}"><td colspan="8">${detail(d)}</td></tr>` : "");
+    </tr>` + (isOpen ? `<tr class="detail" id="${id}"><td colspan="7">${detail(d)}</td></tr>` : "");
 }
 
 function stats() {
