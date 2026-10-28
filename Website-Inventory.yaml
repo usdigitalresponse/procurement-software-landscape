@@ -629,7 +629,7 @@
     'Data Export of Notice List?': No
     'Lighthouse Performance, Notices': 35
     'Lighthouse Accessibility, Notices': 97
-    'Direct URL to Individual Posting? (25 pts)': No
+    'Direct URL to Individual Posting? (25 pts)': Yes
     'Individual Posting Page?': Yes
     'Contact Name and Email': No
     'Project Summary': No
@@ -645,7 +645,7 @@
     m: 0
     n: 0
     o: 5
-    p: 0
+    p: 25
     q: 5
     r: 0
     s: 0
@@ -653,7 +653,7 @@
     u: 5
     v: 2
     w: 5
-    Total: 32
+    Total: 57
 -
     State: Illinois
     'System Name': 'Illinois BidBuy'
