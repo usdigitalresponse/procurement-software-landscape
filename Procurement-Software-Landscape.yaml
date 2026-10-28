@@ -881,7 +881,7 @@
     Total: 35
 -
     State: Maine
-    'System Name': MeVSS
+    'System Name': 'MeVSS (Maine Vendor Self Service)'
     'System Type': ERP
     Platform: {Vendor: 'Advantage by CGI'}
     'Public Link': 'https://mevss.hostams.com/PRDVSS1X1/Advantage4'
@@ -1001,7 +1001,7 @@
     Total: 79
 -
     State: Michigan
-    'System Name': 'SIGMA VSS'
+    'System Name': 'SIGMA VSS (Statewide Integrated Governmental Management Applications Vendor Self Service)'
     'System Type': ERP
     Platform: {Vendor: 'Advantage by CGI'}
     'Public Link': 'https://sigma.michigan.gov/PRDVSS1X1/Advantage4'
