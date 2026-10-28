@@ -100,6 +100,7 @@
   .pill.yes { background: var(--good-bg); color: #216e1f; }
   .pill.no { background: var(--bad-bg); color: #8b0a03; }
   .pill.part { background: var(--mid-bg); color: #6b5100; }
+  .pill.na { background: #edeff0; color: var(--muted); }
   .detail-grid p.system { margin: 0 0 1rem; font-size: .92rem; }
   .links dt { font-weight: 600; font-size: .875rem; color: var(--muted); }
   .links dd { margin: 0 0 .6rem; word-break: break-all; font-size: .92rem; }
@@ -305,7 +306,7 @@ function scoreCell(v, max) {
 function answerPill(val, pts, max) {
   const v = String(val ?? "").trim();
   if (typeof val === "number") return `<span class="pill ${pts >= max ? "yes" : pts > 0 ? "part" : "no"}">${val === 0 ? "Not tested" : val + "/100"}</span>`;
-  const cls = /^yes$/i.test(v) ? "yes" : /^no$/i.test(v) || !v ? "no" : "part";
+  const cls = /^yes$/i.test(v) ? "yes" : /^n\/a$/i.test(v) ? "na" : /^no$/i.test(v) || !v ? "no" : "part";
   return `<span class="pill ${cls}">${esc(v || "—")}</span>`;
 }
 
