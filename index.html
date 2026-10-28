@@ -398,15 +398,11 @@ function stats() {
   const sorted = [...totals].sort((a, b) => a - b);
   const median = sorted.length % 2 ? sorted[(sorted.length - 1) / 2] : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2;
   const best = rows.reduce((a, b) => (b.total > a.total ? b : a));
-  const direct = rows.filter(d => num(d.raw.P1) > 0).length;
-  const docs = rows.filter(d => num(d.raw.P6) > 0).length;
   $("#stats").innerHTML = [
     [rows.length, "Sites reviewed"],
     [avg.toFixed(1), "Average score"],
     [median, "Median score"],
     [`${best.total}`, `Top score (${esc(best.state)})`],
-    [`${direct}`, "Link directly to postings"],
-    [`${docs}`, "Documents without registration"],
   ].map(([v, l]) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
 }
 
