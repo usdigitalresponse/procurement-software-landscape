@@ -601,7 +601,7 @@
     Total: 80
 -
     Government: Idaho
-    'System name': IPRO
+    'System name': 'IPRO, powered by Luma'
     'System type': eProcurement
     Vendor: Infor
     'Public site URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/page/XiSupplyManagementSupplierPage?csk.SupplierGroup=LUMA'
@@ -2081,7 +2081,7 @@
     Total: 58
 -
     Government: Virginia
-    'System name': eVA
+    'System name': 'eVA (Electronic Virginia)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
     'Public site URL': 'https://eva.virginia.gov/'
