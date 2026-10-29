@@ -14,6 +14,7 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 | [`Scoring-Metrics.md`](./Scoring-Metrics.md) | The scoring methodology, published as the site's Scoring metrics page. |
 | [`index.html`](./index.html) | The landscape page. It reads `Procurement-Software-Landscape.yaml` in the browser, so there is no build step. |
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
+| `scripts/check-data.js` | Checks the data file against the scoring rules. See [Automatic checks](#automatic-checks). |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
 
 The site is published with GitHub Pages from the `main` branch. Changes pushed to `main` appear on the site within a minute or two.
@@ -57,6 +58,24 @@ When you change a record, keep these consistent:
 - `Total` must equal the sum of the 15 points fields.
 
 If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the landscape page links each metric to its heading.
+
+### Automatic checks
+
+Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It checks that:
+
+- every record has all of the fields above, with no misspelled or extra fields, and no government appears twice;
+- each link is a full `http://` or `https://` address, or `N/A`;
+- each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
+- each points field matches its answer, using the rules above, and `Total` equals their sum;
+- each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`.
+
+If a check fails, GitHub marks the commit or pull request with a red X, and the run's details list each problem. It also warns, without failing, when a direct URL answer is `Yes` but the record has no link for that page.
+
+To run the checks yourself, install [Node.js](https://nodejs.org/) and run this from the repository folder:
+
+```bash
+node scripts/check-data.js
+```
 
 ## Previewing locally
 

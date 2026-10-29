@@ -1,0 +1,34 @@
+# Checks the data file against the scoring rules whenever it, the metric list
+# in index.html, or the scoring metrics page changes.
+name: Check data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - Procurement-Software-Landscape.yaml
+      - index.html
+      - Scoring-Metrics.md
+      - scripts/check-data.js
+      - .github/workflows/check-data.yml
+  pull_request:
+    paths:
+      - Procurement-Software-Landscape.yaml
+      - index.html
+      - Scoring-Metrics.md
+      - scripts/check-data.js
+      - .github/workflows/check-data.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-data.js
