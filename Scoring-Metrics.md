@@ -6,6 +6,8 @@ Throughout this document, the term “solicitation posting” is used to describ
 
 This evaluation only considers information that is publicly available, meaning that it can be accessed by a member of the public without registration. We feel that procurement information is most useful when it is broadly and easily accessible. Potential vendors are not the only users of information from solicitation posting notices. Governments often look to each other for examples of similar work, and it benefits the broader government procurement community if information is more easily accessible. 
 
+A CAPTCHA, or a similar check that a visitor is a person, does not currently lower a site's score. A page behind a CAPTCHA still counts as publicly available, and its URL still counts as a direct URL if it leads to the page once the check is passed.
+
 The total score available from all metrics is 100 points.
 
 ### State web design system in use (5 pts)
