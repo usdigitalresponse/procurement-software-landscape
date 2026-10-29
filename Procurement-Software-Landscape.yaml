@@ -927,7 +927,7 @@
     'Public site URL': 'https://emma.maryland.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
     'Notices list URL': 'https://emma.maryland.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://emma.maryland.gov/page.aspx/en/bpm/process_manage_extranet/93305'
-    Note: ""
+    Note: 'The notices list and sample posting ask visitors to complete a reCAPTCHA ("I''m not a robot") before they load (checked October 2026). A CAPTCHA does not lower the score.'
     'State web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1807,7 +1807,7 @@
     'Public site URL': 'https://www.procurement.sc.gov/scpro'
     'Notices list URL': 'https://scpro.sc.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': N/A
-    Note: 'SCPro launches November 9, 2026, replacing SCEIS (SCEIS vendor portal down October 26 to November 9). Re-check the sample posting URL and scores after launch.'
+    Note: 'SCPro launches November 9, 2026, replacing SCEIS (SCEIS vendor portal down October 26 to November 9). Re-check the sample posting URL and scores after launch. The notices list asks visitors to solve a CAPTCHA before it loads (checked October 2026). A CAPTCHA does not lower the score.'
     'State web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2047,7 +2047,7 @@
     'Public site URL': 'https://vtbuysprocurement.vermont.gov/'
     'Notices list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
-    Note: ""
+    Note: 'The notices list and sample posting ask visitors to solve a CAPTCHA before they load (checked October 2026). A CAPTCHA does not lower the score.'
     'State web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
