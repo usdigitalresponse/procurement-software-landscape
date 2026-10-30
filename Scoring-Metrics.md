@@ -66,7 +66,7 @@ Ideally, every state government would provide direct machine readable access to 
 
 This is a graded metric worth five (5) points derived from the Lighthouse performance score. Performance is scored on a scale of 0 to 100, with 90 to 100 considered good. A score of 90 or better is given five (5), four (4) points for 80-89, three (3) points for 70-79, two (2) points for 60-69, and one (1) point for 50-59. A score below 50 receives no points.   
 
-This metric is dependent on the notices list having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each site was tested manually using the features built into Google Chrome. 
+This metric is dependent on the notices list having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each page is tested automatically once a week using Lighthouse's desktop settings, and its score is the median of three tests. If a page can't be tested, it keeps its most recent score, or receives a zero (0) if it has never been tested. 
 
 Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good performance is important to giving users a positive experience that loads quickly and renders correctly. 
 
@@ -76,7 +76,7 @@ Google Lighthouse is a widely used and trusted tool for auditing and evaluating 
 
 This is a graded metric worth five (5) points derived from the Lighthouse accessibility score. Accessibility is scored on a scale of 0 to 100, with 90 to 100 considered good. A score of 90 or better is given five (5), four (4) points for 80-89, three (3) points for 70-79, two (2) points for 60-69, and one (1) point for 50-59. A score below 50 receives no points.   
 
-This metric is dependent on the notices list having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each site was tested manually using the features built into Google Chrome. 
+This metric is dependent on the notices list having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each page is tested automatically once a week using Lighthouse's desktop settings, and its score is the median of three tests. If a page can't be tested, it keeps its most recent score, or receives a zero (0) if it has never been tested. 
 
 Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good accessibility ensures that everyone, including people who use screen readers, keyboard navigation, or other assistive technology, can find and use public information about government contracting opportunities. 
 
@@ -146,7 +146,7 @@ Ideally, governments will modernize their solicitation processes and templates t
 
 This is a graded metric worth five (5) points derived from the Lighthouse performance score. Performance is scored on a scale of 0 to 100, with 90 to 100 considered good. A score of 90 or better is given five (5), four (4) points for 80-89, three (3) points for 70-79, two (2) points for 60-69, and one (1) point for 50-59. A score below 50 receives no points.   
 
-This metric is dependent on an individual solicitation posting having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each site was tested manually using the features built into Google Chrome. 
+This metric is dependent on an individual solicitation posting having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each page is tested automatically once a week using Lighthouse's desktop settings, and its score is the median of three tests. If a page can't be tested, it keeps its most recent score, or receives a zero (0) if it has never been tested. 
 
 Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good performance is important to giving users a positive experience that loads quickly and renders correctly. 
 
@@ -156,6 +156,6 @@ Google Lighthouse is a widely used and trusted tool for auditing and evaluating 
 
 This is a graded metric worth five (5) points derived from the Lighthouse accessibility score. Accessibility is scored on a scale of 0 to 100, with 90 to 100 considered good. A score of 90 or better is given five (5), four (4) points for 80-89, three (3) points for 70-79, two (2) points for 60-69, and one (1) point for 50-59. A score below 50 receives no points.   
 
-This metric is dependent on an individual solicitation posting having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each site was tested manually using the features built into Google Chrome. 
+This metric is dependent on an individual solicitation posting having a direct URL. If it does not have a direct URL it could not be scored by Google Lighthouse and received a zero (0). Each page is tested automatically once a week using Lighthouse's desktop settings, and its score is the median of three tests. If a page can't be tested, it keeps its most recent score, or receives a zero (0) if it has never been tested. 
 
 Google Lighthouse is a widely used and trusted tool for auditing and evaluating websites. Good accessibility ensures that everyone, including people who use screen readers, keyboard navigation, or other assistive technology, can find and use public information about government contracting opportunities. 
