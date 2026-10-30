@@ -1,0 +1,139 @@
+# Builds the site and publishes it to GitHub Pages, with fresh Lighthouse scores.
+#
+# The Lighthouse scores in Procurement-Software-Landscape.yaml are replaced at build
+# time with scores this workflow collects itself. Those scores are kept in the GitHub
+# Actions cache, and each page is scanned at most once per calendar week (Monday to
+# Sunday, UTC), so most builds reuse the cached scores and skip scanning. The weekly
+# schedule refreshes the scores even when nothing in the repository has changed.
+# See scripts/lighthouse.js for how the scores are collected.
+name: Build and publish site
+
+on:
+  push:
+    branches: [main]
+  # Monday's run rescans every page. Thursday's run finds nothing due, so it only
+  # rebuilds; its purpose is to use the cache, since GitHub deletes a cache that goes
+  # unused for 7 days.
+  schedule:
+    - cron: "17 6 * * 1,4"   # Mondays and Thursdays at 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One run at a time, so two runs never scan the same pages or overwrite each other's
+# cached scores. A queued run waits rather than cancelling the one in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  SCORES_DIR: lighthouse-scores
+  LIGHTHOUSE_VERSION: 13.6.0
+
+jobs:
+  plan:
+    name: List pages due for a Lighthouse scan
+    runs-on: ubuntu-latest
+    outputs:
+      count: ${{ steps.plan.outputs.count }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Restore cached Lighthouse scores
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ runner.temp }}/${{ env.SCORES_DIR }}
+          key: lighthouse-scores-${{ github.run_id }}
+          restore-keys: lighthouse-scores-
+      - id: plan
+        run: node scripts/lighthouse.js plan "$RUNNER_TEMP/$SCORES_DIR/scores.json"
+
+  scan:
+    name: Lighthouse scan, group ${{ matrix.group }}
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: npm install --global "lighthouse@$LIGHTHOUSE_VERSION"
+      - name: Scan pages
+        env:
+          URLS: ${{ toJSON(matrix.urls) }}
+        run: node scripts/lighthouse.js scan "$RUNNER_TEMP/results/group-${{ matrix.group }}.json"
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: lighthouse-results-${{ matrix.group }}
+          path: ${{ runner.temp }}/results/
+          retention-days: 7
+
+  build:
+    name: Build site
+    needs: [plan, scan]
+    # Build even if a scan group failed: pages it missed keep their last good scores.
+    if: ${{ !cancelled() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Restore cached Lighthouse scores
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ runner.temp }}/${{ env.SCORES_DIR }}
+          key: lighthouse-scores-${{ github.run_id }}
+          restore-keys: lighthouse-scores-
+      - name: Download scan results
+        if: needs.plan.outputs.count != '0'
+        uses: actions/download-artifact@v8
+        with:
+          pattern: lighthouse-results-*
+          merge-multiple: true
+          path: ${{ runner.temp }}/results
+      - name: Add scan results to the cached scores
+        if: needs.plan.outputs.count != '0'
+        run: |
+          shopt -s nullglob
+          node scripts/lighthouse.js merge "$RUNNER_TEMP/$SCORES_DIR/scores.json" "$RUNNER_TEMP"/results/*.json
+      - name: Save Lighthouse scores to the cache
+        if: needs.plan.outputs.count != '0'
+        uses: actions/cache/save@v6
+        with:
+          path: ${{ runner.temp }}/${{ env.SCORES_DIR }}
+          key: lighthouse-scores-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Write Lighthouse scores into the data file
+        run: node scripts/lighthouse.js apply "$RUNNER_TEMP/$SCORES_DIR/scores.json"
+      - name: Check the data file
+        run: node scripts/check-data.js
+      - uses: actions/configure-pages@v6
+      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/upload-pages-artifact@v5
+
+  deploy:
+    name: Publish to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v5
