@@ -16,7 +16,8 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
 | `scripts/check-data.js` | Checks the data file against the scoring rules. See [Automatic checks](#automatic-checks). |
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
-| `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores. |
+| `scripts/check-links.js` | Checks that every link in the data file works. See [Link check](#link-check). |
+| `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores, and checks links weekly. |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
 
 The site is built and published to GitHub Pages by a GitHub Actions workflow each time a change is pushed to `main`. Changes appear on the site within a few minutes, or longer when the build has Lighthouse scans to run.
@@ -78,6 +79,20 @@ To scan pages yourself, install Node.js 22 or later and Lighthouse (`npm install
 ```bash
 node scripts/lighthouse.js scan results.json https://example.gov/bids
 ```
+
+### Link check
+
+Every Monday, the "Build and publish site" workflow also checks every link in the data file: the three link fields in each record, and any link in a note. Running the workflow by hand from the Actions tab also runs the check. A broken link never stops the site from being published. Instead:
+
+- the workflow opens a GitHub issue for each state (or other government) with broken links, titled "Broken links: " and the state's name and labeled "broken links", and GitHub notifies people watching the repository;
+- each week after that, it updates each issue's list, and adds a comment when more of that state's links break;
+- it closes a state's issue once none of its links are broken.
+
+Each issue holds a hidden marker with the state's name, which is how the check finds it again, so its title can be edited, and it can be assigned like any other issue. Leave the marker in place.
+
+A link counts as broken if it still fails when checked a second time. Some sites, such as those behind a Cloudflare challenge, refuse automated checks. Those links are listed in the run's summary as not checked, and don't count as broken.
+
+To check the links yourself, install Node.js 22 or later and run `node scripts/check-links.js` from the repository folder.
 
 ### Automatic checks
 
