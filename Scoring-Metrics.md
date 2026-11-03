@@ -1,4 +1,4 @@
-# Metrics used in evaluating public solicitation posting websites of states and territories
+# Metrics used in evaluating public solicitation posting websites of states, territories, and DC
 
 For each listed metric it (1) explains what the metric is, (2) explains how the metric is scored, and (3) explains why the metric is important.
 
@@ -12,13 +12,13 @@ The total score available from all metrics is 100 points.
 
 ### Web design system in use (5 pts)
 
-A web design system (WDS) is a library of user interface components and visual style guides for websites operated by a government. The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) is an example of a web design system. The [Delaware bids website](https://mmp.delaware.gov/Bids/) is an example of a solicitation posting notices list website using a state WDS.
+A web design system (WDS) is a library of user interface components and visual style guides for websites operated by a government. The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) is an example of a web design system. The [Delaware bids website](https://mmp.delaware.gov/Bids/) is an example of a solicitation posting notices list website using a WDS.
 
 This is a yes-or-no binary metric worth five (5) points. Yes indicates that a government both has a WDS and is using that WDS on the website where notices are listed.
 
 Use of a web design system helps create better services. A good WDS makes government websites more consistent which makes it easier for visitors to navigate across multiple government services during a process. This matters for something like vendor registration where they may need to interact with websites for a small business office and a controller’s office in addition to a purchasing office.
 
-Ideally, every state has a web design system implemented, so that collaboratively developed, open source, or commercially acquired tools can be easily included without changing the overall user experience.  
+Ideally, every government has a web design system implemented, so that collaboratively developed, open source, or commercially acquired tools can be easily included without changing the overall user experience.  
 
 ### Data standard is published (5 pts)
 
@@ -42,13 +42,13 @@ Ideally, every government’s notices list website URL is something easy like `s
 
 ### Includes local listings (5 pts)
 
-This metric looks at the solicitation posting notices list webpage and whether the notices included in the lists are exclusive to the executive agencies of a state government or if they also include notices from local jurisdictions like cities, counties, and districts. This metric examines a notices list webpage whether it has a dedicated URL or not.
+This metric looks at the solicitation posting notices list webpage and whether the notices included in the lists are exclusive to the executive agencies of a government or if they also include notices from local jurisdictions like cities, counties, and districts. This metric examines a notices list webpage whether it has a dedicated URL or not.
 
-This is a yes-or-no binary metric worth five (5) points. Yes indicates that the public facing notices list website maintained by the state government includes notices from local jurisdictions.
+This is a yes-or-no binary metric worth five (5) points. Yes indicates that the public facing notices list website maintained by the government includes notices from local jurisdictions.
 
 Vendors with the potential to provide a good or service often would like to provide it to all levels of government. This could mean visiting multiple websites, with different user experiences, to discover potential opportunities. A joined up service, where notices about opportunities from multiple public agencies are all available, can increase vendor participation and competition on government projects by decreasing the barriers to discovery and participation.
 
-Ideally, every state level government operates a notices list website that performs at a level where local governments choose to participate in the system for the benefits that using it provides.
+Ideally, every government operates a notices list website that performs at a level where local jurisdictions choose to participate in the system for the benefits that using it provides.
 
 ### Data export of notices list (5 pts)
 
@@ -58,7 +58,7 @@ This is a yes-or-no binary metric worth five (5) points. Yes indicates that the 
 
 Vendors work with multiple customers, both public and private, and benefit from being able to interact with the information in a method of their own choosing. Additionally, third-party aggregators and small business matchmaking services can better amplify government contracting opportunities when data is easily available for export.
 
-Ideally, every state government would provide direct machine readable access to notices list data, so that other governments, researchers, vendors, the public, and even AI agents can easily access and use it.
+Ideally, every government would provide direct machine readable access to notices list data, so that other governments, researchers, vendors, the public, and even AI agents can easily access and use it.
 
 ### Lighthouse performance for the notices list (5 pts)
 
@@ -128,11 +128,11 @@ This is a yes-or-no binary metric worth five (5) points. Yes indicates that the 
 
 Vendors work with multiple customers, both public and private, and benefit from being able to interact with the information in a method of their own choosing. Additionally, third-party aggregators and small business matchmaking services can better amplify government contracting opportunities when data is easily available for export. 
 
-Ideally, every state government would provide direct machine readable access to individual solicitation notices following consistent data standards like the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/latest/en/), so that other governments, researchers, vendors, the public, and even AI agents can easily access, use, and compare it.
+Ideally, every government would provide direct machine readable access to individual solicitation notices following consistent data standards like the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/latest/en/), so that other governments, researchers, vendors, the public, and even AI agents can easily access, use, and compare it.
 
 ### Documents without registration (5 pts)
 
-This metric looks at whether the state provides access to the full solicitation documents publicly, without requiring the user to register for an account or log in to a system in order to view or download solicitation documents.
+This metric looks at whether the government provides access to the full solicitation documents publicly, without requiring the user to register for an account or log in to a system in order to view or download solicitation documents.
 
 This is a yes-or-no binary metric worth five (5) points. Yes indicates that the website includes the ability to access, view, and/or download the entirety of a solicitation, including all attachments or addenda. A website that does not include individual posting pages can still meet this requirement if the notices list links directly to attachments. A website that requires registration to view attachments does not meet this standard. 
 

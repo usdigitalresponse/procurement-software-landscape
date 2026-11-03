@@ -1,6 +1,6 @@
 # Procurement Software Landscape
 
-This project evaluates and scores the websites that state and territorial government procurement agencies use to publicly advertise contracting opportunities, like requests for proposals (RFPs) and invitations to bid (ITBs), to potential vendors and the public.
+This project evaluates and scores the websites that procurement agencies in U.S. states, territories, and DC use to publicly advertise contracting opportunities, like requests for proposals (RFPs) and invitations to bid (ITBs), to potential vendors and the public.
 
 **View the landscape: https://usdigitalresponse.github.io/procurement-software-landscape/**
 
@@ -10,7 +10,7 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 
 | File | Purpose |
 |---|---|
-| [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per state or territory, with links, answers to each metric, and points. |
+| [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per government, with links, answers to each metric, and points. |
 | [`Scoring-Metrics.md`](./Scoring-Metrics.md) | The scoring methodology, published as the site's Scoring metrics page. |
 | [`index.html`](./index.html) | The landscape page. It reads `Procurement-Software-Landscape.yaml` in the browser, so there is no build step. |
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
@@ -84,11 +84,11 @@ node scripts/lighthouse.js scan results.json https://example.gov/bids
 
 Every Monday, the "Build and publish site" workflow also checks every link in the data file: the three link fields in each record, and any link in a note. Running the workflow by hand from the Actions tab also runs the check. A broken link never stops the site from being published. Instead:
 
-- the workflow opens a GitHub issue for each state (or other government) with broken links, titled "Broken links: " and the state's name and labeled "broken links", and GitHub notifies people watching the repository;
-- each week after that, it updates each issue's list, and adds a comment when more of that state's links break;
-- it closes a state's issue once none of its links are broken.
+- the workflow opens a GitHub issue for each government with broken links, titled "Broken links: " and the government's name and labeled "broken links", and GitHub notifies people watching the repository;
+- each week after that, it updates each issue's list, and adds a comment when more of that government's links break;
+- it closes a government's issue once none of its links are broken.
 
-Each issue holds a hidden marker with the state's name, which is how the check finds it again, so its title can be edited, and it can be assigned like any other issue. Leave the marker in place.
+Each issue holds a hidden marker with the government's name, which is how the check finds it again, so its title can be edited, and it can be assigned like any other issue. Leave the marker in place.
 
 A link counts as broken if it still fails when checked a second time. Some sites, such as those behind a Cloudflare challenge, refuse automated checks. Those links are listed in the run's summary as not checked, and don't count as broken.
 
@@ -124,7 +124,7 @@ Then open http://localhost:8000/. The Scoring metrics page is rendered by GitHub
 
 ## Reporting a correction
 
-If a score or link looks wrong, [open an issue](https://github.com/usdigitalresponse/procurement-software-landscape/issues/new) with the state, the metric, and what you found.
+If a score or link looks wrong, [open an issue](https://github.com/usdigitalresponse/procurement-software-landscape/issues/new) with the government, the metric, and what you found.
 
 ## Code of Conduct
 

@@ -9,7 +9,7 @@ const URL_FIELDS = ["Public site URL", "Notices list URL", "Sample posting URL"]
 // Lighthouse points depend on the page having a direct URL.
 const LIGHTHOUSE_NEEDS = { N4: "N1", N5: "N1", P7: "P1", P8: "P1" };
 // When a page has a direct URL, the record should include it. This is only a warning,
-// because a link can be missing for a while, such as when a state changes systems.
+// because a link can be missing for a while, such as when a government changes systems.
 const DIRECT_URL_LINKS = { N1: "Notices list URL", P1: "Sample posting URL" };
 
 function readCriteria(indexHtml) {
