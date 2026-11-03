@@ -18,7 +18,8 @@
 //       Add scan results to the scores file.
 //   node scripts/lighthouse.js apply <scores.json>
 //       Replace the Lighthouse scores in the data file with the stored scores, and
-//       recompute the Lighthouse points and totals. Pages without a stored score get 0.
+//       recompute the Lighthouse points and totals. Pages without a stored score keep
+//       the score already in the data file, such as one from an earlier manual test.
 
 const fs = require("fs");
 const path = require("path");
@@ -176,7 +177,8 @@ function apply(scoresFile) {
       const stored = pages[String(r[p.url] ?? "").trim()] || {};
       for (const kind of ["performance", "accessibility"]) {
         const [field, key] = p[kind];
-        const score = Number.isInteger(stored[kind]) ? stored[kind] : 0;
+        // A page that has never been scanned keeps the data file's score.
+        const score = Number.isInteger(stored[kind]) ? stored[kind] : Number.isInteger(r[field]) ? r[field] : 0;
         u[field] = score;
         u[key] = r[p.direct] === "Yes" ? lighthousePoints(score) : 0;
       }
@@ -212,7 +214,7 @@ function apply(scoresFile) {
   const scored = new Set(Object.entries(pages).filter(([, p]) => Number.isInteger(p.performance)).map(([u]) => u));
   const missing = dataUrls().filter(u => !scored.has(u));
   console.log(`Wrote Lighthouse scores for ${data.length} records.`);
-  if (missing.length) console.log(`${missing.length} pages have no Lighthouse score yet and were given 0:\n${missing.map(u => `- ${u}`).join("\n")}`);
+  if (missing.length) console.log(`${missing.length} pages have no Lighthouse scan yet and kept the scores in the data file:\n${missing.map(u => `- ${u}`).join("\n")}`);
 }
 
 const [cmd, file, ...rest] = process.argv.slice(2);

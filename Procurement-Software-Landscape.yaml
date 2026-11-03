@@ -1821,8 +1821,8 @@
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
-    'Lighthouse performance, posting page': 74
-    'Lighthouse accessibility, posting page': 100
+    'Lighthouse performance, posting page': 0
+    'Lighthouse accessibility, posting page': 0
     G1: 0
     G2: 0
     N1: 10
@@ -1836,9 +1836,9 @@
     P4: 0
     P5: 0
     P6: 5
-    P7: 3
-    P8: 5
-    Total: 61
+    P7: 0
+    P8: 0
+    Total: 53
 -
     Government: 'South Dakota'
     'System name': 'Posting Board'

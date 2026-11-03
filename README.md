@@ -69,7 +69,7 @@ The four Lighthouse scores, and their points (`N4`, `N5`, `P7` and `P8`) and `To
 - Each page is scanned three times with Lighthouse's desktop settings, and the median score is kept.
 - Each page is scanned at most once per calendar week (Monday to Sunday, UTC). Builds in between reuse the stored scores. A page whose URL changes is scanned at the next build.
 - The workflow also runs on a schedule: on Mondays to rescan every page, and on Thursdays to rebuild the site, which keeps the stored scores from expiring.
-- If a page can't be scanned, it keeps its last good score, and the run's summary lists it with the reason. A page that has never been scanned gets 0, shown on the site as "Not tested".
+- If a page can't be scanned, it keeps its last good score, and the run's summary lists it with the reason. A page that has never been scanned keeps the score in the data file, such as one from an earlier manual test. If that score is 0, the site shows "Not tested".
 - Pages are split into groups that are scanned at the same time, so a full rescan takes about 10 minutes.
 
 The scores are stored in the GitHub Actions cache, not in the repository. GitHub deletes a cache that goes unused for 7 days, which the twice-weekly schedule prevents. If the cache is lost, such as when GitHub turns off the schedule after 60 days with no activity in the repository, the next build rescans every page from scratch. To rescan or rebuild without pushing a change, run the "Build and publish site" workflow from the repository's Actions tab.
