@@ -11,11 +11,13 @@ name: Build and publish site
 on:
   push:
     branches: [main]
-  # Monday's run rescans every page. Thursday's run finds nothing due, so it only
-  # rebuilds; its purpose is to use the cache, since GitHub deletes a cache that goes
-  # unused for 7 days.
+  # Monday's run rescans every page and checks every link. Thursday's run finds nothing
+  # due, so it only rebuilds; its purpose is to use the cache, since GitHub deletes a
+  # cache that goes unused for 7 days. The link check job looks for the Monday cron
+  # string, so update it there too if you change it.
   schedule:
-    - cron: "17 6 * * 1,4"   # Mondays and Thursdays at 06:17 UTC
+    - cron: "17 6 * * 1"   # Mondays at 06:17 UTC
+    - cron: "17 6 * * 4"   # Thursdays at 06:17 UTC
   workflow_dispatch:
 
 permissions:
@@ -123,6 +125,28 @@ jobs:
       - uses: actions/configure-pages@v6
       - uses: actions/jekyll-build-pages@v1
       - uses: actions/upload-pages-artifact@v5
+
+  # Checks every link in the data file once a week, and when the workflow is run by
+  # hand. Broken links never fail the run or hold up publishing; instead the job opens
+  # (or updates) a GitHub issue labeled "broken links", and closes it once they work.
+  links:
+    name: Check links
+    if: github.event.schedule == '17 6 * * 1' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Check every link in the data file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/check-links.js
 
   deploy:
     name: Publish to GitHub Pages
