@@ -1807,7 +1807,7 @@
     'Public site URL': 'https://www.procurement.sc.gov/scpro'
     'Notices list URL': 'https://scpro.sc.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': N/A
-    Note: 'SCPro launches November 9, 2026, replacing SCEIS (SCEIS vendor portal down October 26 to November 9). Re-check the sample posting URL and scores after launch. The notices list asks visitors to solve a CAPTCHA before it loads (checked October 2026). A CAPTCHA does not lower the score.'
+    Note: 'SCPro launches November 9, 2026, replacing SCEIS (the SCEIS vendor portal is down October 26 to November 9). A sample posting will be added after launch. Until then, the posting page Lighthouse scores show as Not tested. The notices list asks visitors to solve a CAPTCHA before it loads (checked October 2026). A CAPTCHA does not lower the score.'
     'State web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes

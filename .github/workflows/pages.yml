@@ -151,6 +151,8 @@ jobs:
   deploy:
     name: Publish to GitHub Pages
     needs: build
+    # Without this, a skipped scan job (no pages due) would skip publishing too.
+    if: ${{ !cancelled() && needs.build.result == 'success' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
