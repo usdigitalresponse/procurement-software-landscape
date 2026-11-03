@@ -10,7 +10,7 @@ A CAPTCHA, or a similar check that a visitor is a person, does not currently low
 
 The total score available from all metrics is 100 points.
 
-### State web design system in use (5 pts)
+### Web design system in use (5 pts)
 
 A web design system (WDS) is a library of user interface components and visual style guides for websites operated by a government. The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) is an example of a web design system. The [Delaware bids website](https://mmp.delaware.gov/Bids/) is an example of a solicitation posting notices list website using a state WDS.
 

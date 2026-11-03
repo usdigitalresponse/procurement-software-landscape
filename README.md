@@ -37,7 +37,7 @@ Each points field is named for its section and its order within that section: `G
 
 | Points field | Answer field | Max |
 |---|---|---|
-| `G1` | `State web design system in use` | 5 |
+| `G1` | `Web design system in use` | 5 |
 | `G2` | `Data standard is published` | 5 |
 | `N1` | `Notices list has a direct URL` | 10 |
 | `N2` | `Includes local listings` | 5 |

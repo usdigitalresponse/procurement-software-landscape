@@ -8,7 +8,7 @@
     'Notices list URL': 'https://www.find-tender.service.gov.uk/search/opportunities'
     'Sample posting URL': 'https://www.find-tender.service.gov.uk/Notice/071922-2026'
     Note: ""
-    'State web design system in use': Yes
+    'Web design system in use': Yes
     'Data standard is published': Yes
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -48,7 +48,7 @@
     'Notices list URL': 'https://alabamabuys.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://alabamabuys.gov/page.aspx/en/bpm/process_manage_extranet/42646'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -88,7 +88,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': No
@@ -128,7 +128,7 @@
     'Notices list URL': 'https://portal.tenderlink.com/mof_samoa/alltenders/'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': N/A
@@ -168,7 +168,7 @@
     'Notices list URL': 'https://app.az.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://app.az.gov/page.aspx/en/bpm/process_manage_extranet/13800'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -208,7 +208,7 @@
     'Notices list URL': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
     'Sample posting URL': 'https://portal.us.bn.cloud.ariba.com/dashboard/public/appext/comsapsbncdiscoveryui#/RfxEvent/preview/1110018345?anId=ANONYMOUS'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -248,7 +248,7 @@
     'Notices list URL': 'https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx'
     'Sample posting URL': 'https://caleprocure.ca.gov/event/3860/0000039630'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -288,7 +288,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': No
@@ -328,7 +328,7 @@
     'Notices list URL': 'https://portal.ct.gov/das/ctsource/bidboard?language=en_US'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -368,7 +368,7 @@
     'Notices list URL': 'https://mmp.delaware.gov/Bids/'
     'Sample posting URL': 'https://mmp.delaware.gov/Bids/Details/9246'
     Note: ""
-    'State web design system in use': Yes
+    'Web design system in use': Yes
     'Data standard is published': Yes
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -408,7 +408,7 @@
     'Notices list URL': 'https://contracts.ocp.dc.gov/solicitations/search'
     'Sample posting URL': 'https://contracts.ocp.dc.gov/solicitations/details?id=Doc831461'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': N/A
@@ -448,7 +448,7 @@
     'Notices list URL': 'https://vendor.myfloridamarketplace.com/search/bids'
     'Sample posting URL': 'https://vendor.myfloridamarketplace.com/search/bids/detail/16318'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -488,7 +488,7 @@
     'Notices list URL': 'https://ssl.doas.state.ga.us/gpr/'
     'Sample posting URL': 'https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=SWC-eRFP-00023-2027&sourceSystemType=jag'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -528,7 +528,7 @@
     'Notices list URL': 'https://gsa.doa.guam.gov/invitation-for-bid/'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': N/A
@@ -568,7 +568,7 @@
     'Notices list URL': 'https://hands.ehawaii.gov/hands/opportunities'
     'Sample posting URL': 'https://hiepro.ehawaii.gov/public-display-solicitation.html?rfid=26003293'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -608,7 +608,7 @@
     'Notices list URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=LUMA'
     'Sample posting URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/form/SourcingEvent%5BByCompany%5D%28230,1301%29.XiSupplierPortalSummary?action=_open&navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&fromlist=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%7CNotificationStatus%3D2%29.XiOpenForBid&csk.SupplierGroup=LUMA&sortOrderName=SourcingEvent.ByCompany&previousDisabled=true&fk=SourcingEvent%5BByCompany%5D%28190,1418%7CNotificationStatus%3D2%29&firstDisabled=true&hasPrevious=false&pageSize=10&hasNext=true&isAscending=true&lk=SourcingEvent%5BByCompany%5D%28270,1411%7CNotificationStatus%3D2%29&pk=SourcingEvent%5BByCompany%5D%28230,1301%7CNotificationStatus%3D2%29&selectedPanel=Lines'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -648,7 +648,7 @@
     'Notices list URL': 'https://www.bidbuy.illinois.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://www.bidbuy.illinois.gov/bso/external/bidDetail.sda?docId=26-551HDA-FINAN-B-53072&external=true&parentUrl=close'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -688,7 +688,7 @@
     'Notices list URL': 'https://www.in.gov/idoa/procurement/current-business-opportunities/'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': Yes
+    'Web design system in use': Yes
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -728,7 +728,7 @@
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -768,7 +768,7 @@
     'Notices list URL': 'https://supplier.sok.ks.gov/psc/sokfsprdsup/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL?&'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -808,7 +808,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': No
@@ -848,7 +848,7 @@
     'Notices list URL': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/srchopen.cfm?deptno=all&catno=all&dateStart=&dateEnd=&compareDate=O&keywords=&keywordsCheck=all'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -888,7 +888,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': No
@@ -928,7 +928,7 @@
     'Notices list URL': 'https://emma.maryland.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://emma.maryland.gov/page.aspx/en/bpm/process_manage_extranet/93305'
     Note: 'The notices list and sample posting ask visitors to complete a reCAPTCHA ("I''m not a robot") before they load (checked October 2026). A CAPTCHA does not lower the score.'
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -968,7 +968,7 @@
     'Notices list URL': 'https://www.commbuys.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-27-1026-DOE02-DOE01-130975'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -1008,7 +1008,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': Yes
@@ -1048,7 +1048,7 @@
     'Notices list URL': 'https://guest.supplier.systems.state.mn.us/psc/fmssupap/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1088,7 +1088,7 @@
     'Notices list URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid'
     'Sample posting URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid/Details/45855?AppId=1'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -1128,7 +1128,7 @@
     'Notices list URL': 'https://ewqg.fa.us8.oraclecloud.com/fscmUI/redwood/negotiation-abstracts/view/abstractlisting?prcBuId=300000005255687'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1168,7 +1168,7 @@
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfMontana'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1208,7 +1208,7 @@
     'Notices list URL': 'https://das.nebraska.gov/materiel/bid-opportunities.html#current-bid-opportunities'
     'Sample posting URL': 'https://das.nebraska.gov/materiel/purchasing/124528%20ON/124528%20ON.html'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1248,7 +1248,7 @@
     'Notices list URL': 'https://nevadaepro.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://nevadaepro.com/bso/external/bidDetail.sda?docId=41NHA-S3922&external=true&parentUrl=close'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1288,7 +1288,7 @@
     'Notices list URL': 'https://apps.das.nh.gov/NHProcurement/Bid'
     'Sample posting URL': 'https://apps.das.nh.gov/NHProcurement/Bid/rfp-nhlc-202606'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1328,7 +1328,7 @@
     'Notices list URL': 'https://www.njstart.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://www.njstart.gov/bso/external/bidDetail.sda?docId=26DPP01212&external=true&parentUrl=close'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1368,7 +1368,7 @@
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
     'Sample posting URL': N/A
     Note: 'Transitioning to Euna (Bonfire) in early 2027, replacing eProNM. Re-check the notices list URL, sample posting URL and scores after the transition. New portal: https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1408,7 +1408,7 @@
     'Notices list URL': 'https://www.nyscr.ny.gov/Ads/Search'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -1448,7 +1448,7 @@
     'Notices list URL': 'https://evp.nc.gov/solicitations/?status=0'
     'Sample posting URL': 'https://evp.nc.gov/solicitations/details/?id=1290880c-067b-f111-ab0e-001dd80db495'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -1488,7 +1488,7 @@
     'Notices list URL': 'https://public.ndbuys.nd.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://public.ndbuys.nd.gov/page.aspx/en/bpm/process_manage_extranet/3545'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1528,7 +1528,7 @@
     'Notices list URL': 'https://selfservice.dof.gov.mp/vss/Vendors/VBids/SearchResults.aspx'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': N/A
@@ -1568,7 +1568,7 @@
     'Notices list URL': 'https://ohiobuys.ohio.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/56086'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1608,7 +1608,7 @@
     'Notices list URL': 'https://financials.ok.gov/psc/SOKLFP1DS/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1648,7 +1648,7 @@
     'Notices list URL': 'https://oregonbuys.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://oregonbuys.gov/bso/external/bidDetail.sda?docId=S-R09145-00017514&external=true&parentUrl=close'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -1688,7 +1688,7 @@
     'Notices list URL': 'https://www.emarketplace.state.pa.us/Search.aspx'
     'Sample posting URL': 'https://www.emarketplace.state.pa.us/Solicitations.aspx?SID=6100066036'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1728,7 +1728,7 @@
     'Notices list URL': 'https://asg.pr.gov/subastas'
     'Sample posting URL': 'https://asg.pr.gov/subastas26J-22671'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': N/A
@@ -1768,7 +1768,7 @@
     'Notices list URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1808,7 +1808,7 @@
     'Notices list URL': 'https://scpro.sc.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': N/A
     Note: 'SCPro launches November 9, 2026, replacing SCEIS (the SCEIS vendor portal is down October 26 to November 9). A sample posting will be added after launch. Until then, the posting page Lighthouse scores show as Not tested. The notices list asks visitors to solve a CAPTCHA before it loads (checked October 2026). A CAPTCHA does not lower the score.'
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1848,7 +1848,7 @@
     'Notices list URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/events'
     'Sample posting URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/eventDetail/19882'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1888,7 +1888,7 @@
     'Notices list URL': 'https://www.tn.gov/content/tn/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1928,7 +1928,7 @@
     'Notices list URL': 'https://www.txsmartbuy.gov/esbd'
     'Sample posting URL': 'https://www.txsmartbuy.gov/esbd/304-27-0790MS-1'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -1968,7 +1968,7 @@
     'Notices list URL': 'https://gvibuy.buyspeed.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://gvibuy.buyspeed.com/bso/external/bidDetail.sda?docId=BD-26-720-7201-646&external=true&parentUrl=close'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': N/A
@@ -2008,7 +2008,7 @@
     'Notices list URL': 'https://utah.bonfirehub.com/portal/?tab=openOpportunities'
     'Sample posting URL': 'https://utah.bonfirehub.com/opportunities/237998'
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -2048,7 +2048,7 @@
     'Notices list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
     Note: 'The notices list and sample posting ask visitors to solve a CAPTCHA before they load (checked October 2026). A CAPTCHA does not lower the score.'
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -2088,7 +2088,7 @@
     'Notices list URL': 'https://mvendor.cgieva.com/Vendor/public/AllOpportunities.jsp'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
@@ -2128,7 +2128,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': No
@@ -2168,7 +2168,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
     'Includes local listings': No
@@ -2208,7 +2208,7 @@
     'Notices list URL': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/c/WI_SS_BIDDER_FLU.WI_SS_BDR_BIDS_FLU.GBL'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
@@ -2248,7 +2248,7 @@
     'Notices list URL': 'https://www.publicpurchase.com/gems/wyominggsd,wy/buyer/public/publicInfo'
     'Sample posting URL': N/A
     Note: ""
-    'State web design system in use': No
+    'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
