@@ -1,5 +1,6 @@
 -
     Government: 'United Kingdom'
+    Abbreviation: UK
     Benchmark: true
     'System name': 'Find a Tender'
     'System type': Custom
@@ -41,6 +42,7 @@
     Total: 99
 -
     Government: Alabama
+    Abbreviation: AL
     'System name': 'Alabama Buys'
     'System type': 'eProcurement, ERP'
     Vendor: 'Ivalua; Advantage by CGI'
@@ -81,6 +83,7 @@
     Total: 66
 -
     Government: Alaska
+    Abbreviation: AK
     'System name': 'IRIS (Integrated Resource Information System)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -121,6 +124,7 @@
     Total: 15
 -
     Government: 'American Samoa'
+    Abbreviation: AS
     'System name': 'e-Tendering Portal'
     'System type': eProcurement
     Vendor: 'illion Tenderlink'
@@ -161,6 +165,7 @@
     Total: 23
 -
     Government: Arizona
+    Abbreviation: AZ
     'System name': 'APP (Arizona Procurement Portal)'
     'System type': eProcurement
     Vendor: Ivalua
@@ -201,6 +206,7 @@
     Total: 77
 -
     Government: Arkansas
+    Abbreviation: AR
     'System name': 'Bid Opportunities'
     'System type': ERP
     Vendor: 'SAP Ariba'
@@ -241,6 +247,7 @@
     Total: 69
 -
     Government: California
+    Abbreviation: CA
     'System name': 'Cal eProcure'
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -281,6 +288,7 @@
     Total: 75
 -
     Government: Colorado
+    Abbreviation: CO
     'System name': 'CORE VSS (Colorado Operations Resource Engine Vendor Self Service)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -321,6 +329,7 @@
     Total: 15
 -
     Government: Connecticut
+    Abbreviation: CT
     'System name': 'CT Source'
     'System type': 'eProcurement, ERP'
     Vendor: 'Proactis WebProcure; PeopleSoft by Oracle'
@@ -361,6 +370,7 @@
     Total: 42
 -
     Government: Delaware
+    Abbreviation: DE
     'System name': MyMarketplace
     'System type': Custom
     Vendor: 'Government owned'
@@ -401,6 +411,7 @@
     Total: 78
 -
     Government: 'District of Columbia'
+    Abbreviation: DC
     'System name': 'Contracts and Procurement Transparency Portal'
     'System type': Custom
     Vendor: 'Government owned'
@@ -441,6 +452,7 @@
     Total: 74
 -
     Government: Florida
+    Abbreviation: FL
     'System name': MyFloridaMarketplace
     'System type': ERP
     Vendor: 'SAP Ariba'
@@ -481,6 +493,7 @@
     Total: 75
 -
     Government: Georgia
+    Abbreviation: GA
     'System name': GA@Work
     'System type': 'eProcurement, ERP'
     Vendor: 'Jaggaer; Workday'
@@ -521,6 +534,7 @@
     Total: 79
 -
     Government: Guam
+    Abbreviation: GU
     'System name': 'Invitation for Bid'
     'System type': Custom
     Vendor: 'Government owned'
@@ -561,6 +575,7 @@
     Total: 23
 -
     Government: Hawaii
+    Abbreviation: HI
     'System name': HIePRO
     'System type': ERP
     Vendor: 'Tyler Technologies'
@@ -601,6 +616,7 @@
     Total: 80
 -
     Government: Idaho
+    Abbreviation: ID
     'System name': 'IPRO, powered by Luma'
     'System type': eProcurement
     Vendor: Infor
@@ -641,6 +657,7 @@
     Total: 57
 -
     Government: Illinois
+    Abbreviation: IL
     'System name': 'Illinois BidBuy'
     'System type': eProcurement
     Vendor: 'SOVRA (Periscope/MDF)'
@@ -681,6 +698,7 @@
     Total: 75
 -
     Government: Indiana
+    Abbreviation: IN
     'System name': 'Current Business Opportunities'
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -721,6 +739,7 @@
     Total: 27
 -
     Government: Iowa
+    Abbreviation: IA
     'System name': 'IMPACS (Iowa Management of Procurement and Contracts System)'
     'System type': eProcurement
     Vendor: Jaggaer
@@ -761,6 +780,7 @@
     Total: 24
 -
     Government: Kansas
+    Abbreviation: KS
     'System name': 'SMART (Statewide Management, Accounting and Reporting Tool)'
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -801,6 +821,7 @@
     Total: 36
 -
     Government: Kentucky
+    Abbreviation: KY
     'System name': 'Vendor Self Service'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -841,6 +862,7 @@
     Total: 15
 -
     Government: Louisiana
+    Abbreviation: LA
     'System name': 'LaPAC (Louisiana Procurement and Contract Network)'
     'System type': ERP
     Vendor: SAP
@@ -881,6 +903,7 @@
     Total: 35
 -
     Government: Maine
+    Abbreviation: ME
     'System name': 'MeVSS (Maine Vendor Self Service)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -921,6 +944,7 @@
     Total: 15
 -
     Government: Maryland
+    Abbreviation: MD
     'System name': 'eMMA (eMaryland Marketplace Advantage)'
     'System type': eProcurement
     Vendor: Ivalua
@@ -961,6 +985,7 @@
     Total: 74
 -
     Government: Massachusetts
+    Abbreviation: MA
     'System name': COMMBUYS
     'System type': eProcurement
     Vendor: 'SOVRA (Periscope/MDF)'
@@ -1001,6 +1026,7 @@
     Total: 79
 -
     Government: Michigan
+    Abbreviation: MI
     'System name': 'SIGMA VSS (Statewide Integrated Governmental Management Applications Vendor Self Service)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -1041,6 +1067,7 @@
     Total: 20
 -
     Government: Minnesota
+    Abbreviation: MN
     'System name': 'SWIFT (Statewide Integrated Financial Tools)'
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -1081,6 +1108,7 @@
     Total: 33
 -
     Government: Mississippi
+    Abbreviation: MS
     'System name': 'MAGIC (Mississippi''s Accountability System for Government Information and Collaboration)'
     'System type': ERP
     Vendor: SAP
@@ -1121,6 +1149,7 @@
     Total: 68
 -
     Government: Missouri
+    Abbreviation: MO
     'System name': 'MissouriBUYS, powered by Movers'
     'System type': ERP
     Vendor: Oracle
@@ -1161,6 +1190,7 @@
     Total: 40
 -
     Government: Montana
+    Abbreviation: MT
     'System name': 'eMACS (electronic Montana Acquisition and Contracting System)'
     'System type': eProcurement
     Vendor: Jaggaer
@@ -1201,6 +1231,7 @@
     Total: 29
 -
     Government: Nebraska
+    Abbreviation: NE
     'System name': 'Bid Opportunities'
     'System type': Custom
     Vendor: 'Government owned'
@@ -1241,6 +1272,7 @@
     Total: 80
 -
     Government: Nevada
+    Abbreviation: NV
     'System name': NevadaEPro
     'System type': eProcurement
     Vendor: 'SOVRA (Periscope/MDF)'
@@ -1281,6 +1313,7 @@
     Total: 75
 -
     Government: 'New Hampshire'
+    Abbreviation: NH
     'System name': 'NH Procurement Portal'
     'System type': Custom
     Vendor: 'Government owned'
@@ -1321,6 +1354,7 @@
     Total: 70
 -
     Government: 'New Jersey'
+    Abbreviation: NJ
     'System name': 'NJSTART (New Jersey State-of-the-Art Requisition Technology)'
     'System type': eProcurement
     Vendor: 'SOVRA (Periscope/MDF)'
@@ -1361,6 +1395,7 @@
     Total: 68
 -
     Government: 'New Mexico'
+    Abbreviation: NM
     'System name': eProNM
     'System type': 'eProcurement, ERP'
     Vendor: 'Jaggaer; PeopleSoft by Oracle'
@@ -1401,6 +1436,7 @@
     Total: 30
 -
     Government: 'New York'
+    Abbreviation: NY
     'System name': 'New York State Contract Reporter'
     'System type': Custom
     Vendor: 'Government owned'
@@ -1441,6 +1477,7 @@
     Total: 29
 -
     Government: 'North Carolina'
+    Abbreviation: NC
     'System name': 'eVP (electronic Vendor Portal)'
     'System type': ERP
     Vendor: 'SAP Ariba'
@@ -1481,6 +1518,7 @@
     Total: 74
 -
     Government: 'North Dakota'
+    Abbreviation: ND
     'System name': NDBuys
     'System type': eProcurement
     Vendor: Ivalua
@@ -1521,6 +1559,7 @@
     Total: 69
 -
     Government: 'Northern Mariana Islands'
+    Abbreviation: MP
     'System name': Munis
     'System type': ERP
     Vendor: 'Tyler Technologies'
@@ -1561,6 +1600,7 @@
     Total: 29
 -
     Government: Ohio
+    Abbreviation: OH
     'System name': OhioBuys
     'System type': 'eProcurement, ERP'
     Vendor: 'Ivalua; PeopleSoft by Oracle'
@@ -1601,6 +1641,7 @@
     Total: 69
 -
     Government: Oklahoma
+    Abbreviation: OK
     'System name': 'Oklahoma Supplier Portal'
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -1641,6 +1682,7 @@
     Total: 42
 -
     Government: Oregon
+    Abbreviation: OR
     'System name': OregonBuys
     'System type': eProcurement
     Vendor: 'SOVRA (Periscope/MDF)'
@@ -1681,6 +1723,7 @@
     Total: 79
 -
     Government: Pennsylvania
+    Abbreviation: PA
     'System name': 'PA - eMarketplace'
     'System type': eProcurement
     Vendor: Jaggaer
@@ -1721,6 +1764,7 @@
     Total: 76
 -
     Government: 'Puerto Rico'
+    Abbreviation: PR
     'System name': 'JEDI (Joint E-procurement Digital Intelligence)'
     'System type': Custom
     Vendor: 'Government owned'
@@ -1761,6 +1805,7 @@
     Total: 67
 -
     Government: 'Rhode Island'
+    Abbreviation: RI
     'System name': 'OSP (Ocean State Procures)'
     'System type': eProcurement
     Vendor: 'Proactis WebProcure'
@@ -1801,6 +1846,7 @@
     Total: 40
 -
     Government: 'South Carolina'
+    Abbreviation: SC
     'System name': SCPro
     'System type': eProcurement
     Vendor: Ivalua
@@ -1841,6 +1887,7 @@
     Total: 53
 -
     Government: 'South Dakota'
+    Abbreviation: SD
     'System name': 'Posting Board'
     'System type': eProcurement
     Vendor: 'ESM Solutions'
@@ -1881,6 +1928,7 @@
     Total: 67
 -
     Government: Tennessee
+    Abbreviation: TN
     'System name': Edison
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -1921,6 +1969,7 @@
     Total: 23
 -
     Government: Texas
+    Abbreviation: TX
     'System name': TXSmartBuy
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -1961,6 +2010,7 @@
     Total: 71
 -
     Government: 'US Virgin Islands'
+    Abbreviation: VI
     'System name': GVIBUY
     'System type': eProcurement
     Vendor: 'SOVRA (Periscope/MDF)'
@@ -2001,6 +2051,7 @@
     Total: 70
 -
     Government: Utah
+    Abbreviation: UT
     'System name': 'U3P (Utah Public Procurement Place)'
     'System type': eProcurement
     Vendor: Euna
@@ -2041,6 +2092,7 @@
     Total: 73
 -
     Government: Vermont
+    Abbreviation: VT
     'System name': VTBuys
     'System type': 'eProcurement, ERP'
     Vendor: 'Ivalua; PeopleSoft by Oracle'
@@ -2081,6 +2133,7 @@
     Total: 58
 -
     Government: Virginia
+    Abbreviation: VA
     'System name': 'eVA (Electronic Virginia)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -2121,6 +2174,7 @@
     Total: 42
 -
     Government: Washington
+    Abbreviation: WA
     'System name': 'WEBS (Washington''s Electronic Business Solution)'
     'System type': Custom
     Vendor: 'Government owned'
@@ -2161,6 +2215,7 @@
     Total: 0
 -
     Government: 'West Virginia'
+    Abbreviation: WV
     'System name': 'wvOASIS (Our Advanced Solution with Integrated Systems)'
     'System type': ERP
     Vendor: 'Advantage by CGI'
@@ -2201,6 +2256,7 @@
     Total: 15
 -
     Government: Wisconsin
+    Abbreviation: WI
     'System name': WISBuy
     'System type': ERP
     Vendor: 'PeopleSoft by Oracle'
@@ -2241,6 +2297,7 @@
     Total: 42
 -
     Government: Wyoming
+    Abbreviation: WY
     'System name': 'Public Purchase'
     'System type': eProcurement
     Vendor: 'Public Purchase'

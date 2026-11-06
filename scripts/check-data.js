@@ -4,7 +4,7 @@
 // the CRITERIA list in index.html, so the site and this check always agree.
 
 const ANSWERS = ["Yes", "No", "N/A", "Print"];
-const TEXT_FIELDS = ["Government", "System name", "System type", "Vendor"];
+const TEXT_FIELDS = ["Government", "Abbreviation", "System name", "System type", "Vendor"];
 const URL_FIELDS = ["Public site URL", "Notices list URL", "Sample posting URL"];
 // Lighthouse points depend on the page having a direct URL.
 const LIGHTHOUSE_NEEDS = { N4: "N1", N5: "N1", P7: "P1", P8: "P1" };
@@ -52,6 +52,7 @@ function check(data, criteria, metricsMd) {
 
   const known = new Set([...TEXT_FIELDS, ...URL_FIELDS, "Note", "Benchmark", "Total", ...criteria.flatMap(c => [c.field, c.key])]);
   const seen = new Set();
+  const seenAbbr = new Map();
 
   data.forEach((r, i) => {
     if (!r || typeof r !== "object" || Array.isArray(r)) { errors.push(`Record ${i + 1}: should be a set of fields.`); return; }
@@ -66,6 +67,12 @@ function check(data, criteria, metricsMd) {
     }
     if (seen.has(name)) err("appears more than once.");
     seen.add(name);
+    if (typeof r.Abbreviation === "string" && r.Abbreviation.trim()) {
+      const abbr = r.Abbreviation.trim();
+      if (!/^[A-Z]{2}$/.test(abbr)) err(`"Abbreviation" is "${abbr}"; it should be two capital letters, such as AL.`);
+      else if (seenAbbr.has(abbr)) err(`"Abbreviation" ${abbr} is also used by ${seenAbbr.get(abbr)}.`);
+      else seenAbbr.set(abbr, name);
+    }
 
     for (const f of URL_FIELDS) {
       if (!(f in r)) err(`"${f}" is missing.`);

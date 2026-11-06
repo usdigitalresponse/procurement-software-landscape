@@ -26,7 +26,7 @@ The site is built and published to GitHub Pages by a GitHub Actions workflow eac
 
 Edit `Procurement-Software-Landscape.yaml` directly. Each record has these kinds of fields:
 
-- **Description:** `Government` (the name of the state, DC, territory, or benchmark site such as the United Kingdom), `System name`, `System type`, and `Vendor`. Separate more than one vendor with a semicolon.
+- **Description:** `Government` (the name of the state, DC, territory, or benchmark site such as the United Kingdom), `Abbreviation` (its two-letter postal abbreviation, such as `AL` or `DC`, which places it on the map; `UK` for the United Kingdom), `System name`, `System type`, and `Vendor`. Separate more than one vendor with a semicolon.
 - **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
 - **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
 - **Links:** `Public site URL`, `Notices list URL`, and `Sample posting URL`. Use `N/A` when there is none.
@@ -98,7 +98,7 @@ To check the links yourself, install Node.js 22 or later and run `node scripts/c
 
 Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
 
-- every record has all of the fields above, with no misspelled or extra fields, and no government appears twice;
+- every record has all of the fields above, with no misspelled or extra fields, no government appears twice, and each abbreviation is two capital letters used only once;
 - each link is a full `http://` or `https://` address, or `N/A`;
 - each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
 - each points field matches its answer, using the rules above, and `Total` equals their sum;
