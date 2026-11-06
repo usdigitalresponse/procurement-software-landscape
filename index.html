@@ -53,14 +53,46 @@
   .stat { background: var(--sky); border: 1px solid #c3dff5; border-radius: .375rem; padding: .75rem 1rem; }
   .stat .v { font-size: 1.6rem; font-weight: 700; color: var(--accent-dark); }
   .stat .l { color: var(--muted); font-size: .875rem; }
+  /* A full-width light blue band, like the sections on usdigitalresponse.org. The shadow
+     paints the background out to the window's edges without changing the layout. */
+  .map-band { background: var(--sky); box-shadow: 0 0 0 100vmax var(--sky); clip-path: inset(0 -100vmax); margin: 2rem 0; padding: 1.75rem 0 2rem; }
+  .map-band h2.section { margin-top: 0; }
+  .map-band p.intro { color: var(--ink); }
   .map svg { display: block; width: 100%; max-width: 48rem; height: auto; margin: 0 auto; }
-  .map a circle { fill: var(--accent-dark); transition: fill .15s; }
+  .map a circle { fill: var(--accent-dark); transition: fill .15s, opacity .15s; }
   .map a text { fill: #fff; font: 600 .36px Inter, system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
-  .map a:hover circle, .map a:focus-visible circle { fill: var(--button); }
+  .map a:hover circle { stroke: var(--ink); stroke-width: .06; }
   .map a:focus-visible { outline: none; }
   .map a:focus-visible circle { stroke: #2491ff; stroke-width: .08; }
-  .map a.out circle { fill: #c9ccd1; }
-  .map a.out text { fill: var(--ink); }
+  /* Answer colors, used by the map's circles and its legend. */
+  .map a.yes circle, .swatch.yes { fill: #216e1f; background: #216e1f; }
+  .map a.part circle, .swatch.part { fill: #e5a000; background: #e5a000; }
+  .map a.no circle, .swatch.no { fill: #b50909; background: #b50909; }
+  .map a.na circle, .swatch.na { fill: #c9ccd1; background: #c9ccd1; }
+  .map a.part text, .map a.na text { fill: var(--ink); }
+  .map a.out { opacity: .25; }
+  /* Metric buttons: a column beside the map on wider screens, and a compact wrapped
+     list above it on narrow ones. */
+  .map-layout { display: grid; gap: 1.25rem; }
+  .map-controls { display: grid; gap: .9rem; align-content: start; }
+  .map-controls h3 { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 0 0 .3rem; }
+  .map-controls div { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .map-controls button { font: inherit; font-size: .8rem; line-height: 1.3; padding: .3rem .6rem; border-radius: 8px; border: 1px solid var(--button); background: #fff; color: var(--button); cursor: pointer; text-align: left; }
+  .map-controls button:hover { background: #eef4ff; }
+  .map-controls button[aria-pressed="true"] { background: var(--button); color: #fff; }
+  .map-select { display: flex; flex-direction: column; gap: .3rem; font-size: .875rem; font-weight: 600; }
+  .map-select select { font: inherit; font-weight: 400; font-size: 1rem; padding: .45rem .5rem; border: 1px solid #71767a; border-radius: .25rem; background: #fff; max-width: 24rem; }
+  .map-controls section { display: none; }
+  @media (min-width: 900px) {
+    .map-select { display: none; }
+    .map-controls section { display: block; }
+    .map-layout { grid-template-columns: 15rem minmax(0, 1fr); align-items: start; gap: 2rem; }
+    .map-controls div { flex-direction: column; }
+    .map-controls button { width: 100%; }
+  }
+  .map-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: .35rem 1.25rem; min-height: 1.5rem; margin: .5rem 0 0; font-size: .875rem; }
+  .map-legend span { display: inline-flex; align-items: center; gap: .4rem; }
+  .swatch { display: inline-block; width: .9rem; height: .9rem; border-radius: 50%; }
   .controls { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: end; background: var(--panel); border: 1px solid var(--line); border-radius: .375rem; padding: 1rem; }
   .controls label { display: flex; flex-direction: column; font-size: .875rem; font-weight: 600; gap: .25rem; }
   .controls input, .controls select { font: inherit; padding: .4rem .5rem; border: 1px solid #71767a; border-radius: .25rem; min-width: 12rem; background: #fff; }
@@ -163,10 +195,16 @@
     <div class="stats" id="stats"></div>
   </section>
 
-  <section aria-labelledby="map-heading">
+  <section class="map-band" aria-labelledby="map-heading">
     <h2 class="section" id="map-heading">Map</h2>
-    <p class="intro">Each circle is one state, DC, or territory. Select a circle to see its scores.</p>
-    <div class="map" id="map"></div>
+    <p class="intro">Each circle is one state, DC, or territory. Choose a metric to color the map by each government's answer, and select a circle to see its scores.</p>
+    <div class="map-layout">
+      <div class="map-controls" id="map-controls" role="group" aria-label="Color the map by a metric"></div>
+      <div>
+        <div class="map" id="map"></div>
+        <div class="map-legend" id="map-legend" aria-live="polite"></div>
+      </div>
+    </div>
   </section>
 
   <section id="benchmark" aria-labelledby="benchmark-heading" hidden>
@@ -493,9 +531,77 @@ function map() {
 }
 
 // Fade the circles of governments that the current filters hide.
+let mapMetric = null;  // key of the metric the map is colored by, or null for none
+const LIGHTHOUSE = new Set(["N4", "N5", "P7", "P8"]);
+const MAP_CLASSES = ["yes", "part", "no", "na"];
+// The total score, colored with the same bands as the list's score bars.
+const MAP_TOTAL = { key: "total", label: "Total score" };
+const mapChoice = key => key === MAP_TOTAL.key ? MAP_TOTAL : CRITERIA.find(c => c.key === key);
+
+// A button for the total score, then one per metric, grouped like the scoring metrics.
+// Narrow screens get the same choices as a dropdown instead (see the CSS).
+function mapControls() {
+  const option = c => `<option value="${c.key}">${esc(c.label)}</option>`;
+  $("#map-controls").innerHTML =
+    `<label class="map-select">Color the map by <select id="map-metric"><option value="">Nothing</option>` +
+    `<optgroup label="Overall">${option(MAP_TOTAL)}</optgroup>` +
+    Object.keys(GROUPS).map(g => `<optgroup label="${GROUPS[g]}">${CRITERIA.filter(c => c.group === g).map(option).join("")}</optgroup>`).join("") +
+    `</select></label>` +
+    `<section><h3>Overall</h3><div><button type="button" data-key="${MAP_TOTAL.key}" aria-pressed="false">${MAP_TOTAL.label}</button></div></section>` +
+    Object.keys(GROUPS).map(g =>
+    `<section><h3>${GROUPS[g]}</h3><div>` +
+    CRITERIA.filter(c => c.group === g).map(c =>
+      `<button type="button" data-key="${c.key}" aria-pressed="false">${esc(c.label)}</button>`).join("") +
+    `</div></section>`).join("");
+}
+
+// A government's answer to a metric, as a color class and a short description.
+// Lighthouse scores use Lighthouse's own bands: 90–100 good, 50–89 fair, 0–49 poor.
+// The total uses the list's bands: 75–100, 50–74 and 0–49.
+function mapAnswer(d, c) {
+  if (c === MAP_TOTAL) {
+    const band = d.total >= 75 ? ["yes", "75–100"] : d.total >= 50 ? ["part", "50–74"] : ["no", "0–49"];
+    return [band[0], band[1], `${d.total} of 100`];
+  }
+  const v = d.raw[c.field];
+  if (LIGHTHOUSE.has(c.key)) {
+    const n = num(v);
+    if (!n) return ["na", "Not tested"];
+    return n >= 90 ? ["yes", "90–100"] : n >= 50 ? ["part", "50–89"] : ["no", "0–49"];
+  }
+  if (/^yes$/i.test(v)) return ["yes", "Yes"];
+  if (/^print$/i.test(v)) return ["part", "Print only"];
+  if (/^no$/i.test(v)) return ["no", "No"];
+  return ["na", "N/A"];
+}
+
+// Color the circles by the chosen metric, fade those the filters hide, and update
+// the buttons and the legend.
 function updateMap() {
   const shown = new Set(filtered().map(d => d.state));
-  document.querySelectorAll("#map a").forEach(a => a.classList.toggle("out", !shown.has(a.dataset.state)));
+  const c = mapChoice(mapMetric);
+  const counts = new Map();
+  document.querySelectorAll("#map a").forEach(a => {
+    const d = rows.find(r => r.state === a.dataset.state);
+    a.classList.remove(...MAP_CLASSES);
+    a.classList.toggle("out", !shown.has(d.state));
+    if (c) {
+      const [cls, text, spoken = text] = mapAnswer(d, c);
+      a.classList.add(cls);
+      counts.set(text, { cls, n: (counts.get(text)?.n || 0) + 1 });
+      a.setAttribute("aria-label", `${d.state}, ${c.label}: ${spoken}`);
+    } else {
+      a.setAttribute("aria-label", `${d.state}, ${d.total} of 100`);
+    }
+  });
+  document.querySelectorAll("#map-controls button").forEach(b => b.setAttribute("aria-pressed", b.dataset.key === mapMetric));
+  $("#map-metric").value = mapMetric || "";
+  const order = ["Yes", "90–100", "75–100", "Print only", "50–89", "50–74", "No", "0–49", "N/A", "Not tested"];
+  $("#map-legend").innerHTML = c
+    ? `<strong>${c === MAP_TOTAL ? c.label : `${esc(GROUPS[c.group])}: ${critLink(c)}`}</strong>` +
+      [...counts].sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]))
+        .map(([text, { cls, n }]) => `<span><span class="swatch ${cls}" aria-hidden="true"></span>${text} (${n})</span>`).join("")
+    : "";
 }
 
 function methodology() {
@@ -524,6 +630,7 @@ function syncHash() {
   checkedValues("vendor-list").forEach(v => p.append("vendor", v));
   // e.g. metrics=P1,P6,-P8: full points on P1 and P6, not on P8.
   if (checkedMetrics().length) p.set("metrics", checkedMetrics().map(({ c, yes }) => (yes ? "" : "-") + c.key).join(","));
+  if (mapMetric) p.set("map", mapMetric);
   if (open.size === 1) p.set("state", [...open][0]);
   history.replaceState(null, "", p.toString() ? "#" + p : location.pathname);
 }
@@ -540,6 +647,7 @@ function readHash() {
   document.querySelectorAll("#metric-list input").forEach(i =>
     i.checked = keys.includes((i.value === "yes" ? "" : "-") + i.dataset.key));
   updateSummaries();
+  mapMetric = mapChoice(p.get("map")) ? p.get("map") : null;
   if (p.get("state")) open.add(p.get("state"));
 }
 
@@ -576,6 +684,7 @@ async function init() {
   $("#benchmark").hidden = !benchmarks.length;
   readHash();
   stats();
+  mapControls();
   map();
   methodology();
   render();
@@ -611,6 +720,19 @@ async function init() {
     render();
     syncHash();
     document.querySelector(`.state-btn[data-state="${CSS.escape(s)}"]`)?.focus();
+  });
+  // A metric button colors the map by that metric; pressing it again clears the colors.
+  $("#map-controls").addEventListener("click", e => {
+    const b = e.target.closest("button[data-key]");
+    if (!b) return;
+    mapMetric = mapMetric === b.dataset.key ? null : b.dataset.key;
+    updateMap();
+    syncHash();
+  });
+  $("#map-metric").addEventListener("change", e => {
+    mapMetric = e.target.value || null;
+    updateMap();
+    syncHash();
   });
   // A map circle opens that government's details in the table and scrolls to them,
   // clearing the filters first if they hide it.
