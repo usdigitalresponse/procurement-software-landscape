@@ -536,7 +536,7 @@ function map() {
 }
 
 // Fade the circles of governments that the current filters hide.
-let mapMetric = null;  // key of the metric the map is colored by, or null for none
+let mapMetric = "total";  // key of what the map is colored by: "total" or a metric
 const LIGHTHOUSE = new Set(["N4", "N5", "P7", "P8"]);
 const MAP_CLASSES = ["yes", "part", "no", "na"];
 // The total score, colored with the same bands as the list's score bars.
@@ -548,7 +548,7 @@ const mapChoice = key => key === MAP_TOTAL.key ? MAP_TOTAL : CRITERIA.find(c => 
 function mapControls() {
   const option = c => `<option value="${c.key}">${esc(c.label)}</option>`;
   $("#map-controls").innerHTML =
-    `<label class="map-select">Color the map by <select id="map-metric"><option value="">Nothing</option>` +
+    `<label class="map-select">Color the map by <select id="map-metric">` +
     `<optgroup label="Overall">${option(MAP_TOTAL)}</optgroup>` +
     Object.keys(GROUPS).map(g => `<optgroup label="${GROUPS[g]}">${CRITERIA.filter(c => c.group === g).map(option).join("")}</optgroup>`).join("") +
     `</select></label>` +
@@ -600,7 +600,7 @@ function updateMap() {
     }
   });
   document.querySelectorAll("#map-controls button").forEach(b => b.setAttribute("aria-pressed", b.dataset.key === mapMetric));
-  $("#map-metric").value = mapMetric || "";
+  $("#map-metric").value = mapMetric;
   const order = ["Yes", "90–100", "75–100", "Print only", "50–89", "50–74", "No", "0–49", "N/A", "Not tested"];
   $("#map-legend").innerHTML = c
     ? `<strong>${c === MAP_TOTAL ? c.label : `${esc(GROUPS[c.group])}: ${critLink(c)}`}</strong>` +
@@ -635,7 +635,7 @@ function syncHash() {
   checkedValues("vendor-list").forEach(v => p.append("vendor", v));
   // e.g. metrics=P1,P6,-P8: full points on P1 and P6, not on P8.
   if (checkedMetrics().length) p.set("metrics", checkedMetrics().map(({ c, yes }) => (yes ? "" : "-") + c.key).join(","));
-  if (mapMetric) p.set("map", mapMetric);
+  if (mapMetric !== MAP_TOTAL.key) p.set("map", mapMetric);  // the total is the default
   if (open.size === 1) p.set("state", [...open][0]);
   history.replaceState(null, "", p.toString() ? "#" + p : location.pathname);
 }
@@ -652,7 +652,7 @@ function readHash() {
   document.querySelectorAll("#metric-list input").forEach(i =>
     i.checked = keys.includes((i.value === "yes" ? "" : "-") + i.dataset.key));
   updateSummaries();
-  mapMetric = mapChoice(p.get("map")) ? p.get("map") : null;
+  mapMetric = mapChoice(p.get("map")) ? p.get("map") : MAP_TOTAL.key;
   if (p.get("state")) open.add(p.get("state"));
 }
 
@@ -726,16 +726,16 @@ async function init() {
     syncHash();
     document.querySelector(`.state-btn[data-state="${CSS.escape(s)}"]`)?.focus();
   });
-  // A metric button colors the map by that metric; pressing it again clears the colors.
+  // A button colors the map by the total score or that metric.
   $("#map-controls").addEventListener("click", e => {
     const b = e.target.closest("button[data-key]");
     if (!b) return;
-    mapMetric = mapMetric === b.dataset.key ? null : b.dataset.key;
+    mapMetric = b.dataset.key;
     updateMap();
     syncHash();
   });
   $("#map-metric").addEventListener("change", e => {
-    mapMetric = e.target.value || null;
+    mapMetric = e.target.value;
     updateMap();
     syncHash();
   });
