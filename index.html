@@ -53,6 +53,14 @@
   .stat { background: var(--sky); border: 1px solid #c3dff5; border-radius: .375rem; padding: .75rem 1rem; }
   .stat .v { font-size: 1.6rem; font-weight: 700; color: var(--accent-dark); }
   .stat .l { color: var(--muted); font-size: .875rem; }
+  .map svg { display: block; width: 100%; max-width: 48rem; height: auto; margin: 0 auto; }
+  .map a circle { fill: var(--accent-dark); transition: fill .15s; }
+  .map a text { fill: #fff; font: 600 .36px Inter, system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+  .map a:hover circle, .map a:focus-visible circle { fill: var(--button); }
+  .map a:focus-visible { outline: none; }
+  .map a:focus-visible circle { stroke: #2491ff; stroke-width: .08; }
+  .map a.out circle { fill: #c9ccd1; }
+  .map a.out text { fill: var(--ink); }
   .controls { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: end; background: var(--panel); border: 1px solid var(--line); border-radius: .375rem; padding: 1rem; }
   .controls label { display: flex; flex-direction: column; font-size: .875rem; font-weight: 600; gap: .25rem; }
   .controls input, .controls select { font: inherit; padding: .4rem .5rem; border: 1px solid #71767a; border-radius: .25rem; min-width: 12rem; background: #fff; }
@@ -153,6 +161,12 @@
   <section aria-labelledby="summary-heading">
     <h2 id="summary-heading" class="sr-only">Summary</h2>
     <div class="stats" id="stats"></div>
+  </section>
+
+  <section aria-labelledby="map-heading">
+    <h2 class="section" id="map-heading">Map</h2>
+    <p class="intro">Each circle is one state, DC, or territory. Select a circle to see its scores.</p>
+    <div class="map" id="map"></div>
   </section>
 
   <section id="benchmark" aria-labelledby="benchmark-heading" hidden>
@@ -404,6 +418,7 @@ function render() {
   $("#tbl tbody").innerHTML = list.map(rowHtml).join("") || `<tr><td colspan="8">No sites match these filters.</td></tr>`;
   $("#benchmark tbody").innerHTML = benchmarks.map(rowHtml).join("");
   $("#expand-all").textContent = list.length && list.every(d => open.has(d.state)) ? "Collapse all" : "Expand all";
+  updateMap();
 }
 
 function rowHtml(d) {
@@ -434,6 +449,52 @@ function stats() {
     [median, "Median score"],
     [`${top}`, `Top score (${leaders.join(", ")})`],
   ].map(([v, l]) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`).join("");
+}
+
+// Map: one equal circle per government on a hex grid, so every circle is the same
+// distance from its neighbors. Each entry is [abbreviation, x, row]: odd rows are shifted
+// half a step, so their x values end in .5. The states follow PresentationGO's circle
+// tile grid map of the USA; the territories are added near Hawaii and Florida.
+const MAP_HEX = {
+  Alaska: ["AK", 0, 0], Maine: ["ME", 11, 0],
+  Vermont: ["VT", 9.5, 1], "New Hampshire": ["NH", 10.5, 1],
+  Washington: ["WA", 1, 2], Montana: ["MT", 2, 2], "North Dakota": ["ND", 3, 2], Minnesota: ["MN", 4, 2],
+  Wisconsin: ["WI", 5, 2], Michigan: ["MI", 7, 2], "New York": ["NY", 9, 2], Massachusetts: ["MA", 10, 2],
+  "Rhode Island": ["RI", 11, 2],
+  Idaho: ["ID", 1.5, 3], Wyoming: ["WY", 2.5, 3], "South Dakota": ["SD", 3.5, 3], Iowa: ["IA", 4.5, 3],
+  Illinois: ["IL", 5.5, 3], Indiana: ["IN", 6.5, 3], Ohio: ["OH", 7.5, 3], Pennsylvania: ["PA", 8.5, 3],
+  "New Jersey": ["NJ", 9.5, 3], Connecticut: ["CT", 10.5, 3],
+  Oregon: ["OR", 1, 4], Nevada: ["NV", 2, 4], Colorado: ["CO", 3, 4], Nebraska: ["NE", 4, 4], Missouri: ["MO", 5, 4],
+  Kentucky: ["KY", 6, 4], "West Virginia": ["WV", 7, 4], Maryland: ["MD", 8, 4], Delaware: ["DE", 9, 4],
+  California: ["CA", 1.5, 5], Arizona: ["AZ", 2.5, 5], Utah: ["UT", 3.5, 5], Kansas: ["KS", 4.5, 5],
+  Arkansas: ["AR", 5.5, 5], Tennessee: ["TN", 6.5, 5], Virginia: ["VA", 7.5, 5], "North Carolina": ["NC", 8.5, 5],
+  "District of Columbia": ["DC", 11.5, 5],
+  "New Mexico": ["NM", 3, 6], Oklahoma: ["OK", 4, 6], Louisiana: ["LA", 5, 6], Mississippi: ["MS", 6, 6],
+  Alabama: ["AL", 7, 6], "South Carolina": ["SC", 8, 6],
+  "Northern Mariana Islands": ["MP", -.5, 7], Texas: ["TX", 3.5, 7], Georgia: ["GA", 7.5, 7],
+  Guam: ["GU", -1, 8], Hawaii: ["HI", 0, 8], Florida: ["FL", 8, 8],
+  "American Samoa": ["AS", -.5, 9], "Puerto Rico": ["PR", 9.5, 9], "US Virgin Islands": ["VI", 10.5, 9],
+};
+const HEX_ROW = Math.sqrt(3) / 2;  // row spacing that makes every neighbor equidistant
+
+function map() {
+  const tiles = Object.values(MAP_HEX);
+  const minX = Math.min(...tiles.map(t => t[1])), maxX = Math.max(...tiles.map(t => t[1]));
+  const maxRow = Math.max(...tiles.map(t => t[2]));
+  const f = v => Math.round(v * 1000) / 1000;
+  const dots = rows.filter(d => MAP_HEX[d.state]).map(d => {
+    const [abbr, x, row] = MAP_HEX[d.state];
+    const cx = f(x - minX + .5), cy = f(row * HEX_ROW + .5);
+    return `<a href="#state=${encodeURIComponent(d.state)}" data-state="${esc(d.state)}" aria-label="${esc(d.state)}, ${d.total} of 100">` +
+      `<circle cx="${cx}" cy="${cy}" r=".46"/><text x="${cx}" y="${cy}" aria-hidden="true">${abbr}</text></a>`;
+  });
+  $("#map").innerHTML = `<svg viewBox="0 0 ${f(maxX - minX + 1)} ${f(maxRow * HEX_ROW + 1)}" role="group" aria-label="Map of the governments in the landscape">${dots.join("")}</svg>`;
+}
+
+// Fade the circles of governments that the current filters hide.
+function updateMap() {
+  const shown = new Set(filtered().map(d => d.state));
+  document.querySelectorAll("#map a").forEach(a => a.classList.toggle("out", !shown.has(a.dataset.state)));
 }
 
 function methodology() {
@@ -514,6 +575,7 @@ async function init() {
   $("#benchmark").hidden = !benchmarks.length;
   readHash();
   stats();
+  map();
   methodology();
   render();
   if (open.size) document.getElementById("d-" + [...open][0].replace(/\W+/g, "-"))?.scrollIntoView();
@@ -548,6 +610,25 @@ async function init() {
     render();
     syncHash();
     document.querySelector(`.state-btn[data-state="${CSS.escape(s)}"]`)?.focus();
+  });
+  // A map circle opens that government's details in the table and scrolls to them,
+  // clearing the filters first if they hide it.
+  $("#map").addEventListener("click", e => {
+    const a = e.target.closest("a[data-state]");
+    if (!a) return;
+    e.preventDefault();
+    const s = a.dataset.state;
+    if (!filtered().some(d => d.state === s)) {
+      $("#q").value = "";
+      document.querySelectorAll(".menu input").forEach(i => i.checked = false);
+      updateSummaries();
+    }
+    open.add(s);
+    render();
+    syncHash();
+    const id = "d-" + s.replace(/\W+/g, "-");
+    document.getElementById(id)?.scrollIntoView({ block: "center" });
+    document.querySelector(`.state-btn[data-state="${CSS.escape(s)}"]`)?.focus({ preventScroll: true });
   });
   $("#expand-all").addEventListener("click", () => {
     const list = filtered();
