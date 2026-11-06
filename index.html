@@ -56,7 +56,12 @@
   /* A full-width light blue band, like the sections on usdigitalresponse.org. The shadow
      paints the background out to the window's edges without changing the layout. */
   .map-band { background: var(--sky); box-shadow: 0 0 0 100vmax var(--sky); clip-path: inset(0 -100vmax); margin: 2rem 0; padding: 1.75rem 0 2rem; }
+  main > .map-band:first-child { margin-top: -1rem; }
   .map-band h2.section { margin-top: 0; }
+  /* The summary figures, on a full-width navy band. */
+  .stats-band { background: var(--accent-dark); box-shadow: 0 0 0 100vmax var(--accent-dark); clip-path: inset(0 -100vmax); margin: 2rem 0; padding: 1.5rem 0; }
+  .stats-band .stats { margin: 0; }
+  .stats-band .stat { border-color: var(--sky); }
   .map-band p.intro { color: var(--ink); }
   .map svg { display: block; width: 100%; max-width: 48rem; height: auto; margin: 0 auto; }
   .map a circle { fill: var(--accent-dark); transition: fill .15s, opacity .15s; }
@@ -190,11 +195,6 @@
 </header>
 
 <main id="main">
-  <section aria-labelledby="summary-heading">
-    <h2 id="summary-heading" class="sr-only">Summary</h2>
-    <div class="stats" id="stats"></div>
-  </section>
-
   <section class="map-band" aria-labelledby="map-heading">
     <h2 class="section" id="map-heading">Map</h2>
     <p class="intro">Each circle is one state, DC, or territory. Choose a metric to color the map by each government's answer, and select a circle to see its scores.</p>
@@ -222,6 +222,11 @@
         <tbody></tbody>
       </table>
     </div>
+  </section>
+
+  <section class="stats-band" aria-labelledby="summary-heading">
+    <h2 id="summary-heading" class="sr-only">Summary</h2>
+    <div class="stats" id="stats"></div>
   </section>
 
   <h2 class="section" id="sites-heading">All sites</h2>
