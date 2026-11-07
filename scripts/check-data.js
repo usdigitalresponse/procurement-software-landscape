@@ -4,7 +4,7 @@
 // the CRITERIA list in index.html, so the site and this check always agree.
 
 const ANSWERS = ["Yes", "No", "N/A", "Print"];
-const TEXT_FIELDS = ["Government", "System name", "System type", "Vendor"];
+const TEXT_FIELDS = ["Government", "Abbreviation", "System name", "System type", "Vendor"];
 const URL_FIELDS = ["Public site URL", "Notices list URL", "Sample posting URL"];
 // Lighthouse points depend on the page having a direct URL.
 const LIGHTHOUSE_NEEDS = { N4: "N1", N5: "N1", P7: "P1", P8: "P1" };
@@ -23,6 +23,13 @@ function readCriteria(indexHtml) {
   return criteria;
 }
 
+// The abbreviations that have a position on the map, from the MAP_HEX list in index.html.
+function readMapTiles(indexHtml) {
+  const block = indexHtml.match(/const MAP_HEX = \{([\s\S]*?)\n\};/);
+  if (!block) throw new Error("Could not find the MAP_HEX list in index.html.");
+  return new Set([...block[1].matchAll(/\b([A-Z]{2}): \[/g)].map(m => m[1]));
+}
+
 // The heading IDs GitHub Pages gives Scoring-Metrics.md headings.
 const slug = s => s.trim().toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/ /g, "-");
 
@@ -35,7 +42,8 @@ function lighthousePoints(score) {
   return 0;
 }
 
-function check(data, criteria, metricsMd) {
+// mapTiles is optional: when given, every government except a benchmark needs a map position.
+function check(data, criteria, metricsMd, mapTiles) {
   const errors = [];
   const warnings = [];
   const isLighthouse = c => c.key in LIGHTHOUSE_NEEDS;
@@ -52,6 +60,7 @@ function check(data, criteria, metricsMd) {
 
   const known = new Set([...TEXT_FIELDS, ...URL_FIELDS, "Note", "Benchmark", "Total", ...criteria.flatMap(c => [c.field, c.key])]);
   const seen = new Set();
+  const seenAbbr = new Map();
 
   data.forEach((r, i) => {
     if (!r || typeof r !== "object" || Array.isArray(r)) { errors.push(`Record ${i + 1}: should be a set of fields.`); return; }
@@ -66,6 +75,15 @@ function check(data, criteria, metricsMd) {
     }
     if (seen.has(name)) err("appears more than once.");
     seen.add(name);
+    if (typeof r.Abbreviation === "string" && r.Abbreviation.trim()) {
+      const abbr = r.Abbreviation.trim();
+      if (!/^[A-Z]{2}$/.test(abbr)) err(`"Abbreviation" is "${abbr}"; it should be two capital letters, such as AL.`);
+      else if (seenAbbr.has(abbr)) err(`"Abbreviation" ${abbr} is also used by ${seenAbbr.get(abbr)}.`);
+      else seenAbbr.set(abbr, name);
+      if (mapTiles && r.Benchmark !== true && /^[A-Z]{2}$/.test(abbr) && !mapTiles.has(abbr)) {
+        err(`has no position on the map. Add ${abbr} to the MAP_HEX list in index.html.`);
+      }
+    }
 
     for (const f of URL_FIELDS) {
       if (!(f in r)) err(`"${f}" is missing.`);
@@ -124,7 +142,8 @@ function main() {
   let errors, warnings = [];
   try {
     const data = yaml.load(read("Procurement-Software-Landscape.yaml"));
-    ({ errors, warnings } = check(data, readCriteria(read("index.html")), read("Scoring-Metrics.md")));
+    const indexHtml = read("index.html");
+    ({ errors, warnings } = check(data, readCriteria(indexHtml), read("Scoring-Metrics.md"), readMapTiles(indexHtml)));
   } catch (e) {
     errors = [e.message];
   }
@@ -150,4 +169,4 @@ function main() {
 }
 
 if (typeof require !== "undefined" && require.main === module) main();
-if (typeof module !== "undefined") module.exports = { check, readCriteria, lighthousePoints, slug };
+if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug };

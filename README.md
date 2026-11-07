@@ -12,7 +12,7 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 |---|---|
 | [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per government, with links, answers to each metric, and points. |
 | [`Scoring-Metrics.md`](./Scoring-Metrics.md) | The scoring methodology, published as the site's Scoring metrics page. |
-| [`index.html`](./index.html) | The landscape page. It reads `Procurement-Software-Landscape.yaml` in the browser, so there is no build step. |
+| [`index.html`](./index.html) | The landscape page, with the map and the list of sites. It reads `Procurement-Software-Landscape.yaml` in the browser. |
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
 | `scripts/check-data.js` | Checks the data file against the scoring rules. See [Automatic checks](#automatic-checks). |
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
@@ -26,7 +26,7 @@ The site is built and published to GitHub Pages by a GitHub Actions workflow eac
 
 Edit `Procurement-Software-Landscape.yaml` directly. Each record has these kinds of fields:
 
-- **Description:** `Government` (the name of the state, DC, territory, or benchmark site such as the United Kingdom), `System name`, `System type`, and `Vendor`. Separate more than one vendor with a semicolon.
+- **Description:** `Government` (the name of the state, DC, territory, or benchmark site such as the United Kingdom), `Abbreviation` (its two-letter postal abbreviation, such as `AL` or `DC`, which places it on the map; `UK` for the United Kingdom), `System name`, `System type`, and `Vendor`. Separate more than one vendor with a semicolon.
 - **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
 - **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
 - **Links:** `Public site URL`, `Notices list URL`, and `Sample posting URL`. Use `N/A` when there is none.
@@ -61,6 +61,21 @@ When you change a record, keep these consistent:
 - `Total` must equal the sum of the 15 points fields.
 
 If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the landscape page links each metric to its heading.
+
+### The map
+
+The landscape page opens with a map that shows each state, DC, and territory as an equal circle, labeled with its `Abbreviation`. Benchmark sites, such as the United Kingdom, aren't on the map.
+
+- **Layout:** the circles sit on a hex grid, so each is the same distance from its neighbors. The states follow [PresentationGO's circle tile grid map of the USA](https://www.presentationgo.com/), with DC to the right and the territories near Hawaii and Florida. Each position is set in the `MAP_HEX` list in `index.html`, keyed by abbreviation, as `[x, row]`. Odd rows are shifted half a step, so their `x` values end in `.5`.
+- **Colors:** the map opens colored by total score. Readers can choose any metric instead, with the buttons beside the map, or the dropdown on narrow screens.
+  - Total score uses the same bands as the list's score bars: 75–100 blue, 50–74 amber, and 0–49 dark red.
+  - Yes-or-no metrics show Yes in blue, "Print only" in amber, No in dark red, and N/A in grey.
+  - Lighthouse metrics use Lighthouse's own bands: 90–100 blue, 50–89 amber, 0–49 dark red, and "Not tested" in grey.
+- **Legend:** below the map, it counts how many of the governments the filters show have each answer.
+- **Links:** a chosen metric is saved in the page address, such as `#map=P1` for the direct URL to an individual posting, so shared links open with the same coloring. Total score is the default, so it doesn't appear in the address.
+- **Selecting a circle** opens that government's details in the list.
+
+When you add a government, give it an `Abbreviation` and add a position for it to `MAP_HEX`. The [automatic checks](#automatic-checks) fail if a government other than a benchmark has no position on the map.
 
 ### Lighthouse scores
 
@@ -98,11 +113,12 @@ To check the links yourself, install Node.js 22 or later and run `node scripts/c
 
 Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
 
-- every record has all of the fields above, with no misspelled or extra fields, and no government appears twice;
+- every record has all of the fields above, with no misspelled or extra fields, no government appears twice, and each abbreviation is two capital letters used only once;
 - each link is a full `http://` or `https://` address, or `N/A`;
 - each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
 - each points field matches its answer, using the rules above, and `Total` equals their sum;
-- each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`.
+- each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`;
+- every government except a benchmark has a position on the map, in the `MAP_HEX` list in `index.html`.
 
 If a check fails, GitHub marks the commit or pull request with a red X, and the run's details list each problem. It also warns, without failing, when a direct URL answer is `Yes` but the record has no link for that page.
 
