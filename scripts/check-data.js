@@ -23,6 +23,13 @@ function readCriteria(indexHtml) {
   return criteria;
 }
 
+// The abbreviations that have a position on the map, from the MAP_HEX list in index.html.
+function readMapTiles(indexHtml) {
+  const block = indexHtml.match(/const MAP_HEX = \{([\s\S]*?)\n\};/);
+  if (!block) throw new Error("Could not find the MAP_HEX list in index.html.");
+  return new Set([...block[1].matchAll(/\b([A-Z]{2}): \[/g)].map(m => m[1]));
+}
+
 // The heading IDs GitHub Pages gives Scoring-Metrics.md headings.
 const slug = s => s.trim().toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/ /g, "-");
 
@@ -35,7 +42,8 @@ function lighthousePoints(score) {
   return 0;
 }
 
-function check(data, criteria, metricsMd) {
+// mapTiles is optional: when given, every government except a benchmark needs a map position.
+function check(data, criteria, metricsMd, mapTiles) {
   const errors = [];
   const warnings = [];
   const isLighthouse = c => c.key in LIGHTHOUSE_NEEDS;
@@ -72,6 +80,9 @@ function check(data, criteria, metricsMd) {
       if (!/^[A-Z]{2}$/.test(abbr)) err(`"Abbreviation" is "${abbr}"; it should be two capital letters, such as AL.`);
       else if (seenAbbr.has(abbr)) err(`"Abbreviation" ${abbr} is also used by ${seenAbbr.get(abbr)}.`);
       else seenAbbr.set(abbr, name);
+      if (mapTiles && r.Benchmark !== true && /^[A-Z]{2}$/.test(abbr) && !mapTiles.has(abbr)) {
+        err(`has no position on the map. Add ${abbr} to the MAP_HEX list in index.html.`);
+      }
     }
 
     for (const f of URL_FIELDS) {
@@ -131,7 +142,8 @@ function main() {
   let errors, warnings = [];
   try {
     const data = yaml.load(read("Procurement-Software-Landscape.yaml"));
-    ({ errors, warnings } = check(data, readCriteria(read("index.html")), read("Scoring-Metrics.md")));
+    const indexHtml = read("index.html");
+    ({ errors, warnings } = check(data, readCriteria(indexHtml), read("Scoring-Metrics.md"), readMapTiles(indexHtml)));
   } catch (e) {
     errors = [e.message];
   }
@@ -157,4 +169,4 @@ function main() {
 }
 
 if (typeof require !== "undefined" && require.main === module) main();
-if (typeof module !== "undefined") module.exports = { check, readCriteria, lighthousePoints, slug };
+if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug };

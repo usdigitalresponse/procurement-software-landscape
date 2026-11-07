@@ -102,7 +102,8 @@ Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pus
 - each link is a full `http://` or `https://` address, or `N/A`;
 - each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
 - each points field matches its answer, using the rules above, and `Total` equals their sum;
-- each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`.
+- each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`;
+- every government except a benchmark has a position on the map, in the `MAP_HEX` list in `index.html`.
 
 If a check fails, GitHub marks the commit or pull request with a red X, and the run's details list each problem. It also warns, without failing, when a direct URL answer is `Yes` but the record has no link for that page.
 

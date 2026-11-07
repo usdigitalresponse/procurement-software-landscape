@@ -28,6 +28,9 @@
     --gutter: max(1rem, calc((100% - 78rem) / 2));
     --good: #00a91c; --mid: #e5a000; --bad: #d83933;
     --good-bg: #ecf3ec; --bad-bg: #f8e1de; --mid-bg: #faf3d1;
+    /* Score colors for the map and the score bars: blue, amber and dark red stay easy to
+       tell apart with red-green color blindness. */
+    --score-good: #1f6fc5; --score-mid: #e5a000; --score-bad: #b50909;
   }
   * { box-sizing: border-box; }
   body { margin: 0; font: 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
@@ -70,9 +73,9 @@
   .map a:focus-visible { outline: none; }
   .map a:focus-visible circle { stroke: #2491ff; stroke-width: .08; }
   /* Answer colors, used by the map's circles and its legend. */
-  .map a.yes circle, .swatch.yes { fill: #216e1f; background: #216e1f; }
-  .map a.part circle, .swatch.part { fill: #e5a000; background: #e5a000; }
-  .map a.no circle, .swatch.no { fill: #b50909; background: #b50909; }
+  .map a.yes circle, .swatch.yes { fill: var(--score-good); background: var(--score-good); }
+  .map a.part circle, .swatch.part { fill: var(--score-mid); background: var(--score-mid); }
+  .map a.no circle, .swatch.no { fill: var(--score-bad); background: var(--score-bad); }
   .map a.na circle, .swatch.na { fill: #c9ccd1; background: #c9ccd1; }
   .map a.part text, .map a.na text { fill: var(--ink); }
   .map a.out { opacity: .25; }
@@ -339,7 +342,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const num = v => (typeof v === "number" ? v : parseFloat(v)) || 0;
 const isUrl = v => /^https?:\/\//i.test(String(v || "").trim());
-const color = pct => pct >= 75 ? "var(--good)" : pct >= 50 ? "var(--mid)" : "var(--bad)";
+const color = pct => pct >= 75 ? "var(--score-good)" : pct >= 50 ? "var(--score-mid)" : "var(--score-bad)";
 const extLink = u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}<span class="sr-only"> (opens in a new tab)</span></a>`;
 // Escape note text, then turn any bare URLs in it into links.
 const linkify = s => esc(s).replace(/https?:\/\/[^\s<]+/g, u => extLink(u.replace(/&amp;/g, "&")));
@@ -530,7 +533,7 @@ function map() {
     const [x, row] = MAP_HEX[d.abbr];
     const cx = f(x - minX + .5), cy = f(row * HEX_ROW + .5);
     return `<a href="#state=${encodeURIComponent(d.state)}" data-state="${esc(d.state)}" aria-label="${esc(d.state)}, ${d.total} of 100">` +
-      `<circle cx="${cx}" cy="${cy}" r=".46"/><text x="${cx}" y="${cy}" aria-hidden="true">${esc(d.abbr)}</text></a>`;
+      `<title></title><circle cx="${cx}" cy="${cy}" r=".46"/><text x="${cx}" y="${cy}" aria-hidden="true">${esc(d.abbr)}</text></a>`;
   });
   $("#map").innerHTML = `<svg viewBox="0 0 ${f(maxX - minX + 1)} ${f(maxRow * HEX_ROW + 1)}" role="group" aria-label="Map of the governments in the landscape">${dots.join("")}</svg>`;
 }
@@ -585,19 +588,25 @@ function mapAnswer(d, c) {
 function updateMap() {
   const shown = new Set(filtered().map(d => d.state));
   const c = mapChoice(mapMetric);
-  const counts = new Map();
-  document.querySelectorAll("#map a").forEach(a => {
+  const counts = new Map();  // legend counts, for the circles the filters show
+  const circles = document.querySelectorAll("#map a");
+  let showing = 0;
+  circles.forEach(a => {
     const d = rows.find(r => r.state === a.dataset.state);
+    const isShown = shown.has(d.state);
     a.classList.remove(...MAP_CLASSES);
-    a.classList.toggle("out", !shown.has(d.state));
+    a.classList.toggle("out", !isShown);
+    let label = `${d.state}, ${d.total} of 100`;
     if (c) {
       const [cls, text, spoken = text] = mapAnswer(d, c);
       a.classList.add(cls);
-      counts.set(text, { cls, n: (counts.get(text)?.n || 0) + 1 });
-      a.setAttribute("aria-label", `${d.state}, ${c.label}: ${spoken}`);
-    } else {
-      a.setAttribute("aria-label", `${d.state}, ${d.total} of 100`);
+      if (isShown) counts.set(text, { cls, n: (counts.get(text)?.n || 0) + 1 });
+      label = `${d.state}, ${c.label}: ${spoken}`;
     }
+    if (isShown) showing++;
+    // The same text for screen readers and, as a tooltip, for mouse users.
+    a.setAttribute("aria-label", label);
+    a.querySelector("title").textContent = label;
   });
   document.querySelectorAll("#map-controls button").forEach(b => b.setAttribute("aria-pressed", b.dataset.key === mapMetric));
   $("#map-metric").value = mapMetric;
@@ -605,7 +614,8 @@ function updateMap() {
   $("#map-legend").innerHTML = c
     ? `<strong>${c === MAP_TOTAL ? c.label : `${esc(GROUPS[c.group])}: ${critLink(c)}`}</strong>` +
       [...counts].sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]))
-        .map(([text, { cls, n }]) => `<span><span class="swatch ${cls}" aria-hidden="true"></span>${text} (${n})</span>`).join("")
+        .map(([text, { cls, n }]) => `<span><span class="swatch ${cls}" aria-hidden="true"></span>${text} (${n})</span>`).join("") +
+      (showing < circles.length ? `<span>Showing ${showing} of ${circles.length} that match the filters</span>` : "")
     : "";
 }
 
