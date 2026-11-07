@@ -12,7 +12,7 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 |---|---|
 | [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per government, with links, answers to each metric, and points. |
 | [`Scoring-Metrics.md`](./Scoring-Metrics.md) | The scoring methodology, published as the site's Scoring metrics page. |
-| [`index.html`](./index.html) | The landscape page. It reads `Procurement-Software-Landscape.yaml` in the browser, so there is no build step. |
+| [`index.html`](./index.html) | The landscape page, with the map and the list of sites. It reads `Procurement-Software-Landscape.yaml` in the browser. |
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
 | `scripts/check-data.js` | Checks the data file against the scoring rules. See [Automatic checks](#automatic-checks). |
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
@@ -61,6 +61,21 @@ When you change a record, keep these consistent:
 - `Total` must equal the sum of the 15 points fields.
 
 If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the landscape page links each metric to its heading.
+
+### The map
+
+The landscape page opens with a map that shows each state, DC, and territory as an equal circle, labeled with its `Abbreviation`. Benchmark sites, such as the United Kingdom, aren't on the map.
+
+- **Layout:** the circles sit on a hex grid, so each is the same distance from its neighbors. The states follow [PresentationGO's circle tile grid map of the USA](https://www.presentationgo.com/), with DC to the right and the territories near Hawaii and Florida. Each position is set in the `MAP_HEX` list in `index.html`, keyed by abbreviation, as `[x, row]`. Odd rows are shifted half a step, so their `x` values end in `.5`.
+- **Colors:** the map opens colored by total score. Readers can choose any metric instead, with the buttons beside the map, or the dropdown on narrow screens.
+  - Total score uses the same bands as the list's score bars: 75–100 blue, 50–74 amber, and 0–49 dark red.
+  - Yes-or-no metrics show Yes in blue, "Print only" in amber, No in dark red, and N/A in grey.
+  - Lighthouse metrics use Lighthouse's own bands: 90–100 blue, 50–89 amber, 0–49 dark red, and "Not tested" in grey.
+- **Legend:** below the map, it counts how many of the governments the filters show have each answer.
+- **Links:** a chosen metric is saved in the page address, such as `#map=P1` for the direct URL to an individual posting, so shared links open with the same coloring. Total score is the default, so it doesn't appear in the address.
+- **Selecting a circle** opens that government's details in the list.
+
+When you add a government, give it an `Abbreviation` and add a position for it to `MAP_HEX`. The [automatic checks](#automatic-checks) fail if a government other than a benchmark has no position on the map.
 
 ### Lighthouse scores
 
