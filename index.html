@@ -28,9 +28,11 @@
     --gutter: max(1rem, calc((100% - 78rem) / 2));
     --good: #00a91c; --mid: #e5a000; --bad: #d83933;
     --good-bg: #ecf3ec; --bad-bg: #f8e1de; --mid-bg: #faf3d1;
-    /* Score colors for the map and the score bars: blue, amber and dark red stay easy to
-       tell apart with red-green color blindness. */
-    --score-good: #1f6fc5; --score-mid: #e5a000; --score-bad: #b50909;
+    /* Score colors for the map and the score bars, from the USDR palette: navy, USDR Blue
+       and peach. They get lighter as the score drops, so they read in order without color. */
+    --score-good: #071a51; --score-mid: #0066ff; --score-bad: #ffe1c9; --score-bad-edge: #e0a77c;
+    /* Peach is too faint for a thin score bar, so low-score bars use USDR orange. */
+    --score-bad-bar: #ff8029;
   }
   * { box-sizing: border-box; }
   body { margin: 0; font: 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
@@ -84,8 +86,14 @@
   .map a.yes circle, .swatch.yes { fill: var(--score-good); background: var(--score-good); }
   .map a.part circle, .swatch.part { fill: var(--score-mid); background: var(--score-mid); }
   .map a.no circle, .swatch.no { fill: var(--score-bad); background: var(--score-bad); }
-  .map a.na circle, .swatch.na { fill: #c9ccd1; background: #c9ccd1; }
-  .map a.part text, .map a.na text { fill: var(--ink); }
+  .map a.no circle { stroke: var(--score-bad-edge); stroke-width: .03; }
+  .swatch.no { box-shadow: inset 0 0 0 1px var(--score-bad-edge); }
+  .map a.na circle, .swatch.na { fill: #fff; background: #fff; }
+  .map a.na circle { stroke: #9aa0a6; stroke-width: .03; stroke-dasharray: .08 .06; }
+  .swatch.na { box-shadow: inset 0 0 0 1px #9aa0a6; }
+  .map a.no text { fill: var(--score-good); }
+  .map a.na text { fill: var(--muted); }
+  .map a.no:hover circle, .map a.na:hover circle { stroke: var(--ink); stroke-width: .06; stroke-dasharray: none; }
   .map a.out { opacity: .25; }
   /* Metric buttons: a column beside the map on wider screens, and a compact wrapped
      list above it on narrow ones. */
@@ -352,7 +360,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const num = v => (typeof v === "number" ? v : parseFloat(v)) || 0;
 const isUrl = v => /^https?:\/\//i.test(String(v || "").trim());
-const color = pct => pct >= 75 ? "var(--score-good)" : pct >= 50 ? "var(--score-mid)" : "var(--score-bad)";
+const color = pct => pct >= 75 ? "var(--score-good)" : pct >= 50 ? "var(--score-mid)" : "var(--score-bad-bar)";
 const extLink = u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}<span class="sr-only"> (opens in a new tab)</span></a>`;
 // Escape note text, then turn any bare URLs in it into links.
 const linkify = s => esc(s).replace(/https?:\/\/[^\s<]+/g, u => extLink(u.replace(/&amp;/g, "&")));

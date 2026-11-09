@@ -67,10 +67,10 @@ If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` va
 The landscape page opens with a map that shows each state, DC, and territory as an equal circle, labeled with its `Abbreviation`. Benchmark sites, such as the United Kingdom, aren't on the map.
 
 - **Layout:** the circles sit on a hex grid, so each is the same distance from its neighbors. The states follow [PresentationGO's circle tile grid map of the USA](https://www.presentationgo.com/), with DC to the right and the territories near Hawaii and Florida. Each position is set in the `MAP_HEX` list in `index.html`, keyed by abbreviation, as `[x, row]`. Odd rows are shifted half a step, so their `x` values end in `.5`.
-- **Colors:** the map opens colored by total score. Readers can choose any metric instead, with the buttons beside the map, or the dropdown on narrow screens.
-  - Total score uses the same bands as the list's score bars: 75–100 blue, 50–74 amber, and 0–49 dark red.
-  - Yes-or-no metrics show Yes in blue, "Print only" in amber, No in dark red, and N/A in grey.
-  - Lighthouse metrics use Lighthouse's own bands: 90–100 blue, 50–89 amber, 0–49 dark red, and "Not tested" in grey.
+- **Colors:** the map uses the USDR palette: navy, USDR Blue, and peach, getting lighter as the answer gets worse, so the order reads even without color. It opens colored by total score. Readers can choose any metric instead, with the buttons beside the map, or the dropdown on narrow screens.
+  - Total score uses the same bands as the list's score bars: 75–100 navy, 50–74 blue, and 0–49 peach. In the list, low-score bars are USDR orange, because peach is too faint for a thin bar.
+  - Yes-or-no metrics show Yes in navy, "Print only" in blue, No in peach, and N/A as a white circle with a dashed outline.
+  - Lighthouse metrics use Lighthouse's own bands: 90–100 navy, 50–89 blue, 0–49 peach, and "Not tested" as a dashed white circle.
 - **Legend:** below the map, it counts how many of the governments the filters show have each answer.
 - **Links:** a chosen metric is saved in the page address, such as `#map=P1` for the direct URL to an individual posting, so shared links open with the same coloring. Total score is the default, so it doesn't appear in the address.
 - **Selecting a circle** opens that government's details in the list.
