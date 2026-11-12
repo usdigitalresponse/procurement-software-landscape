@@ -1852,8 +1852,8 @@
     Vendor: Ivalua
     'Public site URL': 'https://www.procurement.sc.gov/scpro'
     'Notices list URL': 'https://scpro.sc.gov/page.aspx/en/rfp/request_browse_public'
-    'Sample posting URL': N/A
-    Note: 'SCPro launches November 9, 2026, replacing SCEIS (the SCEIS vendor portal is down October 26 to November 9). A sample posting will be added after launch. Until then, the posting page Lighthouse scores show as Not tested. The notices list asks visitors to solve a CAPTCHA before it loads (checked October 2026). A CAPTCHA does not lower the score.'
+    'Sample posting URL': 'https://scpro.sc.gov/page.aspx/en/bpm/process_manage_extranet/30'
+    Note: 'SCPro launched November 9, 2026, replacing SCEIS. The notices list, posting pages and document downloads ask visitors to solve a CAPTCHA first (checked November 2026); no registration is needed. A CAPTCHA does not lower the score. Postings have a summary field, but it is not consistently filled out, so Project summary is No.'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1865,10 +1865,10 @@
     'Individual posting page': Yes
     'Contact name and email': No
     'Project summary': No
-    'Data export of posting': No
+    'Data export of posting': Print
     'Documents without registration': Yes
-    'Lighthouse performance, posting page': 0
-    'Lighthouse accessibility, posting page': 0
+    'Lighthouse performance, posting page': 48
+    'Lighthouse accessibility, posting page': 93
     G1: 0
     G2: 0
     N1: 10
@@ -1883,8 +1883,8 @@
     P5: 0
     P6: 5
     P7: 0
-    P8: 0
-    Total: 53
+    P8: 5
+    Total: 58
 -
     Government: 'South Dakota'
     Abbreviation: SD
