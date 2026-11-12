@@ -1853,7 +1853,7 @@
     'Public site URL': 'https://www.procurement.sc.gov/scpro'
     'Notices list URL': 'https://scpro.sc.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://scpro.sc.gov/page.aspx/en/bpm/process_manage_extranet/30'
-    Note: 'SCPro launched November 9, 2026, replacing SCEIS. The notices list, posting pages and document downloads ask visitors to solve a CAPTCHA first (checked November 2026); no registration is needed. A CAPTCHA does not lower the score. Postings have a summary field, but it is not consistently filled out, so Project summary is No.'
+    Note: 'The notices list and sample posting ask visitors to solve a CAPTCHA before they load (checked November 2026). A CAPTCHA does not lower the score.'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
