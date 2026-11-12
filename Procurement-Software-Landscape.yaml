@@ -44,8 +44,8 @@
     Government: Alabama
     Abbreviation: AL
     'System name': 'Alabama Buys'
-    'System type': 'eProcurement, ERP'
-    Vendor: 'Ivalua; Advantage by CGI'
+    'System type': eProcurement
+    Vendor: Ivalua
     'Public site URL': 'https://alabamabuys.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
     'Notices list URL': 'https://alabamabuys.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://alabamabuys.gov/page.aspx/en/bpm/process_manage_extranet/42646'
@@ -331,8 +331,8 @@
     Government: Connecticut
     Abbreviation: CT
     'System name': 'CT Source'
-    'System type': 'eProcurement, ERP'
-    Vendor: 'Proactis WebProcure; PeopleSoft by Oracle'
+    'System type': eProcurement
+    Vendor: 'Proactis WebProcure'
     'Public site URL': 'https://portal.ct.gov/DAS/CTSource/CTSource'
     'Notices list URL': 'https://portal.ct.gov/das/ctsource/bidboard?language=en_US'
     'Sample posting URL': N/A
@@ -495,8 +495,8 @@
     Government: Georgia
     Abbreviation: GA
     'System name': GA@Work
-    'System type': 'eProcurement, ERP'
-    Vendor: 'Jaggaer; Workday'
+    'System type': eProcurement
+    Vendor: Jaggaer
     'Public site URL': 'https://app01.jaggaer.com/apps/Router/SupplierLogin?CustOrg=Georgia'
     'Notices list URL': 'https://ssl.doas.state.ga.us/gpr/'
     'Sample posting URL': 'https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=SWC-eRFP-00023-2027&sourceSystemType=jag'
@@ -1397,8 +1397,8 @@
     Government: 'New Mexico'
     Abbreviation: NM
     'System name': eProNM
-    'System type': 'eProcurement, ERP'
-    Vendor: 'Jaggaer; PeopleSoft by Oracle'
+    'System type': eProcurement
+    Vendor: Jaggaer
     'Public site URL': 'https://www.generalservices.state.nm.us/state-purchasing/online-procurement/'
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
     'Sample posting URL': N/A
@@ -1602,8 +1602,8 @@
     Government: Ohio
     Abbreviation: OH
     'System name': OhioBuys
-    'System type': 'eProcurement, ERP'
-    Vendor: 'Ivalua; PeopleSoft by Oracle'
+    'System type': eProcurement
+    Vendor: Ivalua
     'Public site URL': 'https://procure.ohio.gov/state-and-local-agencies/resources/ohiobuys-overview'
     'Notices list URL': 'https://ohiobuys.ohio.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/56086'
@@ -2094,8 +2094,8 @@
     Government: Vermont
     Abbreviation: VT
     'System name': VTBuys
-    'System type': 'eProcurement, ERP'
-    Vendor: 'Ivalua; PeopleSoft by Oracle'
+    'System type': eProcurement
+    Vendor: Ivalua
     'Public site URL': 'https://vtbuysprocurement.vermont.gov/'
     'Notices list URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://vtbuys.suppliers.vermont.gov/page.aspx/en/bpm/process_manage_extranet/942'
