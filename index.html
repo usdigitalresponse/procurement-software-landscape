@@ -144,6 +144,13 @@
   button.btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
   #count { margin: .75rem 0; color: var(--muted); }
   .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: .375rem; }
+  /* A box that scrolls sideways also keeps the header from sticking to the window. On wide
+     screens the table fits, so let it overflow normally and keep the header in view. */
+  @media (min-width: 1100px) {
+    .table-wrap { overflow: visible; }
+    thead th:first-child { border-top-left-radius: .375rem; }
+    thead th:last-child { border-top-right-radius: .375rem; }
+  }
   table { border-collapse: collapse; width: 100%; }
   th, td { text-align: left; padding: .55rem .75rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
   thead th { background: var(--panel); position: sticky; top: 0; font-size: .875rem; white-space: nowrap; }
@@ -399,7 +406,7 @@ function scoreCell(v, max) {
 function answerPill(val, pts, max) {
   const v = String(val ?? "").trim();
   if (typeof val === "number") return `<span class="pill ${pts >= max ? "yes" : pts > 0 ? "part" : "no"}">${val === 0 ? "Not tested" : val + "/100"}</span>`;
-  const cls = /^yes$/i.test(v) ? "yes" : /^n\/a$/i.test(v) ? "na" : /^no$/i.test(v) || !v ? "no" : "part";
+  const cls = /^yes$/i.test(v) ? "yes" : /^n\/a$/i.test(v) ? "na" : /^(no|print)$/i.test(v) || !v ? "no" : "part";
   return `<span class="pill ${cls}">${esc(v || "—")}</span>`;
 }
 
@@ -599,7 +606,8 @@ function mapAnswer(d, c) {
     return n >= 90 ? ["yes", "90–100"] : n >= 50 ? ["part", "50–89"] : ["no", "0–49"];
   }
   if (/^yes$/i.test(v)) return ["yes", "Yes"];
-  if (/^print$/i.test(v)) return ["part", "Print only"];
+  // A print button or PDF doesn't meet the metric, so it's colored like No.
+  if (/^print$/i.test(v)) return ["no", "Print only"];
   if (/^no$/i.test(v)) return ["no", "No"];
   return ["na", "N/A"];
 }
@@ -631,7 +639,7 @@ function updateMap() {
   });
   document.querySelectorAll("#map-controls button").forEach(b => b.setAttribute("aria-pressed", b.dataset.key === mapMetric));
   $("#map-metric").value = mapMetric;
-  const order = ["Yes", "90–100", "75–100", "Print only", "50–89", "50–74", "No", "0–49", "N/A", "Not tested"];
+  const order = ["Yes", "90–100", "75–100", "50–89", "50–74", "No", "Print only", "0–49", "N/A", "Not tested"];
   $("#map-legend").innerHTML = c
     ? `<strong>${c === MAP_TOTAL ? c.label : `${esc(GROUPS[c.group])}: ${critLink(c)}`}</strong>` +
       [...counts].sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]))
@@ -648,10 +656,10 @@ function methodology() {
 }
 
 function toCsv() {
-  const cols = ["Rank", "Government", "System name", "System type", "Vendor", "Public site URL", "Notices list URL", "Sample posting URL",
+  const cols = ["Rank", "Government", "Abbreviation", "System name", "System type", "Vendor", "Public site URL", "Notices list URL", "Sample posting URL",
     ...CRITERIA.map(c => c.field), ...CRITERIA.map(c => `${GROUPS[c.group]}: ${c.label} (pts)`), "Total", "Notes"];
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-  const lines = filtered().map(d => [d.rank, d.state, d.name, d.type, d.vendor, d.raw["Public site URL"], d.raw["Notices list URL"], d.raw["Sample posting URL"],
+  const lines = filtered().map(d => [d.rank, d.state, d.abbr, d.name, d.type, d.vendor, d.raw["Public site URL"], d.raw["Notices list URL"], d.raw["Sample posting URL"],
     ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total, d.notes.join("; ")].map(q).join(","));
   const blob = new Blob([[cols.map(q).join(","), ...lines].join("\r\n")], { type: "text/csv" });
   const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "procurement-software-landscape.csv" });
