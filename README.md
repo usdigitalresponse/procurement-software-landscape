@@ -18,6 +18,7 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
 | `scripts/check-links.js` | Checks that every link in the data file works. See [Link check](#link-check). |
 | `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores, and checks links weekly. |
+| `.github/ISSUE_TEMPLATE/correction.yml` | The correction form for reporting a wrong answer, link, or system detail. See [Reporting a correction](#reporting-a-correction). |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
 
 The site is built and published to GitHub Pages by a GitHub Actions workflow each time a change is pushed to `main`. Changes appear on the site within a few minutes, or longer when the build has Lighthouse scans to run.
@@ -112,7 +113,7 @@ To check the links yourself, install Node.js 22 or later and run `node scripts/c
 
 ### Automatic checks
 
-Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
+Whenever a change to the data file, `index.html`, `Scoring-Metrics.md`, or the correction form is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
 
 - every record has all of the fields above, with no misspelled or extra fields, no government appears twice, and each abbreviation is two capital letters used only once;
 - each link is a full `http://` or `https://` address, or `N/A`;
@@ -120,7 +121,8 @@ Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pus
 - each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
 - each points field matches its answer, using the rules above, and `Total` equals their sum;
 - each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`;
-- every government except a benchmark has a position on the map, in the `MAP_HEX` list in `index.html`.
+- every government except a benchmark has a position on the map, in the `MAP_HEX` list in `index.html`;
+- every metric is an option in the correction form, `.github/ISSUE_TEMPLATE/correction.yml`.
 
 If a check fails, GitHub marks the commit or pull request with a red X, and the run's details list each problem. It also warns, without failing, when a direct URL answer is `Yes` but the record has no link for that page.
 
@@ -142,7 +144,9 @@ Then open http://localhost:8000/. The Scoring metrics page is rendered by GitHub
 
 ## Reporting a correction
 
-If a score or link looks wrong, [open an issue](https://github.com/usdigitalresponse/procurement-software-landscape/issues/new) with the government, the metric, and what you found.
+If a score or link looks wrong, fill in the [correction form](https://github.com/usdigitalresponse/procurement-software-landscape/issues/new?template=correction.yml). Each government's details on the landscape page also link to it, with the government filled in. The form asks what's wrong, what it should be, and for evidence, and labels the issue "correction". See [CONTRIBUTING.md](./CONTRIBUTING.md#reporting-a-correction) for what makes a correction easy to confirm.
+
+The form's list of metrics, in `.github/ISSUE_TEMPLATE/correction.yml`, must name every metric by its answer field. If you add or rename a metric, update the form too; the [automatic checks](#automatic-checks) fail if a metric is missing from it.
 
 ## Code of Conduct
 

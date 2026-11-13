@@ -153,6 +153,17 @@ function check(data, criteria, metricsMd, mapTiles) {
   return { errors, warnings };
 }
 
+// The correction form lists every metric, by its answer field name, as an option of its
+// "problem" dropdown. Returns a problem for each metric that's missing from it.
+const FORM_FILE = ".github/ISSUE_TEMPLATE/correction.yml";
+function checkForm(form, criteria) {
+  const problem = (form && Array.isArray(form.body) ? form.body : []).find(f => f && f.id === "problem");
+  const options = problem && problem.attributes && Array.isArray(problem.attributes.options) ? problem.attributes.options : null;
+  if (!options) return [`${FORM_FILE}: could not find the "problem" dropdown's options.`];
+  return criteria.filter(c => !options.includes(c.field))
+    .map(c => `${FORM_FILE}: the "problem" dropdown has no option for the ${c.key} metric. Add "${c.field}".`);
+}
+
 function main() {
   const fs = require("fs");
   const path = require("path");
@@ -164,7 +175,9 @@ function main() {
   try {
     const data = yaml.load(read("Procurement-Software-Landscape.yaml"));
     const indexHtml = read("index.html");
-    ({ errors, warnings } = check(data, readCriteria(indexHtml), read("Scoring-Metrics.md"), readMapTiles(indexHtml)));
+    const criteria = readCriteria(indexHtml);
+    ({ errors, warnings } = check(data, criteria, read("Scoring-Metrics.md"), readMapTiles(indexHtml)));
+    errors.push(...checkForm(yaml.load(read(FORM_FILE)), criteria));
   } catch (e) {
     errors = [e.message];
   }
@@ -190,4 +203,4 @@ function main() {
 }
 
 if (typeof require !== "undefined" && require.main === module) main();
-if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug, dateProblem };
+if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug, dateProblem, checkForm };
