@@ -8,8 +8,8 @@
     'Public site URL': 'https://www.find-tender.service.gov.uk/'
     'Notices list URL': 'https://www.find-tender.service.gov.uk/search/opportunities'
     'Sample posting URL': 'https://www.find-tender.service.gov.uk/Notice/071922-2026'
-    Note: ""
-    'Answers checked': ""
+    Note: 'The sample notice gives only a shared procurement mailbox, with no named person, so Contact name and email is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': Yes
     'Data standard is published': Yes
     'Notices list has a direct URL': Yes
@@ -20,7 +20,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': Yes
     'Data export of posting': Yes
     'Documents without registration': Yes
@@ -36,13 +36,13 @@
     N5: 5
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 5
     P5: 5
     P6: 5
     P7: 4
     P8: 5
-    Total: 99
+    Total: 94
 -
     Government: Alabama
     Abbreviation: AL
@@ -134,21 +134,21 @@
 -
     Government: 'American Samoa'
     Abbreviation: AS
-    'System name': 'e-Tendering Portal'
-    'System type': eProcurement
-    Vendor: 'illion Tenderlink'
-    'Public site URL': 'https://portal.tenderlink.com/mof_samoa/login?ReturnUrl=%2Fmof_samoa%2F'
-    'Notices list URL': 'https://portal.tenderlink.com/mof_samoa/alltenders/'
+    'System name': 'Office of Procurement announcements'
+    'System type': Custom
+    Vendor: 'Government owned'
+    'Public site URL': 'https://www.americansamoa.gov/'
+    'Notices list URL': N/A
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'The Office of Procurement posts requests for proposals as announcements and PDFs on americansamoa.gov. There is no notices list or posting page, but the RFP PDFs are public (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
-    'Notices list has a direct URL': Yes
+    'Notices list has a direct URL': No
     'Includes local listings': N/A
     'Data export of notices list': No
-    'Lighthouse performance, notices list': 87
-    'Lighthouse accessibility, notices list': 84
+    'Lighthouse performance, notices list': 0
+    'Lighthouse accessibility, notices list': 0
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': No
     'Individual posting page': No
@@ -161,11 +161,11 @@
     'Lighthouse measured, posting page': ""
     G1: 0
     G2: 0
-    N1: 10
+    N1: 0
     N2: 0
     N3: 0
-    N4: 4
-    N5: 4
+    N4: 0
+    N5: 0
     P1: 0
     P2: 0
     P3: 0
@@ -174,7 +174,7 @@
     P6: 5
     P7: 0
     P8: 0
-    Total: 23
+    Total: 5
 -
     Government: Arizona
     Abbreviation: AZ
@@ -447,9 +447,9 @@
     Vendor: 'Government owned'
     'Public site URL': 'https://contracts.ocp.dc.gov/'
     'Notices list URL': 'https://contracts.ocp.dc.gov/solicitations/search'
-    'Sample posting URL': 'https://contracts.ocp.dc.gov/solicitations/details?id=Doc831461'
-    Note: ""
-    'Answers checked': ""
+    'Sample posting URL': 'https://contracts.ocp.dc.gov/solicitations/details?id=DCKA-2026-B-0073'
+    Note: 'Posting pages list only the contracting officer''s phone number; the name and email appear on the search results, so Contact name and email is No. Documents are picked up from the agency''s own site. A posting''s page stops loading once it is no longer listed, so the sample posting URL needs replacing after it closes (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -460,7 +460,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': Yes
     'Data export of posting': No
     'Documents without registration': Yes
@@ -476,13 +476,13 @@
     N5: 5
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 5
     P5: 0
     P6: 5
     P7: 2
     P8: 5
-    Total: 74
+    Total: 69
 -
     Government: Florida
     Abbreviation: FL
@@ -581,7 +581,7 @@
     'Notices list URL': 'https://gsa.doa.guam.gov/invitation-for-bid/'
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1328,13 +1328,13 @@
     'Public site URL': 'https://das.nebraska.gov/materiel/vendor-information.html'
     'Notices list URL': 'https://das.nebraska.gov/materiel/bid-opportunities.html#current-bid-opportunities'
     'Sample posting URL': 'https://das.nebraska.gov/materiel/purchasing/124528%20ON/124528%20ON.html'
-    Note: ""
-    'Answers checked': ""
+    Note: 'The bid opportunities page lists notices in plain tables, with no export or download, so Data export of notices list is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': No
-    'Data export of notices list': Yes
+    'Data export of notices list': No
     'Lighthouse performance, notices list': 96
     'Lighthouse accessibility, notices list': 95
     'Lighthouse measured, notices list': ""
@@ -1351,7 +1351,7 @@
     G2: 0
     N1: 10
     N2: 0
-    N3: 5
+    N3: 0
     N4: 5
     N5: 5
     P1: 25
@@ -1362,7 +1362,7 @@
     P6: 5
     P7: 5
     P8: 5
-    Total: 80
+    Total: 75
 -
     Government: Nevada
     Abbreviation: NV
@@ -1417,7 +1417,7 @@
     'Notices list URL': 'https://apps.das.nh.gov/NHProcurement/Bid'
     'Sample posting URL': 'https://apps.das.nh.gov/NHProcurement/Bid/rfp-nhlc-202606'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1548,13 +1548,13 @@
     'Public site URL': 'https://www.nyscr.ny.gov/'
     'Notices list URL': 'https://www.nyscr.ny.gov/Ads/Search'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'The search results can only be downloaded as a PDF, which does not count as a data export. Each ad asks visitors to log in or sign up to view it (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
     'Includes local listings': Yes
-    'Data export of notices list': Yes
+    'Data export of notices list': No
     'Lighthouse performance, notices list': 96
     'Lighthouse accessibility, notices list': 88
     'Lighthouse measured, notices list': ""
@@ -1571,7 +1571,7 @@
     G2: 0
     N1: 10
     N2: 5
-    N3: 5
+    N3: 0
     N4: 5
     N5: 4
     P1: 0
@@ -1582,7 +1582,7 @@
     P6: 0
     P7: 0
     P8: 0
-    Total: 29
+    Total: 24
 -
     Government: 'North Carolina'
     Abbreviation: NC
@@ -1901,7 +1901,7 @@
     'Notices list URL': 'https://asg.pr.gov/subastas'
     'Sample posting URL': 'https://asg.pr.gov/subastas26J-22671'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
