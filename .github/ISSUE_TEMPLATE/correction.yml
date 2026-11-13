@@ -1,0 +1,94 @@
+# The correction form. The landscape page links here from each government's details,
+# filling in the "government" field, so keep that field's id.
+#
+# The "problem" options list every metric by its answer field name, as in the CRITERIA
+# list in index.html. scripts/check-data.js fails if a metric is missing here.
+name: Report a correction
+description: Tell us about an answer, link, or system detail that looks wrong.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the landscape accurate. Please check what you found against the metric's definition in the [scoring metrics](https://usdigitalresponse.github.io/procurement-software-landscape/Scoring-Metrics.html) first. For example, a print button or a PDF doesn't count as a data export, and a CAPTCHA doesn't lower a score.
+
+        Lighthouse scores are measured automatically each week, and vary between runs, so please don't report a different score from your own Lighthouse run. Do tell us if a score was measured on the wrong page.
+  - type: input
+    id: government
+    attributes:
+      label: Government
+      description: The state, territory, or DC, as named on the landscape.
+      placeholder: Ohio
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What looks wrong?
+      description: Choose every part that needs a correction.
+      multiple: true
+      options:
+        - Web design system in use
+        - Data standard is published
+        - Notices list has a direct URL
+        - Includes local listings
+        - Data export of notices list
+        - Lighthouse performance, notices list
+        - Lighthouse accessibility, notices list
+        - Direct URL to an individual posting
+        - Individual posting page
+        - Contact name and email
+        - Project summary
+        - Data export of posting
+        - Documents without registration
+        - Lighthouse performance, posting page
+        - Lighthouse accessibility, posting page
+        - "A link: public site, notices list, or sample posting"
+        - System name, type, or vendor
+        - The note
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What the landscape shows now
+      placeholder: "Documents without registration: No"
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should be, and why
+      placeholder: "Yes. The posting's attachments download without signing in."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Links to the pages that show it. Add a screenshot if the page takes steps to reach, or may change. You can paste or drag images here.
+      placeholder: https://example.gov/bids/RFP-2026-17
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: When you checked
+      placeholder: "2026-11-12"
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: How you use the site (optional)
+      description: This helps us understand who relies on the landscape.
+      options:
+        - I work for this government
+        - I work for another government
+        - Vendor or potential vendor
+        - Researcher, journalist, or advocate
+        - Something else
+    validations:
+      required: false

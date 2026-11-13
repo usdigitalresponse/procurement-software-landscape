@@ -1,5 +1,5 @@
 # Checks the data file against the scoring rules whenever it, the metric list
-# in index.html, or the scoring metrics page changes.
+# in index.html, the scoring metrics page, or the correction form changes.
 name: Check data
 
 on:
@@ -10,6 +10,7 @@ on:
       - index.html
       - Scoring-Metrics.md
       - scripts/check-data.js
+      - .github/ISSUE_TEMPLATE/correction.yml
       - .github/workflows/check-data.yml
   pull_request:
     paths:
@@ -17,6 +18,7 @@ on:
       - index.html
       - Scoring-Metrics.md
       - scripts/check-data.js
+      - .github/ISSUE_TEMPLATE/correction.yml
       - .github/workflows/check-data.yml
   workflow_dispatch:
 

@@ -1,140 +1,76 @@
-# How to contribute to U.S. Digital Response projects
+# Contributing to the Procurement Software Landscape
 
-Everyone is welcome to contribute, and we value everybody's contribution. Code
-is not the only way to help the community. Answering questions, helping
-others, reaching out, and improving the documentation are all immensely valuable
-to the community.
+Thank you for helping. This project is only as useful as its data is accurate, and most contributions are about keeping the data right: reporting a correction, rechecking a government's answers, or fixing a broken link. You don't need to write code to help.
 
+Everyone who takes part is expected to follow [U.S. Digital Response's Code of Conduct](./CODE_OF_CONDUCT.md). To volunteer with other USDR projects, sign up at [usdigitalresponse.org/raisingyourhand](https://www.usdigitalresponse.org/raisingyourhand).
 
-## You can contribute in so many ways!
+## Ways to help
 
-There are 3 ways you can contribute to this project:
+- **[Report a correction](https://github.com/usdigitalresponse/procurement-software-landscape/issues/new?template=correction.yml)** when an answer, link, or system detail looks wrong. This is the most helpful thing you can do, and it doesn't need a GitHub pull request.
+- **Recheck a government's answers.** The yes-or-no answers, worth 80 of the 100 points, are checked by hand and aren't rechecked on a schedule. Records whose `Answers checked` date says "Not recorded" or is old are good places to start. See [Checking a government's answers](#checking-a-governments-answers).
+- **Fix a broken link.** Every Monday, the link check opens an issue labeled [broken links](https://github.com/usdigitalresponse/procurement-software-landscape/labels/broken%20links) for each government with links that stopped working. A broken link often means the government changed systems, so its answers may need a recheck too.
+- **Improve the site or the scripts.** See [Changing the site or the scripts](#changing-the-site-or-the-scripts).
 
-- Fixing outstanding issues with the existing code;
-- Contributing to the examples or to the documentation;
-- Submitting issues related to bugs or desired new features.
+Before starting on something big, search the [open issues](https://github.com/usdigitalresponse/procurement-software-landscape/issues) to see whether someone is already on it, or open one to talk it over.
 
-_All are equally valuable to the community._
+## Reporting a correction
 
-We also onboard new volunteers to USDR projects in general at [https://www.usdigitalresponse.org/raisingyourhand](https://www.usdigitalresponse.org/raisingyourhand). Please sign up if you’d like to help on other projects.
+Use the [correction form](https://github.com/usdigitalresponse/procurement-software-landscape/issues/new?template=correction.yml). You can also open it from a government's details on the landscape page, which fills in the government for you. The form asks for:
 
+- the government, and what's wrong (a metric's answer, a link, or the system details);
+- what the landscape shows now, and what it should be;
+- evidence: a link to the page that shows it, and a screenshot if the page needs steps to reach or may change;
+- the date you checked.
 
-## Submitting a new issue or feature request
+Please check against the definition of the metric in [Scoring-Metrics.md](./Scoring-Metrics.md). Many questions come down to a detail in a definition. For example, a print button or a PDF doesn't count as a data export, and a CAPTCHA doesn't lower a score.
 
-Do your best to follow these guidelines when submitting an issue or a feature
-request. It will make it easier for us to come back to you quickly and with good
-feedback.
+Lighthouse scores are measured automatically each week, so please don't report a different score from your own Lighthouse run. Scores vary between runs and between computers. Do report a Lighthouse score if the page it was measured on is the wrong page.
 
+## Checking a government's answers
 
-### Did you find a bug?
+Work through each yes-or-no metric in [Scoring-Metrics.md](./Scoring-Metrics.md) for the government's site:
 
-Open source code is robust and reliable thanks to the users who notify us of
-the problems they encounter, so thank you for reporting an issue.
+1. **Use a private browser window, signed out.** The metrics are about what the public can see without registering, so don't use an account you're signed in to.
+2. **Start from the notices list.** Check whether its URL leads straight to the list, whether it includes local governments' notices, and whether it offers a data export.
+3. **Open a current posting.** Check whether its URL leads straight to it, and whether it shows a contact name and email, a plain-language project summary, a data export, and documents you can open without registering. If the record's `Sample posting URL` has closed, pick a current one and update the link.
+4. **Check the system details:** `System name`, `System type`, and `Vendor`.
+5. **Write down anything unusual in the `Note`,** such as a CAPTCHA, a planned move to a new system, or why a borderline answer went the way it did. Say when you checked, such as "(checked November 2026)".
 
-First, we would really appreciate it if you could **make sure the bug was not
-already reported** (use the search bar on GitHub under the “Issues” tab).
+Then update the record as described in [Updating a record](#updating-a-record), including the `Answers checked` date, even if no answers changed.
 
-Did not find it? :( So we can act quickly on it, please include the following:
+## Updating a record
 
-- Your **operating system**.
-- If the problem is with the API, your **client (e.g. cURL, Python Requests)**.
-- If the problem was with the demo UI or docs pages, your **browser (e.g. Firefox, Chrome, Edge, Internet Explorer)**.
-- Any code errors that you have access to.
+The data is in [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml), one record per government. The [README](./README.md#updating-the-data) explains every field and the scoring rules. In short:
 
+- A `Yes` answer earns the metric's full points, and anything else earns 0. Update the points field (`G1` to `P8`) to match each answer you change, and update `Total` to their sum.
+- Set `Answers checked` to the date you checked, in quotes, like `'2026-11-12'`.
+- Don't edit the Lighthouse scores, their points, or the `Lighthouse measured` dates by hand. They're replaced each time the site is built. The exception is a new record: give each Lighthouse score and its points 0, and each `Lighthouse measured` date `""`.
+- When you add a government, give it an `Abbreviation` and a position on the map in the `MAP_HEX` list in `index.html`.
 
-### Do you want a new feature?
+To make the change, either edit the file on GitHub, which creates a fork and a pull request for you, or work on a branch on your own computer.
 
-A world-class feature request addresses the following points:
+Before you open a pull request, run the data checks if you can. Install [Node.js](https://nodejs.org/) 22 or later and run this from the repository folder:
 
-1. Motivation first:
+```bash
+node scripts/check-data.js
+```
 
-- Is it related to a problem/frustration with the current system? If so, please explain why.
-- Is it related to something you would need for a project? We'd love to hear about it!
-- Is it something you worked on and think could benefit the community? Awesome! Tell us what problem it solved for you.
+The same checks run automatically on every pull request. If they find a problem, the pull request gets a red X, and the run's details list each problem.
 
-2. Write a _full paragraph_ describing the feature;
-3. Provide a **code snippet** or **design mockup or sketch** if possible, to demonstrate its future use.
+## Changing the site or the scripts
 
-If your issue is well written, we’re already 80% of the way there by the time you
-post it.
+The site is a single page, [`index.html`](./index.html), which reads the data file in the browser. The scoring metrics page is [`Scoring-Metrics.md`](./Scoring-Metrics.md), rendered by GitHub Pages with [`_layouts/default.html`](./_layouts/default.html). The scripts in [`scripts/`](./scripts) check the data, collect Lighthouse scores, and check links. The [README](./README.md) explains each of them.
 
+- **Preview the site** with any static file server, such as `python -m http.server 8000`, and open http://localhost:8000/. The page can't load its data when opened as a file.
+- **Keep the metric list in step.** If you rename a heading in `Scoring-Metrics.md`, update its `anchor` in the `CRITERIA` list in `index.html`. If you add, remove, or rename a metric, also update the list of metrics in the [correction form](./.github/ISSUE_TEMPLATE/correction.yml). The data checks catch all of these.
+- **Check accessibility.** The landscape scores other sites on accessibility, so it should do well itself. Test new controls with a keyboard, and run Lighthouse on your local preview.
 
-## Start contributing! (Pull Requests)
+## Pull request checklist
 
-Before writing code, we strongly advise you to search through the exising PRs or
-issues to make sure that nobody is already working on the same thing. If you are
-unsure, it is always a good idea to open an issue to get some feedback.
+- The title sums up the change, such as "Update Ohio's notices list URL".
+- If it fixes an issue, the description says so, such as "Fixes #12", so the issue closes when it's merged.
+- For data changes, the description says what you checked and when, with links, and `Answers checked` is updated.
+- The data checks pass.
+- If the work isn't finished, open it as a draft pull request.
 
-You will need basic `git` proficiency to be able to contribute to
-this project. `git` is not the easiest tool to use but it has the greatest
-manual. Type `git --help` in a shell and enjoy.
-
-Follow these steps to start contributing:
-
-1. Fork the repository by
-   clicking on the 'Fork' button on the repository's page. This creates a copy of the code
-   under your GitHub user account.
-
-2. Clone your fork to your local disk
-
-3. Create a new branch to hold your development changes:
-
-   ```bash
-   $ git checkout -b a-descriptive-name-for-my-changes
-   ```
-
-   please avoid working on the `main` or `gh-pages` branch directly.
-
-4. Develop the features on your branch.
-
-   Once you're happy with your changes, add changed files using `git add` and
-   make a commit with `git commit` to record your changes locally:
-
-   ```bash
-   $ git add modified_file.py
-   $ git commit
-   ```
-
-   Please write [good commit messages](https://chris.beams.io/posts/git-commit/).
-
-   It is a good idea to sync your copy of the code with the original
-   repository regularly. This way you can quickly account for changes:
-
-   ```bash
-   $ git fetch origin
-   $ git rebase origin/master
-   ```
-
-   Push the changes to your account using:
-
-   ```bash
-   $ git push -u origin a-descriptive-name-for-my-changes
-   ```
-
-5. Once you are satisfied (**and the checklist below is happy, too**), go to the
-   webpage of your fork on GitHub. Click on 'Pull request' to send your changes
-   to the project maintainers for review.
-
-6. It's ok if maintainers ask you for changes. It happens to core contributors
-   too! So everyone can see the changes in the Pull request, work in your local
-   branch and push the changes to your fork. They will automatically appear in
-   the pull request.
-
-
-### Checklist
-
-1. The title of your pull request should be a summary of its contribution;
-
-2. If your pull request adresses an issue, please [mention the issue number in
-   the pull request description to make sure they are linked](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) (and so people consulting the issue know you are working on it);
-
-3. To indicate a work in progress, please submit your pull request as a draft.
-   This is useful to avoid duplicated work, and to differentiate it from PRs
-   ready to be merged.
-
-   ![Creating a draft pull request](./docs/_assets/draft-pr.png)
-
-4. If there are any tests, make sure that they pass and cover your new features and bugfixes.
-
-
-#### This guide was based on [HuggingFace/transformers](https://github.com/huggingface/transformers/blob/master/CONTRIBUTING.md) which was itself based on [SciKit-Learn](https://github.com/scikit-learn/scikit-learn/blob/master/CONTRIBUTING.md)
+Maintainers may ask for changes. That's a normal part of review, and it happens to everyone.

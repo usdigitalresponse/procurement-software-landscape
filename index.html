@@ -185,6 +185,7 @@
   .links dt { font-weight: 600; font-size: .875rem; color: var(--muted); }
   .links dd { margin: 0 0 .6rem; word-break: break-all; font-size: .92rem; }
   .links.dates dd { word-break: normal; }
+  .report { margin: .75rem 0 0; font-size: .92rem; }
   .links .hint { display: block; color: var(--muted); font-size: .8rem; line-height: 1.4; margin-top: .15rem; }
   .note { background: var(--mid-bg); border-left: 4px solid var(--mid); padding: .5rem .75rem; margin-top: .75rem; font-size: .92rem; }
   details.method { margin: 1.5rem 0; border: 1px solid var(--line); border-radius: .375rem; padding: .75rem 1rem; }
@@ -335,7 +336,7 @@
 <footer>
   <p>A <a href="https://www.usdigitalresponse.org/">U.S. Digital Response</a> project. Data: <a href="Procurement-Software-Landscape.yaml">Procurement-Software-Landscape.yaml</a><span id="updated"></span>.</p>
   <p>Yes-or-no answers are checked by hand, and each site's details show when they were last checked. Lighthouse scores are 0–100 from <a href="https://developer.chrome.com/docs/lighthouse/overview">Google Lighthouse</a>, measured automatically each week; "Not tested" means the page could not be tested. See <a href="Scoring-Metrics.html#how-current-the-scores-are">how current the scores are</a>.</p>
-  <p>See something wrong? <a href="https://github.com/usdigitalresponse/procurement-software-landscape/issues/new">Report a correction on GitHub</a>.</p>
+  <p>See something wrong? <a href="https://github.com/usdigitalresponse/procurement-software-landscape/issues/new?template=correction.yml">Report a correction on GitHub</a>.</p>
 </footer>
 
 <script src="assets/js/js-yaml.min.js"></script>
@@ -361,6 +362,9 @@ const CRITERIA = [
   { group: "posting", key: "P8", max: 5,  label: "Lighthouse accessibility", field: "Lighthouse accessibility, posting page", anchor: "lighthouse-accessibility-for-the-posting-page-5-pts" },
 ];
 const METRICS_URL = "Scoring-Metrics.html";
+// The correction form (.github/ISSUE_TEMPLATE/correction.yml), with the government filled in.
+const correctionUrl = state => "https://github.com/usdigitalresponse/procurement-software-landscape/issues/new?" +
+  new URLSearchParams({ template: "correction.yml", title: `Correction: ${state}`, government: state });
 const critLink = c => `<a href="${METRICS_URL}#${c.anchor}" title="How this is scored">${c.label}</a>`;
 const GROUPS = { general: "General", notice: "Notices list", posting: "Individual posting" };
 const groupMax = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + c.max, 0);
@@ -459,6 +463,7 @@ function detail(d) {
     </dl>
     ${datesHtml(r)}
     ${d.notes.map(n => `<div class="note">${linkify(n)}</div>`).join("")}
+    <p class="report"><a href="${esc(correctionUrl(d.state))}">Report a correction for ${esc(d.state)}</a></p>
     </div>${groups}</div>`;
 }
 

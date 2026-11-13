@@ -1,0 +1,7 @@
+# Keeps blank issues available for anything that isn't a correction, and links to the
+# scoring metrics from the "new issue" page.
+blank_issues_enabled: true
+contact_links:
+  - name: Scoring metrics
+    url: https://usdigitalresponse.github.io/procurement-software-landscape/Scoring-Metrics.html
+    about: How each metric is defined and scored. Worth a look before reporting a correction.
