@@ -21,6 +21,9 @@
 //       with the stored ones, and recompute the Lighthouse points and totals. Pages
 //       without a stored score keep the score and date already in the data file, such
 //       as a score from an earlier manual test.
+//   node scripts/lighthouse.js report <results.json>
+//       Report the results of scanning the landscape's own pages, and warn about any
+//       score below 90. The workflow runs this after each publish.
 
 const fs = require("fs");
 const path = require("path");
@@ -228,10 +231,45 @@ function apply(scoresFile) {
   if (missing.length) console.log(`${missing.length} pages have no Lighthouse scan yet and kept the scores in the data file:\n${missing.map(u => `- ${u}`).join("\n")}`);
 }
 
+// Reports scan results for the landscape's own pages: prints each page's scores, adds a
+// table to the GitHub Actions run summary, and warns about any score below 90, the
+// score this landscape counts as good. It never fails, so it can't hold anything up.
+function report(resultsFile) {
+  const results = readJson(resultsFile, {});
+  const warn = msg => {
+    console.log(msg);
+    if (process.env.GITHUB_ACTIONS) console.log(`::warning::${msg}`);
+  };
+  const rows = Object.entries(results).map(([url, r]) => {
+    if (r.error) {
+      // The scan step has already warned about this.
+      console.log(`${url}: could not be scanned. ${r.error}`);
+      return `| ${url} | Not tested | Not tested |`;
+    }
+    console.log(`${url}: performance ${r.performance}, accessibility ${r.accessibility}`);
+    for (const kind of ["performance", "accessibility"]) {
+      if (r[kind] < 90) warn(`${url} scored ${r[kind]} for Lighthouse ${kind}, below 90.`);
+    }
+    return `| ${url} | ${r.performance} | ${r.accessibility} |`;
+  });
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, [
+      "## Lighthouse scores for this site",
+      "",
+      "Desktop settings, median of three runs. 90 or more counts as good.",
+      "",
+      "| Page | Performance | Accessibility |",
+      "|---|---|---|",
+      ...rows,
+      "",
+    ].join("\n"));
+  }
+}
+
 const [cmd, file, ...rest] = process.argv.slice(2);
-const steps = { plan, scan, merge, apply };
+const steps = { plan, scan, merge, apply, report };
 if (!steps[cmd] || !file) {
-  console.error("Usage: node scripts/lighthouse.js plan|scan|merge|apply <file> [...]");
+  console.error("Usage: node scripts/lighthouse.js plan|scan|merge|apply|report <file> [...]");
   process.exit(2);
 }
 steps[cmd](file, rest);
