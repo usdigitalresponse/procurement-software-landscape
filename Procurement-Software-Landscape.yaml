@@ -492,7 +492,7 @@
     'Public site URL': 'https://vendor.myfloridamarketplace.com/'
     'Notices list URL': 'https://vendor.myfloridamarketplace.com/search/bids'
     'Sample posting URL': 'https://vendor.myfloridamarketplace.com/search/bids/detail/16318'
-    Note: ""
+    Note: 'Postings name a contact but give only the shared DMS Purchasing mailbox, so Contact name and email is No. The notices list URL opens a search form, and its default search returned no results in November 2026, so the notices list answers still need confirming.'
     'Answers checked': ""
     'Web design system in use': No
     'Data standard is published': No
@@ -504,7 +504,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': Yes
     'Data export of posting': No
     'Documents without registration': Yes
@@ -520,13 +520,13 @@
     N5: 5
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 5
     P5: 0
     P6: 5
     P7: 2
     P8: 5
-    Total: 75
+    Total: 70
 -
     Government: Georgia
     Abbreviation: GA
@@ -1680,11 +1680,11 @@
     'Public site URL': 'https://selfservice.dof.gov.mp/vss/default.aspx'
     'Notices list URL': 'https://selfservice.dof.gov.mp/vss/Vendors/VBids/SearchResults.aspx'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'The notices list URL returned a server error (500), both directly and when searching from the bid search form, so the list could not be viewed (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
-    'Notices list has a direct URL': Yes
+    'Notices list has a direct URL': No
     'Includes local listings': N/A
     'Data export of notices list': No
     'Lighthouse performance, notices list': 87
@@ -1701,11 +1701,11 @@
     'Lighthouse measured, posting page': ""
     G1: 0
     G2: 0
-    N1: 10
+    N1: 0
     N2: 0
     N3: 0
-    N4: 4
-    N5: 5
+    N4: 0
+    N5: 0
     P1: 0
     P2: 5
     P3: 0
@@ -1714,7 +1714,7 @@
     P6: 5
     P7: 0
     P8: 0
-    Total: 29
+    Total: 10
 -
     Government: Ohio
     Abbreviation: OH
