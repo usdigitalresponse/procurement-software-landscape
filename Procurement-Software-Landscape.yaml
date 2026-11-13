@@ -227,9 +227,9 @@
     Vendor: 'SAP Ariba'
     'Public site URL': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
     'Notices list URL': 'https://sas.arkansas.gov/procurement/bid-opportunities/'
-    'Sample posting URL': 'https://portal.us.bn.cloud.ariba.com/dashboard/public/appext/comsapsbncdiscoveryui#/RfxEvent/preview/1110018345?anId=ANONYMOUS'
+    'Sample posting URL': 'https://portal.us.bn.cloud.ariba.com/dashboard/public/appext/comsapsbncdiscoveryui#/RfxEvent/preview/1110027718?anId=ANONYMOUS'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -273,7 +273,7 @@
     'Notices list URL': 'https://caleprocure.ca.gov/pages/Events-BS3/event-search.aspx'
     'Sample posting URL': 'https://caleprocure.ca.gov/event/3860/0000039630'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -404,8 +404,8 @@
     'Public site URL': 'https://mymarketplace.delaware.gov/'
     'Notices list URL': 'https://mmp.delaware.gov/Bids/'
     'Sample posting URL': 'https://mmp.delaware.gov/Bids/Details/9246'
-    Note: ""
-    'Answers checked': ""
+    Note: 'Postings give a contact email but no separate contact name, so Contact name and email is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': Yes
     'Data standard is published': Yes
     'Notices list has a direct URL': Yes
@@ -416,7 +416,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
@@ -432,13 +432,13 @@
     N5: 4
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 0
     P5: 0
     P6: 5
     P7: 4
     P8: 5
-    Total: 78
+    Total: 73
 -
     Government: 'District of Columbia'
     Abbreviation: DC
@@ -932,8 +932,8 @@
     'Public site URL': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/pubmain.cfm'
     'Notices list URL': 'https://wwwcfprd.doa.louisiana.gov/osp/lapac/srchopen.cfm?deptno=all&catno=all&dateStart=&dateEnd=&compareDate=O&keywords=&keywordsCheck=all'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'There are no public posting pages: each bid number on the LaPAC list links straight to its PDF, and the list shows no contact names or emails, so Contact name and email is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -944,7 +944,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': No
     'Individual posting page': No
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
@@ -960,13 +960,13 @@
     N5: 5
     P1: 0
     P2: 0
-    P3: 5
+    P3: 0
     P4: 0
     P5: 0
     P6: 5
     P7: 0
     P8: 0
-    Total: 35
+    Total: 30
 -
     Government: Maine
     Abbreviation: ME
@@ -1197,7 +1197,7 @@
     'Notices list URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid'
     'Sample posting URL': 'https://www.ms.gov/dfa/contract_bid_search/Bid/Details/45855?AppId=1'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1593,7 +1593,7 @@
     'Notices list URL': 'https://evp.nc.gov/solicitations/?status=0'
     'Sample posting URL': 'https://evp.nc.gov/solicitations/details/?id=1290880c-067b-f111-ab0e-001dd80db495'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1857,7 +1857,7 @@
     'Notices list URL': 'https://www.emarketplace.state.pa.us/Search.aspx'
     'Sample posting URL': 'https://www.emarketplace.state.pa.us/Solicitations.aspx?SID=6100066036'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2032,8 +2032,8 @@
     'Public site URL': 'https://www.sd.gov/bhra?id=cs_kb_article_view&sysparm_article=KB0044779&sys_kb_id=a9c554f787aecf14a086bae9cebb356d&spa=1'
     'Notices list URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/events'
     'Sample posting URL': 'https://postingboard.esmsolutions.com/3444a404-3818-494f-84c5-2a850acd7779/eventDetail/19882'
-    Note: ""
-    'Answers checked': ""
+    Note: 'Event pages are public, with their documents, but the events checked had an empty Event Description and no contact, and a closed event asks visitors to log in for more details, so Project summary is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2045,7 +2045,7 @@
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
     'Contact name and email': No
-    'Project summary': Yes
+    'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 90
@@ -2061,12 +2061,12 @@
     P1: 25
     P2: 5
     P3: 0
-    P4: 5
+    P4: 0
     P5: 0
     P6: 5
     P7: 5
     P8: 5
-    Total: 67
+    Total: 62
 -
     Government: Tennessee
     Abbreviation: TN
@@ -2121,7 +2121,7 @@
     'Notices list URL': 'https://www.txsmartbuy.gov/esbd'
     'Sample posting URL': 'https://www.txsmartbuy.gov/esbd/304-27-0790MS-1'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2428,8 +2428,8 @@
     'Public site URL': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/h/?tab=WI_BIDDER'
     'Notices list URL': 'https://esupplier.wi.gov/psp/esupplier/SUPPLIER/ERP/c/WI_SS_BIDDER_FLU.WI_SS_BDR_BIDS_FLU.GBL'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'Each solicitation opens in a pop-up on the list, with no address of its own. The posting checked named a contact but gave only a shared agency mailbox, so Contact name and email is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2440,7 +2440,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': No
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': Yes
     'Data export of posting': No
     'Documents without registration': Yes
@@ -2456,13 +2456,13 @@
     N5: 5
     P1: 0
     P2: 5
-    P3: 5
+    P3: 0
     P4: 5
     P5: 0
     P6: 5
     P7: 0
     P8: 0
-    Total: 42
+    Total: 37
 -
     Government: Wyoming
     Abbreviation: WY
