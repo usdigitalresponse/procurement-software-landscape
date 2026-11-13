@@ -21,6 +21,8 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
 | `scripts/check-links.js` | Checks that every link in the data file works. See [Link check](#link-check). |
 | `scripts/export-data.js` | Writes `data.json` and `data.csv` when the site is built. See [Using the data](#using-the-data). |
+| `tests/` | Tests for the scoring rules and the scripts. See [Automatic checks](#automatic-checks). |
+| `.github/workflows/check-data.yml` | Checks the data, runs the tests, and tries the site build on every pull request. See [Automatic checks](#automatic-checks). |
 | `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores, checks links weekly, and scores the site's own pages with Lighthouse. |
 | `.github/ISSUE_TEMPLATE/correction.yml` | The correction form for reporting a wrong answer, link, or system detail. See [Reporting a correction](#reporting-a-correction). |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
@@ -125,7 +127,13 @@ To check the links yourself, install Node.js 22 or later and run `node scripts/c
 
 ### Automatic checks
 
-Whenever a change to the data file, `index.html`, the scoring rules in `assets/js/scoring.js`, `Scoring-Metrics.md`, or the correction form is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
+Whenever a change to the data file, `index.html`, `Scoring-Metrics.md`, the page layout, the scripts or the scoring rules, the tests, or the correction form is pushed to `main` or opened as a pull request, the "Check data" workflow runs three checks:
+
+- **check:** runs `scripts/check-data.js` on the data file, described below.
+- **test:** runs the tests in `tests/`, which cover the scoring rules, the data checks, writing the Lighthouse scores and points into the data file, `data.json` and `data.csv`, and the link check's handling of sign-in pages and issues. They don't need a network connection.
+- **build:** runs the same steps as the site build, with the latest stored Lighthouse scores but without scanning or publishing, so a change that would stop the site from being published fails on its pull request instead of after it's merged.
+
+`scripts/check-data.js` runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
 
 - every record has all of the fields above, with no misspelled or extra fields, no government appears twice, and each abbreviation is two capital letters used only once;
 - each link is a full `http://` or `https://` address, or `N/A`;
@@ -138,11 +146,17 @@ Whenever a change to the data file, `index.html`, the scoring rules in `assets/j
 
 If a check fails, GitHub marks the commit or pull request with a red X, and the run's details list each problem. It also warns, without failing, when a direct URL answer is `Yes` but the record has no link for that page.
 
-To run the checks yourself, install [Node.js](https://nodejs.org/) and run this from the repository folder:
+To run the checks and the tests yourself, install [Node.js](https://nodejs.org/) 22 or later and run these from the repository folder:
 
 ```bash
 node scripts/check-data.js
 ```
+
+```bash
+node --test
+```
+
+When you change a script or the scoring rules, add or update a test in `tests/` for the change. The tests use Node.js's built-in test runner, so there's nothing to install.
 
 ## Using the data
 

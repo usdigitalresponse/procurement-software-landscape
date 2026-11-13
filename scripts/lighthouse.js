@@ -179,13 +179,12 @@ function merge(scoresFile, resultsFiles) {
   console.log(`Merged ${ok} new scores and ${failed} failed scans into ${scoresFile}.`);
 }
 
-// Rewrites only the score and date lines of each record, and adds its points lines at
-// the end of the record, so the rest of the file, including its formatting, stays as
-// it is. A points line that's already there is rewritten in place.
-function apply(scoresFile) {
-  const { pages } = loadScores(scoresFile);
-  const criteria = readCriteria(fs.readFileSync(path.join(ROOT, "index.html"), "utf8"));
-  const text = fs.readFileSync(DATA_FILE, "utf8");
+// Returns the data file's text with the stored scores and dates written in, and each
+// record's points. Rewrites only the score and date lines of each record, and adds its
+// points lines at the end of the record, so the rest of the file, including its
+// formatting, stays as it is. A points line that's already there is rewritten in place.
+// pages is the "pages" part of the scores file; criteria is the CRITERIA list.
+function applyScores(text, pages, criteria) {
   const data = yaml.load(text);
 
   const updates = data.map(r => {
@@ -243,10 +242,18 @@ function apply(scoresFile) {
     }
   });
 
-  fs.writeFileSync(DATA_FILE, outText);
+  return outText;
+}
+
+function apply(scoresFile) {
+  const { pages } = loadScores(scoresFile);
+  const criteria = readCriteria(fs.readFileSync(path.join(ROOT, "index.html"), "utf8"));
+  const text = fs.readFileSync(DATA_FILE, "utf8");
+  fs.writeFileSync(DATA_FILE, applyScores(text, pages, criteria));
+  const records = yaml.load(text).length;
   const scored = new Set(Object.entries(pages).filter(([, p]) => Number.isInteger(p.performance)).map(([u]) => u));
   const missing = dataUrls().filter(u => !scored.has(u));
-  console.log(`Wrote Lighthouse scores for ${data.length} records.`);
+  console.log(`Wrote Lighthouse scores for ${records} records.`);
   if (missing.length) console.log(`${missing.length} pages have no Lighthouse scan yet and kept the scores in the data file:\n${missing.map(u => `- ${u}`).join("\n")}`);
 }
 
@@ -285,10 +292,13 @@ function report(resultsFile) {
   }
 }
 
-const [cmd, file, ...rest] = process.argv.slice(2);
-const steps = { plan, scan, merge, apply, report };
-if (!steps[cmd] || !file) {
-  console.error("Usage: node scripts/lighthouse.js plan|scan|merge|apply|report <file> [...]");
-  process.exit(2);
+if (require.main === module) {
+  const [cmd, file, ...rest] = process.argv.slice(2);
+  const steps = { plan, scan, merge, apply, report };
+  if (!steps[cmd] || !file) {
+    console.error("Usage: node scripts/lighthouse.js plan|scan|merge|apply|report <file> [...]");
+    process.exit(2);
+  }
+  steps[cmd](file, rest);
 }
-steps[cmd](file, rest);
+module.exports = { applyScores, merge, median, weekStart };
