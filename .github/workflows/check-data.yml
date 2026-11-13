@@ -1,5 +1,11 @@
-# Checks the data file against the scoring rules whenever it, the metric list
-# in index.html, the scoring rules, the scoring metrics page, or the correction form changes.
+# Checks the data and the scripts before a change reaches main, whenever the data file,
+# the metric list in index.html, the scoring rules, the scoring metrics page, the
+# correction form, the scripts, or their tests change:
+# - "check" checks the data file against the scoring rules;
+# - "test" runs the tests in tests/;
+# - "build" runs the same build steps as the "Build and publish site" workflow, without
+#   scanning or publishing, so a change that would break publishing fails here instead.
+# Keep the job IDs, since they're the names of the checks GitHub shows on pull requests.
 name: Check data
 
 on:
@@ -9,8 +15,10 @@ on:
       - Procurement-Software-Landscape.yaml
       - index.html
       - Scoring-Metrics.md
-      - scripts/check-data.js
-      - assets/js/scoring.js
+      - _layouts/**
+      - assets/js/**
+      - scripts/**
+      - tests/**
       - .github/ISSUE_TEMPLATE/correction.yml
       - .github/workflows/check-data.yml
   pull_request:
@@ -18,8 +26,10 @@ on:
       - Procurement-Software-Landscape.yaml
       - index.html
       - Scoring-Metrics.md
-      - scripts/check-data.js
-      - assets/js/scoring.js
+      - _layouts/**
+      - assets/js/**
+      - scripts/**
+      - tests/**
       - .github/ISSUE_TEMPLATE/correction.yml
       - .github/workflows/check-data.yml
   workflow_dispatch:
@@ -36,3 +46,37 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/check-data.js
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: node --test
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      # The latest stored Lighthouse scores, if there are any, so the build uses real
+      # ones. It only reads the cache; nothing here changes the stored scores.
+      - name: Restore cached Lighthouse scores
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ runner.temp }}/lighthouse-scores
+          key: lighthouse-scores-${{ github.run_id }}
+          restore-keys: lighthouse-scores-
+      - name: List pages due for a Lighthouse scan
+        run: node scripts/lighthouse.js plan "$RUNNER_TEMP/lighthouse-scores/scores.json"
+      - name: Write Lighthouse scores into the data file
+        run: node scripts/lighthouse.js apply "$RUNNER_TEMP/lighthouse-scores/scores.json"
+      - name: Check the data file
+        run: node scripts/check-data.js
+      - name: Write data.json and data.csv
+        run: node scripts/export-data.js https://usdigitalresponse.github.io/procurement-software-landscape/
+      - uses: actions/jekyll-build-pages@v1

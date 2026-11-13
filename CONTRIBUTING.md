@@ -63,6 +63,7 @@ The site is a single page, [`index.html`](./index.html), which reads the data fi
 
 - **Preview the site** with any static file server, such as `python -m http.server 8000`, and open http://localhost:8000/. The page can't load its data when opened as a file.
 - **Keep the metric list in step.** If you rename a heading in `Scoring-Metrics.md`, update its `anchor` in the `CRITERIA` list in `index.html`. If you add, remove, or rename a metric, also update the list of metrics in the [correction form](./.github/ISSUE_TEMPLATE/correction.yml). The data checks catch all of these.
+- **Test your change.** The tests in [`tests/`](./tests) cover the scoring rules and the scripts. Run them with `node --test` from the repository folder, and add or update a test for what you changed. Every pull request also runs the tests and tries the site build, so a change that would stop the site from being published shows up as a red X before it's merged.
 - **Check accessibility.** The landscape scores other sites on accessibility, so it should do well itself. Test new controls with a keyboard, and run Lighthouse on your local preview.
 
 ## Pull request checklist
@@ -70,7 +71,7 @@ The site is a single page, [`index.html`](./index.html), which reads the data fi
 - The title sums up the change, such as "Update Ohio's notices list URL".
 - If it fixes an issue, the description says so, such as "Fixes #12", so the issue closes when it's merged.
 - For data changes, the description says what you checked and when, with links, and `Answers checked` is updated.
-- The data checks pass.
+- The data checks pass, and for changes to the scripts or the scoring rules, so do the tests (`node --test`).
 - If the work isn't finished, open it as a draft pull request.
 
 Maintainers may ask for changes. That's a normal part of review, and it happens to everyone.

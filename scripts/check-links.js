@@ -7,9 +7,10 @@
 //
 // In GitHub Actions it also adds a warning to the run for each broken link, writes a
 // table to the run summary, and keeps one GitHub issue (labeled "broken links") up to
-// date: it opens the issue when links break, comments on it when more break, and
-// closes it once every link works again. That needs GITHUB_TOKEN, with permission to
-// write issues, and GITHUB_REPOSITORY.
+// date for each government with broken links: it opens the issue when that
+// government's links break, comments on it when more break, and closes it once they
+// all work again. That needs GITHUB_TOKEN, with permission to write issues, and
+// GITHUB_REPOSITORY.
 //
 // Links that a site's bot protection blocks (such as a Cloudflare challenge) can't be
 // checked automatically. They're listed in the run summary, but don't count as broken.
