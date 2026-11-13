@@ -114,6 +114,8 @@ Each issue holds a hidden marker with the government's name, which is how the ch
 
 A link counts as broken if it still fails when checked a second time. Some sites, such as those behind a Cloudflare challenge, refuse automated checks. Those links are listed in the run's summary as not checked, and don't count as broken.
 
+A `Notices list URL` or `Sample posting URL` also counts as broken if it now goes to a sign-in page, which usually means the posting has closed, such as on sites that put closed postings behind a sign-in. The check catches this when the link redirects to a sign-in page, and when the last Lighthouse scan of the page ended on one, since some sites only redirect after a script runs in the browser. Lighthouse scans happen once a week, so a stale sample posting can take up to a week longer to show up. The issue for that government suggests replacing the link with a current posting.
+
 To check the links yourself, install Node.js 22 or later and run `node scripts/check-links.js` from the repository folder.
 
 ### Automatic checks

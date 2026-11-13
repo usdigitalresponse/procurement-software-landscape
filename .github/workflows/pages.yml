@@ -147,9 +147,18 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
+      # The scores record the page each scan ended on, which catches sample postings that
+      # now go to a sign-in page only after a script runs.
+      - name: Restore cached Lighthouse scores
+        uses: actions/cache/restore@v6
+        with:
+          path: ${{ runner.temp }}/${{ env.SCORES_DIR }}
+          key: lighthouse-scores-${{ github.run_id }}
+          restore-keys: lighthouse-scores-
       - name: Check every link in the data file
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SCORES_FILE: ${{ runner.temp }}/${{ env.SCORES_DIR }}/scores.json
         run: node scripts/check-links.js
 
   deploy:
