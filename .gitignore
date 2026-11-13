@@ -6,3 +6,7 @@
 
 .DS_Store
 scratch.*
+
+# Written by scripts/export-data.js when the site is built.
+/data.json
+/data.csv
