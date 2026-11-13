@@ -713,7 +713,7 @@
     'Notices list URL': 'https://www.bidbuy.illinois.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://www.bidbuy.illinois.gov/bso/external/bidDetail.sda?docId=26-551HDA-FINAN-B-53072&external=true&parentUrl=close'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -800,8 +800,8 @@
     'Public site URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=DASIowa'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'Postings need a JAGGAER supplier login, so contact names and emails appear only on the notices list, not on a public posting page. Documents are available without registration, but they are hard to find: the "View as PDF" link for each event on the notices list includes the RFP''s attachments (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1284,8 +1284,8 @@
     'Public site URL': 'https://spb.mt.gov/eMACS-Resources'
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfMontana'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'Postings need a JAGGAER supplier login, so contact names and emails appear only on the notices list, not on a public posting page. Documents are available without registration, but they are hard to find: the "View as PDF" link for each event on the notices list includes the RFP''s attachments (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1296,7 +1296,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': No
     'Individual posting page': No
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
@@ -1312,13 +1312,13 @@
     N5: 4
     P1: 0
     P2: 0
-    P3: 5
+    P3: 0
     P4: 0
     P5: 0
     P6: 5
     P7: 0
     P8: 0
-    Total: 29
+    Total: 24
 -
     Government: Nebraska
     Abbreviation: NE
@@ -1373,7 +1373,7 @@
     'Notices list URL': 'https://nevadaepro.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://nevadaepro.com/bso/external/bidDetail.sda?docId=41NHA-S3922&external=true&parentUrl=close'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1460,8 +1460,8 @@
     'Public site URL': 'https://www.njstart.gov/bso/'
     'Notices list URL': 'https://www.njstart.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://www.njstart.gov/bso/external/bidDetail.sda?docId=26DPP01212&external=true&parentUrl=close'
-    Note: ""
-    'Answers checked': ""
+    Note: 'Postings name a purchaser, but the only email given is the shared njstart@treas.nj.gov mailbox, so Contact name and email is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1637,7 +1637,7 @@
     'Notices list URL': 'https://public.ndbuys.nd.gov/page.aspx/en/rfp/request_browse_public'
     'Sample posting URL': 'https://public.ndbuys.nd.gov/page.aspx/en/bpm/process_manage_extranet/3545'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1812,8 +1812,8 @@
     'Public site URL': 'https://www.oregon.gov/das/orbuys/Pages/index.aspx'
     'Notices list URL': 'https://oregonbuys.gov/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://oregonbuys.gov/bso/external/bidDetail.sda?docId=S-R09145-00017514&external=true&parentUrl=close'
-    Note: ""
-    'Answers checked': ""
+    Note: 'Postings name a purchaser, but the Info Contact field is usually empty, and the purchaser''s email appeared on only some of the current postings checked, so Contact name and email is No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1824,7 +1824,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
@@ -1840,13 +1840,13 @@
     N5: 5
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 0
     P5: 0
     P6: 5
     P7: 5
     P8: 5
-    Total: 79
+    Total: 74
 -
     Government: Pennsylvania
     Abbreviation: PA
@@ -1943,9 +1943,9 @@
     Vendor: 'Proactis WebProcure'
     'Public site URL': 'https://ridop.ri.gov/ocean-state-procures-osp'
     'Notices list URL': 'https://ridop.ri.gov/vendors/bidding-opportunities'
-    'Sample posting URL': N/A
+    'Sample posting URL': 'https://webprocure.proactiscloud.com/wp-web-public/en/#/bidboard/bid/146282?customerid=46'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1954,11 +1954,11 @@
     'Lighthouse performance, notices list': 99
     'Lighthouse accessibility, notices list': 95
     'Lighthouse measured, notices list': ""
-    'Direct URL to an individual posting': No
+    'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
     'Contact name and email': Yes
     'Project summary': Yes
-    'Data export of posting': No
+    'Data export of posting': Print
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
@@ -1970,7 +1970,7 @@
     N3: 0
     N4: 5
     N5: 5
-    P1: 0
+    P1: 25
     P2: 5
     P3: 5
     P4: 5
@@ -1978,7 +1978,7 @@
     P6: 5
     P7: 0
     P8: 0
-    Total: 40
+    Total: 65
 -
     Government: 'South Carolina'
     Abbreviation: SC
@@ -2165,7 +2165,7 @@
     'Notices list URL': 'https://gvibuy.buyspeed.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://gvibuy.buyspeed.com/bso/external/bidDetail.sda?docId=BD-26-720-7201-646&external=true&parentUrl=close'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
