@@ -176,6 +176,8 @@ jobs:
   self-check:
     name: Lighthouse scan of this site
     needs: deploy
+    # Without this, a skipped scan job (no pages due) would skip this job too, like deploy.
+    if: ${{ !cancelled() && needs.deploy.result == 'success' }}
     runs-on: ubuntu-latest
     continue-on-error: true
     timeout-minutes: 20

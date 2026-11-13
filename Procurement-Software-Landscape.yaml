@@ -51,9 +51,9 @@
     Vendor: Ivalua
     'Public site URL': 'https://alabamabuys.gov/page.aspx/en/usr/login?ReturnUrl=%2fpage.aspx%2fen%2fbuy%2fhomepage'
     'Notices list URL': 'https://alabamabuys.gov/page.aspx/en/rfp/request_browse_public'
-    'Sample posting URL': 'https://alabamabuys.gov/page.aspx/en/bpm/process_manage_extranet/42646'
-    Note: ""
-    'Answers checked': ""
+    'Sample posting URL': 'https://alabamabuys.gov/page.aspx/en/bpm/process_manage_extranet/46007'
+    Note: 'Postings switch to a sign-in page when they close, so the sample posting URL has to be replaced after it closes (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -359,9 +359,9 @@
     Vendor: 'Proactis WebProcure'
     'Public site URL': 'https://portal.ct.gov/DAS/CTSource/CTSource'
     'Notices list URL': 'https://portal.ct.gov/das/ctsource/bidboard?language=en_US'
-    'Sample posting URL': N/A
+    'Sample posting URL': 'https://webprocure.proactiscloud.com/wp-web-public/en/#/bidboard/bid/145825?customerid=51'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -370,7 +370,7 @@
     'Lighthouse performance, notices list': 69
     'Lighthouse accessibility, notices list': 100
     'Lighthouse measured, notices list': ""
-    'Direct URL to an individual posting': No
+    'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
     'Contact name and email': Yes
     'Project summary': Yes
@@ -386,7 +386,7 @@
     N3: 0
     N4: 2
     N5: 5
-    P1: 0
+    P1: 25
     P2: 5
     P3: 5
     P4: 5
@@ -394,7 +394,7 @@
     P6: 5
     P7: 0
     P8: 0
-    Total: 42
+    Total: 67
 -
     Government: Delaware
     Abbreviation: DE
@@ -535,9 +535,9 @@
     Vendor: Jaggaer
     'Public site URL': 'https://app01.jaggaer.com/apps/Router/SupplierLogin?CustOrg=Georgia'
     'Notices list URL': 'https://ssl.doas.state.ga.us/gpr/'
-    'Sample posting URL': 'https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=SWC-eRFP-00023-2027&sourceSystemType=jag'
-    Note: ""
-    'Answers checked': ""
+    'Sample posting URL': 'https://ssl.doas.state.ga.us/gpr/eventDetails?eSourceNumber=41900-eRFP-001835-2027&sourceSystemType=jag'
+    Note: 'Documents are available without registration, but they are hard to find. A posting''s Documents section only links to its JAGGAER event, which asks for a supplier login. Instead, the "View as PDF" link for the event on the JAGGAER public bid list includes the RFP''s attachments (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -625,7 +625,7 @@
     'Notices list URL': 'https://hands.ehawaii.gov/hands/opportunities'
     'Sample posting URL': 'https://hiepro.ehawaii.gov/public-display-solicitation.html?rfid=26003293'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -669,7 +669,7 @@
     'Notices list URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/list/SourcingEvent.XiOpenForBid?navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&csk.SupplierGroup=LUMA'
     'Sample posting URL': 'https://sms-idaho-prd.tam.inforgov.com/fsm/SupplyManagementSupplier/form/SourcingEvent%5BByCompany%5D%28230,1301%29.XiSupplierPortalSummary?action=_open&navigation=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%29.OpenEventsNav&fromlist=SourcingEvent%5BByCompany%5D%28_niu_,_niu_%7CNotificationStatus%3D2%29.XiOpenForBid&csk.SupplierGroup=LUMA&sortOrderName=SourcingEvent.ByCompany&previousDisabled=true&fk=SourcingEvent%5BByCompany%5D%28190,1418%7CNotificationStatus%3D2%29&firstDisabled=true&hasPrevious=false&pageSize=10&hasNext=true&isAscending=true&lk=SourcingEvent%5BByCompany%5D%28270,1411%7CNotificationStatus%3D2%29&pk=SourcingEvent%5BByCompany%5D%28230,1301%7CNotificationStatus%3D2%29&selectedPanel=Lines'
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -888,8 +888,8 @@
     'Public site URL': 'https://vss.ky.gov/vssprod-ext/Advantage4'
     'Notices list URL': N/A
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'The notices list and postings open as tabs on the Vendor Self Service home page, with no address of their own. Attachments are on each posting''s Attachments tab, reached through Show All Tabs (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
@@ -1064,8 +1064,8 @@
     'Public site URL': 'https://www.commbuys.com/bso/'
     'Notices list URL': 'https://www.commbuys.com/bso/view/search/external/advancedSearchBid.xhtml?openBids=true'
     'Sample posting URL': 'https://www.commbuys.com/bso/external/bidDetail.sda?docId=BD-27-1026-DOE02-DOE01-130975'
-    Note: ""
-    'Answers checked': ""
+    Note: 'Postings have a summary field (Bulletin Desc) and a contact field, but they are not consistently filled out: of four current bids checked, one had a summary and only some named a contact with an email, so Project summary and Contact name and email are No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1076,7 +1076,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
@@ -1092,13 +1092,13 @@
     N5: 5
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 0
     P5: 0
     P6: 5
     P7: 5
     P8: 5
-    Total: 79
+    Total: 74
 -
     Government: Michigan
     Abbreviation: MI
@@ -1240,8 +1240,8 @@
     'Public site URL': 'https://missouribuys.mo.gov/'
     'Notices list URL': 'https://ewqg.fa.us8.oraclecloud.com/fscmUI/redwood/negotiation-abstracts/view/abstractlisting?prcBuId=300000005255687'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'Each solicitation''s abstract page is public, with the buyer''s email and attachments, but its address has no ID, so it can''t be linked to directly (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1504,8 +1504,8 @@
     'Public site URL': 'https://www.generalservices.state.nm.us/state-purchasing/online-procurement/'
     'Notices list URL': 'https://bids.sciquest.com/apps/Router/PublicEvent?CustomerOrg=StateOfNewMexico&tab=PHX_NAV_SourcingOpenForBid&tmstmp=1467214109161'
     'Sample posting URL': N/A
-    Note: 'Transitioning to Euna (Bonfire) in early 2027, replacing eProNM. Re-check the notices list URL, sample posting URL and scores after the transition. New portal: https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities'
-    'Answers checked': ""
+    Note: 'Transitioning to Euna (Bonfire) in early 2027, replacing eProNM. Re-check the notices list URL, sample posting URL and scores after the transition. New portal: https://generalservices-state-nm-us.bonfirehub.com/portal/?tab=openOpportunities Postings need a JAGGAER supplier login, so contact names and emails appear only on the notices list, not on a public posting page. Documents are available without registration, but they are hard to find: the "View as PDF" link for each event on the notices list includes the RFP''s attachments (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1516,7 +1516,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': No
     'Individual posting page': No
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
@@ -1532,13 +1532,13 @@
     N5: 5
     P1: 0
     P2: 0
-    P3: 5
+    P3: 0
     P4: 0
     P5: 0
     P6: 5
     P7: 0
     P8: 0
-    Total: 30
+    Total: 25
 -
     Government: 'New York'
     Abbreviation: NY
@@ -1723,9 +1723,9 @@
     Vendor: Ivalua
     'Public site URL': 'https://procure.ohio.gov/state-and-local-agencies/resources/ohiobuys-overview'
     'Notices list URL': 'https://ohiobuys.ohio.gov/page.aspx/en/rfp/request_browse_public'
-    'Sample posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/56086'
-    Note: ""
-    'Answers checked': ""
+    'Sample posting URL': 'https://ohiobuys.ohio.gov/page.aspx/en/bpm/process_manage_extranet/59438'
+    Note: 'Postings switch to a sign-in page when they close, so the sample posting URL has to be replaced after it closes (checked November 2026). The current postings checked did not show a state contact with both a name and an email.'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1736,7 +1736,7 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
+    'Contact name and email': No
     'Project summary': Yes
     'Data export of posting': No
     'Documents without registration': Yes
@@ -1752,13 +1752,13 @@
     N5: 5
     P1: 25
     P2: 5
-    P3: 5
+    P3: 0
     P4: 5
     P5: 0
     P6: 5
     P7: 2
     P8: 5
-    Total: 69
+    Total: 64
 -
     Government: Oklahoma
     Abbreviation: OK
@@ -2077,7 +2077,7 @@
     'Notices list URL': 'https://www.tn.gov/content/tn/generalservices/procurement/central-procurement-office--cpo-/supplier-information/request-for-proposals--rfp--opportunities1.html'
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2338,14 +2338,14 @@
     'System type': Custom
     Vendor: 'Government owned'
     'Public site URL': 'https://pr-webs-vendor.des.wa.gov/'
-    'Notices list URL': N/A
+    'Notices list URL': 'https://pr-webs-vendor.des.wa.gov/BidCalendar.aspx'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'The notices list is public and includes local governments, such as school districts, a county library system, public utility districts and a fire district. Each posting''s page asks for a WEBS login, and the list shows contact names without emails (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
-    'Notices list has a direct URL': No
-    'Includes local listings': No
+    'Notices list has a direct URL': Yes
+    'Includes local listings': Yes
     'Data export of notices list': No
     'Lighthouse performance, notices list': 0
     'Lighthouse accessibility, notices list': 0
@@ -2361,8 +2361,8 @@
     'Lighthouse measured, posting page': ""
     G1: 0
     G2: 0
-    N1: 0
-    N2: 0
+    N1: 10
+    N2: 5
     N3: 0
     N4: 0
     N5: 0
@@ -2374,7 +2374,7 @@
     P6: 0
     P7: 0
     P8: 0
-    Total: 0
+    Total: 15
 -
     Government: 'West Virginia'
     Abbreviation: WV
@@ -2473,7 +2473,7 @@
     'Notices list URL': 'https://www.publicpurchase.com/gems/wyominggsd,wy/buyer/public/publicInfo'
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
