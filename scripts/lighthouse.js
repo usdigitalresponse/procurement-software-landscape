@@ -17,9 +17,10 @@
 //   node scripts/lighthouse.js merge <scores.json> <results.json>...
 //       Add scan results to the scores file.
 //   node scripts/lighthouse.js apply <scores.json>
-//       Replace the Lighthouse scores in the data file with the stored scores, and
-//       recompute the Lighthouse points and totals. Pages without a stored score keep
-//       the score already in the data file, such as one from an earlier manual test.
+//       Replace the Lighthouse scores and the dates they were measured in the data file
+//       with the stored ones, and recompute the Lighthouse points and totals. Pages
+//       without a stored score keep the score and date already in the data file, such
+//       as a score from an earlier manual test.
 
 const fs = require("fs");
 const path = require("path");
@@ -30,15 +31,17 @@ const { lighthousePoints } = require("./check-data.js");
 const ROOT = path.join(__dirname, "..");
 const DATA_FILE = path.join(ROOT, "Procurement-Software-Landscape.yaml");
 
-// Each page's URL field, its two score fields, and their points fields. Points are 0
-// unless the page has a direct URL.
+// Each page's URL field, its two score fields and their points fields, and the field
+// for the date its scores were measured. Points are 0 unless the page has a direct URL.
 const PAGES = [
   { url: "Notices list URL", direct: "Notices list has a direct URL",
     performance: ["Lighthouse performance, notices list", "N4"],
-    accessibility: ["Lighthouse accessibility, notices list", "N5"] },
+    accessibility: ["Lighthouse accessibility, notices list", "N5"],
+    measured: "Lighthouse measured, notices list" },
   { url: "Sample posting URL", direct: "Direct URL to an individual posting",
     performance: ["Lighthouse performance, posting page", "P7"],
-    accessibility: ["Lighthouse accessibility, posting page", "P8"] },
+    accessibility: ["Lighthouse accessibility, posting page", "P8"],
+    measured: "Lighthouse measured, posting page" },
 ];
 const POINTS_FIELDS = ["G1", "G2", "N1", "N2", "N3", "N4", "N5", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"];
 
@@ -182,6 +185,11 @@ function apply(scoresFile) {
         u[field] = score;
         u[key] = r[p.direct] === "Yes" ? lighthousePoints(score) : 0;
       }
+      // The date (UTC) of the scan that produced the stored scores. A page that has never
+      // been scanned keeps the data file's date, which is usually "".
+      u[p.measured] = Number.isInteger(stored.performance) && stored.measured
+        ? String(stored.measured).slice(0, 10)
+        : String(r[p.measured] ?? "");
     }
     u.Total = POINTS_FIELDS.reduce((sum, k) => sum + (k in u ? u[k] : r[k]), 0);
     return u;
@@ -195,7 +203,10 @@ function apply(scoresFile) {
     if (!m || record < 0) return line;
     const field = m[3] ?? m[2];
     if (!(field in updates[record])) return line;
-    return `${m[1]}${m[2]}:${m[4] || " "}${updates[record][field]}`;
+    const value = updates[record][field];
+    // Quote text, so a date stays text instead of being read back as a timestamp.
+    const written = typeof value === "string" ? `'${value.replace(/'/g, "''")}'` : value;
+    return `${m[1]}${m[2]}:${m[4] || " "}${written}`;
   });
   const out = lines.join("\n");
 
