@@ -9,9 +9,12 @@
 // is used for the links in data.json. The files are written to the repository folder,
 // and aren't committed (see .gitignore).
 //
-// Both files use the data file's own field names, explained in the README, plus Rank.
-// Benchmark sites, such as the United Kingdom, are included with "Benchmark" set to true
-// and no rank, so they're easy to leave out.
+// Both files use the data file's own field names, explained in the README, plus Rank,
+// and the points (G1 to P8) and Total, worked out from the answers by
+// assets/js/scoring.js. Benchmark sites, such as the United Kingdom, are included with
+// "Benchmark" set to true and no rank, so they're easy to leave out.
+
+const { scoreRecord } = require("../assets/js/scoring.js");
 
 const DEFAULT_SITE = "https://usdigitalresponse.github.io/procurement-software-landscape/";
 
@@ -34,6 +37,8 @@ function columns(data) {
 
 function exportData(data, criteria, siteUrl = DEFAULT_SITE, now = new Date()) {
   const site = siteUrl.endsWith("/") ? siteUrl : siteUrl + "/";
+  // The points come after the record's other fields, in metric order.
+  data = data.map(r => ({ ...r, ...scoreRecord(r, criteria) }));
   const rank = ranks(data);
   const cols = columns(data);
   const records = data.map(r => Object.fromEntries(cols.map(c =>

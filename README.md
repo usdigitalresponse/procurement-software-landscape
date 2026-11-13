@@ -12,7 +12,8 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 
 | File | Purpose |
 |---|---|
-| [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per government, with links, answers to each metric, and points. |
+| [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml) | The data: one record per government, with links and answers to each metric. The points are worked out from the answers. |
+| `assets/js/scoring.js` | The scoring rules, which turn a record's answers into points. The landscape page and the scripts both use it. |
 | [`Scoring-Metrics.md`](./Scoring-Metrics.md) | The scoring methodology, published as the site's Scoring metrics page. |
 | [`index.html`](./index.html) | The landscape page, with the map and the list of sites. It reads `Procurement-Software-Landscape.yaml` in the browser. |
 | `_layouts/default.html` | The page layout GitHub Pages uses for `Scoring-Metrics.md`. |
@@ -37,7 +38,9 @@ Edit `Procurement-Software-Landscape.yaml` directly. Each record has these kinds
 - **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
 - **Links:** `Public site URL`, `Notices list URL`, and `Sample posting URL`. Use `N/A` when there is none.
 - **Answers:** one field per metric, named for the metric, such as `Contact name and email: Yes`, or a Lighthouse score from 0 to 100. Lighthouse scores are collected automatically when the site is built; see [Lighthouse scores](#lighthouse-scores).
-- **Points:** one field per metric, `G1` through `P8`, plus `Total`.
+### Points
+
+The data file has no points fields. The points are worked out from the answers by `assets/js/scoring.js`: by the landscape page when it loads, and by the build, which writes them into the published copy of the data file, `data.json`, and `data.csv`. Each record there has one points field per metric, `G1` through `P8`, plus `Total`.
 
 Each points field is named for its section and its order within that section: `G` for General, `N` for the notices list, and `P` for the individual posting. The table lists each points field with its matching answer field.
 
@@ -59,12 +62,14 @@ Each points field is named for its section and its order within that section: `G
 | `P7` | `Lighthouse performance, posting page` | 5 |
 | `P8` | `Lighthouse accessibility, posting page` | 5 |
 
-When you change a record, keep these consistent:
+The rules:
 
 - A "Yes" answer earns the metric's full points; anything else earns 0.
 - Lighthouse points use these bands: 90 or more = 5, 80–89 = 4, 70–79 = 3, 60–69 = 2, 50–59 = 1, below 50 = 0.
 - Lighthouse points for the notices list or posting page are 0 unless that page has a direct URL.
-- `Total` must equal the sum of the 15 points fields.
+- `Total` is the sum of the 15 points fields.
+
+To change a rule, change `assets/js/scoring.js` and the matching definition in `Scoring-Metrics.md`. To change a metric's maximum points, change its `max` in the `CRITERIA` list in `index.html`.
 
 If you rename a heading in `Scoring-Metrics.md`, update the matching `anchor` value in the `CRITERIA` list in `index.html`, because the landscape page links each metric to its heading.
 
@@ -85,7 +90,7 @@ When you add a government, give it an `Abbreviation` and add a position for it t
 
 ### Lighthouse scores
 
-The four Lighthouse scores, and their points (`N4`, `N5`, `P7` and `P8`), `Total`, and the two `Lighthouse measured` dates, are not taken from the data file. When the site is built, `scripts/lighthouse.js` runs [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) on each `Notices list URL` and `Sample posting URL` and writes the new scores, points, totals, and the date (UTC) each page's scores were measured into the published copy of the data file. The copy in this repository is not changed, so its Lighthouse scores, points, totals and dates may not match the site. In a new record, enter 0 for each Lighthouse score and its points, and a `Total` to match, so that the record passes the [automatic checks](#automatic-checks).
+The four Lighthouse scores and the two `Lighthouse measured` dates are not taken from the data file. When the site is built, `scripts/lighthouse.js` runs [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) on each `Notices list URL` and `Sample posting URL` and writes the new scores, and the date (UTC) each page's scores were measured, into the published copy of the data file, along with every record's points and `Total`. The copy in this repository is not changed, so its Lighthouse scores and dates may not match the site. In a new record, enter 0 for each Lighthouse score.
 
 - Each page is scanned three times with Lighthouse's desktop settings, and the median score is kept.
 - Each page is scanned at most once per calendar week (Monday to Sunday, UTC). Builds in between reuse the stored scores. A page whose URL changes is scanned at the next build.
@@ -120,13 +125,13 @@ To check the links yourself, install Node.js 22 or later and run `node scripts/c
 
 ### Automatic checks
 
-Whenever a change to the data file, `index.html`, `Scoring-Metrics.md`, or the correction form is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
+Whenever a change to the data file, `index.html`, the scoring rules in `assets/js/scoring.js`, `Scoring-Metrics.md`, or the correction form is pushed to `main` or opened as a pull request, GitHub runs `scripts/check-data.js`. It runs again on the published copy of the data file each time the site is built, after the Lighthouse scores are added, and a failed check stops the site from being published. It checks that:
 
 - every record has all of the fields above, with no misspelled or extra fields, no government appears twice, and each abbreviation is two capital letters used only once;
 - each link is a full `http://` or `https://` address, or `N/A`;
 - each date is a real date in quotes, like `'2026-11-12'`, and not in the future, or `""`;
 - each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
-- each points field matches its answer, using the rules above, and `Total` equals their sum;
+- the records have no points fields, or, in the published copy, each points field and `Total` match what the answers earn;
 - each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`;
 - every government except a benchmark has a position on the map, in the `MAP_HEX` list in `index.html`;
 - every metric is an option in the correction form, `.github/ISSUE_TEMPLATE/correction.yml`.

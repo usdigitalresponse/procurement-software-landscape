@@ -42,9 +42,9 @@ Then update the record as described in [Updating a record](#updating-a-record), 
 
 The data is in [`Procurement-Software-Landscape.yaml`](./Procurement-Software-Landscape.yaml), one record per government. The [README](./README.md#updating-the-data) explains every field and the scoring rules. In short:
 
-- A `Yes` answer earns the metric's full points, and anything else earns 0. Update the points field (`G1` to `P8`) to match each answer you change, and update `Total` to their sum.
+- Change only the answers. The points and totals are worked out from them, so there are no points fields to update.
 - Set `Answers checked` to the date you checked, in quotes, like `'2026-11-12'`.
-- Don't edit the Lighthouse scores, their points, or the `Lighthouse measured` dates by hand. They're replaced each time the site is built. The exception is a new record: give each Lighthouse score and its points 0, and each `Lighthouse measured` date `""`.
+- Don't edit the Lighthouse scores or the `Lighthouse measured` dates by hand. They're replaced each time the site is built. The exception is a new record: give each Lighthouse score 0, and each `Lighthouse measured` date `""`.
 - When you add a government, give it an `Abbreviation` and a position on the map in the `MAP_HEX` list in `index.html`.
 
 To make the change, either edit the file on GitHub, which creates a fork and a pull request for you, or work on a branch on your own computer.

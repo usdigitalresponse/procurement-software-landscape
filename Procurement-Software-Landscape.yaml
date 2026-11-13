@@ -27,22 +27,6 @@
     'Lighthouse performance, posting page': 85
     'Lighthouse accessibility, posting page': 100
     'Lighthouse measured, posting page': ""
-    G1: 5
-    G2: 5
-    N1: 10
-    N2: 5
-    N3: 5
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 5
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 94
 -
     Government: Alabama
     Abbreviation: AL
@@ -71,22 +55,6 @@
     'Lighthouse performance, posting page': 75
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 4
-    N5: 4
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 3
-    P8: 5
-    Total: 66
 -
     Government: Alaska
     Abbreviation: AK
@@ -115,22 +83,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 15
 -
     Government: 'American Samoa'
     Abbreviation: AS
@@ -159,22 +111,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 5
 -
     Government: Arizona
     Abbreviation: AZ
@@ -203,22 +139,6 @@
     'Lighthouse performance, posting page': 80
     'Lighthouse accessibility, posting page': 85
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 4
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 4
-    Total: 77
 -
     Government: Arkansas
     Abbreviation: AR
@@ -247,22 +167,6 @@
     'Lighthouse performance, posting page': 43
     'Lighthouse accessibility, posting page': 92
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 4
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 5
-    Total: 69
 -
     Government: California
     Abbreviation: CA
@@ -291,22 +195,6 @@
     'Lighthouse performance, posting page': 70
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 2
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 3
-    P8: 5
-    Total: 75
 -
     Government: Colorado
     Abbreviation: CO
@@ -335,22 +223,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 15
 -
     Government: Connecticut
     Abbreviation: CT
@@ -379,22 +251,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 2
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 67
 -
     Government: Delaware
     Abbreviation: DE
@@ -423,22 +279,6 @@
     'Lighthouse performance, posting page': 80
     'Lighthouse accessibility, posting page': 100
     'Lighthouse measured, posting page': ""
-    G1: 5
-    G2: 5
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 4
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 73
 -
     Government: 'District of Columbia'
     Abbreviation: DC
@@ -467,22 +307,6 @@
     'Lighthouse performance, posting page': 67
     'Lighthouse accessibility, posting page': 100
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 2
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 2
-    P8: 5
-    Total: 69
 -
     Government: Florida
     Abbreviation: FL
@@ -511,22 +335,6 @@
     'Lighthouse performance, posting page': 69
     'Lighthouse accessibility, posting page': 100
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 3
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 2
-    P8: 5
-    Total: 70
 -
     Government: Georgia
     Abbreviation: GA
@@ -555,22 +363,6 @@
     'Lighthouse performance, posting page': 88
     'Lighthouse accessibility, posting page': 95
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 79
 -
     Government: Guam
     Abbreviation: GU
@@ -599,22 +391,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 3
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 23
 -
     Government: Hawaii
     Abbreviation: HI
@@ -643,22 +419,6 @@
     'Lighthouse performance, posting page': 83
     'Lighthouse accessibility, posting page': 95
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 5
-    N4: 1
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 80
 -
     Government: Idaho
     Abbreviation: ID
@@ -687,22 +447,6 @@
     'Lighthouse performance, posting page': 69
     'Lighthouse accessibility, posting page': 93
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 2
-    P8: 5
-    Total: 57
 -
     Government: Illinois
     Abbreviation: IL
@@ -731,22 +475,6 @@
     'Lighthouse performance, posting page': 96
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 75
 -
     Government: Indiana
     Abbreviation: IN
@@ -775,22 +503,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 5
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 2
-    N5: 5
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 27
 -
     Government: Iowa
     Abbreviation: IA
@@ -819,22 +531,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 4
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 24
 -
     Government: Kansas
     Abbreviation: KS
@@ -863,22 +559,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 1
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 51
 -
     Government: Kentucky
     Abbreviation: KY
@@ -907,22 +587,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 15
 -
     Government: Louisiana
     Abbreviation: LA
@@ -951,22 +615,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 5
-    N5: 5
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 30
 -
     Government: Maine
     Abbreviation: ME
@@ -995,22 +643,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 15
 -
     Government: Maryland
     Abbreviation: MD
@@ -1039,22 +671,6 @@
     'Lighthouse performance, posting page': 67
     'Lighthouse accessibility, posting page': 97
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 2
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 2
-    P8: 5
-    Total: 74
 -
     Government: Massachusetts
     Abbreviation: MA
@@ -1083,22 +699,6 @@
     'Lighthouse performance, posting page': 95
     'Lighthouse accessibility, posting page': 98
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 5
-    N4: 4
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 74
 -
     Government: Michigan
     Abbreviation: MI
@@ -1127,22 +727,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 5
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 20
 -
     Government: Minnesota
     Abbreviation: MN
@@ -1171,22 +755,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 3
-    N5: 5
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 33
 -
     Government: Mississippi
     Abbreviation: MS
@@ -1215,22 +783,6 @@
     'Lighthouse performance, posting page': 74
     'Lighthouse accessibility, posting page': 74
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 3
-    N5: 4
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 3
-    P8: 3
-    Total: 68
 -
     Government: Missouri
     Abbreviation: MO
@@ -1259,22 +811,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 0
-    N5: 5
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 40
 -
     Government: Montana
     Abbreviation: MT
@@ -1303,22 +839,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 4
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 24
 -
     Government: Nebraska
     Abbreviation: NE
@@ -1347,22 +867,6 @@
     'Lighthouse performance, posting page': 95
     'Lighthouse accessibility, posting page': 98
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 75
 -
     Government: Nevada
     Abbreviation: NV
@@ -1391,22 +895,6 @@
     'Lighthouse performance, posting page': 95
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 75
 -
     Government: 'New Hampshire'
     Abbreviation: NH
@@ -1435,22 +923,6 @@
     'Lighthouse performance, posting page': 97
     'Lighthouse accessibility, posting page': 100
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 70
 -
     Government: 'New Jersey'
     Abbreviation: NJ
@@ -1479,22 +951,6 @@
     'Lighthouse performance, posting page': 89
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 4
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 68
 -
     Government: 'New Mexico'
     Abbreviation: NM
@@ -1523,22 +979,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 5
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 25
 -
     Government: 'New York'
     Abbreviation: NY
@@ -1567,22 +1007,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 5
-    N5: 4
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 0
-    P7: 0
-    P8: 0
-    Total: 24
 -
     Government: 'North Carolina'
     Abbreviation: NC
@@ -1611,22 +1035,6 @@
     'Lighthouse performance, posting page': 77
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 5
-    N4: 1
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 3
-    P8: 5
-    Total: 74
 -
     Government: 'North Dakota'
     Abbreviation: ND
@@ -1655,22 +1063,6 @@
     'Lighthouse performance, posting page': 72
     'Lighthouse accessibility, posting page': 97
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 1
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 3
-    P8: 5
-    Total: 69
 -
     Government: 'Northern Mariana Islands'
     Abbreviation: MP
@@ -1699,22 +1091,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 10
 -
     Government: Ohio
     Abbreviation: OH
@@ -1743,22 +1119,6 @@
     'Lighthouse performance, posting page': 65
     'Lighthouse accessibility, posting page': 100
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 2
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 2
-    P8: 5
-    Total: 64
 -
     Government: Oklahoma
     Abbreviation: OK
@@ -1787,22 +1147,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 2
-    N5: 5
-    P1: 0
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 32
 -
     Government: Oregon
     Abbreviation: OR
@@ -1831,22 +1175,6 @@
     'Lighthouse performance, posting page': 93
     'Lighthouse accessibility, posting page': 94
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 5
-    N4: 4
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 74
 -
     Government: Pennsylvania
     Abbreviation: PA
@@ -1875,22 +1203,6 @@
     'Lighthouse performance, posting page': 94
     'Lighthouse accessibility, posting page': 89
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 5
-    N5: 2
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 4
-    Total: 76
 -
     Government: 'Puerto Rico'
     Abbreviation: PR
@@ -1919,22 +1231,6 @@
     'Lighthouse performance, posting page': 85
     'Lighthouse accessibility, posting page': 96
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 3
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 67
 -
     Government: 'Rhode Island'
     Abbreviation: RI
@@ -1963,22 +1259,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 65
 -
     Government: 'South Carolina'
     Abbreviation: SC
@@ -2007,22 +1287,6 @@
     'Lighthouse performance, posting page': 48
     'Lighthouse accessibility, posting page': 93
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 3
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 5
-    Total: 58
 -
     Government: 'South Dakota'
     Abbreviation: SD
@@ -2051,22 +1315,6 @@
     'Lighthouse performance, posting page': 90
     'Lighthouse accessibility, posting page': 95
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 2
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 62
 -
     Government: Tennessee
     Abbreviation: TN
@@ -2095,22 +1343,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 3
-    N5: 5
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 23
 -
     Government: Texas
     Abbreviation: TX
@@ -2139,22 +1371,6 @@
     'Lighthouse performance, posting page': 86
     'Lighthouse accessibility, posting page': 92
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 4
-    N5: 3
-    P1: 25
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 4
-    P8: 5
-    Total: 71
 -
     Government: 'US Virgin Islands'
     Abbreviation: VI
@@ -2183,22 +1399,6 @@
     'Lighthouse performance, posting page': 97
     'Lighthouse accessibility, posting page': 98
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 5
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 70
 -
     Government: Utah
     Abbreviation: UT
@@ -2227,22 +1427,6 @@
     'Lighthouse performance, posting page': 100
     'Lighthouse accessibility, posting page': 93
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 3
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 5
-    P8: 5
-    Total: 73
 -
     Government: Vermont
     Abbreviation: VT
@@ -2271,22 +1455,6 @@
     'Lighthouse performance, posting page': 48
     'Lighthouse accessibility, posting page': 93
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 3
-    N5: 5
-    P1: 25
-    P2: 5
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 5
-    Total: 58
 -
     Government: Virginia
     Abbreviation: VA
@@ -2315,22 +1483,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 4
-    N5: 3
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 42
 -
     Government: Washington
     Abbreviation: WA
@@ -2359,22 +1511,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 5
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 0
-    P7: 0
-    P8: 0
-    Total: 15
 -
     Government: 'West Virginia'
     Abbreviation: WV
@@ -2403,22 +1539,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 0
-    N2: 0
-    N3: 0
-    N4: 0
-    N5: 0
-    P1: 0
-    P2: 5
-    P3: 5
-    P4: 0
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 15
 -
     Government: Wisconsin
     Abbreviation: WI
@@ -2447,22 +1567,6 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 5
-    N4: 2
-    N5: 5
-    P1: 0
-    P2: 5
-    P3: 0
-    P4: 5
-    P5: 0
-    P6: 5
-    P7: 0
-    P8: 0
-    Total: 37
 -
     Government: Wyoming
     Abbreviation: WY
@@ -2491,19 +1595,3 @@
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
     'Lighthouse measured, posting page': ""
-    G1: 0
-    G2: 0
-    N1: 10
-    N2: 0
-    N3: 0
-    N4: 5
-    N5: 0
-    P1: 0
-    P2: 0
-    P3: 0
-    P4: 0
-    P5: 0
-    P6: 0
-    P7: 0
-    P8: 0
-    Total: 15

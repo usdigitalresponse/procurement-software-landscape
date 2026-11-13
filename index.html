@@ -343,10 +343,13 @@
 </footer>
 
 <script src="assets/js/js-yaml.min.js"></script>
+<script src="assets/js/scoring.js"></script>
 <script>
 const DATA_URL = "Procurement-Software-Landscape.yaml";
 
-// Score fields in the YAML: G = General, N = Notices list, P = Individual posting.
+// The metrics. Each answer field in the YAML earns points, worked out by
+// assets/js/scoring.js under the points field name (key): G = General, N = Notices
+// list, P = Individual posting.
 const CRITERIA = [
   { group: "general", key: "G1", max: 5,  label: "Uses web design system", field: "Web design system in use", anchor: "web-design-system-in-use-5-pts" },
   { group: "general", key: "G2", max: 5,  label: "Published data standard", field: "Data standard is published", anchor: "data-standard-is-published-5-pts" },
@@ -388,7 +391,8 @@ const open = new Set();
 
 function normalize(r) {
   const vendor = r.Vendor || "";
-  const sum = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + num(r[c.key]), 0);
+  const points = scoring.scoreRecord(r, CRITERIA);
+  const sum = g => CRITERIA.filter(c => c.group === g).reduce((a, c) => a + points[c.key], 0);
   const notes = [r.Note].map(v => String(v ?? "").trim()).filter(Boolean);
   return {
     raw: r,
@@ -398,7 +402,8 @@ function normalize(r) {
     type: String(r["System type"] || "").trim(),
     vendor: String(vendor).trim(),
     benchmark: r.Benchmark === true,
-    total: num(r.Total),
+    points,
+    total: points.Total,
     generalScore: sum("general"),
     noticeScore: sum("notice"),
     postingScore: sum("posting"),
@@ -450,7 +455,7 @@ function detail(d) {
   const linkRow = (label, v) => `<dt>${label}</dt><dd>${isUrl(v) ? extLink(String(v).trim()) : esc(v || "N/A")}</dd>`;
   const section = g => {
     const items = CRITERIA.filter(c => c.group === g).map(c => {
-      const pts = num(r[c.key]);
+      const pts = d.points[c.key];
       return `<li><span>${critLink(c)}</span><span>${answerPill(r[c.field], pts, c.max)} <strong>${pts}</strong>/${c.max}</span></li>`;
     }).join("");
     return `<h3>${GROUPS[g]} <small>${d[g + "Score"]} / ${groupMax(g)} pts</small></h3><ul class="crit">${items}</ul>`;
@@ -478,7 +483,7 @@ function filtered() {
     (!q || [d.state, d.name, d.vendor, d.type].join(" ").toLowerCase().includes(q)) &&
     (!types.length || d.type.split(/,\s*/).some(t => types.includes(t))) &&
     (!vendors.length || d.vendor.split(/;\s*/).some(v => vendors.includes(v))) &&
-    metrics.every(({ c, yes }) => (num(d.raw[c.key]) >= c.max) === yes));
+    metrics.every(({ c, yes }) => (d.points[c.key] >= c.max) === yes));
 }
 
 const checkedValues = id => [...document.querySelectorAll(`#${id} input:checked`)].map(i => i.value);
@@ -605,7 +610,7 @@ function map() {
 
 // Fade the circles of governments that the current filters hide.
 let mapMetric = "total";  // key of what the map is colored by: "total" or a metric
-const LIGHTHOUSE = new Set(["N4", "N5", "P7", "P8"]);
+const LIGHTHOUSE = new Set(Object.keys(scoring.LIGHTHOUSE_NEEDS));
 const MAP_CLASSES = ["yes", "part", "no", "na"];
 // The total score, colored with the same bands as the list's score bars.
 const MAP_TOTAL = { key: "total", label: "Total score" };
@@ -698,7 +703,7 @@ function toCsv() {
     "Answers checked", ...LIGHTHOUSE_PAGES.map(p => p.measured), "Notes"];
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const lines = filtered().map(d => [d.rank, d.state, d.abbr, d.name, d.type, d.vendor, d.raw["Public site URL"], d.raw["Notices list URL"], d.raw["Sample posting URL"],
-    ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total,
+    ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.points[c.key]), d.total,
     d.raw["Answers checked"], ...LIGHTHOUSE_PAGES.map(p => d.raw[p.measured]), d.notes.join("; ")].map(q).join(","));
   const blob = new Blob([[cols.map(q).join(","), ...lines].join("\r\n")], { type: "text/csv" });
   const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "procurement-software-landscape.csv" });

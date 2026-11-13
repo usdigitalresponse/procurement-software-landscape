@@ -19,9 +19,10 @@
 //       Add scan results to the scores file.
 //   node scripts/lighthouse.js apply <scores.json>
 //       Replace the Lighthouse scores and the dates they were measured in the data file
-//       with the stored ones, and recompute the Lighthouse points and totals. Pages
-//       without a stored score keep the score and date already in the data file, such
-//       as a score from an earlier manual test.
+//       with the stored ones, then write in every record's points (G1 to P8) and Total,
+//       worked out from its answers by assets/js/scoring.js. Pages without a stored
+//       score keep the score and date already in the data file, such as a score from an
+//       earlier manual test.
 //   node scripts/lighthouse.js report <results.json>
 //       Report the results of scanning the landscape's own pages, and warn about any
 //       score below 90. The workflow runs this after each publish.
@@ -30,24 +31,24 @@ const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
 const yaml = require("../assets/js/js-yaml.min.js");
-const { lighthousePoints } = require("./check-data.js");
+const { scoreRecord } = require("../assets/js/scoring.js");
+const { readCriteria } = require("./check-data.js");
 
 const ROOT = path.join(__dirname, "..");
 const DATA_FILE = path.join(ROOT, "Procurement-Software-Landscape.yaml");
 
-// Each page's URL field, its two score fields and their points fields, and the field
-// for the date its scores were measured. Points are 0 unless the page has a direct URL.
+// Each page's URL field, its two score fields, and the field for the date its scores
+// were measured.
 const PAGES = [
-  { url: "Notices list URL", direct: "Notices list has a direct URL",
-    performance: ["Lighthouse performance, notices list", "N4"],
-    accessibility: ["Lighthouse accessibility, notices list", "N5"],
+  { url: "Notices list URL",
+    performance: "Lighthouse performance, notices list",
+    accessibility: "Lighthouse accessibility, notices list",
     measured: "Lighthouse measured, notices list" },
-  { url: "Sample posting URL", direct: "Direct URL to an individual posting",
-    performance: ["Lighthouse performance, posting page", "P7"],
-    accessibility: ["Lighthouse accessibility, posting page", "P8"],
+  { url: "Sample posting URL",
+    performance: "Lighthouse performance, posting page",
+    accessibility: "Lighthouse accessibility, posting page",
     measured: "Lighthouse measured, posting page" },
 ];
-const POINTS_FIELDS = ["G1", "G2", "N1", "N2", "N3", "N4", "N5", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"];
 
 const RUNS_PER_PAGE = 3;        // the median of these runs is kept
 const RUN_TIMEOUT_MS = 180000;  // give up on a single run after 3 minutes
@@ -178,10 +179,12 @@ function merge(scoresFile, resultsFiles) {
   console.log(`Merged ${ok} new scores and ${failed} failed scans into ${scoresFile}.`);
 }
 
-// Rewrites only the score and points lines of each record, so the rest of the file,
-// including its formatting, stays as it is.
+// Rewrites only the score and date lines of each record, and adds its points lines at
+// the end of the record, so the rest of the file, including its formatting, stays as
+// it is. A points line that's already there is rewritten in place.
 function apply(scoresFile) {
   const { pages } = loadScores(scoresFile);
+  const criteria = readCriteria(fs.readFileSync(path.join(ROOT, "index.html"), "utf8"));
   const text = fs.readFileSync(DATA_FILE, "utf8");
   const data = yaml.load(text);
 
@@ -190,11 +193,8 @@ function apply(scoresFile) {
     for (const p of PAGES) {
       const stored = pages[String(r[p.url] ?? "").trim()] || {};
       for (const kind of ["performance", "accessibility"]) {
-        const [field, key] = p[kind];
         // A page that has never been scanned keeps the data file's score.
-        const score = Number.isInteger(stored[kind]) ? stored[kind] : Number.isInteger(r[field]) ? r[field] : 0;
-        u[field] = score;
-        u[key] = r[p.direct] === "Yes" ? lighthousePoints(score) : 0;
+        u[p[kind]] = Number.isInteger(stored[kind]) ? stored[kind] : Number.isInteger(r[p[kind]]) ? r[p[kind]] : 0;
       }
       // The date (UTC) of the scan that produced the stored scores. A page that has never
       // been scanned keeps the data file's date, which is usually "".
@@ -202,27 +202,38 @@ function apply(scoresFile) {
         ? String(stored.measured).slice(0, 10)
         : String(r[p.measured] ?? "");
     }
-    u.Total = POINTS_FIELDS.reduce((sum, k) => sum + (k in u ? u[k] : r[k]), 0);
-    return u;
+    return { ...u, ...scoreRecord({ ...r, ...u }, criteria) };
   });
 
-  // Records start with a line that is just "-"; fields are indented beneath it.
-  let record = -1;
-  const lines = text.split("\n").map(line => {
-    if (/^-\s*$/.test(line)) { record++; return line; }
+  // Quote text, so a date stays text instead of being read back as a timestamp.
+  const yamlValue = value => typeof value === "string" ? `'${value.replace(/'/g, "''")}'` : value;
+  // Records start with a line that is just "-"; fields are indented beneath it. Each
+  // record's points lines that aren't in the file yet go after its last field.
+  const out = [];
+  let record = -1, indent = "    ", written = new Set();
+  const finishRecord = () => {
+    if (record < 0) return;
+    for (const [field, value] of Object.entries(updates[record])) {
+      if (!written.has(field)) out.push(`${indent}${field}: ${yamlValue(value)}`);
+    }
+  };
+  const lines = text.split("\n");
+  const end = lines.length && lines[lines.length - 1] === "" ? lines.length - 1 : lines.length;
+  lines.slice(0, end).forEach(line => {
+    if (/^-\s*$/.test(line)) { finishRecord(); record++; written = new Set(); out.push(line); return; }
     const m = line.match(/^(\s+)('([^']*)'|[^:'\s][^:]*):(\s*)(.*)$/);
-    if (!m || record < 0) return line;
+    if (!m || record < 0) { out.push(line); return; }
+    indent = m[1];
     const field = m[3] ?? m[2];
-    if (!(field in updates[record])) return line;
-    const value = updates[record][field];
-    // Quote text, so a date stays text instead of being read back as a timestamp.
-    const written = typeof value === "string" ? `'${value.replace(/'/g, "''")}'` : value;
-    return `${m[1]}${m[2]}:${m[4] || " "}${written}`;
+    if (!(field in updates[record])) { out.push(line); return; }
+    written.add(field);
+    out.push(`${m[1]}${m[2]}:${m[4] || " "}${yamlValue(updates[record][field])}`);
   });
-  const out = lines.join("\n");
+  finishRecord();
+  const outText = out.join("\n") + (end < lines.length ? "\n" : "");
 
   // Make sure every update landed and nothing else changed.
-  const check = yaml.load(out);
+  const check = yaml.load(outText);
   check.forEach((r, i) => {
     for (const [f, v] of Object.entries(updates[i])) {
       if (r[f] !== v) throw new Error(`${r.Government}: could not set "${f}" to ${v}.`);
@@ -232,7 +243,7 @@ function apply(scoresFile) {
     }
   });
 
-  fs.writeFileSync(DATA_FILE, out);
+  fs.writeFileSync(DATA_FILE, outText);
   const scored = new Set(Object.entries(pages).filter(([, p]) => Number.isInteger(p.performance)).map(([u]) => u));
   const missing = dataUrls().filter(u => !scored.has(u));
   console.log(`Wrote Lighthouse scores for ${data.length} records.`);

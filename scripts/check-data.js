@@ -1,7 +1,14 @@
-// Checks Procurement-Software-Landscape.yaml against the scoring rules in the README.
+// Checks Procurement-Software-Landscape.yaml against the rules in the README.
 // Run from the repository folder with: node scripts/check-data.js
 // The metric list (fields, points fields, maximums and heading anchors) is read from
 // the CRITERIA list in index.html, so the site and this check always agree.
+//
+// The data file holds only the answers. The points are worked out from them, by
+// assets/js/scoring.js, when the site is built and when the page loads. The published
+// copy of the data file has the points written in, so when a record has points fields,
+// this checks that they match its answers.
+
+const { LIGHTHOUSE_NEEDS, scoreRecord } = require("../assets/js/scoring.js");
 
 const ANSWERS = ["Yes", "No", "N/A", "Print"];
 const TEXT_FIELDS = ["Government", "Abbreviation", "System name", "System type", "Vendor"];
@@ -9,8 +16,6 @@ const URL_FIELDS = ["Public site URL", "Notices list URL", "Sample posting URL"]
 // Dates, as 'YYYY-MM-DD' or "" when not recorded. "Answers checked" is entered by hand;
 // the Lighthouse dates are written when the site is built.
 const DATE_FIELDS = ["Answers checked", "Lighthouse measured, notices list", "Lighthouse measured, posting page"];
-// Lighthouse points depend on the page having a direct URL.
-const LIGHTHOUSE_NEEDS = { N4: "N1", N5: "N1", P7: "P1", P8: "P1" };
 // When a page has a direct URL, the record should include it. This is only a warning,
 // because a link can be missing for a while, such as when a government changes systems.
 const DIRECT_URL_LINKS = { N1: "Notices list URL", P1: "Sample posting URL" };
@@ -35,15 +40,6 @@ function readMapTiles(indexHtml) {
 
 // The heading IDs GitHub Pages gives Scoring-Metrics.md headings.
 const slug = s => s.trim().toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/ /g, "-");
-
-function lighthousePoints(score) {
-  if (score >= 90) return 5;
-  if (score >= 80) return 4;
-  if (score >= 70) return 3;
-  if (score >= 60) return 2;
-  if (score >= 50) return 1;
-  return 0;
-}
 
 // What's wrong with a date field's value, or null if nothing is. Dates must be quoted,
 // because YAML reads an unquoted 2026-11-12 as a timestamp rather than text.
@@ -114,30 +110,21 @@ function check(data, criteria, metricsMd, mapTiles) {
     }
     if ("Benchmark" in r && r.Benchmark !== true) err(`"Benchmark" should be true, or left out.`);
 
-    let sum = 0;
+    let answersOk = true;
     for (const c of criteria) {
       const answer = r[c.field];
-      const points = r[c.key];
-      if (!(c.field in r)) { err(`"${c.field}" is missing.`); }
-      if (!(c.key in r)) { err(`${c.key} is missing.`); continue; }
-      if (!Number.isInteger(points) || points < 0 || points > c.max) { err(`${c.key} is ${JSON.stringify(points)}; it should be a whole number from 0 to ${c.max}.`); continue; }
-      sum += points;
-      if (!(c.field in r)) continue;
+      if (!(c.field in r)) { err(`"${c.field}" is missing.`); answersOk = false; }
+      else if (isLighthouse(c)) {
+        if (!Number.isInteger(answer) || answer < 0 || answer > 100) { err(`"${c.field}" is ${JSON.stringify(answer)}; it should be a whole number from 0 to 100.`); answersOk = false; }
+      } else if (!ANSWERS.includes(answer)) { err(`"${c.field}" is ${JSON.stringify(answer)}; it should be one of ${ANSWERS.join(", ")}.`); answersOk = false; }
+    }
 
-      let expected;
-      if (isLighthouse(c)) {
-        if (!Number.isInteger(answer) || answer < 0 || answer > 100) { err(`"${c.field}" is ${JSON.stringify(answer)}; it should be a whole number from 0 to 100.`); continue; }
-        const direct = criteria.find(d => d.key === LIGHTHOUSE_NEEDS[c.key]);
-        expected = r[direct.field] === "Yes" ? lighthousePoints(answer) : 0;
-        if (points !== expected) {
-          err(r[direct.field] === "Yes"
-            ? `${c.key} is ${points}, but a Lighthouse score of ${answer} earns ${expected}.`
-            : `${c.key} is ${points}, but it should be 0 because "${direct.field}" isn't Yes.`);
-        }
-      } else {
-        if (!ANSWERS.includes(answer)) { err(`"${c.field}" is ${JSON.stringify(answer)}; it should be one of ${ANSWERS.join(", ")}.`); continue; }
-        expected = answer === "Yes" ? c.max : 0;
-        if (points !== expected) err(`${c.key} is ${points}, but "${c.field}: ${answer}" earns ${expected}.`);
+    // Points fields are left out of the data file in the repository, and written into
+    // the published copy when the site is built. Where they're present, they must match.
+    if (answersOk) {
+      const earned = scoreRecord(r, criteria);
+      for (const k of [...criteria.map(c => c.key), "Total"]) {
+        if (k in r && r[k] !== earned[k]) err(`${k} is ${JSON.stringify(r[k])}, but the answers earn ${earned[k]}. Points are worked out from the answers, so leave ${k} out of the data file.`);
       }
     }
 
@@ -145,9 +132,6 @@ function check(data, criteria, metricsMd, mapTiles) {
       const c = criteria.find(d => d.key === key);
       if (r[c.field] === "Yes" && !/^https?:\/\//.test(String(r[f]))) warn(`"${c.field}" is Yes, but "${f}" has no link.`);
     }
-
-    if (!Number.isInteger(r.Total)) err(`Total is ${JSON.stringify(r.Total)}; it should be a whole number.`);
-    else if (r.Total !== sum) err(`Total is ${r.Total}, but the points fields add up to ${sum}.`);
   });
 
   return { errors, warnings };
@@ -203,4 +187,4 @@ function main() {
 }
 
 if (typeof require !== "undefined" && require.main === module) main();
-if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug, dateProblem, checkForm };
+if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, slug, dateProblem, checkForm };
