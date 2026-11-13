@@ -13,6 +13,12 @@
 //
 // Links that a site's bot protection blocks (such as a Cloudflare challenge) can't be
 // checked automatically. They're listed in the run summary, but don't count as broken.
+//
+// A notices list or sample posting also counts as broken if it now goes to a sign-in
+// page, which usually means the posting has closed. That's caught two ways: when the
+// link redirects to a sign-in page, and, if SCORES_FILE points to the Lighthouse scores
+// file (see scripts/lighthouse.js), when the last Lighthouse scan of the page ended on
+// one, which catches sites that only redirect after a script runs.
 
 const fs = require("fs");
 const path = require("path");
@@ -69,6 +75,22 @@ function collectLinks() {
   return links;
 }
 
+// A notices list or sample posting that now sends visitors to a sign-in page has usually
+// closed or moved, even though the link still "works". Other links, such as a public
+// site that is itself a sign-in page, aren't checked for this.
+const SIGN_IN_FIELDS = ["Notices list URL", "Sample posting URL"];
+const SIGN_IN_PATH = /log-?in|sign-?in|log-?on/i;
+// True if a link that wasn't a sign-in page ended up on one.
+function isSignInRedirect(original, final) {
+  try {
+    const a = new URL(original), b = new URL(final);
+    return a.href !== b.href && !SIGN_IN_PATH.test(a.pathname) && SIGN_IN_PATH.test(b.pathname);
+  } catch (e) {
+    return false;
+  }
+}
+const signInProblem = final => `goes to a sign-in page (${new URL(final).pathname})`;
+
 // A refusal from bot protection, rather than from the page itself.
 function isBotBlock(res) {
   if (![403, 429, 503].includes(res.status)) return false;
@@ -77,8 +99,10 @@ function isBotBlock(res) {
 
 // Loads a page, following redirects and keeping any cookies they set, as a browser
 // does. Some sites redirect in a loop to a client that doesn't send cookies back.
-// Returns null if the link works, or { problem, blocked }.
+// Returns null if the link works, or { problem, blocked, signIn }. signIn marks a link
+// that works but redirects to a sign-in page; it only counts for SIGN_IN_FIELDS.
 async function checkOnce(url) {
+  const start = url;
   const cookies = new Map();
   try {
     for (let hops = 0; hops <= MAX_REDIRECTS; hops++) {
@@ -99,7 +123,7 @@ async function checkOnce(url) {
         url = new URL(location, url).href;
         continue;
       }
-      if (res.ok) return null;
+      if (res.ok) return isSignInRedirect(start, url) ? { problem: signInProblem(url), signIn: true } : null;
       return { problem: `HTTP ${res.status}${res.statusText ? ` ${res.statusText}` : ""}`, blocked: isBotBlock(res) };
     }
     return { problem: `more than ${MAX_REDIRECTS} redirects` };
@@ -148,6 +172,9 @@ function issueBody(government, list) {
     "",
     table(list),
     "",
+    ...(list.some(b => b.signIn)
+      ? ["A notices list or sample posting that goes to a sign-in page has usually closed or moved. Replace it with a current one that opens without signing in, and recheck the answers that depend on it.", ""]
+      : []),
     `Some sites block automated checks, so a link listed here may still open in a browser. The links are checked every Monday. This issue is updated then, and closed once none of the links for ${government} are broken.`,
   ].join("\n");
 }
@@ -220,15 +247,44 @@ async function updateIssues(broken) {
   }
 }
 
+// Some sites only send visitors to sign-in after a script runs, which a plain request
+// can't see. The weekly Lighthouse scan loads each notices list and sample posting in
+// Chrome and records the page it ended on, so use that too. scoresFile is the scores
+// file from scripts/lighthouse.js; links it doesn't cover are left as they are.
+function addSignInFromScans(problems, links, scoresFile) {
+  if (!scoresFile || !fs.existsSync(scoresFile)) return 0;
+  const { pages = {} } = JSON.parse(fs.readFileSync(scoresFile, "utf8"));
+  let added = 0;
+  for (const [url, uses] of links) {
+    const page = pages[url];
+    if (problems.has(url) || !page || !page.finalUrl || !uses.some(w => SIGN_IN_FIELDS.includes(w.field))) continue;
+    if (!isSignInRedirect(url, page.finalUrl)) continue;
+    const when = page.measured ? `, in the Lighthouse scan on ${String(page.measured).slice(0, 10)}` : "";
+    problems.set(url, { problem: `${signInProblem(page.finalUrl)} in a browser${when}`, signIn: true });
+    added++;
+  }
+  return added;
+}
+
+// Each place a link with a problem appears. A sign-in redirect only counts for the
+// notices list and sample posting.
+function whereProblems(problems, links, blocked) {
+  return [...problems]
+    .filter(([, r]) => !!r.blocked === blocked)
+    .flatMap(([url, r]) => links.get(url)
+      .filter(w => !r.signIn || SIGN_IN_FIELDS.includes(w.field))
+      .map(w => ({ url, problem: r.problem, signIn: !!r.signIn, ...w })))
+    .sort((a, b) => a.government.localeCompare(b.government) || URL_FIELDS.indexOf(a.field) - URL_FIELDS.indexOf(b.field));
+}
+
 async function main() {
   const links = collectLinks();
   console.log(`Checking ${links.size} links...`);
   const problems = await checkAll(links.keys());
+  const fromScans = addSignInFromScans(problems, links, process.env.SCORES_FILE);
+  if (fromScans) console.log(`${fromScans} more links went to a sign-in page in the last Lighthouse scan.`);
 
-  const where = blocked => [...problems]
-    .filter(([, r]) => !!r.blocked === blocked)
-    .flatMap(([url, r]) => links.get(url).map(w => ({ url, problem: r.problem, ...w })))
-    .sort((a, b) => a.government.localeCompare(b.government) || URL_FIELDS.indexOf(a.field) - URL_FIELDS.indexOf(b.field));
+  const where = blocked => whereProblems(problems, links, blocked);
   const broken = where(false);
   const blocked = where(true);
   const line = b => `- ${b.government}, ${b.field}: ${b.url} (${b.problem})`;
@@ -247,8 +303,11 @@ async function main() {
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_REPOSITORY) await updateIssues(broken);
 }
 
-main().catch(e => {
-  // Report the problem without failing the run.
-  console.log(`::warning title=Link check didn't finish::${e.message}`);
-  console.error(e);
-});
+if (require.main === module) {
+  main().catch(e => {
+    // Report the problem without failing the run.
+    console.log(`::warning title=Link check didn't finish::${e.message}`);
+    console.error(e);
+  });
+}
+module.exports = { isSignInRedirect, addSignInFromScans, whereProblems, issueBody, SIGN_IN_FIELDS };

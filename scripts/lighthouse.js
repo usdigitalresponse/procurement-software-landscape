@@ -3,7 +3,8 @@
 // The GitHub Actions workflow in .github/workflows/pages.yml runs each step in turn.
 //
 // The scores live in a JSON file (kept in the GitHub Actions cache), keyed by URL:
-//   { "pages": { "<url>": { performance, accessibility, measured, checked, error } } }
+//   { "pages": { "<url>": { performance, accessibility, finalUrl, measured, checked, error } } }
+// "finalUrl" is the page Chrome ended up on when the scores were measured.
 // "checked" is when the page was last scanned. "measured" is when the scores were
 // last collected successfully. A page is scanned at most once per calendar week
 // (Monday to Sunday, UTC), and a failed scan keeps the page's last good scores.
@@ -112,7 +113,13 @@ function runOnce(url) {
   if (typeof score("performance") !== "number" || typeof score("accessibility") !== "number") {
     return { error: "Lighthouse did not return both scores" };
   }
-  return { performance: Math.round(score("performance") * 100), accessibility: Math.round(score("accessibility") * 100) };
+  return {
+    performance: Math.round(score("performance") * 100),
+    accessibility: Math.round(score("accessibility") * 100),
+    // The page Chrome ended up on, after any redirects, including ones made by scripts.
+    // The link check uses this to spot sample postings that now go to a sign-in page.
+    finalUrl: lhr.finalDisplayedUrl || lhr.finalUrl || url,
+  };
 }
 
 function median(values) {
@@ -138,6 +145,7 @@ function scan(resultsFile, urls) {
         performance: median(runs.map(r => r.performance)),
         accessibility: median(runs.map(r => r.accessibility)),
         runs: runs.length,
+        finalUrl: runs[runs.length - 1].finalUrl,
         checked,
       };
       console.log(`${url}: performance ${results[url].performance}, accessibility ${results[url].accessibility} (${runs.length} of ${RUNS_PER_PAGE} runs)`);
@@ -161,7 +169,7 @@ function merge(scoresFile, resultsFiles) {
         scores.pages[url] = { ...prev, checked: r.checked, error: r.error };
         failed++;
       } else {
-        scores.pages[url] = { performance: r.performance, accessibility: r.accessibility, measured: r.checked, checked: r.checked, error: null };
+        scores.pages[url] = { performance: r.performance, accessibility: r.accessibility, finalUrl: r.finalUrl || null, measured: r.checked, checked: r.checked, error: null };
         ok++;
       }
     }
