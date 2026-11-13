@@ -1,2 +1,5 @@
 # Store and check out every text file with LF line endings.
 * text=auto eol=lf
+
+# Fonts are binary; never change their bytes.
+*.woff2 binary

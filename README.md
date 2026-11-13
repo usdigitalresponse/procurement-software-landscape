@@ -17,9 +17,10 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 | `scripts/check-data.js` | Checks the data file against the scoring rules. See [Automatic checks](#automatic-checks). |
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
 | `scripts/check-links.js` | Checks that every link in the data file works. See [Link check](#link-check). |
-| `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores, and checks links weekly. |
+| `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores, checks links weekly, and scores the site's own pages with Lighthouse. |
 | `.github/ISSUE_TEMPLATE/correction.yml` | The correction form for reporting a wrong answer, link, or system detail. See [Reporting a correction](#reporting-a-correction). |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
+| `assets/fonts/` | [Inter](https://github.com/rsms/inter) and [Lora](https://github.com/cyrealtype/Lora-Cyrillic), the site's fonts, Latin characters only, from Google Fonts. Both are under the SIL Open Font License; the license files are in the same folder. |
 
 The site is built and published to GitHub Pages by a GitHub Actions workflow each time a change is pushed to `main`. Changes appear on the site within a few minutes, or longer when the build has Lighthouse scans to run.
 
@@ -88,6 +89,7 @@ The four Lighthouse scores, and their points (`N4`, `N5`, `P7` and `P8`), `Total
 - The workflow also runs on a schedule: on Mondays to rescan every page, and on Thursdays to rebuild the site, which keeps the stored scores from expiring.
 - If a page can't be scanned, it keeps its last good score, and the run's summary lists it with the reason. A page that has never been scanned keeps the score in the data file, such as one from an earlier manual test. If that score is 0, the site shows "Not tested".
 - Pages are split into groups that are scanned at the same time, so a full rescan takes about 10 minutes.
+- After each publish, the workflow also scans the landscape's own two pages, the landscape and the scoring metrics, with the same settings. Their scores are listed in the run's summary, with a warning for any score below 90. They never fail the run.
 
 The scores are stored in the GitHub Actions cache, not in the repository. GitHub deletes a cache that goes unused for 7 days, which the twice-weekly schedule prevents. If the cache is lost, such as when GitHub turns off the schedule after 60 days with no activity in the repository, the next build rescans every page from scratch. To rescan or rebuild without pushing a change, run the "Build and publish site" workflow from the repository's Actions tab.
 
