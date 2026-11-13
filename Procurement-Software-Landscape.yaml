@@ -97,7 +97,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
@@ -317,7 +317,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
@@ -757,7 +757,7 @@
     'Notices list URL': 'https://www.in.gov/idoa/procurement/current-business-opportunities/'
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': Yes
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -843,9 +843,9 @@
     Vendor: 'PeopleSoft by Oracle'
     'Public site URL': 'https://smartweb.ks.gov/'
     'Notices list URL': 'https://supplier.sok.ks.gov/psc/sokfsprdsup/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL?&'
-    'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    'Sample posting URL': 'https://supplier.sok.ks.gov/psc/sokfsprdsup/SUPPLIER/ERP/c/KS_FSCM_APP_PK.KS_SCP_PUB_BIDLST.GBL?Page=KS_SCP_PUB_BIDLST&Action=&&AUC_ID=EVT0010956'
+    Note: 'Each event''s Share Bid Event link opens it directly. The events checked named a contact without an email, and most had no description, so Contact name and email and Project summary are No. The first visit to the site can show a cookie error; reloading fixes it (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -854,10 +854,10 @@
     'Lighthouse performance, notices list': 59
     'Lighthouse accessibility, notices list': 90
     'Lighthouse measured, notices list': ""
-    'Direct URL to an individual posting': No
+    'Direct URL to an individual posting': Yes
     'Individual posting page': Yes
-    'Contact name and email': Yes
-    'Project summary': Yes
+    'Contact name and email': No
+    'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 0
@@ -870,15 +870,15 @@
     N3: 0
     N4: 1
     N5: 5
-    P1: 0
+    P1: 25
     P2: 5
-    P3: 5
-    P4: 5
+    P3: 0
+    P4: 0
     P5: 0
     P6: 5
     P7: 0
     P8: 0
-    Total: 36
+    Total: 51
 -
     Government: Kentucky
     Abbreviation: KY
@@ -902,7 +902,7 @@
     'Individual posting page': Yes
     'Contact name and email': Yes
     'Project summary': No
-    'Data export of posting': No
+    'Data export of posting': Print
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
@@ -977,7 +977,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
@@ -990,7 +990,7 @@
     'Individual posting page': Yes
     'Contact name and email': Yes
     'Project summary': No
-    'Data export of posting': No
+    'Data export of posting': Print
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
@@ -1109,7 +1109,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
@@ -1122,7 +1122,7 @@
     'Individual posting page': Yes
     'Contact name and email': Yes
     'Project summary': No
-    'Data export of posting': No
+    'Data export of posting': Print
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 0
     'Lighthouse accessibility, posting page': 0
@@ -1768,8 +1768,8 @@
     'Public site URL': 'https://oklahoma.gov/omes/divisions/central-purchasing/suppliers-and-payees/supplier-portal.html'
     'Notices list URL': 'https://financials.ok.gov/psc/SOKLFP1DS/SUPPLIER/ERP/c/SCP_PUBLIC_MENU_FL.SCP_PUB_BID_CMP_FL.GBL'
     'Sample posting URL': N/A
-    Note: ""
-    'Answers checked': ""
+    Note: 'The events checked named a contact without an email and had no description, so Contact name and email and Project summary are No (checked November 2026).'
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -1780,8 +1780,8 @@
     'Lighthouse measured, notices list': ""
     'Direct URL to an individual posting': No
     'Individual posting page': Yes
-    'Contact name and email': Yes
-    'Project summary': Yes
+    'Contact name and email': No
+    'Project summary': No
     'Data export of posting': No
     'Documents without registration': Yes
     'Lighthouse performance, posting page': 0
@@ -1796,13 +1796,13 @@
     N5: 5
     P1: 0
     P2: 5
-    P3: 5
-    P4: 5
+    P3: 0
+    P4: 0
     P5: 0
     P6: 5
     P7: 0
     P8: 0
-    Total: 42
+    Total: 32
 -
     Government: Oregon
     Abbreviation: OR
@@ -2297,7 +2297,7 @@
     'Notices list URL': 'https://mvendor.cgieva.com/Vendor/public/AllOpportunities.jsp'
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': Yes
@@ -2385,7 +2385,7 @@
     'Notices list URL': N/A
     'Sample posting URL': N/A
     Note: ""
-    'Answers checked': ""
+    'Answers checked': '2026-11-12'
     'Web design system in use': No
     'Data standard is published': No
     'Notices list has a direct URL': No
