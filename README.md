@@ -4,6 +4,8 @@ This project evaluates and scores the websites that procurement agencies in U.S.
 
 **View the landscape: https://usdigitalresponse.github.io/procurement-software-landscape/**
 
+**Get the data:** [JSON](https://usdigitalresponse.github.io/procurement-software-landscape/data.json) or [CSV](https://usdigitalresponse.github.io/procurement-software-landscape/data.csv). See [Using the data](#using-the-data).
+
 Each site is scored out of 100 points on whether its notices are easy to find, share, and use: direct links to the notices list and to individual postings, contact details, project summaries, data exports, access to documents without registration, and Google Lighthouse performance and accessibility. See [Scoring-Metrics.md](./Scoring-Metrics.md) for what each metric means, how it is scored, and why it matters.
 
 ## What's in this repository
@@ -17,6 +19,7 @@ Each site is scored out of 100 points on whether its notices are easy to find, s
 | `scripts/check-data.js` | Checks the data file against the scoring rules. See [Automatic checks](#automatic-checks). |
 | `scripts/lighthouse.js` | Collects Lighthouse scores for each site. See [Lighthouse scores](#lighthouse-scores). |
 | `scripts/check-links.js` | Checks that every link in the data file works. See [Link check](#link-check). |
+| `scripts/export-data.js` | Writes `data.json` and `data.csv` when the site is built. See [Using the data](#using-the-data). |
 | `.github/workflows/pages.yml` | Builds and publishes the site, with fresh Lighthouse scores, checks links weekly, and scores the site's own pages with Lighthouse. |
 | `.github/ISSUE_TEMPLATE/correction.yml` | The correction form for reporting a wrong answer, link, or system detail. See [Reporting a correction](#reporting-a-correction). |
 | `assets/js/js-yaml.min.js` | [js-yaml](https://github.com/nodeca/js-yaml) 4.1.0 (MIT license), used to read the data file. |
@@ -133,6 +136,20 @@ To run the checks yourself, install [Node.js](https://nodejs.org/) and run this 
 ```bash
 node scripts/check-data.js
 ```
+
+## Using the data
+
+The published site offers the data in three formats, each with every government and the current Lighthouse scores, points, totals, and dates:
+
+- **JSON:** https://usdigitalresponse.github.io/procurement-software-landscape/data.json
+- **CSV:** https://usdigitalresponse.github.io/procurement-software-landscape/data.csv
+- **YAML,** the source: https://usdigitalresponse.github.io/procurement-software-landscape/Procurement-Software-Landscape.yaml
+
+The JSON and CSV files use the data file's field names, described in [Updating the data](#updating-the-data), plus `Rank`, which ranks governments by `Total`, with ties sharing a rank. Benchmark sites, such as the United Kingdom, have `Benchmark` set to true and no rank, so they're easy to leave out. Each record has three dates, formatted like `2026-11-12`: `Answers checked`, when a person last checked the yes-or-no answers, and `Lighthouse measured, notices list` and `Lighthouse measured, posting page`, when each page's Lighthouse scores were measured (UTC); a date that isn't recorded is empty. In the CSV, every value is quoted and empty values are blank.
+
+`data.json` also lists each metric, with its points field, its answer field, its maximum points, and a link to its definition, and `generated`, when the file was written. The files are rebuilt every time the site is, so their URLs don't change. They're written by `scripts/export-data.js` when the site is built, and aren't stored in this repository.
+
+The landscape page's **Download CSV** button is different: it downloads only the governments that match the page's filters, with column names written for reading.
 
 ## Previewing locally
 

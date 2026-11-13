@@ -122,7 +122,11 @@ jobs:
         run: node scripts/lighthouse.js apply "$RUNNER_TEMP/$SCORES_DIR/scores.json"
       - name: Check the data file
         run: node scripts/check-data.js
-      - uses: actions/configure-pages@v6
+      - id: pages
+        uses: actions/configure-pages@v6
+      # After the Lighthouse scores and dates are written, so the files match the site.
+      - name: Write data.json and data.csv
+        run: node scripts/export-data.js "${{ steps.pages.outputs.base_url }}/"
       - uses: actions/jekyll-build-pages@v1
       - uses: actions/upload-pages-artifact@v5
 
