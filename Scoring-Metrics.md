@@ -19,6 +19,15 @@ Each yes-or-no metric is answered with one of these values. Only Yes earns point
 - **Print:** used for the data export of a posting. The page offers a print button or a PDF of the posting, but no export in a data format. It's recorded apart from No to show what the page offers, but it doesn't meet the metric and earns no points.
 - **N/A:** the metric isn't scored for this government. It's currently used for local listings in DC and the territories. It earns no points.
 
+## How current the scores are
+
+Each site's score comes from two kinds of checks, and each site's details on the landscape page show a date for each.
+
+- **Answers checked:** the yes-or-no answers, worth 80 points, are checked by a person visiting the site. They aren't rechecked on a schedule. They're updated when a site changes, such as when a government moves to a new system or a link stops working. The date shows when a person last checked them, or "Not recorded" if that date isn't known.
+- **Lighthouse scores measured:** the four Lighthouse scores, worth 20 points, are measured automatically once a week. The date shows when each page's current scores were measured. If a page can't be scanned, it keeps its last scores and their date.
+
+Every link is also checked automatically once a week. A broken link is reported so a person can recheck that site, but a link check doesn't change any answers.
+
 ## Web design system in use (5 pts)
 
 A web design system (WDS) is a library of user interface components and visual style guides for websites operated by a government. The [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) is an example of a web design system. The [Delaware bids website](https://mmp.delaware.gov/Bids/) is an example of a solicitation posting notices list website using a WDS.

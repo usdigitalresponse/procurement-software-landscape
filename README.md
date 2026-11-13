@@ -28,6 +28,7 @@ Edit `Procurement-Software-Landscape.yaml` directly. Each record has these kinds
 
 - **Description:** `Government` (the name of the state, DC, territory, or benchmark site such as the United Kingdom), `Abbreviation` (its two-letter postal abbreviation, such as `AL` or `DC`, which places it on the map; `UK` for the United Kingdom), `System name`, `System type`, and `Vendor`. Separate more than one vendor with a semicolon.
 - **Note:** `Note` holds a free-text note, shown on the site in the entry's details. Use `""` when there is none.
+- **Dates:** `Answers checked` is the date a person last checked the record's yes-or-no answers, as a quoted date like `'2026-11-12'`, or `""` when it isn't known. Update it whenever you check a record's answers, even if none of them change. `Lighthouse measured, notices list` and `Lighthouse measured, posting page` are filled in when the site is built; see [Lighthouse scores](#lighthouse-scores). In a new record, use `""` for both. The site shows these dates in each entry's details, with a note on what each one covers.
 - **Benchmark:** `Benchmark: true` marks a site scored for comparison only, such as the United Kingdom. Benchmark sites appear in their own section and are left out of the rankings, the summary figures, the filters, and the CSV download. Leave the field out for every other record.
 - **Links:** `Public site URL`, `Notices list URL`, and `Sample posting URL`. Use `N/A` when there is none.
 - **Answers:** one field per metric, named for the metric, such as `Contact name and email: Yes`, or a Lighthouse score from 0 to 100. Lighthouse scores are collected automatically when the site is built; see [Lighthouse scores](#lighthouse-scores).
@@ -79,7 +80,7 @@ When you add a government, give it an `Abbreviation` and add a position for it t
 
 ### Lighthouse scores
 
-The four Lighthouse scores, and their points (`N4`, `N5`, `P7` and `P8`) and `Total`, are not taken from the data file. When the site is built, `scripts/lighthouse.js` runs [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) on each `Notices list URL` and `Sample posting URL` and writes the new scores, points and totals into the published copy of the data file. The copy in this repository is not changed, so its Lighthouse scores, points and totals may not match the site. In a new record, enter 0 for each Lighthouse score and its points, and a `Total` to match, so that the record passes the [automatic checks](#automatic-checks).
+The four Lighthouse scores, and their points (`N4`, `N5`, `P7` and `P8`), `Total`, and the two `Lighthouse measured` dates, are not taken from the data file. When the site is built, `scripts/lighthouse.js` runs [Google Lighthouse](https://developer.chrome.com/docs/lighthouse) on each `Notices list URL` and `Sample posting URL` and writes the new scores, points, totals, and the date (UTC) each page's scores were measured into the published copy of the data file. The copy in this repository is not changed, so its Lighthouse scores, points, totals and dates may not match the site. In a new record, enter 0 for each Lighthouse score and its points, and a `Total` to match, so that the record passes the [automatic checks](#automatic-checks).
 
 - Each page is scanned three times with Lighthouse's desktop settings, and the median score is kept.
 - Each page is scanned at most once per calendar week (Monday to Sunday, UTC). Builds in between reuse the stored scores. A page whose URL changes is scanned at the next build.
@@ -115,6 +116,7 @@ Whenever a change to the data file, `index.html`, or `Scoring-Metrics.md` is pus
 
 - every record has all of the fields above, with no misspelled or extra fields, no government appears twice, and each abbreviation is two capital letters used only once;
 - each link is a full `http://` or `https://` address, or `N/A`;
+- each date is a real date in quotes, like `'2026-11-12'`, and not in the future, or `""`;
 - each answer is `Yes`, `No`, `N/A`, or `Print`, and each Lighthouse score is a whole number from 0 to 100;
 - each points field matches its answer, using the rules above, and `Total` equals their sum;
 - each `anchor` in `index.html` matches a heading in `Scoring-Metrics.md`;

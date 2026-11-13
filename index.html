@@ -184,6 +184,8 @@
   .detail-grid p.system { margin: 0 0 1rem; font-size: .92rem; }
   .links dt { font-weight: 600; font-size: .875rem; color: var(--muted); }
   .links dd { margin: 0 0 .6rem; word-break: break-all; font-size: .92rem; }
+  .links.dates dd { word-break: normal; }
+  .links .hint { display: block; color: var(--muted); font-size: .8rem; line-height: 1.4; margin-top: .15rem; }
   .note { background: var(--mid-bg); border-left: 4px solid var(--mid); padding: .5rem .75rem; margin-top: .75rem; font-size: .92rem; }
   details.method { margin: 1.5rem 0; border: 1px solid var(--line); border-radius: .375rem; padding: .75rem 1rem; }
   details.method summary { cursor: pointer; }
@@ -332,7 +334,7 @@
 
 <footer>
   <p>A <a href="https://www.usdigitalresponse.org/">U.S. Digital Response</a> project. Data: <a href="Procurement-Software-Landscape.yaml">Procurement-Software-Landscape.yaml</a><span id="updated"></span>.</p>
-  <p>Lighthouse scores are 0–100 from <a href="https://developer.chrome.com/docs/lighthouse/overview">Google Lighthouse</a>; "Not tested" means the page could not be tested.</p>
+  <p>Yes-or-no answers are checked by hand, and each site's details show when they were last checked. Lighthouse scores are 0–100 from <a href="https://developer.chrome.com/docs/lighthouse/overview">Google Lighthouse</a>, measured automatically each week; "Not tested" means the page could not be tested. See <a href="Scoring-Metrics.html#how-current-the-scores-are">how current the scores are</a>.</p>
   <p>See something wrong? <a href="https://github.com/usdigitalresponse/procurement-software-landscape/issues/new">Report a correction on GitHub</a>.</p>
 </footer>
 
@@ -410,6 +412,32 @@ function answerPill(val, pts, max) {
   return `<span class="pill ${cls}">${esc(v || "—")}</span>`;
 }
 
+// Dates in the data file are 'YYYY-MM-DD', or "" when not recorded.
+const fmtDate = s => /^\d{4}-\d{2}-\d{2}$/.test(String(s || ""))
+  ? new Date(s + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
+  : "";
+const LIGHTHOUSE_PAGES = [
+  { label: "Notices list", measured: "Lighthouse measured, notices list", scores: ["N4", "N5"] },
+  { label: "Posting page", measured: "Lighthouse measured, posting page", scores: ["P7", "P8"] },
+];
+
+// When the record's two kinds of answers were last checked, and what each date covers:
+// the yes-or-no answers are checked by a person, and the Lighthouse scores automatically.
+function datesHtml(r) {
+  const manual = CRITERIA.filter(c => !LIGHTHOUSE.has(c.key));
+  const lighthouse = LIGHTHOUSE_PAGES.map(p => {
+    const date = fmtDate(r[p.measured]);
+    const scored = p.scores.some(k => num(r[CRITERIA.find(c => c.key === k).field]) > 0);
+    return `${p.label}: ${date ? date : scored ? "earlier manual test, date not recorded" : "not tested"}`;
+  }).join("<br>");
+  return `<h3>Dates</h3><dl class="links dates">
+    <dt>Answers checked</dt><dd>${fmtDate(r["Answers checked"]) || "Not recorded"}
+      <span class="hint">When a person last checked the ${manual.length} yes-or-no answers, worth ${manual.reduce((a, c) => a + c.max, 0)} points. They aren't rechecked automatically.</span></dd>
+    <dt>Lighthouse scores measured</dt><dd>${lighthouse}
+      <span class="hint">Measured automatically each week when the page can be scanned.</span></dd>
+  </dl>`;
+}
+
 function detail(d) {
   const r = d.raw;
   const linkRow = (label, v) => `<dt>${label}</dt><dd>${isUrl(v) ? extLink(String(v).trim()) : esc(v || "N/A")}</dd>`;
@@ -429,6 +457,7 @@ function detail(d) {
       ${linkRow("Notices list", r["Notices list URL"])}
       ${linkRow("Sample posting", r["Sample posting URL"])}
     </dl>
+    ${datesHtml(r)}
     ${d.notes.map(n => `<div class="note">${linkify(n)}</div>`).join("")}
     </div>${groups}</div>`;
 }
@@ -657,10 +686,12 @@ function methodology() {
 
 function toCsv() {
   const cols = ["Rank", "Government", "Abbreviation", "System name", "System type", "Vendor", "Public site URL", "Notices list URL", "Sample posting URL",
-    ...CRITERIA.map(c => c.field), ...CRITERIA.map(c => `${GROUPS[c.group]}: ${c.label} (pts)`), "Total", "Notes"];
+    ...CRITERIA.map(c => c.field), ...CRITERIA.map(c => `${GROUPS[c.group]}: ${c.label} (pts)`), "Total",
+    "Answers checked", ...LIGHTHOUSE_PAGES.map(p => p.measured), "Notes"];
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
   const lines = filtered().map(d => [d.rank, d.state, d.abbr, d.name, d.type, d.vendor, d.raw["Public site URL"], d.raw["Notices list URL"], d.raw["Sample posting URL"],
-    ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total, d.notes.join("; ")].map(q).join(","));
+    ...CRITERIA.map(c => d.raw[c.field]), ...CRITERIA.map(c => d.raw[c.key]), d.total,
+    d.raw["Answers checked"], ...LIGHTHOUSE_PAGES.map(p => d.raw[p.measured]), d.notes.join("; ")].map(q).join(","));
   const blob = new Blob([[cols.map(q).join(","), ...lines].join("\r\n")], { type: "text/csv" });
   const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: "procurement-software-landscape.csv" });
   a.click();

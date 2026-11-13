@@ -6,6 +6,9 @@
 const ANSWERS = ["Yes", "No", "N/A", "Print"];
 const TEXT_FIELDS = ["Government", "Abbreviation", "System name", "System type", "Vendor"];
 const URL_FIELDS = ["Public site URL", "Notices list URL", "Sample posting URL"];
+// Dates, as 'YYYY-MM-DD' or "" when not recorded. "Answers checked" is entered by hand;
+// the Lighthouse dates are written when the site is built.
+const DATE_FIELDS = ["Answers checked", "Lighthouse measured, notices list", "Lighthouse measured, posting page"];
 // Lighthouse points depend on the page having a direct URL.
 const LIGHTHOUSE_NEEDS = { N4: "N1", N5: "N1", P7: "P1", P8: "P1" };
 // When a page has a direct URL, the record should include it. This is only a warning,
@@ -42,6 +45,20 @@ function lighthousePoints(score) {
   return 0;
 }
 
+// What's wrong with a date field's value, or null if nothing is. Dates must be quoted,
+// because YAML reads an unquoted 2026-11-12 as a timestamp rather than text.
+function dateProblem(value, present, today = new Date()) {
+  if (!present) return `is missing. Use "" when there is no date.`;
+  if (value instanceof Date) return `should be in quotes, like '${value.toISOString().slice(0, 10)}'.`;
+  if (value === "") return null;
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return `is ${JSON.stringify(value)}; it should be a date like '2026-11-12', or "".`;
+  const d = new Date(value + "T00:00:00Z");
+  if (isNaN(d) || d.toISOString().slice(0, 10) !== value) return `is ${value}, which isn't a real date.`;
+  // Allow a day's leeway, since the person entering it may be ahead of UTC.
+  if (d - today > 86400000) return `is ${value}, which is in the future.`;
+  return null;
+}
+
 // mapTiles is optional: when given, every government except a benchmark needs a map position.
 function check(data, criteria, metricsMd, mapTiles) {
   const errors = [];
@@ -58,7 +75,7 @@ function check(data, criteria, metricsMd, mapTiles) {
 
   if (!Array.isArray(data)) return { errors: errors.concat("The data file should be a list of records."), warnings };
 
-  const known = new Set([...TEXT_FIELDS, ...URL_FIELDS, "Note", "Benchmark", "Total", ...criteria.flatMap(c => [c.field, c.key])]);
+  const known = new Set([...TEXT_FIELDS, ...URL_FIELDS, ...DATE_FIELDS, "Note", "Benchmark", "Total", ...criteria.flatMap(c => [c.field, c.key])]);
   const seen = new Set();
   const seenAbbr = new Map();
 
@@ -91,6 +108,10 @@ function check(data, criteria, metricsMd, mapTiles) {
     }
     if (!("Note" in r)) err(`"Note" is missing. Use "" when there is no note.`);
     else if (typeof r.Note !== "string") err(`"Note" should be text.`);
+    for (const f of DATE_FIELDS) {
+      const problem = dateProblem(r[f], f in r);
+      if (problem) err(`"${f}" ${problem}`);
+    }
     if ("Benchmark" in r && r.Benchmark !== true) err(`"Benchmark" should be true, or left out.`);
 
     let sum = 0;
@@ -169,4 +190,4 @@ function main() {
 }
 
 if (typeof require !== "undefined" && require.main === module) main();
-if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug };
+if (typeof module !== "undefined") module.exports = { check, readCriteria, readMapTiles, lighthousePoints, slug, dateProblem };
