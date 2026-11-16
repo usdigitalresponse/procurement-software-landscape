@@ -5,7 +5,7 @@ const assert = require("node:assert/strict");
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
-const { isSignInRedirect, addSignInFromScans, whereProblems, issueBody } = require("../scripts/check-links.js");
+const { isSignInRedirect, addSignInFromScans, excuseLoadedInScans, whereProblems, issueBody } = require("../scripts/check-links.js");
 
 test("a link that ends up on a sign-in page is a sign-in redirect", () => {
   assert.equal(isSignInRedirect("https://a.gov/bids/123", "https://a.gov/login?next=/bids/123"), true);
@@ -44,6 +44,63 @@ test("the last Lighthouse scan can show a sign-in page", () => {
   } finally {
     fs.rmSync(dir, { recursive: true, force: true });
   }
+});
+
+// Writes a scores file with the given pages to a new folder, runs fn with its path, and
+// removes the folder.
+function withScores(pages, fn) {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "links-test-"));
+  try {
+    const scoresFile = path.join(dir, "scores.json");
+    fs.writeFileSync(scoresFile, JSON.stringify({ pages }));
+    return fn(scoresFile);
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+test("a link that loaded in Chrome in a recent scan doesn't count as broken", () => {
+  const now = new Date("2026-11-16T07:00:00Z");
+  const loaded = finalUrl => ({ performance: 80, accessibility: 90, finalUrl, measured: "2026-11-16T06:40:00Z", checked: "2026-11-16T06:40:00Z", error: null });
+  const problems = new Map([
+    ["https://a.gov/bids", { problem: "HTTP 403 Forbidden" }],
+    ["https://a.gov/bids/1", { problem: "security certificate can't be verified (browsers may still open the page)" }],
+    ["https://b.gov/x", { problem: "HTTP 404 Not Found" }],
+    ["https://a.gov/", { problem: "HTTP 500 Internal Server Error" }],
+  ]);
+  const count = withScores({
+    "https://a.gov/bids": loaded("https://a.gov/bids"),
+    "https://a.gov/bids/1": loaded("https://a.gov/bids/1"),
+    "https://b.gov/x": loaded("https://b.gov/login"),  // ended on a sign-in page
+    "https://a.gov/": loaded("https://a.gov/"),         // not a page the scan is meant for
+  }, file => excuseLoadedInScans(problems, links, file, now));
+
+  assert.equal(count, 2);
+  assert.deepEqual(problems.get("https://a.gov/bids"), { problem: "HTTP 403 Forbidden, but it loaded in Chrome in the Lighthouse scan on 2026-11-16", blocked: true });
+  assert.equal(problems.get("https://a.gov/bids/1").blocked, true);
+  assert.equal(problems.get("https://b.gov/x").blocked, undefined, "a scan that ended on a sign-in page doesn't help");
+  assert.equal(problems.get("https://a.gov/").blocked, undefined, "the public site isn't scanned");
+  // The links still broken: Alpha's public site, and Beta's link, in its note and as its sample posting.
+  assert.deepEqual(whereProblems(problems, links, false).map(b => `${b.government} ${b.field}`), ["Alpha Public site URL", "Beta Note", "Beta Sample posting URL"]);
+});
+
+test("an old or failed scan doesn't excuse a broken link", () => {
+  const now = new Date("2026-11-16T07:00:00Z");
+  for (const page of [
+    { finalUrl: "https://a.gov/bids", measured: "2026-11-02T06:40:00Z", error: null },                          // two weeks old
+    { finalUrl: "https://a.gov/bids", measured: "2026-11-09T06:40:00Z", error: "timed out" },                   // the latest scan failed
+    { measured: "2026-11-16T06:40:00Z", error: null },                                                         // no page recorded
+  ]) {
+    const problems = new Map([["https://a.gov/bids", { problem: "HTTP 403 Forbidden" }]]);
+    assert.equal(withScores({ "https://a.gov/bids": page }, file => excuseLoadedInScans(problems, links, file, now)), 0, JSON.stringify(page));
+    assert.equal(problems.get("https://a.gov/bids").blocked, undefined);
+  }
+  // A week-old scan, from last Monday's run, still counts.
+  const problems = new Map([["https://a.gov/bids", { problem: "HTTP 403 Forbidden" }]]);
+  withScores({ "https://a.gov/bids": { finalUrl: "https://a.gov/bids", measured: "2026-11-09T06:40:00Z", error: null } },
+    file => excuseLoadedInScans(problems, links, file, now));
+  assert.equal(problems.get("https://a.gov/bids").blocked, true);
+  assert.equal(excuseLoadedInScans(new Map([["https://a.gov/bids", { problem: "x" }]]), links, undefined, now), 0, "no scores file");
 });
 
 test("a sign-in redirect only counts for the notices list and sample posting", () => {

@@ -121,7 +121,9 @@ Each issue holds a hidden marker with the government's name, which is how the ch
 
 A link counts as broken if it still fails when checked a second time. Some sites, such as those behind a Cloudflare challenge, refuse automated checks. Those links are listed in the run's summary as not checked, and don't count as broken.
 
-A `Notices list URL` or `Sample posting URL` also counts as broken if it now goes to a sign-in page, which usually means the posting has closed, such as on sites that put closed postings behind a sign-in. The check catches this when the link redirects to a sign-in page, and when the last Lighthouse scan of the page ended on one, since some sites only redirect after a script runs in the browser. Lighthouse scans happen once a week, so a stale sample posting can take up to a week longer to show up. The issue for that government suggests replacing the link with a current posting.
+A `Notices list URL` or `Sample posting URL` that fails the check also doesn't count as broken if it loaded in Chrome in a Lighthouse scan in the last 10 days, without ending on a sign-in page. Some sites refuse the check's plain requests in ways that don't look like bot protection, or send a security certificate that browsers accept but the check can't verify. These links are also listed in the run's summary as not checked, with the date of the scan. The check runs after the week's Lighthouse scans, so it uses that week's results.
+
+A `Notices list URL` or `Sample posting URL` also counts as broken if it now goes to a sign-in page, which usually means the posting has closed, such as on sites that put closed postings behind a sign-in. The check catches this when the link redirects to a sign-in page, and when the last Lighthouse scan of the page ended on one, since some sites only redirect after a script runs in the browser. The issue for that government suggests replacing the link with a current posting.
 
 To check the links yourself, install Node.js 22 or later and run `node scripts/check-links.js` from the repository folder.
 
