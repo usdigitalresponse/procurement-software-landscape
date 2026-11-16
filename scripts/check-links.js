@@ -15,6 +15,11 @@
 // Links that a site's bot protection blocks (such as a Cloudflare challenge) can't be
 // checked automatically. They're listed in the run summary, but don't count as broken.
 //
+// Neither does a notices list or sample posting that fails this check but loaded in
+// Chrome in a recent Lighthouse scan (see SCORES_FILE below). Some sites refuse plain
+// requests in ways that don't look like bot protection, or send a certificate that
+// browsers accept but this check can't verify.
+//
 // A notices list or sample posting also counts as broken if it now goes to a sign-in
 // page, which usually means the posting has closed. That's caught two ways: when the
 // link redirects to a sign-in page, and, if SCORES_FILE points to the Lighthouse scores
@@ -31,6 +36,9 @@ const TIMEOUT_MS = 30000;
 const RETRY_DELAY_MS = 10000;
 const MAX_REDIRECTS = 20;
 const PARALLEL = 8;
+// How recent a Lighthouse scan must be to show that a page loads in a browser. Pages are
+// scanned weekly, so this allows for a scan that ran a little late.
+const SCAN_MAX_AGE_DAYS = 10;
 const LABEL = "broken links";
 // Some sites refuse requests that don't look like they come from a browser.
 const HEADERS = {
@@ -252,9 +260,13 @@ async function updateIssues(broken) {
 // can't see. The weekly Lighthouse scan loads each notices list and sample posting in
 // Chrome and records the page it ended on, so use that too. scoresFile is the scores
 // file from scripts/lighthouse.js; links it doesn't cover are left as they are.
+const readScans = scoresFile => scoresFile && fs.existsSync(scoresFile)
+  ? JSON.parse(fs.readFileSync(scoresFile, "utf8")).pages || {}
+  : null;
+
 function addSignInFromScans(problems, links, scoresFile) {
-  if (!scoresFile || !fs.existsSync(scoresFile)) return 0;
-  const { pages = {} } = JSON.parse(fs.readFileSync(scoresFile, "utf8"));
+  const pages = readScans(scoresFile);
+  if (!pages) return 0;
   let added = 0;
   for (const [url, uses] of links) {
     const page = pages[url];
@@ -265,6 +277,29 @@ function addSignInFromScans(problems, links, scoresFile) {
     added++;
   }
   return added;
+}
+
+// A notices list or sample posting that failed this check, but loaded in Chrome in a
+// recent Lighthouse scan without ending on a sign-in page, works in a browser. Some sites
+// refuse plain requests in ways that don't look like bot protection, or send a
+// certificate chain that browsers complete but this check can't verify. Those links are
+// marked as not checked, like ones blocked by bot protection, instead of broken.
+// Returns how many links were marked.
+function excuseLoadedInScans(problems, links, scoresFile, now = new Date()) {
+  const pages = readScans(scoresFile);
+  if (!pages) return 0;
+  let excused = 0;
+  for (const [url, r] of problems) {
+    if (r.blocked || r.signIn || !links.get(url)?.some(w => SIGN_IN_FIELDS.includes(w.field))) continue;
+    const page = pages[url];
+    // The latest scan must have worked, recently, and not ended on a sign-in page.
+    if (!page || page.error || !page.finalUrl || !page.measured) continue;
+    if (!((now - new Date(page.measured)) / 86400000 <= SCAN_MAX_AGE_DAYS)) continue;
+    if (isSignInRedirect(url, page.finalUrl)) continue;
+    problems.set(url, { problem: `${r.problem}, but it loaded in Chrome in the Lighthouse scan on ${String(page.measured).slice(0, 10)}`, blocked: true });
+    excused++;
+  }
+  return excused;
 }
 
 // Each place a link with a problem appears. A sign-in redirect only counts for the
@@ -284,6 +319,8 @@ async function main() {
   const problems = await checkAll(links.keys());
   const fromScans = addSignInFromScans(problems, links, process.env.SCORES_FILE);
   if (fromScans) console.log(`${fromScans} more links went to a sign-in page in the last Lighthouse scan.`);
+  const loaded = excuseLoadedInScans(problems, links, process.env.SCORES_FILE);
+  if (loaded) console.log(`${loaded} links failed the check but loaded in Chrome in a recent Lighthouse scan, so they don't count as broken.`);
 
   const where = blocked => whereProblems(problems, links, blocked);
   const broken = where(false);
@@ -291,13 +328,13 @@ async function main() {
   const line = b => `- ${b.government}, ${b.field}: ${b.url} (${b.problem})`;
 
   console.log(broken.length ? `Broken links:\n${broken.map(line).join("\n")}` : "No broken links.");
-  if (blocked.length) console.log(`Blocked by bot protection, so not checked:\n${blocked.map(line).join("\n")}`);
+  if (blocked.length) console.log(`Not checked, because of bot protection or because the page loaded in a browser:\n${blocked.map(line).join("\n")}`);
 
   if (process.env.GITHUB_ACTIONS) {
     for (const b of broken) console.log(`::warning file=Procurement-Software-Landscape.yaml,title=Broken link::${b.government}, ${b.field}: ${b.url} (${b.problem})`);
     if (process.env.GITHUB_STEP_SUMMARY) {
       let summary = `## Link check\n\n${broken.length ? `${new Set(broken.map(b => b.url)).size} of ${links.size} links didn't work:\n\n${table(broken)}` : `None of the ${links.size} links are broken.`}\n`;
-      if (blocked.length) summary += `\n### Blocked by bot protection\n\nThese sites refused the automated check, so these links weren't checked.\n\n${table(blocked)}\n`;
+      if (blocked.length) summary += `\n### Not checked\n\nThese links failed the automated check, but don't count as broken: either the site's bot protection refused the check, or the page loaded in Chrome in a recent Lighthouse scan.\n\n${table(blocked)}\n`;
       fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
     }
   }
@@ -311,4 +348,4 @@ if (require.main === module) {
     console.error(e);
   });
 }
-module.exports = { isSignInRedirect, addSignInFromScans, whereProblems, issueBody, SIGN_IN_FIELDS };
+module.exports = { isSignInRedirect, addSignInFromScans, excuseLoadedInScans, whereProblems, issueBody, SIGN_IN_FIELDS };
